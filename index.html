@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Video Translation Viewer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        select {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        select:hover {
+            border-color: #999;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        select:disabled {
+            background: #f5f5f5;
+            cursor: not-allowed;
+        }
+
+        .video-container {
+            margin-bottom: 30px;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-container.empty {
+            padding-bottom: 0;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-placeholder {
+            color: #666;
+            text-align: center;
+        }
+
+        .subtitles-container {
+            margin-top: 20px;
+        }
+
+        .subtitles-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .subtitles-header h2 {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .subtitle-count {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .subtitles-content {
+            max-height: 600px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .subtitle-entry {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .subtitle-entry:last-child {
+            border-bottom: none;
+        }
+
+        .subtitle-timestamp {
+            color: #666;
+            font-size: 12px;
+            font-family: monospace;
+            margin-bottom: 8px;
+        }
+
+        .subtitle-text {
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            border-left: 4px solid #c62828;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4CAF50;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MIT Video Translation Viewer</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="video-select">Video:</label>
+                <select id="video-select">
+                    <option value="">Select a video...</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="method-select">Translation Method:</label>
+                <select id="method-select" disabled>
+                    <option value="">Select a method...</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="language-select">Language:</label>
+                <select id="language-select" disabled>
+                    <option value="">Select a language...</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="video-container" class="video-container empty">
+            <div class="video-placeholder">
+                <p>Select a video to start playback</p>
+            </div>
+        </div>
+
+        <div class="subtitles-container">
+            <div class="subtitles-header">
+                <h2>Subtitles</h2>
+                <span class="subtitle-count" id="subtitle-count"></span>
+            </div>
+            <div id="subtitles-content" class="subtitles-content">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📝</div>
+                    <p>Select a video, translation method, and language to view subtitles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main application script -->
+    <script src="app.js"></script>
+</body>
+</html>
