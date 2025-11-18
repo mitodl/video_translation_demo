@@ -1,0 +1,584 @@
+1
+00:00:00,000 --> 00:00:04,340
+INSTRUCTEUR : Jusqu'à présent, nous avons analysé une seule variable,
+
+2
+00:00:04,340 --> 00:00:06,320
+la taille des élèves.
+
+3
+00:00:06,320 --> 00:00:11,480
+Ce type d'analyse s'appelle l'analyse univariée, qui
+
+4
+00:00:11,480 --> 00:00:15,920
+vise à décrire et à résumer les variables
+
+5
+00:00:15,920 --> 00:00:20,210
+a pour objectif de décrire et de résumer les variables
+
+6
+00:00:20,210 --> 00:00:24,210
+à l'aide de statistiques descriptives,
+
+7
+00:00:24,210 --> 00:00:30,530
+ainsi que des visualisations, des graphiques tels que des histogrammes et des diagrammes en boîte.
+
+8
+00:00:30,530 --> 00:00:35,030
+Dans l'analyse bivariée, nous explorons deux variables
+
+9
+00:00:35,030 --> 00:00:37,280
+et leur relation.
+
+10
+00:00:37,280 --> 00:00:42,710
+Et dans l'analyse multivariée, nous examinons trois variables ou plus
+
+11
+00:00:42,710 --> 00:00:46,400
+simultanément et, encore une fois, cherchons à comprendre
+
+12
+00:00:46,400 --> 00:00:51,530
+leurs relations, cette fois potentiellement plus complexes.
+
+13
+00:00:51,530 --> 00:00:55,160
+Passons donc de notre analyse univariée
+
+14
+00:00:55,160 --> 00:00:58,880
+de la taille des élèves à l'analyse bivariée, qui
+
+15
+00:00:58,880 --> 00:01:03,800
+en plus des données de taille, inclut également le poids des élèves.
+
+16
+00:01:03,800 --> 00:01:07,270
+Nous avons maintenant deux variables d'observation.
+
+17
+00:01:07,270 --> 00:01:09,420
+Et il est intéressant de quantifier
+
+18
+00:01:09,420 --> 00:01:11,290
+Et il est intéressant de quantifier
+
+19
+00:01:11,290 --> 00:01:15,810
+la relation entre eux...
+
+20
+00:01:15,810 --> 00:01:19,020
+Le poids et la taille sont liés.
+
+21
+00:01:19,020 --> 00:01:23,700
+Les élèves plus grands ont tendance à peser plus lourd que les élèves plus petits.
+
+22
+00:01:23,700 --> 00:01:27,480
+Les étudiants plus grands ont tendance à peser plus lourd que les étudiants plus petits.
+
+23
+00:01:27,480 --> 00:01:30,210
+Nous pouvons tracer ce graphique, avec une variable sur l'axe des x
+
+24
+00:01:30,210 --> 00:01:33,540
+et l'autre sur l'axe des y.
+
+25
+00:01:33,540 --> 00:01:37,980
+Ce type de diagramme est appelé diagramme de dispersion.
+
+26
+00:01:37,980 --> 00:01:40,050
+Chaque point représente un étudiant.
+
+27
+00:01:40,050 --> 00:01:42,970
+L'avantage des diagrammes de dispersion
+
+28
+00:01:42,970 --> 00:01:46,830
+est qu'ils nous aident à voir des modèles,
+
+29
+00:01:46,830 --> 00:01:50,310
+la manière dont les deux variables sont liées l'une à l'autre.
+
+30
+00:01:50,310 --> 00:01:52,230
+Dans la figure, nous pouvons observer un schéma croissant
+
+31
+00:01:52,230 --> 00:01:55,560
+de gauche à droite.
+
+32
+00:01:55,560 --> 00:01:58,560
+Cela signifie que les poids et les tailles sont positivement
+
+33
+00:01:58,560 --> 00:02:00,780
+en corrélation les uns avec les autres.
+
+34
+00:02:00,780 --> 00:02:05,940
+Ce type de relation est également
+
+35
+00:02:05,940 --> 00:02:09,840
+appelée association dans l'analyse bivariée.
+
+36
+00:02:09,840 --> 00:02:11,230
+Une association linéaire signifie que les points forment plus ou moins
+
+37
+00:02:11,230 --> 00:02:15,210
+une ligne droite.
+
+38
+00:02:15,210 --> 00:02:18,030
+Cependant, nous pouvons également observer des associations non linéaires,
+
+39
+00:02:18,030 --> 00:02:21,150
+tels que les modèles quadratiques.
+
+40
+00:02:21,150 --> 00:02:24,150
+Et parfois, il n'y a pas de modèle clair,
+
+41
+00:02:24,150 --> 00:02:27,820
+comme le montre la figure.
+
+42
+00:02:27,820 --> 00:02:31,170
+En plus de la forme de l'association,
+
+43
+00:02:31,170 --> 00:02:34,540
+nous nous soucions également de la direction.
+
+44
+00:02:34,540 --> 00:02:37,530
+Si la pente de la ligne est ascendante,
+
+45
+00:02:37,530 --> 00:02:42,360
+cela signifie que l'association est positive.
+
+46
+00:02:42,360 --> 00:02:46,350
+Si la pente est descendante, l'association est négative.
+
+47
+00:02:46,350 --> 00:02:49,860
+Nous nous soucions également de la force de l'association.
+
+48
+00:02:49,860 --> 00:02:52,890
+Si les points sont étroitement groupés autour de la ligne,
+
+49
+00:02:52,890 --> 00:02:57,690
+il s'agit d'une association forte.
+
+50
+00:02:57,690 --> 00:03:00,810
+Si les points sont plus dispersés, l'association est faible.
+
+51
+00:03:00,810 --> 00:03:03,240
+dépend pas de la direction.
+
+52
+00:03:03,240 --> 00:03:05,850
+Vous pouvez avoir une forte association positive ou
+
+53
+00:03:05,850 --> 00:03:09,600
+une forte association négative.
+
+54
+00:03:09,600 --> 00:03:13,710
+une forte association négative.
+
+55
+00:03:13,710 --> 00:03:18,290
+Nous pouvons également quantifier à la fois la force et la direction
+
+56
+00:03:18,290 --> 00:03:22,270
+d'une association linéaire à l'aide du coefficient de corrélation,
+
+57
+00:03:22,270 --> 00:03:26,090
+qui varie de moins 1 à 1.
+
+58
+00:03:26,090 --> 00:03:29,470
+Plus la valeur est proche de 1 ou moins 1,
+
+59
+00:03:29,470 --> 00:03:35,920
+plus la relation linéaire est forte.
+
+60
+00:03:35,920 --> 00:03:43,450
+Une valeur proche de 0 signifie qu'il y a peu ou pas d'association linéaire.
+
+61
+00:03:43,450 --> 00:03:46,720
+Par exemple, une forte corrélation positive peut être de l'ordre de 0,9.
+
+62
+00:03:46,720 --> 00:03:51,070
+pourrions voir quelque chose comme 0,01.
+
+63
+00:03:51,070 --> 00:03:54,910
+Cependant, nous devons garder à l'esprit que la corrélation n'
+
+64
+00:03:54,910 --> 00:03:56,950
+implique pas la causalité.
+
+65
+00:03:56,950 --> 00:03:59,440
+impliquent un lien de causalité.
+
+66
+00:03:59,440 --> 00:04:03,100
+Ce n'est pas parce que deux choses bougent ensemble
+
+67
+00:04:03,100 --> 00:04:07,640
+ne signifie pas que l'un provoque l'autre.
+
+68
+00:04:07,640 --> 00:04:10,960
+Même dans notre exemple, où la taille et le poids sont liés,
+
+69
+00:04:10,960 --> 00:04:14,380
+Oui, elles sont corrélées, mais la taille ne
+
+70
+00:04:14,380 --> 00:04:15,380
+cause pas directement le poids.
+
+71
+00:04:15,380 --> 00:04:20,089
+causer des problèmes de poids.
+
+72
+00:04:20,089 --> 00:04:24,110
+Au lieu de cela, des facteurs sous-jacents partagés tels que l'âge, la nutrition,
+
+73
+00:04:24,110 --> 00:04:27,350
+et la biologie influencent les deux.
+
+74
+00:04:27,350 --> 00:04:29,780
+Nous pouvons également utiliser la covariance pour mesurer comment
+
+75
+00:04:29,780 --> 00:04:32,000
+deux variables varient ensemble.
+
+76
+00:04:32,000 --> 00:04:34,730
+La covariance est positive s'ils
+
+77
+00:04:34,730 --> 00:04:38,840
+augmentent ou diminuent ensemble.
+
+78
+00:04:38,840 --> 00:04:44,900
+Elle est négative si l'un augmente tandis que l'autre diminue.
+
+79
+00:04:44,900 --> 00:04:49,310
+Et la covariance est proche de 0 s'il n'y a pas de modèle cohérent.
+
+80
+00:04:49,310 --> 00:04:52,310
+La covariance et la corrélation sont toutes deux des statistiques sommaires
+
+81
+00:04:52,310 --> 00:04:54,170
+qui décrivent comment deux séries d'observations
+
+82
+00:04:54,170 --> 00:04:57,120
+se rapportent l'un à l'autre.
+
+83
+00:04:57,120 --> 00:05:00,140
+La covariance nous donne le sens de la relation,
+
+84
+00:05:00,140 --> 00:05:03,590
+mais pas la force de manière significative,
+
+85
+00:05:03,590 --> 00:05:08,450
+tandis que la corrélation nous aide à quantifier
+
+86
+00:05:08,450 --> 00:05:13,580
+le sens et la force d'une relation linéaire.
+
+87
+00:05:13,580 --> 00:05:16,220
+Parlons maintenant d'un phénomène statistique classique,
+
+88
+00:05:16,220 --> 00:05:19,430
+Le paradoxe de Simpson.
+
+89
+00:05:19,430 --> 00:05:24,630
+Supposons que nous recueillions des données sur la taille des élèves
+
+90
+00:05:24,630 --> 00:05:27,280
+et le nombre de points qu'ils marquent au basket-ball.
+
+91
+00:05:27,280 --> 00:05:31,590
+Si l'on considère l'ensemble des données,
+
+92
+00:05:31,590 --> 00:05:32,740
+Il peut sembler que ces deux variables soient négativement liées.
+
+93
+00:05:32,740 --> 00:05:38,918
+en corrélation.
+
+94
+00:05:38,918 --> 00:05:40,830
+En d'autres termes, les élèves les plus grands semblent marquer moins de points.
+
+95
+00:05:40,830 --> 00:05:43,410
+Hm.
+
+96
+00:05:43,410 --> 00:05:47,140
+Cependant, lorsque nous séparons les données
+
+97
+00:05:47,140 --> 00:05:50,140
+en deux sous-groupes, hommes et femmes,
+
+98
+00:05:50,140 --> 00:05:54,060
+nous pouvons trouver cela au sein de chaque groupe,
+
+99
+00:05:54,060 --> 00:05:57,880
+les élèves les plus grands ont tendance à obtenir plus de points.
+
+100
+00:05:57,880 --> 00:06:01,800
+Les données globales suggèrent donc une corrélation négative,
+
+101
+00:06:01,800 --> 00:06:04,530
+mais les données des sous-groupes révèlent des corrélations positives
+
+102
+00:06:04,530 --> 00:06:06,900
+dans les deux groupes.
+
+103
+00:06:06,900 --> 00:06:10,680
+Qu'est-ce que cela signifie ?
+
+104
+00:06:10,680 --> 00:06:12,580
+Cela signifie qu'il y a un autre facteur, une autre variable...
+
+105
+00:06:12,580 --> 00:06:15,690
+en l'occurrence, le genre...
+
+106
+00:06:15,690 --> 00:06:20,250
+qui influence la relation observée.
+
+107
+00:06:20,250 --> 00:06:22,770
+Cette variable est appelée variable confusionnelle.
+
+108
+00:06:22,770 --> 00:06:27,420
+En termes de terminologie, on parle de
+
+109
+00:06:27,420 --> 00:06:30,390
+à la hauteur comme variable indépendante et aux points de basket
+
+110
+00:06:30,390 --> 00:06:33,270
+comme variable dépendante.
+
+111
+00:06:33,270 --> 00:06:37,780
+Ainsi, l'essence du paradoxe de Simpson
+
+112
+00:06:37,780 --> 00:06:40,900
+est que si l'on ne tient pas compte des sous-groupes, comme le sexe, dans ce cas,
+
+113
+00:06:40,900 --> 00:06:43,530
+la tendance générale peut être trompeuse.
+
+114
+00:06:43,530 --> 00:06:48,570
+En d'autres termes, une tendance qui semble
+
+115
+00:06:48,570 --> 00:06:51,840
+dans différents groupes de données disparaît ou s'inverse
+
+116
+00:06:51,840 --> 00:06:54,030
+C'est une illusion statistique causée
+
+117
+00:06:54,030 --> 00:06:57,870
+Il s'agit d'une illusion statistique.
+
+118
+00:06:57,870 --> 00:07:00,540
+par ces variables cachées ou confondues qui affectent les
+
+119
+00:07:00,540 --> 00:07:03,270
+la relation observée.
+
+120
+00:07:03,270 --> 00:07:07,200
+Ce paradoxe est un autre rappel important
+
+121
+00:07:07,200 --> 00:07:10,470
+que la corrélation n'implique pas la causalité.
+
+122
+00:07:10,470 --> 00:07:12,430
+Comparez cela à un exemple classique
+
+123
+00:07:12,430 --> 00:07:15,600
+d'une corrélation erronée.
+
+124
+00:07:15,600 --> 00:07:18,340
+Ventes de glaces et attaques de requins.
+
+125
+00:07:18,340 --> 00:07:22,780
+Ces deux variables sont corrélées.
+
+126
+00:07:22,780 --> 00:07:24,480
+Mais la consommation de glace est-elle à l'origine d'attaques de requins ?
+
+127
+00:07:24,480 --> 00:07:27,360
+Bien sûr que non.
+
+128
+00:07:27,360 --> 00:07:31,320
+La véritable explication réside dans un troisième facteur.
+
+129
+00:07:31,320 --> 00:07:36,070
+Le temps chaud augmente les ventes de glaces et la fréquentation des plages
+
+130
+00:07:36,070 --> 00:07:40,180
+Ce qui, à son tour, augmente les risques d'attaques de requins.
+
+131
+00:07:40,180 --> 00:07:44,560
+C'est ce que nous appelons une corrélation fallacieuse ou trompeuse, lorsque
+
+132
+00:07:44,560 --> 00:07:47,890
+deux variables semblent liées, mais la connexion est en fait
+
+133
+00:07:47,890 --> 00:07:51,340
+sous l'effet d'un facteur externe.
+
+134
+00:07:51,340 --> 00:07:53,980
+parlé de la façon de visualiser les données
+
+135
+00:07:53,980 --> 00:07:57,470
+a parlé de la façon de visualiser les données
+
+136
+00:07:57,470 --> 00:08:02,050
+et avons exploré des idées clés telles que la tendance centrale, la dispersion,
+
+137
+00:08:02,050 --> 00:08:05,950
+et a exploré des idées clés telles que la tendance centrale, la dispersion,
+
+138
+00:08:05,950 --> 00:08:10,840
+et les relations entre les variables.
+
+139
+00:08:10,840 --> 00:08:14,740
+Jusqu'à présent, nous avons vu comment les variables peuvent être associées...
+
+140
+00:08:14,740 --> 00:08:16,540
+non seulement la direction, mais aussi la forme et la force
+
+141
+00:08:16,540 --> 00:08:20,380
+de ces relations.
+
+142
+00:08:20,380 --> 00:08:24,370
+Nous avons ensuite abordé la corrélation et la covariance
+
+143
+00:08:24,370 --> 00:08:28,340
+en tant qu'outils permettant de quantifier ces modèles.
+
+144
+00:08:28,340 --> 00:08:31,360
+En fin de compte, les statistiques ne consistent pas seulement à calculer des chiffres.
+
+145
+00:08:31,360 --> 00:08:36,159
+Il s'agit de prendre des décisions dans l'incertitude
+
+146
+00:08:36,159 --> 00:08:38,640
+À la prochaine leçon.
+

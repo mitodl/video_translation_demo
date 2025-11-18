@@ -4,22 +4,37 @@
       "id": "L2.1.HAIM_Holistic_AI_for_Medicine",
       "title": "L2.1 HAIM: Holistic AI for Medicine",
       "youtubeId": "VAT44R63jOU",
-      "methods": ["gpt-4o-mini", "deep-l", "gpt-5"],
+      "methods": ["gpt-4o-mini", "deep-l", "gpt-5", "deep-l_gpt5"],
       "languages": {
         "gpt-4o-mini": ["en", "ar", "de", "es", "fr", "hi", "kr", "pt", "zh"],
-        "deep-l": [],
-        "gpt-5": []
+        "deep-l": ["en", "ar", "de", "es", "fr", "pt", "zh"],
+        "gpt-5": ["en", "ar", "de", "es", "fr", "pt", "zh"],
+        "deep-l_gpt5": ["en", "ar", "de", "es", "fr", "pt", "zh"]
       }
     },
     {
       "id": "L3.1.StatististicsAndUnderstandingDistributions",
       "title": "L3.1 Statistics and Understanding Distributions",
       "youtubeId": "Vvt9y9FBuOk",
-      "methods": ["gpt-4o-mini", "deep-l", "gpt-5"],
+      "methods": ["gpt-4o-mini", "deep-l", "gpt-5", "deep-l_gpt5"],
       "languages": {
         "gpt-4o-mini": ["en", "ar", "de", "es", "fr", "hi", "kr", "pt", "zh"],
-        "deep-l": [],
-        "gpt-5": []
+        "deep-l": ["en", "ar", "de", "es", "fr", "pt", "zh"],
+        "gpt-5": ["en", "ar", "de", "es", "fr", "hi", "kr", "pt", "zh"],
+        "deep-l_gpt5": ["en", "ar", "de", "es", "fr", "pt", "zh"]
+      }
+    },
+    {
+      "id": "L3.2.SpreadsPercentilesVisualization",
+      "title": "L3.2 Spreads, Percentiles, Visualization",
+      "youtubeId": "QvvKn92MLy4",
+      "baseFilename": "L3.2.Spreads_Percentiles_Visualization",
+      "methods": ["gpt-4o-mini", "deep-l", "gpt-5", "deep-l_gpt5"],
+      "languages": {
+        "gpt-4o-mini": ["en", "ar", "de", "es", "fr", "hi", "kr", "pt", "zh"],
+        "deep-l": ["en", "ar", "de", "es", "fr", "pt", "zh"],
+        "gpt-5": ["en", "ar", "de", "es", "fr", "hi", "kr", "pt", "zh"],
+        "deep-l_gpt5": ["en", "ar", "de", "es", "fr", "pt", "zh"]
       }
     }
   ],

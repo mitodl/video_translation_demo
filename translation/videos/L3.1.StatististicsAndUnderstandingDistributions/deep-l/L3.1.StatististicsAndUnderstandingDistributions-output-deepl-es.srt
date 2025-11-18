@@ -1,0 +1,708 @@
+1
+00:00:05,053 --> 00:00:06,220
+INSTRUCTOR: Hola a todos.
+
+2
+00:00:06,220 --> 00:00:07,520
+Bienvenido de nuevo.
+
+3
+00:00:07,520 --> 00:00:09,760
+En la conferencia de hoy vamos a hablar de
+
+4
+00:00:09,760 --> 00:00:14,120
+sobre estadística para la exploración y el análisis de datos.
+
+5
+00:00:14,120 --> 00:00:16,880
+Empecemos con una pregunta sencilla.
+
+6
+00:00:16,880 --> 00:00:18,920
+¿Qué es la estadística?
+
+7
+00:00:18,920 --> 00:00:22,680
+Formalmente, la estadística es una rama de las matemáticas centrada
+
+8
+00:00:22,680 --> 00:00:25,540
+en recopilar, analizar e interpretar,
+
+9
+00:00:25,540 --> 00:00:29,920
+y presentación de datos para extraer ideas y apoyar
+
+10
+00:00:29,920 --> 00:00:31,720
+mejores decisiones.
+
+11
+00:00:31,720 --> 00:00:36,360
+En esta conferencia, nos centraremos en la estadística descriptiva, los métodos
+
+12
+00:00:36,360 --> 00:00:39,120
+que nos ayudan a resumir y visualizar datos
+
+13
+00:00:39,120 --> 00:00:42,480
+para revelar patrones y tendencias.
+
+14
+00:00:42,480 --> 00:00:45,040
+Empecemos con un ejemplo.
+
+15
+00:00:45,040 --> 00:00:48,400
+Supongamos que queremos estudiar las alturas de los estudiantes
+
+16
+00:00:48,400 --> 00:00:51,560
+matriculado en Universal AI.
+
+17
+00:00:51,560 --> 00:00:56,720
+En lugar de medir la altura de cada estudiante de la UAI,
+
+18
+00:00:56,720 --> 00:00:58,400
+tomamos una muestra...
+
+19
+00:00:58,400 --> 00:01:02,650
+por ejemplo, 100 estudiantes seleccionados al azar.
+
+20
+00:01:02,650 --> 00:01:07,730
+Esto nos da un conjunto de datos de 100 valores de altura.
+
+21
+00:01:07,730 --> 00:01:11,090
+Ahora podemos empezar a visualizar estos datos,
+
+22
+00:01:11,090 --> 00:01:15,370
+por ejemplo, trazando las alturas de todos los estudiantes de la muestra
+
+23
+00:01:15,370 --> 00:01:17,690
+uno al lado del otro.
+
+24
+00:01:17,690 --> 00:01:20,770
+Por supuesto, podemos ordenar los valores para identificar
+
+25
+00:01:20,770 --> 00:01:26,050
+tendencias, que es que la mayoría de los estudiantes tienen una estatura similar.
+
+26
+00:01:26,050 --> 00:01:29,810
+¿Cuál es la estatura típica de un estudiante?
+
+27
+00:01:29,810 --> 00:01:33,650
+Hay tres formas habituales de describirlo.
+
+28
+00:01:33,650 --> 00:01:38,350
+Podemos calcular la altura media aritmética, la media,
+
+29
+00:01:38,350 --> 00:01:41,290
+que es de 65 pulgadas.
+
+30
+00:01:41,290 --> 00:01:43,770
+A continuación, podemos hallar la mediana, que
+
+31
+00:01:43,770 --> 00:01:47,890
+representa el valor medio cuando se ordenan los datos.
+
+32
+00:01:47,890 --> 00:01:52,530
+Es decir, 50 alumnos son más bajos y 50 alumnos
+
+33
+00:01:52,530 --> 00:01:55,530
+son más altos que este valor.
+
+34
+00:01:55,530 --> 00:01:58,890
+Y por último, también podemos identificar el modo, que
+
+35
+00:01:58,890 --> 00:02:02,410
+es el valor más frecuente.
+
+36
+00:02:02,410 --> 00:02:07,070
+Podemos agrupar estas alturas en bandejas de igual tamaño y contarlas
+
+37
+00:02:07,070 --> 00:02:10,389
+cuántos alumnos entran en cada casilla.
+
+38
+00:02:10,389 --> 00:02:12,750
+Este proceso de recuento y agrupación
+
+39
+00:02:12,750 --> 00:02:15,870
+es la base de una técnica de visualización
+
+40
+00:02:15,870 --> 00:02:18,990
+para explorar las distribuciones.
+
+41
+00:02:18,990 --> 00:02:22,790
+Aquí podemos ver dónde se centran las alturas de la mayoría de los estudiantes
+
+42
+00:02:22,790 --> 00:02:26,670
+y cómo se distribuyen por el área de distribución.
+
+43
+00:02:26,670 --> 00:02:29,210
+Algunos individuos son relativamente altos,
+
+44
+00:02:29,210 --> 00:02:33,390
+pero la mayoría de las alturas se agrupan alrededor del centro.
+
+45
+00:02:33,390 --> 00:02:36,370
+Ahora, en lugar de usar puntos individuales,
+
+46
+00:02:36,370 --> 00:02:41,670
+podemos utilizar un gráfico de barras para crear un histograma.
+
+47
+00:02:41,670 --> 00:02:46,390
+Un histograma muestra la frecuencia con la que los valores aparecen en cada casilla,
+
+48
+00:02:46,390 --> 00:02:49,910
+o en nuestro caso, un rango de altura.
+
+49
+00:02:49,910 --> 00:02:54,910
+Esto nos da una idea clara de la distribución de nuestra muestra,
+
+50
+00:02:54,910 --> 00:03:00,190
+dónde están la mayoría de los estudiantes y cómo están repartidos el resto.
+
+51
+00:03:00,190 --> 00:03:03,230
+Podemos cambiar el tamaño del contenedor...
+
+52
+00:03:03,230 --> 00:03:06,040
+el tamaño integral... para ver cuánto
+
+53
+00:03:06,040 --> 00:03:09,120
+La variabilidad es visible en los datos.
+
+54
+00:03:09,120 --> 00:03:11,600
+Un tamaño de recipiente más pequeño muestra variaciones
+
+55
+00:03:11,600 --> 00:03:15,880
+a una granularidad mayor, mientras que los tamaños de cubo más grandes
+
+56
+00:03:15,880 --> 00:03:18,200
+reducir los detalles visibles.
+
+57
+00:03:18,200 --> 00:03:22,120
+Por lo tanto, si los bins son demasiado pequeños, el resultado
+
+58
+00:03:22,120 --> 00:03:26,020
+pueden ser ruidosos, mientras que si son demasiado grandes,
+
+59
+00:03:26,020 --> 00:03:30,080
+la distribución puede simplificarse en exceso.
+
+60
+00:03:30,080 --> 00:03:34,920
+También podemos presentar los datos mediante la estimación de la densidad del núcleo,
+
+61
+00:03:34,920 --> 00:03:39,080
+o KDE, que ofrece una alternativa sin problemas
+
+62
+00:03:39,080 --> 00:03:41,760
+al histograma tradicional.
+
+63
+00:03:41,760 --> 00:03:46,920
+A diferencia de los histogramas, KDE no se basa en el tamaño de las casillas.
+
+64
+00:03:46,920 --> 00:03:50,720
+y ofrece una visualización más clara de la forma
+
+65
+00:03:50,720 --> 00:03:53,240
+de la distribución de los datos.
+
+66
+00:03:53,240 --> 00:03:59,440
+Otra alternativa es una trama de violines, que es un KDE reflejado.
+
+67
+00:03:59,440 --> 00:04:03,120
+Es útil para comparar dos distribuciones,
+
+68
+00:04:03,120 --> 00:04:06,260
+como la distribución de las alturas para hombres y mujeres
+
+69
+00:04:06,260 --> 00:04:09,220
+estudiantes en nuestro ejemplo.
+
+70
+00:04:09,220 --> 00:04:13,780
+Hablando de la forma de los datos, la asimetría es una medida útil
+
+71
+00:04:13,780 --> 00:04:19,899
+que capta la asimetría, o inclinación, de una distribución de datos.
+
+72
+00:04:19,899 --> 00:04:23,940
+Nos ayuda a comprender si los datos están sesgados o en un
+
+73
+00:04:23,940 --> 00:04:25,980
+lado de la distribución.
+
+74
+00:04:25,980 --> 00:04:29,020
+Por ejemplo, si los puntos son uniformes
+
+75
+00:04:29,020 --> 00:04:31,380
+distribuidos alrededor del centro, los datos
+
+76
+00:04:31,380 --> 00:04:34,300
+son simétricos y no muestran desviaciones.
+
+77
+00:04:34,300 --> 00:04:37,740
+Si la mayoría de los puntos de datos se agrupan hacia la izquierda,
+
+78
+00:04:37,740 --> 00:04:43,020
+con una larga cola a la derecha, lo llamamos un sesgo positivo.
+
+79
+00:04:43,020 --> 00:04:45,980
+Si la mayoría de los puntos se agrupan hacia la derecha,
+
+80
+00:04:45,980 --> 00:04:50,260
+con una larga cola a la izquierda, eso es un sesgo negativo.
+
+81
+00:04:50,260 --> 00:04:52,980
+En una distribución perfectamente simétrica,
+
+82
+00:04:52,980 --> 00:04:57,300
+la media, la mediana y la moda son idénticas.
+
+83
+00:04:57,300 --> 00:05:01,300
+Sin embargo, en distribuciones asimétricas o sesgadas,
+
+84
+00:05:01,300 --> 00:05:04,500
+estas tres medidas difieren.
+
+85
+00:05:04,500 --> 00:05:07,590
+Hablemos de valores atípicos.
+
+86
+00:05:07,590 --> 00:05:13,710
+Un valor atípico es un valor inusualmente alto o bajo en nuestro conjunto de datos.
+
+87
+00:05:13,710 --> 00:05:17,050
+Aunque, en muchos casos, los valores atípicos son de esperar,
+
+88
+00:05:17,050 --> 00:05:19,670
+también pueden producirse debido a un error.
+
+89
+00:05:19,670 --> 00:05:22,830
+Por ejemplo, digamos que estamos llevando a cabo
+
+90
+00:05:22,830 --> 00:05:26,190
+nuestro estudio sobre las alturas de los estudiantes preguntándoles
+
+91
+00:05:26,190 --> 00:05:29,390
+para informar de sus alturas, y uno de los estudiantes
+
+92
+00:05:29,390 --> 00:05:34,630
+informa en broma de que su altura es la de la Torre Eiffel.
+
+93
+00:05:34,630 --> 00:05:37,230
+Ahora, cuando trazamos los resultados, el histograma
+
+94
+00:05:37,230 --> 00:05:39,590
+podría ser algo así.
+
+95
+00:05:39,590 --> 00:05:41,650
+Nuestra media está ahora distorsionada.
+
+96
+00:05:41,650 --> 00:05:45,470
+Se eleva a más de 190 pulgadas.
+
+97
+00:05:45,470 --> 00:05:51,550
+Esto demuestra que un único valor atípico puede influir mucho en la media.
+
+98
+00:05:51,550 --> 00:05:56,230
+Sin embargo, la mediana se mantiene en unas 65 pulgadas,
+
+99
+00:05:56,230 --> 00:06:00,630
+que refleja la verdadera tendencia central de los datos.
+
+100
+00:06:00,630 --> 00:06:05,030
+Cuando inspeccionamos el conjunto de datos, vemos que este altísimo
+
+101
+00:06:05,030 --> 00:06:08,290
+valor es claramente erróneo.
+
+102
+00:06:08,290 --> 00:06:12,730
+Podemos eliminarlo con seguridad para analizar eficazmente nuestros datos.
+
+103
+00:06:12,730 --> 00:06:16,330
+Por eso siempre es importante inspeccionar visualmente
+
+104
+00:06:16,330 --> 00:06:21,250
+los datos antes de realizar un análisis o sacar conclusiones.
+
+105
+00:06:21,250 --> 00:06:24,290
+Asegúrese de que todo tiene sentido.
+
+106
+00:06:24,290 --> 00:06:27,850
+Así que volviendo a nuestras estadísticas descriptivas,
+
+107
+00:06:27,850 --> 00:06:32,370
+La media es adecuada cuando los datos son simétricos.
+
+108
+00:06:32,370 --> 00:06:34,650
+La mediana es especialmente útil
+
+109
+00:06:34,650 --> 00:06:37,530
+cuando hay valores atípicos, ya que
+
+110
+00:06:37,530 --> 00:06:40,570
+es más resistente a los valores extremos,
+
+111
+00:06:40,570 --> 00:06:42,450
+como el que acabamos de ver.
+
+112
+00:06:42,450 --> 00:06:44,610
+Por último, el modo
+
+113
+00:06:44,610 --> 00:06:48,690
+en datos categóricos, donde representa la frecuencia más
+
+114
+00:06:48,690 --> 00:06:51,450
+que se produce en esta categoría.
+
+115
+00:06:51,450 --> 00:06:55,370
+Hablemos de varianza y desviación típica.
+
+116
+00:06:55,370 --> 00:06:59,850
+La varianza y la desviación estándar son las dos formas más comunes
+
+117
+00:06:59,850 --> 00:07:03,690
+para describir la dispersión de los valores en un dato continuo
+
+118
+00:07:03,690 --> 00:07:05,250
+set.
+
+119
+00:07:05,250 --> 00:07:09,340
+La varianza de la muestra es la suma de las desviaciones al cuadrado
+
+120
+00:07:09,340 --> 00:07:13,620
+de la media muestral dividida por n menos 1,
+
+121
+00:07:13,620 --> 00:07:15,900
+donde n es el tamaño de la muestra.
+
+122
+00:07:15,900 --> 00:07:20,540
+La desviación típica es la raíz cuadrada de esta varianza.
+
+123
+00:07:20,540 --> 00:07:24,460
+Ambos cuantifican en qué medida los valores individuales
+
+124
+00:07:24,460 --> 00:07:27,340
+desviarse de la media.
+
+125
+00:07:27,340 --> 00:07:30,300
+¿Por qué es importante la desviación típica?
+
+126
+00:07:30,300 --> 00:07:34,060
+La desviación típica muestra la dispersión de los puntos de datos
+
+127
+00:07:34,060 --> 00:07:36,260
+están alrededor de la media.
+
+128
+00:07:36,260 --> 00:07:40,620
+Nos ayuda a comprender la coherencia de los datos.
+
+129
+00:07:40,620 --> 00:07:44,340
+Los valores más pequeños significan que los datos están muy agrupados,
+
+130
+00:07:44,340 --> 00:07:48,300
+mientras que los valores más altos indican una mayor dispersión y más
+
+131
+00:07:48,300 --> 00:07:50,220
+variación.
+
+132
+00:07:50,220 --> 00:07:56,300
+Muestra la distancia media del punto de datos con respecto a la media.
+
+133
+00:07:56,300 --> 00:07:59,380
+En una distribución normal, algo particularmente
+
+134
+00:07:59,380 --> 00:08:01,540
+sucede algo interesante.
+
+135
+00:08:01,540 --> 00:08:07,380
+Alrededor del 68% de los datos se sitúan dentro de una desviación estándar
+
+136
+00:08:07,380 --> 00:08:09,200
+de la media...
+
+137
+00:08:09,200 --> 00:08:13,840
+es decir, entre la media menos 1 desviación típica
+
+138
+00:08:13,840 --> 00:08:18,240
+y la media más 1 desviación típica.
+
+139
+00:08:18,240 --> 00:08:23,200
+Además, si ampliamos esto a la media menos dos
+
+140
+00:08:23,200 --> 00:08:28,360
+desviaciones típicas y media más dos desviaciones típicas,
+
+141
+00:08:28,360 --> 00:08:33,360
+incluiremos el 95% de la muestra.
+
+142
+00:08:33,360 --> 00:08:38,200
+Por último, cuando observamos el rango desde la media menos tres
+
+143
+00:08:38,200 --> 00:08:43,400
+desviaciones estándar a la media más tres desviaciones estándar,
+
+144
+00:08:43,400 --> 00:08:45,640
+la gama incluirá casi todos
+
+145
+00:08:45,640 --> 00:08:51,320
+de la muestra, es decir, aproximadamente el 99,7%.
+
+146
+00:08:51,320 --> 00:08:59,640
+Es lo que se conoce como regla empírica o regla del 68-95-99,7,
+
+147
+00:08:59,640 --> 00:09:05,200
+y sólo se aplica a distribuciones normales.
+
+148
+00:09:05,200 --> 00:09:09,650
+Hablemos también de cuantiles y percentiles.
+
+149
+00:09:09,650 --> 00:09:13,690
+Los cuantiles son valores que dividen un conjunto de datos
+
+150
+00:09:13,690 --> 00:09:17,090
+en intervalos de igual tamaño.
+
+151
+00:09:17,090 --> 00:09:22,930
+Por ejemplo, los cuartiles dividen los datos en cuatro partes iguales
+
+152
+00:09:22,930 --> 00:09:27,490
+para que cada parte contenga aproximadamente el mismo número
+
+153
+00:09:27,490 --> 00:09:29,530
+de puntos de datos.
+
+154
+00:09:29,530 --> 00:09:34,130
+Los percentiles, por su parte, se refieren a la posición
+
+155
+00:09:34,130 --> 00:09:37,410
+de valores dentro de un conjunto de datos.
+
+156
+00:09:37,410 --> 00:09:41,210
+Por ejemplo, si tenemos 100 alumnos,
+
+157
+00:09:41,210 --> 00:09:44,410
+y los dividimos en cuartiles,
+
+158
+00:09:44,410 --> 00:09:49,130
+habrá 25 estudiantes en cada cuartil.
+
+159
+00:09:49,130 --> 00:09:54,810
+A continuación, podemos referirnos a estos puntos de datos utilizando percentiles,
+
+160
+00:09:54,810 --> 00:09:57,090
+que representan la posición de rango
+
+161
+00:09:57,090 --> 00:10:01,010
+de un valor dentro del conjunto de datos.
+
+162
+00:10:01,010 --> 00:10:04,450
+El boxplot es una importante herramienta de visualización
+
+163
+00:10:04,450 --> 00:10:08,990
+porque resume cinco estadísticas clave.
+
+164
+00:10:08,990 --> 00:10:12,510
+Aquí podemos ver el primer cuartil,
+
+165
+00:10:12,510 --> 00:10:16,550
+que corresponde al percentil 25,
+
+166
+00:10:16,550 --> 00:10:23,790
+lo que significa que el 25% de los valores de los datos están por debajo de este punto.
+
+167
+00:10:23,790 --> 00:10:27,230
+La mediana, que es el segundo cuartil,
+
+168
+00:10:27,230 --> 00:10:32,230
+o el percentil 50, indica que la mitad de los datos
+
+169
+00:10:32,230 --> 00:10:37,470
+queda por debajo de ese valor y la mitad por encima.
+
+170
+00:10:37,470 --> 00:10:42,350
+El tercer cuartil, que es el percentil 75,
+
+171
+00:10:42,350 --> 00:10:48,470
+lo que significa que el 75% de los datos se encuentran por debajo de este valor y el 25%
+
+172
+00:10:48,470 --> 00:10:51,190
+arriba.
+
+173
+00:10:51,190 --> 00:10:54,790
+Y como cuarta y quinta estadística clave,
+
+174
+00:10:54,790 --> 00:10:59,350
+también podemos ver el mínimo y el máximo que no
+
+175
+00:10:59,350 --> 00:11:03,190
+incluir valores atípicos en el gráfico.
+
+176
+00:11:03,190 --> 00:11:07,330
+Así que también nos ayuda a visualizar el centro, extendido,
+
+177
+00:11:07,330 --> 00:11:11,500
+y posibles valores atípicos como puntos en nuestros datos.
+

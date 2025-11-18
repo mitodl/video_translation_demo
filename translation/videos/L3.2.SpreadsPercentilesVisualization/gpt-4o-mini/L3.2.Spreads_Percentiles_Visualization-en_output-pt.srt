@@ -1,0 +1,584 @@
+1
+00:00:00,000 --> 00:00:04,340
+INSTRUTOR: Até agora, analisamos a variável única,
+
+2
+00:00:04,340 --> 00:00:06,320
+as alturas dos alunos.
+
+3
+00:00:06,320 --> 00:00:11,480
+Esse tipo de análise é chamado de análise univariada, que
+
+4
+00:00:11,480 --> 00:00:15,920
+tem como objetivo descrever e resumir as características das variáveis
+
+5
+00:00:15,920 --> 00:00:20,210
+usando estatísticas descritivas,
+
+6
+00:00:20,210 --> 00:00:24,210
+coisas como média, mediana, desvio padrão,
+
+7
+00:00:24,210 --> 00:00:30,530
+e visualizações, gráficos como histogramas e diagramas de caixa.
+
+8
+00:00:30,530 --> 00:00:35,030
+Na análise bivariada, exploramos duas variáveis
+
+9
+00:00:35,030 --> 00:00:37,280
+e sua relação.
+
+10
+00:00:37,280 --> 00:00:42,710
+E na análise multivariada, olhamos para três ou mais variáveis
+
+11
+00:00:42,710 --> 00:00:46,400
+simultaneamente e, novamente, tentamos entender
+
+12
+00:00:46,400 --> 00:00:51,530
+suas, desta vez, relações mais complexas, potencialmente.
+
+13
+00:00:51,530 --> 00:00:55,160
+Então, vamos passar da nossa análise univariada
+
+14
+00:00:55,160 --> 00:00:58,880
+das alturas dos alunos para a análise bivariada, que
+
+15
+00:00:58,880 --> 00:01:03,800
+além dos dados de altura, também inclui os pesos dos alunos.
+
+16
+00:01:03,800 --> 00:01:07,270
+Agora, temos duas variáveis observacionais.
+
+17
+00:01:07,270 --> 00:01:09,420
+E é interessante quantificar
+
+18
+00:01:09,420 --> 00:01:11,290
+a relação entre elas—
+
+19
+00:01:11,290 --> 00:01:15,810
+ou seja, medir como as variáveis covariam.
+
+20
+00:01:15,810 --> 00:01:19,020
+Pesos e alturas estão relacionados entre si.
+
+21
+00:01:19,020 --> 00:01:23,700
+Alunos mais altos tendem a pesar mais do que alunos mais baixos.
+
+22
+00:01:23,700 --> 00:01:27,480
+Podemos plotar isso, uma variável no eixo x
+
+23
+00:01:27,480 --> 00:01:30,210
+e a outra no eixo y.
+
+24
+00:01:30,210 --> 00:01:33,540
+Esse tipo de gráfico é chamado de gráfico de dispersão.
+
+25
+00:01:33,540 --> 00:01:37,980
+Cada ponto representa um aluno.
+
+26
+00:01:37,980 --> 00:01:40,050
+A grande vantagem dos gráficos de dispersão
+
+27
+00:01:40,050 --> 00:01:42,970
+é que eles nos ajudam a ver padrões,
+
+28
+00:01:42,970 --> 00:01:46,830
+como as duas variáveis se relacionam.
+
+29
+00:01:46,830 --> 00:01:50,310
+Na figura, podemos observar um padrão crescente
+
+30
+00:01:50,310 --> 00:01:52,230
+da esquerda para a direita.
+
+31
+00:01:52,230 --> 00:01:55,560
+Isso significa que pesos e alturas estão positivamente
+
+32
+00:01:55,560 --> 00:01:58,560
+correlacionados entre si.
+
+33
+00:01:58,560 --> 00:02:00,780
+Esse tipo de relação também é
+
+34
+00:02:00,780 --> 00:02:05,940
+chamado de associação na análise bivariada.
+
+35
+00:02:05,940 --> 00:02:09,840
+Uma associação linear significa que os pontos formam mais ou menos
+
+36
+00:02:09,840 --> 00:02:11,230
+uma linha reta.
+
+37
+00:02:11,230 --> 00:02:15,210
+No entanto, também podemos observar associações não lineares,
+
+38
+00:02:15,210 --> 00:02:18,030
+como padrões quadráticos.
+
+39
+00:02:18,030 --> 00:02:21,150
+E às vezes não há padrões claros,
+
+40
+00:02:21,150 --> 00:02:24,150
+como podemos ver na figura.
+
+41
+00:02:24,150 --> 00:02:27,820
+Além da forma da associação,
+
+42
+00:02:27,820 --> 00:02:31,170
+também nos importa a direção.
+
+43
+00:02:31,170 --> 00:02:34,540
+Se a inclinação da linha é para cima,
+
+44
+00:02:34,540 --> 00:02:37,530
+isso significa que a associação é positiva.
+
+45
+00:02:37,530 --> 00:02:42,360
+Se a inclinação é para baixo, a associação é negativa.
+
+46
+00:02:42,360 --> 00:02:46,350
+Também nos interessa a força da associação.
+
+47
+00:02:46,350 --> 00:02:49,860
+Se os pontos estão agrupados em torno da linha,
+
+48
+00:02:49,860 --> 00:02:52,890
+é uma associação forte.
+
+49
+00:02:52,890 --> 00:02:57,690
+Se os pontos estão mais dispersos, a associação é fraca.
+
+50
+00:02:57,690 --> 00:03:00,810
+É importante notar que a força não
+
+51
+00:03:00,810 --> 00:03:03,240
+depende da direção.
+
+52
+00:03:03,240 --> 00:03:05,850
+Você pode ter uma associação positiva forte ou
+
+53
+00:03:05,850 --> 00:03:09,600
+uma associação negativa forte.
+
+54
+00:03:09,600 --> 00:03:13,710
+Podemos também quantificar tanto a força quanto a direção
+
+55
+00:03:13,710 --> 00:03:18,290
+de uma associação linear usando o coeficiente de correlação,
+
+56
+00:03:18,290 --> 00:03:22,270
+que varia de menos 1 a 1.
+
+57
+00:03:22,270 --> 00:03:26,090
+Quanto mais próximo o valor está de 1 ou menos 1,
+
+58
+00:03:26,090 --> 00:03:29,470
+mais forte é a relação linear.
+
+59
+00:03:29,470 --> 00:03:35,920
+Um valor perto de 0 significa que há pouca ou nenhuma associação linear.
+
+60
+00:03:35,920 --> 00:03:43,450
+Por exemplo, uma correlação positiva forte pode estar em torno de 0,9.
+
+61
+00:03:43,450 --> 00:03:46,720
+Se as variáveis não estão relacionadas, podemos
+
+62
+00:03:46,720 --> 00:03:51,070
+ver algo como 0,01.
+
+63
+00:03:51,070 --> 00:03:54,910
+No entanto, devemos ter em mente que correlação não
+
+64
+00:03:54,910 --> 00:03:56,950
+implica causalidade.
+
+65
+00:03:56,950 --> 00:03:59,440
+Só porque duas coisas se movem juntas
+
+66
+00:03:59,440 --> 00:04:03,100
+não significa que uma causa a outra.
+
+67
+00:04:03,100 --> 00:04:07,640
+Mesmo em nosso exemplo, onde altura e peso estão relacionados,
+
+68
+00:04:07,640 --> 00:04:10,960
+a relação não é diretamente causal.
+
+69
+00:04:10,960 --> 00:04:14,380
+Sim, elas estão correlacionadas, mas a altura não causa diretamente
+
+70
+00:04:14,380 --> 00:04:15,380
+o peso.
+
+71
+00:04:15,380 --> 00:04:20,089
+Em vez disso, fatores subjacentes compartilhados como idade, nutrição,
+
+72
+00:04:20,089 --> 00:04:24,110
+e biologia influenciam ambos.
+
+73
+00:04:24,110 --> 00:04:27,350
+Também podemos usar a covariância para medir como
+
+74
+00:04:27,350 --> 00:04:29,780
+duas variáveis variam juntas.
+
+75
+00:04:29,780 --> 00:04:32,000
+A covariância é positiva se elas
+
+76
+00:04:32,000 --> 00:04:34,730
+aumentam ou diminuem juntas.
+
+77
+00:04:34,730 --> 00:04:38,840
+É negativa se uma aumenta enquanto a outra diminui.
+
+78
+00:04:38,840 --> 00:04:44,900
+E a covariância é próxima de 0 se não houver um padrão consistente.
+
+79
+00:04:44,900 --> 00:04:49,310
+Tanto a covariância quanto a correlação são estatísticas de resumo
+
+80
+00:04:49,310 --> 00:04:52,310
+que descrevem como dois conjuntos de observações
+
+81
+00:04:52,310 --> 00:04:54,170
+se relacionam entre si.
+
+82
+00:04:54,170 --> 00:04:57,120
+A covariância nos dá a direção da relação,
+
+83
+00:04:57,120 --> 00:05:00,140
+mas não a força de uma maneira significativa,
+
+84
+00:05:00,140 --> 00:05:03,590
+enquanto a correlação nos ajuda a quantificar
+
+85
+00:05:03,590 --> 00:05:08,450
+tanto a direção quanto a força de uma relação linear.
+
+86
+00:05:08,450 --> 00:05:13,580
+Agora, vamos falar sobre um fenômeno estatístico clássico,
+
+87
+00:05:13,580 --> 00:05:16,220
+o paradoxo de Simpson.
+
+88
+00:05:16,220 --> 00:05:19,430
+Suponha que coletamos dados sobre a altura dos alunos
+
+89
+00:05:19,430 --> 00:05:24,630
+e quantos pontos eles marcam no basquete.
+
+90
+00:05:24,630 --> 00:05:27,280
+Quando olhamos para os dados gerais,
+
+91
+00:05:27,280 --> 00:05:31,590
+pode parecer que essas duas variáveis estão negativamente
+
+92
+00:05:31,590 --> 00:05:32,740
+correlacionadas.
+
+93
+00:05:32,740 --> 00:05:38,918
+Ou seja, alunos mais altos parecem marcar menos pontos.
+
+94
+00:05:38,918 --> 00:05:40,830
+Hm.
+
+95
+00:05:40,830 --> 00:05:43,410
+No entanto, quando separamos os dados
+
+96
+00:05:43,410 --> 00:05:47,140
+em dois subgrupos, masculino e feminino,
+
+97
+00:05:47,140 --> 00:05:50,140
+podemos descobrir que dentro de cada grupo,
+
+98
+00:05:50,140 --> 00:05:54,060
+alunos mais altos tendem a marcar mais pontos.
+
+99
+00:05:54,060 --> 00:05:57,880
+Então, os dados gerais sugerem uma correlação negativa,
+
+100
+00:05:57,880 --> 00:06:01,800
+mas os dados dos subgrupos revelam correlações positivas.
+
+101
+00:06:01,800 --> 00:06:04,530
+em ambos os grupos.
+
+102
+00:06:04,530 --> 00:06:06,900
+O que isso significa?
+
+103
+00:06:06,900 --> 00:06:10,680
+Isso significa que há outro fator, outra variável--
+
+104
+00:06:10,680 --> 00:06:12,580
+neste caso, gênero--
+
+105
+00:06:12,580 --> 00:06:15,690
+que influencia a relação observada.
+
+106
+00:06:15,690 --> 00:06:20,250
+Essa variável é chamada de variável de confusão.
+
+107
+00:06:20,250 --> 00:06:22,770
+Em termos de terminologia, referimo-nos
+
+108
+00:06:22,770 --> 00:06:27,420
+à altura como a variável independente e pontos de basquete
+
+109
+00:06:27,420 --> 00:06:30,390
+como a variável dependente.
+
+110
+00:06:30,390 --> 00:06:33,270
+Portanto, a essência do paradoxo de Simpson
+
+111
+00:06:33,270 --> 00:06:37,780
+é que se ignorarmos subgrupos, como gênero, neste caso,
+
+112
+00:06:37,780 --> 00:06:40,900
+a tendência geral pode ser enganosa.
+
+113
+00:06:40,900 --> 00:06:43,530
+Em outras palavras, uma tendência que aparece
+
+114
+00:06:43,530 --> 00:06:48,570
+em diferentes grupos de dados desaparece ou se inverte
+
+115
+00:06:48,570 --> 00:06:51,840
+quando os grupos são combinados.
+
+116
+00:06:51,840 --> 00:06:54,030
+É uma ilusão estatística causada
+
+117
+00:06:54,030 --> 00:06:57,870
+por essas variáveis ocultas ou de confusão que afetam
+
+118
+00:06:57,870 --> 00:07:00,540
+a relação observada.
+
+119
+00:07:00,540 --> 00:07:03,270
+Esse paradoxo é outro lembrete importante
+
+120
+00:07:03,270 --> 00:07:07,200
+de que correlação não implica causalidade.
+
+121
+00:07:07,200 --> 00:07:10,470
+Agora, contraste isso com um exemplo clássico
+
+122
+00:07:10,470 --> 00:07:12,430
+de uma correlação espúria.
+
+123
+00:07:12,430 --> 00:07:15,600
+Vendas de sorvete e ataques de tubarão.
+
+124
+00:07:15,600 --> 00:07:18,340
+Essas duas variáveis são correlacionadas.
+
+125
+00:07:18,340 --> 00:07:22,780
+Mas comer sorvete causa ataques de tubarão?
+
+126
+00:07:22,780 --> 00:07:24,480
+Claro que não.
+
+127
+00:07:24,480 --> 00:07:27,360
+A verdadeira explicação é um terceiro fator.
+
+128
+00:07:27,360 --> 00:07:31,320
+Clima quente aumenta tanto as vendas de sorvete quanto a atividade
+
+129
+00:07:31,320 --> 00:07:36,070
+na praia, o que, por sua vez, eleva as chances de ataques de tubarão.
+
+130
+00:07:36,070 --> 00:07:40,180
+Isso é o que chamamos de correlação espúria ou enganosa, quando
+
+131
+00:07:40,180 --> 00:07:44,560
+duas variáveis parecem relacionadas, mas a conexão é, na verdade,
+
+132
+00:07:44,560 --> 00:07:47,890
+impulsionada por um fator externo.
+
+133
+00:07:47,890 --> 00:07:51,340
+Para resumir a palestra de hoje, nós
+
+134
+00:07:51,340 --> 00:07:53,980
+falamos sobre como visualizar dados
+
+135
+00:07:53,980 --> 00:07:57,470
+com histogramas, box plots e gráficos de dispersão,
+
+136
+00:07:57,470 --> 00:08:02,050
+e exploramos ideias-chave como tendência central, dispersão,
+
+137
+00:08:02,050 --> 00:08:05,950
+e relações entre variáveis.
+
+138
+00:08:05,950 --> 00:08:10,840
+Até agora, vimos como as variáveis podem estar associadas--
+
+139
+00:08:10,840 --> 00:08:14,740
+não apenas a direção, mas também a forma e a força
+
+140
+00:08:14,740 --> 00:08:16,540
+daquelas relações.
+
+141
+00:08:16,540 --> 00:08:20,380
+Depois, passamos para correlação e covariância
+
+142
+00:08:20,380 --> 00:08:24,370
+como ferramentas para quantificar esses padrões.
+
+143
+00:08:24,370 --> 00:08:28,340
+No final, estatística não é apenas sobre calcular números.
+
+144
+00:08:28,340 --> 00:08:31,360
+É sobre tomar decisões sob incerteza
+
+145
+00:08:31,360 --> 00:08:36,159
+e fazer isso de uma maneira cuidadosa, clara e transparente.
+
+146
+00:08:36,159 --> 00:08:38,640
+Vejo vocês na próxima palestra.
+

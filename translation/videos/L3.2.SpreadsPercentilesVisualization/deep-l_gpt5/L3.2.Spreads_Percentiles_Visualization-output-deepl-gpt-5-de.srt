@@ -1,0 +1,584 @@
+1
+00:00:00,000 --> 00:00:04,340
+DOZENT: Bis jetzt haben wir die einzelne Variable analysiert,
+
+2
+00:00:04,340 --> 00:00:06,320
+die Körpergröße der Schüler.
+
+3
+00:00:06,320 --> 00:00:11,480
+Diese Art der Analyse wird univariate Analyse genannt, die
+
+4
+00:00:11,480 --> 00:00:15,920
+zum Ziel hat, die Variablen zu beschreiben und zusammenzufassen
+
+5
+00:00:15,920 --> 00:00:20,210
+ihre Merkmale mithilfe der deskriptiven Statistik
+
+6
+00:00:20,210 --> 00:00:24,210
+Dinge wie Mittelwert, Median, Standardabweichung,
+
+7
+00:00:24,210 --> 00:00:30,530
+sowie Visualisierungen, Diagramme wie Histogramme und Boxplots.
+
+8
+00:00:30,530 --> 00:00:35,030
+In der bivariaten Analyse untersuchen wir zwei Variablen
+
+9
+00:00:35,030 --> 00:00:37,280
+und ihre Beziehung.
+
+10
+00:00:37,280 --> 00:00:42,710
+Und bei der multivariaten Analyse betrachten wir drei oder mehr Variablen
+
+11
+00:00:42,710 --> 00:00:46,400
+gleichzeitig und versuchen dabei erneut zu verstehen
+
+12
+00:00:46,400 --> 00:00:51,530
+ihre – diesmal potenziell komplexeren – Beziehungen.
+
+13
+00:00:51,530 --> 00:00:55,160
+Wechseln wir nun von unserer univariaten Analyse
+
+14
+00:00:55,160 --> 00:00:58,880
+der Körpergröße der Schüler zur bivariaten Analyse, die
+
+15
+00:00:58,880 --> 00:01:03,800
+zusätzlich zu den Größenangaben auch die Gewichte der Schüler umfasst.
+
+16
+00:01:03,800 --> 00:01:07,270
+enthält neben den Angaben zur Körpergröße auch die Gewichte der Schüler.
+
+17
+00:01:07,270 --> 00:01:09,420
+Und es ist interessant, zu quantifizieren
+
+18
+00:01:09,420 --> 00:01:11,290
+die Beziehung zwischen ihnen—
+
+19
+00:01:11,290 --> 00:01:15,810
+d. h. zu messen, wie die Variablen kovariieren.
+
+20
+00:01:15,810 --> 00:01:19,020
+Gewicht und Größe hängen miteinander zusammen.
+
+21
+00:01:19,020 --> 00:01:23,700
+Größere Schüler neigen dazu, mehr zu wiegen als kleinere Schüler.
+
+22
+00:01:23,700 --> 00:01:27,480
+Wir können das darstellen, eine Variable auf der x‑Achse
+
+23
+00:01:27,480 --> 00:01:30,210
+und die andere auf der y‑Achse.
+
+24
+00:01:30,210 --> 00:01:33,540
+Diese Art von Diagramm nennt man Streudiagramm.
+
+25
+00:01:33,540 --> 00:01:37,980
+Jeder Punkt repräsentiert einen Schüler.
+
+26
+00:01:37,980 --> 00:01:40,050
+Das Tolle an Streudiagrammen
+
+27
+00:01:40,050 --> 00:01:42,970
+Das Tolle an Streudiagrammen ist
+
+28
+00:01:42,970 --> 00:01:46,830
+ist, dass sie uns helfen, Muster zu erkennen,
+
+29
+00:01:46,830 --> 00:01:50,310
+wie sich die beiden Variablen zueinander verhalten.
+
+30
+00:01:50,310 --> 00:01:52,230
+In der Abbildung ist ein zunehmendes Muster zu erkennen
+
+31
+00:01:52,230 --> 00:01:55,560
+von links nach rechts.
+
+32
+00:01:55,560 --> 00:01:58,560
+Dies bedeutet, dass Gewicht und Größe positiv
+
+33
+00:01:58,560 --> 00:02:00,780
+miteinander korrelieren.
+
+34
+00:02:00,780 --> 00:02:05,940
+in der bivariaten Analyse als Assoziation bezeichnet.
+
+35
+00:02:05,940 --> 00:02:09,840
+Ein linearer Zusammenhang bedeutet, dass die Punkte mehr oder weniger
+
+36
+00:02:09,840 --> 00:02:11,230
+Ein linearer Zusammenhang bedeutet, dass die Punkte mehr oder weniger
+
+37
+00:02:11,230 --> 00:02:15,210
+eine gerade Linie.
+
+38
+00:02:15,210 --> 00:02:18,030
+Wir können jedoch auch nicht-lineare Zusammenhänge beobachten,
+
+39
+00:02:18,030 --> 00:02:21,150
+wie z. B. quadratische Muster.
+
+40
+00:02:21,150 --> 00:02:24,150
+Und manchmal gibt es keine klaren Muster,
+
+41
+00:02:24,150 --> 00:02:27,820
+Neben der Form des Zusammenhangs
+
+42
+00:02:27,820 --> 00:02:31,170
+ist uns auch die Richtung wichtig.
+
+43
+00:02:31,170 --> 00:02:34,540
+wir kümmern uns auch um die Richtung.
+
+44
+00:02:34,540 --> 00:02:37,530
+Wenn die Steigung der Linie nach oben gerichtet ist,
+
+45
+00:02:37,530 --> 00:02:42,360
+bedeutet dies, dass die Assoziation positiv ist.
+
+46
+00:02:42,360 --> 00:02:46,350
+Wichtig ist auch die Stärke des Zusammenhangs.
+
+47
+00:02:46,350 --> 00:02:49,860
+Uns liegt auch die Stärke der Vereinigung am Herzen.
+
+48
+00:02:49,860 --> 00:02:52,890
+Wenn die Punkte eng um die Linie angeordnet sind,
+
+49
+00:02:52,890 --> 00:02:57,690
+es ist eine starke Assoziation.
+
+50
+00:02:57,690 --> 00:03:00,810
+Es ist wichtig zu beachten, dass die Stärke nicht
+
+51
+00:03:00,810 --> 00:03:03,240
+von der Richtung abhängt.
+
+52
+00:03:03,240 --> 00:03:05,850
+hängen von der Richtung ab.
+
+53
+00:03:05,850 --> 00:03:09,600
+Sie können eine starke positive oder
+
+54
+00:03:09,600 --> 00:03:13,710
+eine starke negative Assoziation.
+
+55
+00:03:13,710 --> 00:03:18,290
+Außerdem können wir sowohl die Stärke als auch die Richtung quantifizieren
+
+56
+00:03:18,290 --> 00:03:22,270
+der von minus 1 bis 1 reicht.
+
+57
+00:03:22,270 --> 00:03:26,090
+die von minus 1 bis 1 reicht.
+
+58
+00:03:26,090 --> 00:03:29,470
+Je näher der Wert an 1 oder minus 1 ist,
+
+59
+00:03:29,470 --> 00:03:35,920
+desto stärker ist der lineare Zusammenhang.
+
+60
+00:03:35,920 --> 00:03:43,450
+Ein Wert nahe 0 bedeutet, dass ein geringer oder kein linearer Zusammenhang besteht.
+
+61
+00:03:43,450 --> 00:03:46,720
+Wenn die Variablen nicht miteinander zusammenhängen,
+
+62
+00:03:46,720 --> 00:03:51,070
+sieht man vielleicht so etwas wie 0,01.
+
+63
+00:03:51,070 --> 00:03:54,910
+Wir sollten jedoch bedenken, dass Korrelation
+
+64
+00:03:54,910 --> 00:03:56,950
+keine Kausalität impliziert.
+
+65
+00:03:56,950 --> 00:03:59,440
+eine Kausalität implizieren.
+
+66
+00:03:59,440 --> 00:04:03,100
+Nur weil sich zwei Dinge zusammen bewegen
+
+67
+00:04:03,100 --> 00:04:07,640
+bedeutet nicht, dass das eine das andere verursacht.
+
+68
+00:04:07,640 --> 00:04:10,960
+Selbst in unserem Beispiel, in dem Größe und Gewicht miteinander verbunden sind,
+
+69
+00:04:10,960 --> 00:04:14,380
+Ja, sie sind korreliert, aber die Körpergröße verursacht
+
+70
+00:04:14,380 --> 00:04:15,380
+das Gewicht nicht direkt.
+
+71
+00:04:15,380 --> 00:04:20,089
+Stattdessen beeinflussen gemeinsame zugrunde liegende Faktoren wie Alter und Ernährung
+
+72
+00:04:20,089 --> 00:04:24,110
+Stattdessen wurden die zugrundeliegenden Faktoren wie Alter und Ernährung gemeinsam betrachtet,
+
+73
+00:04:24,110 --> 00:04:27,350
+und die Biologie beeinflussen beides.
+
+74
+00:04:27,350 --> 00:04:29,780
+Wir können auch die Kovarianz verwenden, um zu messen, wie
+
+75
+00:04:29,780 --> 00:04:32,000
+zwei Variablen zusammen variieren.
+
+76
+00:04:32,000 --> 00:04:34,730
+Die Kovarianz ist positiv, wenn sie
+
+77
+00:04:34,730 --> 00:04:38,840
+gemeinsam zu- oder abnehmen.
+
+78
+00:04:38,840 --> 00:04:44,900
+Sie ist negativ, wenn die eine zunimmt, während die andere abnimmt.
+
+79
+00:04:44,900 --> 00:04:49,310
+Und die Kovarianz ist nahe 0, wenn es kein einheitliches Muster gibt.
+
+80
+00:04:49,310 --> 00:04:52,310
+Sowohl Kovarianz als auch Korrelation sind zusammenfassende Statistiken.
+
+81
+00:04:52,310 --> 00:04:54,170
+die beschreiben, wie zwei Gruppen von Beobachtungen
+
+82
+00:04:54,170 --> 00:04:57,120
+in Beziehung zueinander stehen.
+
+83
+00:04:57,120 --> 00:05:00,140
+Die Kovarianz gibt uns die Richtung der Beziehung an,
+
+84
+00:05:00,140 --> 00:05:03,590
+aber nicht die Stärke in einer sinnvollen Weise,
+
+85
+00:05:03,590 --> 00:05:08,450
+während die Korrelation uns hilft, zu quantifizieren
+
+86
+00:05:08,450 --> 00:05:13,580
+sowohl Richtung als auch Stärke einer linearen Beziehung.
+
+87
+00:05:13,580 --> 00:05:16,220
+Lassen Sie uns nun über ein klassisches statistisches Phänomen sprechen,
+
+88
+00:05:16,220 --> 00:05:19,430
+Simpsons Paradoxon.
+
+89
+00:05:19,430 --> 00:05:24,630
+Angenommen, wir sammeln Daten über die Körpergröße von Schülern
+
+90
+00:05:24,630 --> 00:05:27,280
+und wie viele Punkte sie beim Basketball erzielen.
+
+91
+00:05:27,280 --> 00:05:31,590
+könnte es scheinen, dass diese beiden Variablen negativ
+
+92
+00:05:31,590 --> 00:05:32,740
+korreliert sind.
+
+93
+00:05:32,740 --> 00:05:38,918
+korreliert.
+
+94
+00:05:38,918 --> 00:05:40,830
+Das heißt, dass größere Schüler offenbar weniger Punkte erzielen.
+
+95
+00:05:40,830 --> 00:05:43,410
+Wenn wir jedoch die Daten
+
+96
+00:05:43,410 --> 00:05:47,140
+in zwei Untergruppen trennen, männlich und weiblich,
+
+97
+00:05:47,140 --> 00:05:50,140
+stellen wir vielleicht fest, dass innerhalb jeder Gruppe
+
+98
+00:05:50,140 --> 00:05:54,060
+größere Schüler tendenziell mehr Punkte erzielen.
+
+99
+00:05:54,060 --> 00:05:57,880
+Die Gesamtdaten deuten also auf eine negative Korrelation hin,
+
+100
+00:05:57,880 --> 00:06:01,800
+aber die Untergruppendaten zeigen positive Korrelationen
+
+101
+00:06:01,800 --> 00:06:04,530
+in beiden Gruppen.
+
+102
+00:06:04,530 --> 00:06:06,900
+Was bedeutet das?
+
+103
+00:06:06,900 --> 00:06:10,680
+Es bedeutet, dass es einen weiteren Faktor, eine weitere Variable gibt—
+
+104
+00:06:10,680 --> 00:06:12,580
+Es bedeutet, dass es einen weiteren Faktor, eine weitere Variable gibt.
+
+105
+00:06:12,580 --> 00:06:15,690
+die die beobachtete Beziehung beeinflusst.
+
+106
+00:06:15,690 --> 00:06:20,250
+Diese Variable nennt man konfundierende Variable (Störvariable).
+
+107
+00:06:20,250 --> 00:06:22,770
+Was die Terminologie betrifft, sprechen wir von
+
+108
+00:06:22,770 --> 00:06:27,420
+der Körpergröße als unabhängiger Variable und den Basketballpunkten
+
+109
+00:06:27,420 --> 00:06:30,390
+als abhängiger Variable.
+
+110
+00:06:30,390 --> 00:06:33,270
+Die Essenz des Simpson-Paradoxons
+
+111
+00:06:33,270 --> 00:06:37,780
+besteht darin, dass, wenn wir Untergruppen – wie hier das Geschlecht – ignorieren,
+
+112
+00:06:37,780 --> 00:06:40,900
+der Gesamttrend irreführend sein kann.
+
+113
+00:06:40,900 --> 00:06:43,530
+Mit anderen Worten: Ein Trend, der
+
+114
+00:06:43,530 --> 00:06:48,570
+in verschiedenen Datengruppen auftritt, verschwindet oder sich umkehrt,
+
+115
+00:06:48,570 --> 00:06:51,840
+wenn die Gruppen zusammengefasst werden.
+
+116
+00:06:51,840 --> 00:06:54,030
+Es ist eine statistische Täuschung, hervorgerufen
+
+117
+00:06:54,030 --> 00:06:57,870
+durch solche versteckten oder konfundierenden Variablen, die
+
+118
+00:06:57,870 --> 00:07:00,540
+die beobachtete Beziehung beeinflussen.
+
+119
+00:07:00,540 --> 00:07:03,270
+Dieses Paradoxon ist eine weitere wichtige Erinnerung daran,
+
+120
+00:07:03,270 --> 00:07:07,200
+Dieses Paradoxon ist eine weitere wichtige Erinnerung
+
+121
+00:07:07,200 --> 00:07:10,470
+Stellen Sie dem nun ein klassisches Beispiel gegenüber
+
+122
+00:07:10,470 --> 00:07:12,430
+für eine Scheinkorrelation.
+
+123
+00:07:12,430 --> 00:07:15,600
+Eiscremeverkäufe und Haiangriffe.
+
+124
+00:07:15,600 --> 00:07:18,340
+Diese beiden Variablen sind korreliert.
+
+125
+00:07:18,340 --> 00:07:22,780
+Aber führt der Verzehr von Eiscreme zu Haiangriffen?
+
+126
+00:07:22,780 --> 00:07:24,480
+Natürlich nicht.
+
+127
+00:07:24,480 --> 00:07:27,360
+Die eigentliche Erklärung ist ein dritter Faktor.
+
+128
+00:07:27,360 --> 00:07:31,320
+Heißes Wetter erhöht sowohl den Eisverkauf als auch die Strandaktivität,
+
+129
+00:07:31,320 --> 00:07:36,070
+Heißes Wetter steigert sowohl den Eisverkauf als auch den Strand
+
+130
+00:07:36,070 --> 00:07:40,180
+Das nennen wir eine Scheinkorrelation bzw. irreführende Korrelation, wenn
+
+131
+00:07:40,180 --> 00:07:44,560
+Dies nennen wir eine unechte oder irreführende Korrelation, wenn
+
+132
+00:07:44,560 --> 00:07:47,890
+von einem externen Faktor getrieben wird.
+
+133
+00:07:47,890 --> 00:07:51,340
+Zusammenfassend haben wir heute
+
+134
+00:07:51,340 --> 00:07:53,980
+darüber gesprochen, wie man Daten visualisiert
+
+135
+00:07:53,980 --> 00:07:57,470
+mit Histogrammen, Boxplots und Streudiagrammen,
+
+136
+00:07:57,470 --> 00:08:02,050
+und zentrale Konzepte wie zentrale Tendenz, Streuung,
+
+137
+00:08:02,050 --> 00:08:05,950
+und Beziehungen zwischen Variablen.
+
+138
+00:08:05,950 --> 00:08:10,840
+Bisher haben wir uns angesehen, wie Variablen zusammenhängen können—
+
+139
+00:08:10,840 --> 00:08:14,740
+nicht nur die Richtung, sondern auch die Form und Stärke
+
+140
+00:08:14,740 --> 00:08:16,540
+dieser Beziehungen.
+
+141
+00:08:16,540 --> 00:08:20,380
+Dann sind wir zu Korrelation und Kovarianz übergegangen,
+
+142
+00:08:20,380 --> 00:08:24,370
+als Instrumente zur Quantifizierung dieser Muster.
+
+143
+00:08:24,370 --> 00:08:28,340
+Am Ende geht es in der Statistik nicht nur um das Rechnen mit Zahlen.
+
+144
+00:08:28,340 --> 00:08:31,360
+—
+
+145
+00:08:31,360 --> 00:08:36,159
+und dies sorgfältig, klar und transparent zu tun.
+
+146
+00:08:36,159 --> 00:08:38,640
+Bis zur nächsten Vorlesung.
+
