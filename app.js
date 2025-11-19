@@ -512,10 +512,6 @@ function getSubtitlePath(video, method, language) {
         return `translation/videos/${videoId}/${method}/${baseFilename}-output-deepl-${language}.srt`;
     } else if (method === 'gpt-5') {
         // gpt-5 uses: {baseFilename}-output-gpt-5-{lang}.srt
-        // BUT for L2.1, it uses the hybrid format: {baseFilename}-output-deepl-gpt-5-{lang}.srt
-        if (videoId === 'L2.1.HAIM_Holistic_AI_for_Medicine') {
-            return `translation/videos/${videoId}/${method}/${baseFilename}-output-deepl-gpt-5-${language}.srt`;
-        }
         return `translation/videos/${videoId}/${method}/${baseFilename}-output-gpt-5-${language}.srt`;
     } else if (method === 'deep-l_gpt5') {
         // deep-l_gpt5 uses: {baseFilename}-output-deepl-gpt-5-{lang}.srt
