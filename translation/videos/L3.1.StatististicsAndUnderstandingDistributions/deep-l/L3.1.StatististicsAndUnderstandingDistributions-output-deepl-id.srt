@@ -1,0 +1,708 @@
+1
+00:00:05,053 --> 00:00:06,220
+Halo, semuanya.
+
+2
+00:00:06,220 --> 00:00:07,520
+Selamat datang kembali.
+
+3
+00:00:07,520 --> 00:00:09,760
+Dalam kuliah hari ini, kita akan membahas
+
+4
+00:00:09,760 --> 00:00:14,120
+tentang statistik untuk eksplorasi dan analisis data.
+
+5
+00:00:14,120 --> 00:00:16,880
+Mari kita mulai dengan sebuah pertanyaan sederhana.
+
+6
+00:00:16,880 --> 00:00:18,920
+Apa yang dimaksud dengan statistik?
+
+7
+00:00:18,920 --> 00:00:22,680
+Secara formal, statistik adalah cabang matematika yang berfokus pada
+
+8
+00:00:22,680 --> 00:00:25,540
+dalam mengumpulkan, menganalisis, menafsirkan,
+
+9
+00:00:25,540 --> 00:00:29,920
+dan menyajikan data untuk mendapatkan wawasan dan dukungan
+
+10
+00:00:29,920 --> 00:00:31,720
+keputusan yang lebih baik.
+
+11
+00:00:31,720 --> 00:00:36,360
+Dalam kuliah ini, kita akan fokus pada statistik deskriptif, metode
+
+12
+00:00:36,360 --> 00:00:39,120
+yang membantu kami meringkas dan memvisualisasikan data
+
+13
+00:00:39,120 --> 00:00:42,480
+untuk mengungkapkan pola dan tren.
+
+14
+00:00:42,480 --> 00:00:45,040
+Mari kita mulai dengan sebuah contoh.
+
+15
+00:00:45,040 --> 00:00:48,400
+Misalkan kita ingin mempelajari tinggi badan siswa
+
+16
+00:00:48,400 --> 00:00:51,560
+terdaftar di Universal AI.
+
+17
+00:00:51,560 --> 00:00:56,720
+Alih-alih mengukur tinggi badan setiap mahasiswa di UAI,
+
+18
+00:00:56,720 --> 00:00:58,400
+kami mengambil sampel -
+
+19
+00:00:58,400 --> 00:01:02,650
+misalnya, 100 siswa yang dipilih secara acak.
+
+20
+00:01:02,650 --> 00:01:07,730
+Hal ini memberi kita satu set data yang terdiri dari 100 nilai ketinggian.
+
+21
+00:01:07,730 --> 00:01:11,090
+Sekarang kita bisa mulai memvisualisasikan data ini,
+
+22
+00:01:11,090 --> 00:01:15,370
+misalnya, dengan memplot tinggi badan semua siswa yang menjadi sampel
+
+23
+00:01:15,370 --> 00:01:17,690
+berdampingan.
+
+24
+00:01:17,690 --> 00:01:20,770
+Tentu saja, kita dapat mengurutkan nilai untuk mengidentifikasi
+
+25
+00:01:20,770 --> 00:01:26,050
+tren, yaitu sebagian besar siswa memiliki tinggi badan yang sama.
+
+26
+00:01:26,050 --> 00:01:29,810
+Jadi, berapa tinggi badan siswa pada umumnya?
+
+27
+00:01:29,810 --> 00:01:33,650
+Ada tiga cara umum untuk menggambarkannya.
+
+28
+00:01:33,650 --> 00:01:38,350
+Kita bisa menghitung tinggi rata-rata aritmetik, yaitu rata-rata,
+
+29
+00:01:38,350 --> 00:01:41,290
+yang berukuran 65 inci.
+
+30
+00:01:41,290 --> 00:01:43,770
+Selanjutnya, kita dapat menemukan median, yang
+
+31
+00:01:43,770 --> 00:01:47,890
+mewakili nilai tengah ketika data diurutkan.
+
+32
+00:01:47,890 --> 00:01:52,530
+Yaitu, 50 siswa lebih pendek dan 50 siswa
+
+33
+00:01:52,530 --> 00:01:55,530
+lebih tinggi dari nilai ini.
+
+34
+00:01:55,530 --> 00:01:58,890
+Dan terakhir, kami juga dapat mengidentifikasi mode, yang
+
+35
+00:01:58,890 --> 00:02:02,410
+adalah nilai yang paling sering muncul.
+
+36
+00:02:02,410 --> 00:02:07,070
+Kita dapat mengelompokkan ketinggian ini ke dalam tempat sampah dengan ukuran dan hitungan yang sama
+
+37
+00:02:07,070 --> 00:02:10,389
+berapa banyak siswa yang masuk ke dalam setiap tempat sampah.
+
+38
+00:02:10,389 --> 00:02:12,750
+Proses penghitungan dan pengelompokan ini
+
+39
+00:02:12,750 --> 00:02:15,870
+adalah dasar dari teknik visualisasi
+
+40
+00:02:15,870 --> 00:02:18,990
+digunakan untuk mengeksplorasi distribusi.
+
+41
+00:02:18,990 --> 00:02:22,790
+Di sini kita dapat melihat di mana sebagian besar siswa berada di tengah-tengah
+
+42
+00:02:22,790 --> 00:02:26,670
+dan bagaimana mereka tersebar di seluruh wilayah.
+
+43
+00:02:26,670 --> 00:02:29,210
+Beberapa individu relatif tinggi,
+
+44
+00:02:29,210 --> 00:02:33,390
+tetapi sebagian besar ketinggian mengelompok di sekitar pusat.
+
+45
+00:02:33,390 --> 00:02:36,370
+Sekarang, alih-alih menggunakan titik-titik individual,
+
+46
+00:02:36,370 --> 00:02:41,670
+kita dapat menggunakan diagram batang untuk membuat histogram.
+
+47
+00:02:41,670 --> 00:02:46,390
+Histogram menunjukkan seberapa sering nilai muncul di setiap bin,
+
+48
+00:02:46,390 --> 00:02:49,910
+atau dalam kasus kami, kisaran ketinggian.
+
+49
+00:02:49,910 --> 00:02:54,910
+Hal ini memberikan gambaran yang jelas tentang distribusi sampel kami,
+
+50
+00:02:54,910 --> 00:03:00,190
+di mana sebagian besar siswa berada dan bagaimana sisanya tersebar.
+
+51
+00:03:00,190 --> 00:03:03,230
+Kita dapat mengubah ukuran tempat sampah--
+
+52
+00:03:03,230 --> 00:03:06,040
+ukuran integral - untuk melihat seberapa banyak
+
+53
+00:03:06,040 --> 00:03:09,120
+variabilitas terlihat dalam data.
+
+54
+00:03:09,120 --> 00:03:11,600
+Ukuran tempat sampah yang lebih kecil menunjukkan variasi
+
+55
+00:03:11,600 --> 00:03:15,880
+pada granularitas yang lebih tinggi, sementara ukuran tempat sampah yang lebih besar
+
+56
+00:03:15,880 --> 00:03:18,200
+mengurangi detail yang terlihat.
+
+57
+00:03:18,200 --> 00:03:22,120
+Jadi, jika tempat sampah terlalu kecil, hasilnya
+
+58
+00:03:22,120 --> 00:03:26,020
+bisa berisik, sedangkan jika ukurannya terlalu besar,
+
+59
+00:03:26,020 --> 00:03:30,080
+distribusi dapat menjadi terlalu disederhanakan.
+
+60
+00:03:30,080 --> 00:03:34,920
+Kami juga dapat menyajikan data menggunakan Estimasi Densitas Kernel,
+
+61
+00:03:34,920 --> 00:03:39,080
+atau KDE, yang menyediakan alternatif yang lancar
+
+62
+00:03:39,080 --> 00:03:41,760
+ke histogram tradisional.
+
+63
+00:03:41,760 --> 00:03:46,920
+Tidak seperti histogram, KDE tidak bergantung pada ukuran bin
+
+64
+00:03:46,920 --> 00:03:50,720
+dan menawarkan visualisasi bentuk yang lebih jelas
+
+65
+00:03:50,720 --> 00:03:53,240
+dari distribusi data.
+
+66
+00:03:53,240 --> 00:03:59,440
+Alternatif lain adalah plot biola, yang merupakan KDE yang dicerminkan.
+
+67
+00:03:59,440 --> 00:04:03,120
+Ini berguna untuk membandingkan dua distribusi,
+
+68
+00:04:03,120 --> 00:04:06,260
+seperti distribusi ketinggian untuk pria dan wanita
+
+69
+00:04:06,260 --> 00:04:09,220
+siswa dalam contoh kami.
+
+70
+00:04:09,220 --> 00:04:13,780
+Berbicara tentang bentuk data, skewness adalah ukuran yang berguna
+
+71
+00:04:13,780 --> 00:04:19,899
+yang menangkap asimetri, atau kemiringan, dari distribusi data.
+
+72
+00:04:19,899 --> 00:04:23,940
+Ini membantu kita memahami apakah data tersebut bias atau pada satu titik
+
+73
+00:04:23,940 --> 00:04:25,980
+sisi distribusi.
+
+74
+00:04:25,980 --> 00:04:29,020
+Contohnya, jika poinnya merata
+
+75
+00:04:29,020 --> 00:04:31,380
+didistribusikan di sekitar pusat, data
+
+76
+00:04:31,380 --> 00:04:34,300
+simetris, tidak menunjukkan kemiringan.
+
+77
+00:04:34,300 --> 00:04:37,740
+Jika sebagian besar titik data mengelompok ke arah kiri,
+
+78
+00:04:37,740 --> 00:04:43,020
+dengan ekor panjang di sebelah kanan, kami menyebutnya sebagai kemiringan positif.
+
+79
+00:04:43,020 --> 00:04:45,980
+Jika sebagian besar titik mengelompok ke arah kanan,
+
+80
+00:04:45,980 --> 00:04:50,260
+dengan ekor panjang di sebelah kiri, itu adalah kemiringan negatif.
+
+81
+00:04:50,260 --> 00:04:52,980
+Dalam distribusi yang simetris sempurna,
+
+82
+00:04:52,980 --> 00:04:57,300
+rata-rata, median, dan modus adalah identik.
+
+83
+00:04:57,300 --> 00:05:01,300
+Namun demikian, dalam distribusi yang asimetris atau miring,
+
+84
+00:05:01,300 --> 00:05:04,500
+ketiga langkah ini berbeda.
+
+85
+00:05:04,500 --> 00:05:07,590
+Mari kita bahas tentang outlier.
+
+86
+00:05:07,590 --> 00:05:13,710
+Pencilan adalah nilai yang sangat tinggi atau rendah dalam kumpulan data kami.
+
+87
+00:05:13,710 --> 00:05:17,050
+Sementara, dalam banyak kasus, outlier diharapkan,
+
+88
+00:05:17,050 --> 00:05:19,670
+juga dapat terjadi karena kesalahan.
+
+89
+00:05:19,670 --> 00:05:22,830
+Sebagai contoh, katakanlah kita sedang melakukan
+
+90
+00:05:22,830 --> 00:05:26,190
+studi kami tentang ketinggian siswa dengan bertanya kepada siswa
+
+91
+00:05:26,190 --> 00:05:29,390
+untuk melaporkan tinggi badan mereka, dan salah satu siswa
+
+92
+00:05:29,390 --> 00:05:34,630
+dengan bercanda melaporkan ketinggiannya sama dengan ketinggian Menara Eiffel.
+
+93
+00:05:34,630 --> 00:05:37,230
+Sekarang, apabila kita memplot hasilnya, histogram
+
+94
+00:05:37,230 --> 00:05:39,590
+mungkin terlihat seperti ini.
+
+95
+00:05:39,590 --> 00:05:41,650
+Rata-rata kita sekarang terdistorsi.
+
+96
+00:05:41,650 --> 00:05:45,470
+Tingginya mencapai lebih dari 190 inci.
+
+97
+00:05:45,470 --> 00:05:51,550
+Hal ini menunjukkan bagaimana satu outlier dapat sangat memengaruhi rata-rata.
+
+98
+00:05:51,550 --> 00:05:56,230
+Namun demikian, mediannya tetap sekitar 65 inci,
+
+99
+00:05:56,230 --> 00:06:00,630
+mencerminkan kecenderungan sentral data yang sebenarnya.
+
+100
+00:06:00,630 --> 00:06:05,030
+Ketika kami memeriksa kumpulan data, kami melihat bahwa ini sangat tinggi
+
+101
+00:06:05,030 --> 00:06:08,290
+nilai tersebut jelas keliru.
+
+102
+00:06:08,290 --> 00:06:12,730
+Kami dapat menghapusnya dengan aman untuk menganalisis data kami secara efektif.
+
+103
+00:06:12,730 --> 00:06:16,330
+Inilah sebabnya mengapa selalu penting untuk memeriksa secara visual
+
+104
+00:06:16,330 --> 00:06:21,250
+data Anda sebelum melakukan analisis atau menarik kesimpulan.
+
+105
+00:06:21,250 --> 00:06:24,290
+Pastikan semuanya masuk akal.
+
+106
+00:06:24,290 --> 00:06:27,850
+Jadi, kembali ke statistik deskriptif kami,
+
+107
+00:06:27,850 --> 00:06:32,370
+mean tepat digunakan ketika data simetris.
+
+108
+00:06:32,370 --> 00:06:34,650
+Median sangat berguna
+
+109
+00:06:34,650 --> 00:06:37,530
+ketika ada pencilan, karena
+
+110
+00:06:37,530 --> 00:06:40,570
+lebih kuat terhadap nilai ekstrem,
+
+111
+00:06:40,570 --> 00:06:42,450
+seperti yang baru saja kita lihat.
+
+112
+00:06:42,450 --> 00:06:44,610
+Terakhir, mode ini biasanya digunakan
+
+113
+00:06:44,610 --> 00:06:48,690
+dalam data kategorikal, di mana ia mewakili data yang paling sering
+
+114
+00:06:48,690 --> 00:06:51,450
+kategori yang terjadi.
+
+115
+00:06:51,450 --> 00:06:55,370
+Jadi, mari kita bahas tentang varians dan deviasi standar.
+
+116
+00:06:55,370 --> 00:06:59,850
+Varians dan deviasi standar adalah dua cara yang paling umum
+
+117
+00:06:59,850 --> 00:07:03,690
+untuk menggambarkan bagaimana penyebaran nilai dalam data kontinu
+
+118
+00:07:03,690 --> 00:07:05,250
+set.
+
+119
+00:07:05,250 --> 00:07:09,340
+Varians sampel adalah jumlah deviasi kuadrat
+
+120
+00:07:09,340 --> 00:07:13,620
+dari rata-rata sampel dibagi dengan n dikurangi 1,
+
+121
+00:07:13,620 --> 00:07:15,900
+di mana n adalah ukuran sampel.
+
+122
+00:07:15,900 --> 00:07:20,540
+Standar deviasi adalah akar kuadrat dari varians ini.
+
+123
+00:07:20,540 --> 00:07:24,460
+Kedua hal ini mengukur seberapa besar nilai individu
+
+124
+00:07:24,460 --> 00:07:27,340
+menyimpang dari rata-rata.
+
+125
+00:07:27,340 --> 00:07:30,300
+Mengapa deviasi standar penting?
+
+126
+00:07:30,300 --> 00:07:34,060
+Standar deviasi menunjukkan bagaimana penyebaran titik data
+
+127
+00:07:34,060 --> 00:07:36,260
+berada di sekitar rata-rata.
+
+128
+00:07:36,260 --> 00:07:40,620
+Hal ini membantu kami memahami konsistensi data.
+
+129
+00:07:40,620 --> 00:07:44,340
+Nilai yang lebih kecil berarti data terkelompok dengan rapat,
+
+130
+00:07:44,340 --> 00:07:48,300
+sementara nilai yang lebih besar menunjukkan penyebaran yang lebih besar dan lebih banyak
+
+131
+00:07:48,300 --> 00:07:50,220
+variasi.
+
+132
+00:07:50,220 --> 00:07:56,300
+Ini menunjukkan jarak rata-rata titik data dari rata-rata.
+
+133
+00:07:56,300 --> 00:07:59,380
+Dalam distribusi normal, ada sesuatu yang khusus
+
+134
+00:07:59,380 --> 00:08:01,540
+yang menarik terjadi.
+
+135
+00:08:01,540 --> 00:08:07,380
+Sekitar 68% data berada dalam satu standar deviasi
+
+136
+00:08:07,380 --> 00:08:09,200
+dari mean--
+
+137
+00:08:09,200 --> 00:08:13,840
+yaitu antara rata-rata dikurangi 1 standar deviasi
+
+138
+00:08:13,840 --> 00:08:18,240
+dan rata-rata ditambah 1 standar deviasi.
+
+139
+00:08:18,240 --> 00:08:23,200
+Lebih jauh lagi, jika kita memperluas ini ke rata-rata minus dua
+
+140
+00:08:23,200 --> 00:08:28,360
+deviasi standar dan rata-rata ditambah dua deviasi standar,
+
+141
+00:08:28,360 --> 00:08:33,360
+kami akan menyertakan 95% dari sampel.
+
+142
+00:08:33,360 --> 00:08:38,200
+Terakhir, ketika kita melihat kisaran dari rata-rata minus tiga
+
+143
+00:08:38,200 --> 00:08:43,400
+deviasi standar terhadap rata-rata ditambah tiga deviasi standar,
+
+144
+00:08:43,400 --> 00:08:45,640
+jangkauan akan mencakup hampir semua
+
+145
+00:08:45,640 --> 00:08:51,320
+sampel, atau sekitar 99,7%.
+
+146
+00:08:51,320 --> 00:08:59,640
+Ini dikenal sebagai aturan empiris, atau aturan 68-95-99,7,
+
+147
+00:08:59,640 --> 00:09:05,200
+dan hanya berlaku untuk distribusi normal.
+
+148
+00:09:05,200 --> 00:09:09,650
+Mari kita bahas juga tentang kuantil dan persentil.
+
+149
+00:09:09,650 --> 00:09:13,690
+Kuantil adalah nilai yang membagi kumpulan data
+
+150
+00:09:13,690 --> 00:09:17,090
+ke dalam interval berukuran sama.
+
+151
+00:09:17,090 --> 00:09:22,930
+Misalnya, kuartil membagi data menjadi empat bagian yang sama
+
+152
+00:09:22,930 --> 00:09:27,490
+sehingga setiap bagian berisi jumlah yang kurang lebih sama
+
+153
+00:09:27,490 --> 00:09:29,530
+titik data.
+
+154
+00:09:29,530 --> 00:09:34,130
+Persentil, di sisi lain, mengacu pada posisi
+
+155
+00:09:34,130 --> 00:09:37,410
+nilai dalam kumpulan data.
+
+156
+00:09:37,410 --> 00:09:41,210
+Sebagai contoh, jika kita memiliki 100 siswa,
+
+157
+00:09:41,210 --> 00:09:44,410
+dan kami membaginya menjadi beberapa kuartil,
+
+158
+00:09:44,410 --> 00:09:49,130
+akan ada 25 siswa di setiap kuartil.
+
+159
+00:09:49,130 --> 00:09:54,810
+Kita kemudian dapat merujuk ke titik-titik data ini menggunakan persentil,
+
+160
+00:09:54,810 --> 00:09:57,090
+yang mewakili posisi peringkat
+
+161
+00:09:57,090 --> 00:10:01,010
+dari suatu nilai dalam kumpulan data.
+
+162
+00:10:01,010 --> 00:10:04,450
+Boxplot adalah alat visualisasi yang penting
+
+163
+00:10:04,450 --> 00:10:08,990
+karena merangkum lima statistik utama.
+
+164
+00:10:08,990 --> 00:10:12,510
+Di sini kita dapat melihat kuartil pertama,
+
+165
+00:10:12,510 --> 00:10:16,550
+yang sesuai dengan persentil ke-25,
+
+166
+00:10:16,550 --> 00:10:23,790
+yang berarti bahwa 25% dari nilai data berada di bawah titik ini.
+
+167
+00:10:23,790 --> 00:10:27,230
+Median, yang merupakan kuartil kedua,
+
+168
+00:10:27,230 --> 00:10:32,230
+atau persentil ke-50, menunjukkan bahwa setengah dari data
+
+169
+00:10:32,230 --> 00:10:37,470
+berada di bawah nilai tersebut dan setengahnya di atas.
+
+170
+00:10:37,470 --> 00:10:42,350
+Kuartil ketiga, yaitu persentil ke-75,
+
+171
+00:10:42,350 --> 00:10:48,470
+yang berarti bahwa 75% dari data terletak di bawah nilai ini dan 25%
+
+172
+00:10:48,470 --> 00:10:51,190
+di atas.
+
+173
+00:10:51,190 --> 00:10:54,790
+Dan sebagai statistik kunci keempat dan kelima,
+
+174
+00:10:54,790 --> 00:10:59,350
+kita juga dapat melihat minimum dan maksimum yang tidak
+
+175
+00:10:59,350 --> 00:11:03,190
+termasuk pencilan pada plot.
+
+176
+00:11:03,190 --> 00:11:07,330
+Jadi, ini juga membantu kita memvisualisasikan bagian tengah, penyebarannya,
+
+177
+00:11:07,330 --> 00:11:11,500
+dan potensi outlier sebagai titik-titik dalam data kami.
+

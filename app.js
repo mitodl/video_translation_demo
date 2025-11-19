@@ -1,7 +1,9 @@
 // Application state
 let manifest = null;
 let ytPlayer = null;
-let subtitleData = [];
+let subtitleData = []; // For video overlay
+let englishSubtitleData = [];
+let translatedSubtitleData = [];
 let subtitleUpdateInterval = null;
 let currentSelection = {
     video: null,
@@ -13,7 +15,9 @@ let currentSelection = {
 const videoSelect = document.getElementById('video-select');
 const methodSelect = document.getElementById('method-select');
 const languageSelect = document.getElementById('language-select');
-const subtitlesContent = document.getElementById('subtitles-content');
+const subtitlesContentEnglish = document.getElementById('subtitles-content-english');
+const subtitlesContentTranslated = document.getElementById('subtitles-content-translated');
+const translatedHeader = document.getElementById('translated-header');
 const subtitleCount = document.getElementById('subtitle-count');
 const videoContainer = document.getElementById('video-container');
 const subtitleOverlayText = document.getElementById('subtitle-overlay-text');
@@ -81,7 +85,8 @@ function setDefaults() {
             languageSelect.value = 'es';
 
             // Load subtitles
-            loadSubtitles();
+            loadEnglishSubtitles();
+            loadTranslatedSubtitles();
         }
     }
 }
@@ -161,6 +166,9 @@ function setupEventListeners() {
             currentSelection.video = parseInt(videoIndex);
             const video = manifest.videos[videoIndex];
 
+            // Load English subtitles
+            loadEnglishSubtitles();
+
             // Populate method dropdown
             populateMethodSelect(videoIndex);
 
@@ -176,17 +184,17 @@ function setupEventListeners() {
                 if (previousLanguage && video.languages[previousMethod].includes(previousLanguage)) {
                     currentSelection.language = previousLanguage;
                     languageSelect.value = previousLanguage;
-                    loadSubtitles();
+                    loadTranslatedSubtitles();
                 } else {
                     currentSelection.language = null;
-                    clearSubtitles();
+                    clearTranslatedSubtitles();
                 }
             } else {
                 currentSelection.method = null;
                 currentSelection.language = null;
                 languageSelect.disabled = true;
                 languageSelect.innerHTML = '<option value="">Select a language...</option>';
-                clearSubtitles();
+                clearTranslatedSubtitles();
             }
 
             loadVideo(video.youtubeId);
@@ -201,7 +209,7 @@ function setupEventListeners() {
             currentSelection.language = null;
             languageSelect.disabled = true;
             languageSelect.innerHTML = '<option value="">Select a language...</option>';
-            clearSubtitles();
+            clearTranslatedSubtitles();
         } else {
             const previousLanguage = currentSelection.language;
             currentSelection.method = method;
@@ -213,10 +221,10 @@ function setupEventListeners() {
             if (previousLanguage && video.languages[method].includes(previousLanguage)) {
                 currentSelection.language = previousLanguage;
                 languageSelect.value = previousLanguage;
-                loadSubtitles();
+                loadTranslatedSubtitles();
             } else {
                 currentSelection.language = null;
-                clearSubtitles();
+                clearTranslatedSubtitles();
             }
         }
     });
@@ -226,10 +234,10 @@ function setupEventListeners() {
 
         if (language === '') {
             currentSelection.language = null;
-            clearSubtitles();
+            clearTranslatedSubtitles();
         } else {
             currentSelection.language = language;
-            loadSubtitles();
+            loadTranslatedSubtitles();
         }
     });
 }
@@ -367,13 +375,66 @@ function clearVideo() {
     videoContainer.innerHTML = '';
 }
 
-// Load and display subtitles
-async function loadSubtitles() {
+// Load and display English subtitles
+async function loadEnglishSubtitles() {
+    if (currentSelection.video === null) {
+        return;
+    }
+
+    showLoading('english');
+    stopSubtitleUpdates();
+
+    try {
+        const video = manifest.videos[currentSelection.video];
+        const subtitlePath = getSubtitlePath(video, null, 'en');
+
+        const response = await fetch(subtitlePath);
+        if (!response.ok) {
+            throw new Error(`Failed to load English subtitles: ${response.status}`);
+        }
+
+        const srtContent = await response.text();
+        const subtitles = parseSRT(srtContent);
+
+        // Store English subtitle data with timing information
+        englishSubtitleData = subtitles.map(sub => ({
+            ...sub,
+            startTime: parseTimestamp(sub.timestamp.split(' --> ')[0]),
+            endTime: parseTimestamp(sub.timestamp.split(' --> ')[1])
+        }));
+
+        // Display English subtitles
+        displaySubtitles(subtitles, 'english');
+
+        console.log('English subtitles loaded:', englishSubtitleData.length, 'entries');
+
+        // Use English for overlay if no translation selected
+        if (!currentSelection.language) {
+            subtitleData = englishSubtitleData;
+        }
+
+        updateSubtitleCount();
+
+        // Start subtitle updates if video is playing
+        if (ytPlayer && ytPlayer.getPlayerState) {
+            const playerState = ytPlayer.getPlayerState();
+            if (playerState === YT.PlayerState.PLAYING) {
+                startSubtitleUpdates();
+            }
+        }
+    } catch (error) {
+        console.error('Error loading English subtitles:', error);
+        showError('Failed to load English subtitles', 'english');
+    }
+}
+
+// Load and display translated subtitles
+async function loadTranslatedSubtitles() {
     if (currentSelection.video === null || !currentSelection.method || !currentSelection.language) {
         return;
     }
 
-    showLoading();
+    showLoading('translated');
     stopSubtitleUpdates();
 
     try {
@@ -382,35 +443,43 @@ async function loadSubtitles() {
 
         const response = await fetch(subtitlePath);
         if (!response.ok) {
-            throw new Error(`Failed to load subtitles: ${response.status}`);
+            throw new Error(`Failed to load translated subtitles: ${response.status}`);
         }
 
         const srtContent = await response.text();
         const subtitles = parseSRT(srtContent);
 
-        // Store subtitle data with timing information
-        subtitleData = subtitles.map(sub => ({
+        // Store translated subtitle data with timing information
+        translatedSubtitleData = subtitles.map(sub => ({
             ...sub,
             startTime: parseTimestamp(sub.timestamp.split(' --> ')[0]),
             endTime: parseTimestamp(sub.timestamp.split(' --> ')[1])
         }));
 
-        // Display subtitles in the transcript area below
-        displaySubtitles(subtitles);
+        // Use translated subtitles for overlay
+        subtitleData = translatedSubtitleData;
 
-        console.log('Subtitles loaded:', subtitleData.length, 'entries');
+        // Display translated subtitles
+        displaySubtitles(subtitles, 'translated');
+
+        // Update header with language name
+        const languageName = manifest.languageNames[currentSelection.language] || currentSelection.language;
+        translatedHeader.textContent = languageName;
+
+        console.log('Translated subtitles loaded:', translatedSubtitleData.length, 'entries');
+
+        updateSubtitleCount();
 
         // Start subtitle updates if video is playing
         if (ytPlayer && ytPlayer.getPlayerState) {
             const playerState = ytPlayer.getPlayerState();
-            console.log('Player state:', playerState);
             if (playerState === YT.PlayerState.PLAYING) {
                 startSubtitleUpdates();
             }
         }
     } catch (error) {
-        console.error('Error loading subtitles:', error);
-        showError('Failed to load subtitles');
+        console.error('Error loading translated subtitles:', error);
+        showError('Failed to load translated subtitles', 'translated');
     }
 }
 
@@ -452,8 +521,11 @@ function getSubtitlePath(video, method, language) {
         // deep-l_gpt5 uses: {baseFilename}-output-deepl-gpt-5-{lang}.srt
         return `translation/videos/${videoId}/${method}/${baseFilename}-output-deepl-gpt-5-${language}.srt`;
     } else {
-        // gpt-4o-mini uses: {baseFilename}-en_output-{lang}.srt
-        return `translation/videos/${videoId}/${method}/${baseFilename}-en_output-${language}.srt`;
+        // gpt-4o-mini can use either pattern:
+        // 1. {baseFilename}-output-gpt-4o-mini-{lang}.srt
+        // 2. {baseFilename}-en_output-{lang}.srt (legacy)
+        // Try the new pattern first
+        return `translation/videos/${videoId}/${method}/${baseFilename}-output-gpt-4o-mini-${language}.srt`;
     }
 }
 
@@ -480,14 +552,14 @@ function parseSRT(srt) {
     return subtitles;
 }
 
-// Display subtitles
-function displaySubtitles(subtitles) {
+// Display subtitles in specified column
+function displaySubtitles(subtitles, column) {
+    const container = column === 'english' ? subtitlesContentEnglish : subtitlesContentTranslated;
+
     if (subtitles.length === 0) {
-        showEmptyState('No subtitles found');
+        showEmptyState(column === 'english' ? 'No English subtitles found' : 'No translated subtitles found', column);
         return;
     }
-
-    subtitleCount.textContent = `${subtitles.length} entries`;
 
     const html = subtitles.map(sub => `
         <div class="subtitle-entry">
@@ -496,46 +568,105 @@ function displaySubtitles(subtitles) {
         </div>
     `).join('');
 
-    subtitlesContent.innerHTML = html;
+    container.innerHTML = html;
+
+    // Set up synchronized scrolling
+    setupSyncedScrolling();
 }
 
-// Clear subtitles
+// Set up synchronized scrolling between subtitle columns
+let syncScrollingSetup = false;
+function setupSyncedScrolling() {
+    if (syncScrollingSetup) return; // Only set up once
+    syncScrollingSetup = true;
+
+    let isScrolling = false;
+
+    const syncScroll = (source, target) => {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        const scrollPercentage = source.scrollTop / (source.scrollHeight - source.clientHeight);
+        target.scrollTop = scrollPercentage * (target.scrollHeight - target.clientHeight);
+
+        setTimeout(() => { isScrolling = false; }, 50);
+    };
+
+    const englishContainer = document.getElementById('subtitles-content-english');
+    const translatedContainer = document.getElementById('subtitles-content-translated');
+
+    englishContainer.addEventListener('scroll', () => syncScroll(englishContainer, translatedContainer));
+    translatedContainer.addEventListener('scroll', () => syncScroll(translatedContainer, englishContainer));
+}
+
+// Update subtitle count
+function updateSubtitleCount() {
+    const englishCount = englishSubtitleData.length;
+    const translatedCount = translatedSubtitleData.length;
+
+    if (englishCount > 0 && translatedCount > 0) {
+        subtitleCount.textContent = `English: ${englishCount} entries | Translated: ${translatedCount} entries`;
+    } else if (englishCount > 0) {
+        subtitleCount.textContent = `English: ${englishCount} entries`;
+    } else if (translatedCount > 0) {
+        subtitleCount.textContent = `Translated: ${translatedCount} entries`;
+    } else {
+        subtitleCount.textContent = '';
+    }
+}
+
+// Clear all subtitles
 function clearSubtitles() {
-    showEmptyState('Select a video, translation method, and language to view subtitles');
+    showEmptyState('Select a video to view English subtitles', 'english');
+    showEmptyState('Select a translation method and language', 'translated');
     subtitleCount.textContent = '';
     subtitleData = [];
+    englishSubtitleData = [];
+    translatedSubtitleData = [];
+    translatedHeader.textContent = 'Translation';
     stopSubtitleUpdates();
 }
 
+// Clear only translated subtitles
+function clearTranslatedSubtitles() {
+    showEmptyState('Select a translation method and language', 'translated');
+    translatedSubtitleData = [];
+    subtitleData = englishSubtitleData; // Fall back to English for overlay
+    translatedHeader.textContent = 'Translation';
+    updateSubtitleCount();
+}
+
 // Show loading state
-function showLoading() {
-    subtitlesContent.innerHTML = `
+function showLoading(column) {
+    const container = column === 'english' ? subtitlesContentEnglish : subtitlesContentTranslated;
+    container.innerHTML = `
         <div class="loading">
             <div class="spinner"></div>
             <p>Loading subtitles...</p>
         </div>
     `;
-    subtitleCount.textContent = '';
 }
 
 // Show empty state
-function showEmptyState(message) {
-    subtitlesContent.innerHTML = `
+function showEmptyState(message, column) {
+    const container = column === 'english' ? subtitlesContentEnglish : subtitlesContentTranslated;
+    const icon = column === 'english' ? '📝' : '🌍';
+    container.innerHTML = `
         <div class="empty-state">
-            <div class="empty-state-icon">📝</div>
+            <div class="empty-state-icon">${icon}</div>
             <p>${escapeHtml(message)}</p>
         </div>
     `;
 }
 
 // Show error
-function showError(message) {
-    subtitlesContent.innerHTML = `
+function showError(message, column) {
+    const container = column === 'english' ? subtitlesContentEnglish : subtitlesContentTranslated;
+    container.innerHTML = `
         <div class="error-message">
             <strong>Error:</strong> ${escapeHtml(message)}
         </div>
     `;
-    subtitleCount.textContent = '';
 }
 
 // Escape HTML to prevent XSS

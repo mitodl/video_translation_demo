@@ -1,0 +1,584 @@
+1
+00:00:00,000 --> 00:00:04,340
+Sejauh ini, kita telah menganalisis variabel tunggal,
+
+2
+00:00:04,340 --> 00:00:06,320
+tinggi badan siswa.
+
+3
+00:00:06,320 --> 00:00:11,480
+Jenis analisis ini disebut analisis univariat, yang
+
+4
+00:00:11,480 --> 00:00:15,920
+memiliki tujuan untuk menggambarkan dan meringkas variabel-variabel
+
+5
+00:00:15,920 --> 00:00:20,210
+karakteristik menggunakan statistik deskriptif,
+
+6
+00:00:20,210 --> 00:00:24,210
+seperti rata-rata, median, deviasi standar,
+
+7
+00:00:24,210 --> 00:00:30,530
+dan visualisasi, plot seperti histogram dan plot kotak.
+
+8
+00:00:30,530 --> 00:00:35,030
+Dalam analisis bivariat, kami mengeksplorasi dua variabel
+
+9
+00:00:35,030 --> 00:00:37,280
+dan hubungan mereka.
+
+10
+00:00:37,280 --> 00:00:42,710
+Dan dalam analisis multivariat, kita melihat tiga atau lebih variabel
+
+11
+00:00:42,710 --> 00:00:46,400
+secara bersamaan dan sekali lagi, cobalah untuk memahami
+
+12
+00:00:46,400 --> 00:00:51,530
+hubungan mereka, kali ini, yang lebih kompleks dan berpotensi lebih kompleks.
+
+13
+00:00:51,530 --> 00:00:55,160
+Jadi, mari kita lanjutkan dari analisis univariat kita
+
+14
+00:00:55,160 --> 00:00:58,880
+tinggi badan siswa untuk analisis bivariat, yang
+
+15
+00:00:58,880 --> 00:01:03,800
+selain data ketinggian, juga mencakup berat badan siswa.
+
+16
+00:01:03,800 --> 00:01:07,270
+Sekarang, kita memiliki dua variabel pengamatan.
+
+17
+00:01:07,270 --> 00:01:09,420
+Dan sangat menarik untuk diukur
+
+18
+00:01:09,420 --> 00:01:11,290
+hubungan di antara mereka--
+
+19
+00:01:11,290 --> 00:01:15,810
+yaitu untuk mengukur bagaimana variabel-variabel tersebut bervariasi.
+
+20
+00:01:15,810 --> 00:01:19,020
+Bobot dan ketinggian saling terkait satu sama lain.
+
+21
+00:01:19,020 --> 00:01:23,700
+Siswa yang lebih tinggi cenderung memiliki berat badan yang lebih besar daripada siswa yang lebih pendek.
+
+22
+00:01:23,700 --> 00:01:27,480
+Kita dapat memplotnya, satu variabel pada sumbu x
+
+23
+00:01:27,480 --> 00:01:30,210
+dan yang lainnya pada sumbu y.
+
+24
+00:01:30,210 --> 00:01:33,540
+Plot semacam ini disebut scatter plot.
+
+25
+00:01:33,540 --> 00:01:37,980
+Setiap titik mewakili satu siswa.
+
+26
+00:01:37,980 --> 00:01:40,050
+Hal yang hebat tentang plot sebar
+
+27
+00:01:40,050 --> 00:01:42,970
+adalah bahwa mereka membantu kita melihat pola,
+
+28
+00:01:42,970 --> 00:01:46,830
+bagaimana kedua variabel tersebut berhubungan satu sama lain.
+
+29
+00:01:46,830 --> 00:01:50,310
+Pada gambar, kita dapat mengamati pola yang meningkat
+
+30
+00:01:50,310 --> 00:01:52,230
+dari kiri ke kanan.
+
+31
+00:01:52,230 --> 00:01:55,560
+Ini berarti bahwa bobot dan ketinggian secara positif
+
+32
+00:01:55,560 --> 00:01:58,560
+berkorelasi satu sama lain.
+
+33
+00:01:58,560 --> 00:02:00,780
+Jenis hubungan ini juga
+
+34
+00:02:00,780 --> 00:02:05,940
+disebut asosiasi dalam analisis bivariat.
+
+35
+00:02:05,940 --> 00:02:09,840
+Asosiasi linier berarti titik-titik tersebut membentuk kurang lebih
+
+36
+00:02:09,840 --> 00:02:11,230
+garis lurus.
+
+37
+00:02:11,230 --> 00:02:15,210
+Namun, kita juga dapat mengamati hubungan non-linear,
+
+38
+00:02:15,210 --> 00:02:18,030
+seperti pola kuadrat.
+
+39
+00:02:18,030 --> 00:02:21,150
+Dan terkadang tidak ada pola yang jelas,
+
+40
+00:02:21,150 --> 00:02:24,150
+seperti yang bisa kita lihat pada gambar.
+
+41
+00:02:24,150 --> 00:02:27,820
+Selain bentuk asosiasi,
+
+42
+00:02:27,820 --> 00:02:31,170
+kami juga peduli dengan arahnya.
+
+43
+00:02:31,170 --> 00:02:34,540
+Jika kemiringan garis ke atas,
+
+44
+00:02:34,540 --> 00:02:37,530
+itu berarti hubungannya positif.
+
+45
+00:02:37,530 --> 00:02:42,360
+Jika kemiringannya ke bawah, hubungannya negatif.
+
+46
+00:02:42,360 --> 00:02:46,350
+Kami juga peduli dengan kekuatan asosiasi.
+
+47
+00:02:46,350 --> 00:02:49,860
+Jika titik-titiknya mengelompok secara rapat di sekitar garis,
+
+48
+00:02:49,860 --> 00:02:52,890
+itu adalah asosiasi yang kuat.
+
+49
+00:02:52,890 --> 00:02:57,690
+Jika titik-titiknya lebih tersebar, maka hubungannya lemah.
+
+50
+00:02:57,690 --> 00:03:00,810
+Penting untuk dicatat bahwa kekuatan tidak
+
+51
+00:03:00,810 --> 00:03:03,240
+tergantung pada arah.
+
+52
+00:03:03,240 --> 00:03:05,850
+Anda dapat memiliki nilai positif atau negatif yang kuat
+
+53
+00:03:05,850 --> 00:03:09,600
+asosiasi negatif yang kuat.
+
+54
+00:03:09,600 --> 00:03:13,710
+Kami juga dapat mengukur kekuatan dan arahnya
+
+55
+00:03:13,710 --> 00:03:18,290
+dari hubungan linier dengan menggunakan koefisien korelasi,
+
+56
+00:03:18,290 --> 00:03:22,270
+yang berkisar dari minus 1 hingga 1.
+
+57
+00:03:22,270 --> 00:03:26,090
+Semakin dekat nilainya ke 1 atau minus 1,
+
+58
+00:03:26,090 --> 00:03:29,470
+semakin kuat hubungan liniernya.
+
+59
+00:03:29,470 --> 00:03:35,920
+Nilai yang mendekati 0 berarti hanya ada sedikit atau tidak ada hubungan linier.
+
+60
+00:03:35,920 --> 00:03:43,450
+Sebagai contoh, korelasi positif yang kuat mungkin sekitar 0,9.
+
+61
+00:03:43,450 --> 00:03:46,720
+Jika variabel-variabel tersebut tidak berhubungan, kami
+
+62
+00:03:46,720 --> 00:03:51,070
+mungkin melihat sesuatu seperti 0,01.
+
+63
+00:03:51,070 --> 00:03:54,910
+Namun, kita harus ingat bahwa korelasi tidak
+
+64
+00:03:54,910 --> 00:03:56,950
+menyiratkan sebab akibat.
+
+65
+00:03:56,950 --> 00:03:59,440
+Hanya karena dua hal bergerak bersama
+
+66
+00:03:59,440 --> 00:04:03,100
+tidak berarti yang satu menyebabkan yang lain.
+
+67
+00:04:03,100 --> 00:04:07,640
+Bahkan dalam contoh kita, di mana tinggi dan berat badan saling berkaitan,
+
+68
+00:04:07,640 --> 00:04:10,960
+hubungan tersebut tidak secara langsung bersifat kausal.
+
+69
+00:04:10,960 --> 00:04:14,380
+Ya, keduanya berkorelasi, tetapi tinggi badan tidak secara langsung
+
+70
+00:04:14,380 --> 00:04:15,380
+menyebabkan berat badan.
+
+71
+00:04:15,380 --> 00:04:20,089
+Sebaliknya, berbagi faktor yang mendasari seperti usia dan nutrisi,
+
+72
+00:04:20,089 --> 00:04:24,110
+dan biologi mempengaruhi keduanya.
+
+73
+00:04:24,110 --> 00:04:27,350
+Kita juga dapat menggunakan kovarians untuk mengukur bagaimana
+
+74
+00:04:27,350 --> 00:04:29,780
+dua variabel bervariasi secara bersamaan.
+
+75
+00:04:29,780 --> 00:04:32,000
+Kovarians adalah positif jika mereka
+
+76
+00:04:32,000 --> 00:04:34,730
+meningkat atau menurun secara bersamaan.
+
+77
+00:04:34,730 --> 00:04:38,840
+Ini negatif jika yang satu meningkat sementara yang lain menurun.
+
+78
+00:04:38,840 --> 00:04:44,900
+Dan kovarians mendekati 0 jika tidak ada pola yang konsisten.
+
+79
+00:04:44,900 --> 00:04:49,310
+Baik kovarians dan korelasi adalah statistik ringkasan
+
+80
+00:04:49,310 --> 00:04:52,310
+yang menggambarkan bagaimana dua set pengamatan
+
+81
+00:04:52,310 --> 00:04:54,170
+berhubungan satu sama lain.
+
+82
+00:04:54,170 --> 00:04:57,120
+Kovarians memberi kita arah hubungan,
+
+83
+00:04:57,120 --> 00:05:00,140
+tetapi bukan kekuatan dengan cara yang berarti,
+
+84
+00:05:00,140 --> 00:05:03,590
+sementara korelasi membantu kita mengukur
+
+85
+00:05:03,590 --> 00:05:08,450
+baik arah maupun kekuatan hubungan linier.
+
+86
+00:05:08,450 --> 00:05:13,580
+Sekarang, mari kita bahas tentang fenomena statistik klasik,
+
+87
+00:05:13,580 --> 00:05:16,220
+Paradoks Simpson.
+
+88
+00:05:16,220 --> 00:05:19,430
+Misalkan kita mengumpulkan data tentang tinggi badan siswa
+
+89
+00:05:19,430 --> 00:05:24,630
+dan berapa banyak poin yang mereka cetak dalam bola basket.
+
+90
+00:05:24,630 --> 00:05:27,280
+Ketika kita melihat data secara keseluruhan,
+
+91
+00:05:27,280 --> 00:05:31,590
+mungkin tampak bahwa kedua variabel ini berhubungan negatif
+
+92
+00:05:31,590 --> 00:05:32,740
+berkorelasi.
+
+93
+00:05:32,740 --> 00:05:38,918
+Artinya, siswa yang lebih tinggi tampaknya mendapatkan poin yang lebih sedikit.
+
+94
+00:05:38,918 --> 00:05:40,830
+Hm.
+
+95
+00:05:40,830 --> 00:05:43,410
+Akan tetapi, ketika kami memisahkan data
+
+96
+00:05:43,410 --> 00:05:47,140
+menjadi dua subkelompok, laki-laki dan perempuan,
+
+97
+00:05:47,140 --> 00:05:50,140
+kita dapat menemukan hal tersebut di dalam setiap kelompok,
+
+98
+00:05:50,140 --> 00:05:54,060
+siswa yang lebih tinggi cenderung mencetak lebih banyak poin.
+
+99
+00:05:54,060 --> 00:05:57,880
+Jadi, keseluruhan data menunjukkan korelasi negatif,
+
+100
+00:05:57,880 --> 00:06:01,800
+tetapi data subkelompok menunjukkan korelasi positif
+
+101
+00:06:01,800 --> 00:06:04,530
+di kedua kelompok.
+
+102
+00:06:04,530 --> 00:06:06,900
+Apa maksudnya?
+
+103
+00:06:06,900 --> 00:06:10,680
+Ini berarti ada faktor lain, variabel lain--
+
+104
+00:06:10,680 --> 00:06:12,580
+dalam hal ini, jenis kelamin--
+
+105
+00:06:12,580 --> 00:06:15,690
+yang mempengaruhi hubungan yang diamati.
+
+106
+00:06:15,690 --> 00:06:20,250
+Variabel ini disebut variabel pengganggu.
+
+107
+00:06:20,250 --> 00:06:22,770
+Dalam hal terminologi, kami mengacu pada
+
+108
+00:06:22,770 --> 00:06:27,420
+untuk tinggi badan sebagai variabel independen dan poin bola basket
+
+109
+00:06:27,420 --> 00:06:30,390
+sebagai variabel dependen.
+
+110
+00:06:30,390 --> 00:06:33,270
+Jadi, inti dari paradoks Simpson
+
+111
+00:06:33,270 --> 00:06:37,780
+adalah jika kita mengabaikan subkelompok, seperti jenis kelamin, dalam kasus ini,
+
+112
+00:06:37,780 --> 00:06:40,900
+tren secara keseluruhan mungkin menyesatkan.
+
+113
+00:06:40,900 --> 00:06:43,530
+Dengan kata lain, tren yang muncul
+
+114
+00:06:43,530 --> 00:06:48,570
+dalam kelompok data yang berbeda menghilang atau berbalik
+
+115
+00:06:48,570 --> 00:06:51,840
+ketika kelompok-kelompok tersebut digabungkan.
+
+116
+00:06:51,840 --> 00:06:54,030
+Ini adalah ilusi statistik yang disebabkan oleh
+
+117
+00:06:54,030 --> 00:06:57,870
+oleh variabel-variabel yang mengintai atau perancu yang mempengaruhi
+
+118
+00:06:57,870 --> 00:07:00,540
+hubungan yang diamati.
+
+119
+00:07:00,540 --> 00:07:03,270
+Paradoks ini adalah pengingat penting lainnya
+
+120
+00:07:03,270 --> 00:07:07,200
+bahwa korelasi tidak menyiratkan sebab-akibat.
+
+121
+00:07:07,200 --> 00:07:10,470
+Sekarang, bandingkan dengan contoh klasik
+
+122
+00:07:10,470 --> 00:07:12,430
+dari korelasi palsu.
+
+123
+00:07:12,430 --> 00:07:15,600
+Penjualan es krim dan serangan hiu.
+
+124
+00:07:15,600 --> 00:07:18,340
+Kedua variabel ini berkorelasi.
+
+125
+00:07:18,340 --> 00:07:22,780
+Tetapi apakah makan es krim menyebabkan serangan hiu?
+
+126
+00:07:22,780 --> 00:07:24,480
+Tentu saja tidak.
+
+127
+00:07:24,480 --> 00:07:27,360
+Penjelasan sebenarnya adalah faktor ketiga.
+
+128
+00:07:27,360 --> 00:07:31,320
+Cuaca panas meningkatkan penjualan es krim dan pantai
+
+129
+00:07:31,320 --> 00:07:36,070
+yang pada gilirannya meningkatkan kemungkinan serangan hiu.
+
+130
+00:07:36,070 --> 00:07:40,180
+Inilah yang kami sebut sebagai korelasi palsu atau menyesatkan, ketika
+
+131
+00:07:40,180 --> 00:07:44,560
+dua variabel tampak berhubungan, tetapi sebenarnya hubungannya adalah
+
+132
+00:07:44,560 --> 00:07:47,890
+didorong oleh faktor eksternal.
+
+133
+00:07:47,890 --> 00:07:51,340
+Sebagai kesimpulan dari kuliah hari ini, kita
+
+134
+00:07:51,340 --> 00:07:53,980
+berbicara tentang cara memvisualisasikan data
+
+135
+00:07:53,980 --> 00:07:57,470
+dengan histogram, plot kotak, dan plot sebar,
+
+136
+00:07:57,470 --> 00:08:02,050
+dan mengeksplorasi ide-ide kunci seperti tendensi sentral, penyebaran,
+
+137
+00:08:02,050 --> 00:08:05,950
+dan hubungan antar variabel.
+
+138
+00:08:05,950 --> 00:08:10,840
+Sejauh ini, kita telah melihat bagaimana variabel dapat dikaitkan--
+
+139
+00:08:10,840 --> 00:08:14,740
+tidak hanya arahnya, tetapi juga bentuk dan kekuatannya
+
+140
+00:08:14,740 --> 00:08:16,540
+dari hubungan tersebut.
+
+141
+00:08:16,540 --> 00:08:20,380
+Kemudian kami beralih ke korelasi dan kovarians
+
+142
+00:08:20,380 --> 00:08:24,370
+sebagai alat untuk mengukur pola-pola tersebut.
+
+143
+00:08:24,370 --> 00:08:28,340
+Pada akhirnya, statistik bukan hanya tentang menghitung angka.
+
+144
+00:08:28,340 --> 00:08:31,360
+Ini adalah tentang membuat keputusan di bawah ketidakpastian
+
+145
+00:08:31,360 --> 00:08:36,159
+dan melakukannya dengan cara yang hati-hati, jelas, dan transparan.
+
+146
+00:08:36,159 --> 00:08:38,640
+Sampai jumpa di kuliah berikutnya.
+
