@@ -4,7 +4,7 @@
       "id": "L2.1.HAIM_Holistic_AI_for_Medicine",
       "title": "L2.1 HAIM: Holistic AI for Medicine",
       "youtubeId": "VAT44R63jOU",
-      "methods": ["gpt-4o-mini", "gpt-5", "deep-l", "deep-l_gpt5"],
+      "methods": ["deep-l_gpt5", "gpt-5", "deep-l", "gpt-4o-mini"],
       "languages": {
         "gpt-4o-mini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
         "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],

@@ -74,13 +74,13 @@ function setDefaults() {
 
     // Populate and select gpt-4o-mini method
     populateMethodSelect(0);
-    if (video.languages['gpt-4o-mini'] && video.languages['gpt-4o-mini'].length > 0) {
-        currentSelection.method = 'gpt-4o-mini';
-        methodSelect.value = 'gpt-4o-mini';
+    if (video.languages['deep-l_gpt5'] && video.languages['deep-l_gpt5'].length > 0) {
+        currentSelection.method = 'deep-l_gpt5';
+        methodSelect.value = 'deep-l_gpt5';
 
         // Populate and select Spanish language
-        populateLanguageSelect(0, 'gpt-4o-mini');
-        if (video.languages['gpt-4o-mini'].includes('es')) {
+        populateLanguageSelect(0, 'deep-l_gpt5');
+        if (video.languages['deep-l_gpt5'].includes('es')) {
             currentSelection.language = 'es';
             languageSelect.value = 'es';
 
@@ -108,10 +108,10 @@ function populateMethodSelect(videoIndex) {
     methodSelect.innerHTML = '<option value="">Select a method...</option>';
 
     const video = manifest.videos[videoIndex];
-    video.methods.forEach(method => {
+    video.methods.forEach((method, index) => {
         const option = document.createElement('option');
         option.value = method;
-        option.textContent = method;
+        option.textContent = `Method ${index + 1} - ${method}`;
 
         // Disable if no languages available
         const hasLanguages = video.languages[method] && video.languages[method].length > 0;
