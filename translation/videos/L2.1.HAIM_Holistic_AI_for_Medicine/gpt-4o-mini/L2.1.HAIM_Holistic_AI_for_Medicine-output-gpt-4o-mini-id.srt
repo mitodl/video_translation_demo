@@ -1,18 +1,18 @@
 1
 00:00:00,000 --> 00:00:02,120
-INSTRUKTUR: Dalam kuliah ini, kami mempresentasikan
+PENGAJAR: Dalam kuliah ini, kami menyajikan
 
 2
 00:00:02,120 --> 00:00:08,400
-Kecerdasan Buatan Holistik untuk Kedokteran, atau HAIM untuk singkatnya.
+Kecerdasan Buatan Holistik untuk Kedokteran, atau disingkat HAIM.
 
 3
 00:00:08,400 --> 00:00:11,900
-Haim adalah kata dalam bahasa Ibrani untuk kehidupan.
+Haim adalah kata dalam bahasa Ibrani yang berarti hidup.
 
 4
 00:00:11,900 --> 00:00:17,660
-Ini merepresentasikan aplikasi AI multimodal dalam kedokteran.
+Ini mewakili aplikasi AI multimodal dalam kedokteran.
 
 5
 00:00:17,660 --> 00:00:19,800
@@ -20,11 +20,11 @@ Garis besar kuliah adalah sebagai berikut.
 
 6
 00:00:19,800 --> 00:00:23,670
-Kami pertama-tama memberikan motivasi untuk menggunakan AI multimodal.
+Pertama-tama kami memberikan motivasi untuk menggunakan AI multimodal.
 
 7
 00:00:23,670 --> 00:00:27,110
-Kemudian kami mempersembahkan HAIM dan menerapkannya
+Kami kemudian mempersembahkan HAIM dan menerapkannya
 
 8
 00:00:27,110 --> 00:00:31,880
@@ -36,7 +36,7 @@ Dan akhirnya, kami menyimpulkan dengan aplikasi HAIM
 
 10
 00:00:35,030 --> 00:00:38,960
-di beberapa bidang lain dalam kedokteran.
+di beberapa bidang kedokteran lainnya.
 
 11
 00:00:38,960 --> 00:00:42,260
@@ -48,7 +48,7 @@ mari kita pikirkan bagaimana dokter membuat keputusan.
 
 13
 00:00:45,920 --> 00:00:52,520
-Mereka memanfaatkan pemindaian, MRI, CT, sinar-X, dan lain-lain; bahasa,
+Mereka menggunakan pemindaian, MRI, CT, sinar-X, dan lain-lain; bahasa,
 
 14
 00:00:52,520 --> 00:00:56,670
@@ -56,11 +56,11 @@ laporan radiologi, catatan dokter atau perawat;
 
 15
 00:00:56,670 --> 00:01:00,200
-data tabel, rekaman medis elektronik, misalnya;
+data tabel, catatan medis elektronik, misalnya;
 
 16
 00:01:00,200 --> 00:01:04,290
-seri waktu; dan informasi genom.
+rangkaian waktu; dan informasi genetik.
 
 17
 00:01:04,290 --> 00:01:07,870
@@ -68,7 +68,7 @@ Mengingat bahwa dokter manusia menggunakan data multimodal,
 
 18
 00:01:07,870 --> 00:01:10,770
-adalah wajar untuk bertanya apakah mesin
+adalah hal yang wajar untuk bertanya apakah mesin
 
 19
 00:01:10,770 --> 00:01:16,680
@@ -84,11 +84,11 @@ Orang menggunakan lima indera dasar manusia--
 
 22
 00:01:26,220 --> 00:01:32,850
-sentuhan, penglihatan, pendengaran, penciuman, dan rasa.
+sentuhan, penglihatan, pendengaran, penciuman, dan pengecapan.
 
 23
 00:01:32,850 --> 00:01:36,390
-Dengan kata lain, multimodalitas adalah karakteristik fundamental
+Dengan kata lain, multimodalitas adalah karakteristik dasar
 
 24
 00:01:36,390 --> 00:01:38,070
@@ -96,7 +96,7 @@ dari kehidupan manusia.
 
 25
 00:01:38,070 --> 00:01:41,910
-Oleh karena itu, adalah wajar untuk mempertimbangkan pertanyaan
+Oleh karena itu wajar untuk mempertimbangkan pertanyaan
 
 26
 00:01:41,910 --> 00:01:48,390
@@ -104,695 +104,695 @@ apakah mesin juga harus digunakan untuk data multimodal.
 
 27
 00:01:48,390 --> 00:01:52,830
-Dalam kuliah ini, kami mempersembahkan HAIM dari temuan utama
+Dalam kuliah ini, kami menyajikan HAIM dari temuan utama
 
 28
 00:01:52,830 --> 00:01:57,960
-dari sebuah makalah tahun 2022 berjudul, "Kerangka Kecerdasan Buatan
+dari sebuah makalah tahun 2022 berjudul, "Kerangka Kerja Kecerdasan Buatan Multimodal Terintegrasi untuk Aplikasi Kesehatan
 
 29
 00:01:57,960 --> 00:02:00,900
-Multimodal Terintegrasi untuk Aplikasi Perawatan Kesehatan
+yang Muncul di Nature Digital Medicine,"
 
 30
 00:02:00,900 --> 00:02:05,810
-yang Muncul di Nature Digital Medicine,"
+September 2022 oleh saya dan anggota kelompok riset saya.
 
 31
 00:02:05,810 --> 00:02:10,850
-September 2022 oleh saya sendiri dan anggota grup penelitian saya.
+Saya ingin memberi tahu Anda sedikit tentang sejarah
 
 32
 00:02:10,850 --> 00:02:13,520
-Saya ingin memberitahukan Anda sedikit sejarah
+konsepsi HAIM.
 
 33
 00:02:13,520 --> 00:02:15,650
-konsepsi HAIM.
+Pada tahun 2013, IBM menciptakan Watson, sebuah program komputer yang
 
 34
 00:02:15,650 --> 00:02:22,160
-Pada tahun 2013, IBM menciptakan Watson, sebuah program komputer yang
+dapat bersaing di Jeopardy, sebuah permainan
 
 35
 00:02:22,160 --> 00:02:24,770
-dapat bersaing di Jeopardy, sebuah permainan
+di mana seorang kontestan diberikan sebuah pernyataan
 
 36
 00:02:24,770 --> 00:02:29,180
-di mana seorang kontestan diberikan sebuah pernyataan
+dan dia perlu mengekspresikan jawabannya
 
 37
 00:02:29,180 --> 00:02:31,250
-dan dia harus mengungkapkan jawaban
+dalam bentuk pertanyaan.
 
 38
 00:02:31,250 --> 00:02:33,350
-dalam bentuk pertanyaan.
+Sebagai contoh, jika jawabannya adalah "dia mengembangkan teori
 
 39
 00:02:33,350 --> 00:02:38,660
-Misalnya, jika jawabannya adalah "dia mengembangkan teori
+relativitas," kontestan perlu mengatakan untuk jawaban yang benar, "siapa Albert Einstein?"
 
 40
 00:02:38,660 --> 00:02:42,710
-relativitas," kontestan perlu mengatakan untuk menjawab dengan benar,
+IBM Watson bersaing dengan pemain manusia terbaik dalam sejarah
 
 41
 00:02:42,710 --> 00:02:44,990
-"siapa Albert Einstein?"
+selama dua hari, dan ia menang dengan sangat meyakinkan.
 
 42
 00:02:44,990 --> 00:02:49,490
-IBM Watson bersaing dengan pemain manusia terbaik dalam sejarah
+Saya ingat kegembiraan di acara ini,
 
 43
 00:02:49,490 --> 00:02:54,680
-selama dua hari, dan itu menang dengan sangat meyakinkan.
+karena saya tahu pada saat itu bahwa ini adalah
 
 44
 00:02:54,680 --> 00:02:58,710
-Saya ingat kegembiraan pada acara ini,
+awal dari era mendorong kecerdasan mesin
 
 45
 00:02:58,710 --> 00:03:01,220
-karena saya tahu pada saat itu bahwa ini adalah
+ke tingkat selanjutnya.
 
 46
 00:03:01,220 --> 00:03:03,910
-awal dari sebuah era untuk mendorong kecerdasan mesin
+IBM melanjutkan untuk menerapkan Watson dalam kedokteran,
 
 47
 00:03:03,910 --> 00:03:06,190
-ke tingkat berikutnya.
+sayangnya tidak berhasil.
 
 48
 00:03:06,190 --> 00:03:09,740
-IBM melanjutkan untuk menerapkan Watson dalam kedokteran,
+Dalam 12 tahun yang telah berlalu, kecerdasan buatan
 
 49
 00:03:09,740 --> 00:03:12,550
-sayangnya tidak berhasil.
+telah berkembang secara signifikan, terutama AI generatif
 
 50
 00:03:12,550 --> 00:03:15,640
-Dalam 12 tahun yang berlalu, kecerdasan buatan
+dan model bahasa besar.
 
 51
 00:03:15,640 --> 00:03:19,090
-telah berkembang pesat, terutama AI generatif
+HAIM menunjukkan bagaimana menggabungkan berbagai modalitas
 
 52
 00:03:19,090 --> 00:03:21,460
-dan model bahasa besar.
+untuk mencapai kinerja yang jauh lebih baik.
 
 53
 00:03:21,460 --> 00:03:24,970
-HAIM menunjukkan bagaimana menggabungkan berbagai modalitas
+HAIM menyajikan perspektif holistik tentang AI--
 
 54
 00:03:24,970 --> 00:03:29,170
-untuk mencapai kinerja yang signifikan lebih baik.
+visi komputer, pengolahan bahasa alami,
 
 55
 00:03:29,170 --> 00:03:32,780
-HAIM menyajikan perspektif holistik tentang AI--
+pembelajaran mesin-- untuk meningkatkan kemampuan model
 
 56
 00:03:32,780 --> 00:03:35,000
-penglihatan komputer, pemrosesan bahasa alami,
+dalam membuat prediksi dan resep,
 
 57
 00:03:35,000 --> 00:03:38,170
-pembelajaran mesin-- untuk meningkatkan kemampuan model
+terutama dalam kedokteran.
 
 58
 00:03:38,170 --> 00:03:40,820
-dalam membuat prediksi dan resep,
+Paradigma pembelajaran mesin tradisional
 
 59
 00:03:40,820 --> 00:03:44,230
-terutama dalam kedokteran.
+adalah menggunakan data tabel untuk membuat prediksi.
 
 60
 00:03:44,230 --> 00:03:47,560
-Paradigma pembelajaran mesin tradisional
+Ketika beberapa modalitas hadir,
 
 61
 00:03:47,560 --> 00:03:51,400
-adalah menggunakan data tabel untuk membuat prediksi.
+seperti visi komputer atau bahasa,
 
 62
 00:03:51,400 --> 00:03:53,780
-Ketika beberapa modalitas ada,
+paradigma ini tidak berlaku dan kita
 
 63
 00:03:53,780 --> 00:03:56,480
-seperti penglihatan komputer atau bahasa,
+perlu menemukan cara yang berbeda untuk menggabungkan data.
 
 64
 00:03:56,480 --> 00:03:58,690
-paradigma ini tidak berlaku dan kita
+Dalam slide berikutnya, kami menggariskan bagaimana
 
 65
 00:03:58,690 --> 00:04:02,170
-perlu menemukan cara berbeda untuk menggabungkan data.
+menggabungkan berbagai modalitas data.
 
 66
 00:04:02,170 --> 00:04:04,610
-Dalam slide selanjutnya, kami menguraikan bagaimana
+Ketika data kesehatan elektronik tersedia,
 
 67
 00:04:04,610 --> 00:04:08,450
-menggabungkan berbagai modalitas data.
+seperti yang ditunjukkan pada slide, kami menyimpan catatan seperti adanya,
 
 68
 00:04:08,450 --> 00:04:11,850
-Ketika data kesehatan elektronik tersedia,
+sebagaimana dalam format pembelajaran mesin tradisional,
 
 69
 00:04:11,850 --> 00:04:16,560
-seperti yang ditunjukkan di slide, kami menjaga catatan sebagaimana adanya,
+di mana metode tradisional diterapkan.
 
 70
 00:04:16,560 --> 00:04:19,138
-sebagaimana data tersebut dalam format pembelajaran mesin tradisional,
+Ketika ada rangkaian waktu yang tersedia,
 
 71
 00:04:19,138 --> 00:04:23,120
-di mana metode tradisional berlaku.
+kami menggunakan perangkat lunak seperti tsfresh--
 
 72
 00:04:23,120 --> 00:04:26,070
-Ketika ada seri waktu yang tersedia,
+Anda akan melihat sekarang dalam pembacaan--
 
 73
 00:04:26,070 --> 00:04:29,790
-kami menggunakan perangkat lunak seperti tsfresh--
+untuk mengekstrak fitur dari rangkaian waktu,
 
 74
 00:04:29,790 --> 00:04:31,880
-Anda akan melihat sekarang dalam pembacaan ulang--
+seperti nilai maksimum, nilai minimum, median,
 
 75
 00:04:31,880 --> 00:04:34,640
-untuk mengekstrak fitur dari seri waktu,
+rata-rata, jumlah puncak, antara banyak lainnya.
 
 76
 00:04:34,640 --> 00:04:38,340
-seperti nilai maksimum, nilai minimum, median,
+Dengan cara ini, rangkaian waktu diringkas dalam angka
 
 77
 00:04:38,340 --> 00:04:41,840
-rata-rata, jumlah puncak, di antara banyak lainnya.
+yang menjadi input dalam format pembelajaran mesin tradisional.
 
 78
 00:04:41,840 --> 00:04:45,860
-Dengan cara ini, seri waktu dirangkum dalam angka
+Ketika inputnya adalah catatan dokter atau perawat
 
 79
 00:04:45,860 --> 00:04:50,390
-yang menjadi input dalam format pembelajaran mesin tradisional.
+atau laporan radiologi, yang merupakan bahasa,
 
 80
 00:04:50,390 --> 00:04:53,210
-Ketika input adalah catatan dokter atau perawat
+kami menggunakan model dasar seperti ClinicalBERT.
 
 81
 00:04:53,210 --> 00:04:57,000
-atau laporan radiologi, itu adalah bahasa,
+Ini merangkum informasi bahasa dalam format
 
 82
 00:04:57,000 --> 00:05:00,680
-kami menggunakan model dasar seperti ClinicalBERT.
+embedding, sebuah vektor dengan 768 elemen.
 
 83
 00:05:00,680 --> 00:05:04,410
-Ini merangkum informasi bahasa dalam format
+Vektor ini merangkum informasi
 
 84
 00:05:04,410 --> 00:05:09,420
-embedding, sebuah vektor dengan 768 elemen.
+dalam format numerik yang dapat digabungkan
 
 85
 00:05:09,420 --> 00:05:12,090
-Vektor ini merangkum informasi
+dengan fitur numerik lainnya.
 
 86
 00:05:12,090 --> 00:05:15,750
-dalam format numerik yang dapat digabungkan
+Perhatikan bahwa kami dapat menggunakan AI generatif
 
 87
 00:05:15,750 --> 00:05:18,510
-dengan fitur numerik lainnya.
+model seperti OpenAI 4.0 atau Llama sebagai pengganti ClinicalBERT.
 
 88
 00:05:18,510 --> 00:05:20,940
-Perhatikan bahwa kami dapat menggunakan AI generatif
+Ketika inputnya adalah dalam bentuk kardiogram elektronik,
 
 89
 00:05:20,940 --> 00:05:28,530
-model seperti OpenAI 4.0 atau Llama sebagai pengganti ClinicalBERT.
+kami menggunakan informasi bahasa yang terdapat dalam EKG,
 
 90
 00:05:28,530 --> 00:05:31,870
-Ketika input berada dalam kardiogram elektronik,
+seperti bahasa, dan kemudian menggunakan model dasar seperti
 
 91
 00:05:31,870 --> 00:05:36,510
-kami menggunakan informasi bahasa yang terdapat dalam EKG,
+ClinicalBERT, yang telah kami lihat sebelumnya,
 
 92
 00:05:36,510 --> 00:05:41,370
-seperti bahasa, dan kemudian menggunakan model dasar seperti
+yang merangkum informasi bahasa dalam format
 
 93
 00:05:41,370 --> 00:05:43,260
-ClinicalBERT, yang telah kami lihat sebelumnya,
+embedding vektor dengan 768 elemen dalam format numerik,
 
 94
 00:05:43,260 --> 00:05:46,770
-yang merangkum informasi bahasa dalam format
+seperti sebelumnya.
 
 95
 00:05:46,770 --> 00:05:51,610
-embedding dari vektor dengan 768 elemen dalam format numerik,
+Ketika inputnya adalah gambar seperti sinar-X,
 
 96
 00:05:51,610 --> 00:05:54,300
-seperti sebelumnya.
+kami menggunakan jaringan saraf konvolusional untuk mengekstrak embedding
 
 97
 00:05:54,300 --> 00:05:57,790
-Ketika input adalah gambar seperti sinar-X,
+dari vektor dengan 768 elemen dalam format numerik.
 
 98
 00:05:57,790 --> 00:06:02,820
-kami menggunakan jaringan syaraf konvolusional untuk mengekstrak embedding
-
-99
-00:06:02,820 --> 00:06:07,050
-dari vektor dengan 768 elemen dalam format numerik.
-
-100
-00:06:07,050 --> 00:06:12,300
 Perhatikan bahwa kami dapat menggunakan embedding dari model AI generatif,
 
-101
+99
 00:06:12,300 --> 00:06:19,590
-sebagai alternatif daripada menggunakan gambar dari model CNN.
+daripada menggunakan gambar dari model CNN sebagai alternatif.
 
-102
+100
 00:06:19,590 --> 00:06:22,470
 Ini adalah ide kritis dari kuliah.
 
-103
+101
 00:06:22,470 --> 00:06:26,520
-Kami menggunakan fitur numerik yang kami kembangkan, baik secara langsung
+Kami menggunakan fitur numerik yang telah kami kembangkan, baik secara langsung
+
+102
+00:06:26,520 --> 00:06:29,020
+dari catatan perawatan kesehatan elektronik
+
+103
+00:06:29,020 --> 00:06:32,730
+atau fitur yang diekstrak dari deret waktu atau embedding
 
 104
-00:06:26,520 --> 00:06:29,020
-dari rekam medis elektronik
+00:06:32,730 --> 00:06:34,830
+menggunakan data tak terstruktur.
 
 105
-00:06:29,020 --> 00:06:32,730
-atau fitur yang diekstraksi dari deret waktu atau embeddings
-
-106
-00:06:32,730 --> 00:06:34,830
-menggunakan data yang tidak terstruktur.
-
-107
 00:06:34,830 --> 00:06:37,470
 Ide ini disebut fusi.
 
-108
+106
 00:06:37,470 --> 00:06:41,080
 Sekarang kami memiliki tugas pembelajaran mesin tradisional.
 
-109
+107
 00:06:41,080 --> 00:06:45,330
 Kami ingin memprediksi, katakanlah, misalnya, mortalitas menggunakan
 
-110
+108
 00:06:45,330 --> 00:06:48,510
-sebagai masukan fitur numerik yang kami ekstrak,
+sebagai input fitur numerik yang kami ekstrak,
 
-111
+109
 00:06:48,510 --> 00:06:50,230
-seperti yang disebutkan sebelumnya.
+seperti yang diindikasikan sebelumnya.
 
-112
+110
 00:06:50,230 --> 00:06:54,510
 Kami menggunakan model ML tradisional seperti XGBoost atau random forest
 
-113
+111
 00:06:54,510 --> 00:06:58,620
 untuk melakukan tugas prediksi ini.
 
-114
+112
 00:06:58,620 --> 00:07:01,140
-Perhatikan bahwa metode ini sangat umum,
+Perhatikan bahwa metodenya sangat umum,
 
-115
+113
 00:07:01,140 --> 00:07:04,180
 karena kami memperlakukan setiap modalitas secara independen,
 
-116
+114
 00:07:04,180 --> 00:07:07,660
 sehingga jika kami menambahkan modalitas baru,
 
-117
+115
 00:07:07,660 --> 00:07:11,050
-kami hanya menambahkan embeddings tambahan.
+kami hanya menambahkan embedding tambahan.
 
-118
+116
 00:07:11,050 --> 00:07:15,730
 Perhatikan bahwa kami tidak melatih modalitas dalam kombinasi.
 
-119
+117
 00:07:15,730 --> 00:07:19,000
-Perhatikan juga bahwa embeddings tidak bergantung
+Perhatikan juga bahwa embedding tidak tergantung
 
-120
+118
 00:07:19,000 --> 00:07:21,880
 pada tugas yang ingin kami lakukan.
 
-121
+119
 00:07:21,880 --> 00:07:24,460
-Embeddings hanya merangkum data
+Embedding hanya meringkas data
 
-122
+120
 00:07:24,460 --> 00:07:29,860
 dari setiap modalitas secara independen dari tugas yang ingin kami lakukan.
 
-123
+121
 00:07:29,860 --> 00:07:34,780
-Sekarang mari kita terapkan HAIM untuk berbagai tugas prediksi menggunakan
+Mari kita terapkan HAIM untuk berbagai tugas prediksi menggunakan
 
-124
+122
 00:07:34,780 --> 00:07:38,860
 set data MIMIC-IV dari Beth Israel Deaconess Medical
 
-125
+123
 00:07:38,860 --> 00:07:43,540
 Center, sebuah sistem rumah sakit di Boston, Massachusetts.
 
-126
+124
 00:07:43,540 --> 00:07:51,490
-Set data yang berisi 34.537 catatan pasien berasal dari
+Set data 34.537 catatan pasien berasal dari
 
-127
+125
 00:07:51,490 --> 00:07:54,850
 ruang ICU darurat.
 
-128
+126
 00:07:54,850 --> 00:07:57,940
-Catatan tersebut termasuk rontgen dada,
+Catatan tersebut mencakup rontgen dada,
+
+127
+00:07:57,940 --> 00:08:03,310
+catatan medis elektronik, catatan radiologi, dan EKG.
+
+128
+00:08:03,310 --> 00:08:09,500
+Yaitu, mencakup data visual, bahasa, dan tabel.
 
 129
-00:07:57,940 --> 00:08:03,310
-rekam medis elektronik, catatan radiologi, dan EKG.
+00:08:09,500 --> 00:08:12,600
+Diagnosis target kami meliputi 12 target--
 
 130
-00:08:03,310 --> 00:08:09,500
-Artinya, ini mencakup data visual, bahasa, dan tabel.
-
-131
-00:08:09,500 --> 00:08:12,600
-Diagnosis target kami mencakup 12 target--
-
-132
 00:08:12,600 --> 00:08:14,990
 prediksi mortalitas, yaitu, kami
 
-133
+131
 00:08:14,990 --> 00:08:19,310
-bertujuan untuk memprediksi apakah seorang pasien telah meninggal atau dikirim ke hospice
+bertujuan untuk memprediksi apakah seorang pasien meninggal atau dirujuk ke rumah sakit
 
-134
+132
 00:08:19,310 --> 00:08:25,130
 atau pasien tersebut masih hidup saat keluar dari rumah sakit; satu
 
-135
+133
 00:08:25,130 --> 00:08:29,810
 dari 10 diagnosis, yaitu, kami ingin memprediksi apakah seorang pasien memiliki
 
-136
+134
 00:08:29,810 --> 00:08:37,429
-penyakit tertentu, seperti patah tulang, lesi paru-paru, membesar
+penyakit tertentu, seperti fraktur, lesion paru, pembesaran
+
+135
+00:08:37,429 --> 00:08:43,580
+CM, konsolidasi, pneumonia, kelas [TIDAK JELAS], kapasitas paru,
+
+136
+00:08:43,580 --> 00:08:49,940
+pneumotoraks, edema, kardiomegali; dan akhirnya,
 
 137
-00:08:37,429 --> 00:08:43,580
-CM, konsolidasi, pneumonia, kelas [INAUDIBLE], kapasitas paru,
-
-138
-00:08:43,580 --> 00:08:49,940
-pneumothorax, edema, kardiomegali; dan akhirnya,
-
-139
 00:08:49,940 --> 00:08:52,670
 lama tinggal, yaitu, kami ingin
 
-140
+138
 00:08:52,670 --> 00:08:58,340
 memprediksi apakah seorang pasien keluar dari rumah sakit dalam 48 jam.
 
-141
+139
 00:08:58,340 --> 00:09:01,310
 Kami telah membandingkan kinerja HAIM
 
-142
+140
 00:09:01,310 --> 00:09:04,740
 dan kinerja model pembelajaran mesin klasik
 
-143
+141
 00:09:04,740 --> 00:09:08,200
-yang hanya berdasarkan rekam medis elektronik,
+yang hanya berdasarkan catatan medis elektronik,
 
-144
+142
 00:09:08,200 --> 00:09:10,020
 pendekatan klasik.
 
-145
+143
 00:09:10,020 --> 00:09:16,650
-Dalam hal mortalitas, HAIM meningkatkan akurasi sebesar 11% hingga 33%
+Pada mortalitas, HAIM meningkatkan akurasi sebesar 11% hingga 33%
 
-146
+144
 00:09:16,650 --> 00:09:19,120
-dibandingkan dengan rekam medis elektronik.
+dibandingkan dengan catatan medis elektronik.
 
-147
+145
 00:09:19,120 --> 00:09:22,350
 Itu hanya berdasarkan model pembelajaran mesin klasik.
 
-148
+146
 00:09:22,350 --> 00:09:25,860
-Dalam klasifikasi penyakit, HAIM meningkatkan akurasi
+Pada klasifikasi penyakit, HAIM meningkatkan akurasi
+
+147
+00:09:25,860 --> 00:09:30,630
+sebanyak 6% hingga 22% dibandingkan dengan catatan elektronik.
+
+148
+00:09:30,630 --> 00:09:34,890
+Pada lama tinggal, HAIM meningkatkan akurasi sebesar 8% hingga 20%
 
 149
-00:09:25,860 --> 00:09:30,630
-sebanyak 6% hingga 22% dibandingkan dengan rekam elektronik.
+00:09:34,890 --> 00:09:37,050
+dibandingkan dengan catatan medis elektronik
 
 150
-00:09:30,630 --> 00:09:34,890
-Dalam lama tinggal, HAIM meningkatkan akurasi sebesar 8% hingga 20%
+00:09:37,050 --> 00:09:39,840
+dan model pembelajaran mesin klasik lainnya.
 
 151
-00:09:34,890 --> 00:09:37,050
-dibandingkan dengan rekam medis elektronik
+00:09:39,840 --> 00:09:42,780
+Di semua kasus, penggunaan multimodalitas
 
 152
-00:09:37,050 --> 00:09:39,840
-dan model pembelajaran mesin klasik yang lebih banyak.
-
-153
-00:09:39,840 --> 00:09:42,780
-Dalam semua kasus, penggunaan multimodalitas
-
-154
 00:09:42,780 --> 00:09:47,460
 menghasilkan peningkatan kinerja yang signifikan.
 
-155
+153
 00:09:47,460 --> 00:09:51,300
 Dalam slide ini, kami menyajikan subanalisis untuk
 
-156
+154
 00:09:51,300 --> 00:09:54,900
 memahami kontribusi relatif dari setiap modalitas
 
-157
+155
 00:09:54,900 --> 00:09:58,270
-terhadap prediksi klasifikasi penyakit.
+terhadap prediksi untuk klasifikasi penyakit.
 
-158
+156
 00:09:58,270 --> 00:10:00,810
-Masukan visual, dalam hal ini, rontgen,
+Input visual, dalam hal ini, rontgen,
 
-159
+157
 00:10:00,810 --> 00:10:02,820
 adalah modalitas dominan.
 
-160
+158
 00:10:02,820 --> 00:10:05,300
 Untuk lama tinggal dan mortalitas,
 
-161
+159
 00:10:05,300 --> 00:10:10,990
-deret waktu dan rekam medis elektronik
+deret waktu dan catatan medis elektronik
 
-162
+160
 00:10:10,990 --> 00:10:13,900
 adalah modalitas dominan.
 
-163
+161
 00:10:13,900 --> 00:10:18,040
-Selanjutnya, kami menyajikan aplikasi dari metodologi HAIM
+Selanjutnya kami menyajikan aplikasi metodologi HAIM
 
-164
+162
 00:10:18,040 --> 00:10:22,570
 untuk memprediksi lama tinggal di sistem Hartford Health Care,
 
-165
+163
 00:10:22,570 --> 00:10:28,510
 HHC untuk singkatnya, sistem rumah sakit terbesar di Connecticut,
 
-166
+164
 00:10:28,510 --> 00:10:32,080
-dengan pendapatan operasi di atas $5 miliar setahun,
+dengan pendapatan operasional di atas $5 miliar setahun,
 
-167
+165
 00:10:32,080 --> 00:10:37,300
-tujuh rumah sakit yang beragam, mulai dari rumah sakit akademik kota
+tujuh rumah sakit yang beragam, mulai dari rumah sakit akademis urban
 
-168
+166
 00:10:37,300 --> 00:10:41,180
 hingga rumah sakit komunitas, dan dari rumah sakit besar hingga kecil.
 
-169
+167
 00:10:41,180 --> 00:10:45,590
 Secara keseluruhan, HHC memiliki total 2.500 tempat tidur.
 
-170
+168
 00:10:45,590 --> 00:10:49,900
-Ini mewakili jaringan rumah sakit AS yang tipikal dan berkualitas tinggi.
+Ini menjadi representatif dari jaringan rumah sakit AS
+
+169
+00:10:49,900 --> 00:10:52,660
+yang berkualitas tinggi dan khas.
+
+170
+00:10:52,660 --> 00:10:56,170
+Kami telah menerapkan beberapa algoritma yang kami sajikan
 
 171
-00:10:49,900 --> 00:10:52,660
-Kami telah menerapkan beberapa algoritma yang kami presentasikan
-
-172
-00:10:52,660 --> 00:10:56,170
+00:10:56,170 --> 00:11:00,020
 di sebuah perusahaan bernama Holistic Hospital Optimization,
 
+172
+00:11:00,020 --> 00:11:02,350
+H2O untuk singkatnya.
+
 173
-00:10:56,170 --> 00:11:00,020
-singkatnya H2O.
+00:11:02,350 --> 00:11:04,420
+Ini adalah indikasi koneksi
 
 174
-00:11:00,020 --> 00:11:02,350
-Ini adalah indikasi dari hubungan
+00:11:04,420 --> 00:11:07,840
+dengan aspek fundamental kehidupan, air.
 
 175
-00:11:02,350 --> 00:11:04,420
-dengan aspek mendasar kehidupan, air.
+00:11:07,840 --> 00:11:11,140
+Kami membahas secara rinci aplikasi lama tinggal.
 
 176
-00:11:04,420 --> 00:11:07,840
-Kami membahas secara detail aplikasi lama tinggal.
-
-177
-00:11:07,840 --> 00:11:11,140
+00:11:11,140 --> 00:11:13,330
 Kami telah menerapkan aplikasi lain,
 
-178
-00:11:11,140 --> 00:11:13,330
-seperti indeks kemunduran, yang mencakup risiko mortalitas, risiko ICU,
-
-179
+177
 00:11:13,330 --> 00:11:17,230
+seperti indeks deteriorasi, yang mencakup risiko mortalitas, risiko ICU,
+
+178
+00:11:17,230 --> 00:11:21,670
 penjadwalan perawat, dan penjadwalan ruang operasi.
 
-180
-00:11:17,230 --> 00:11:21,670
+179
+00:11:21,670 --> 00:11:24,580
 Perangkat lunak ini digunakan oleh ratusan pengguna--
 
-181
-00:11:21,670 --> 00:11:24,580
+180
+00:11:24,580 --> 00:11:27,800
 dokter, perawat, administrator.
 
-182
-00:11:24,580 --> 00:11:27,800
+181
+00:11:27,800 --> 00:11:31,780
 Ini berfungsi di semua tujuh rumah sakit HHC,
 
+182
+00:11:31,780 --> 00:11:35,710
+dan telah menghasilkan peningkatan pendapatan tahunan
+
 183
-00:11:27,800 --> 00:11:31,780
-dan telah menghasilkan peningkatan pendapatan tahunan dalam puluhan juta
+00:11:35,710 --> 00:11:37,390
+di angka puluhan juta
 
 184
-00:11:31,780 --> 00:11:35,710
+00:11:37,390 --> 00:11:39,070
 dolar.
 
 185
-00:11:35,710 --> 00:11:37,390
+00:11:39,070 --> 00:11:43,210
 Kami telah menerapkan solusi ini
 
 186
-00:11:37,390 --> 00:11:39,070
+00:11:43,210 --> 00:11:45,310
 ke beberapa sistem rumah sakit lain di seluruh dunia.
 
 187
-00:11:39,070 --> 00:11:43,210
+00:11:45,310 --> 00:11:49,060
 Aplikasi tersebut mencakup memprediksi
 
 188
-00:11:43,210 --> 00:11:45,310
-keluaran dalam 24 atau 48 jam ke depan, yang
+00:11:49,060 --> 00:11:52,880
+keluar dalam 24 atau 48 jam ke depan, yang
 
 189
-00:11:45,310 --> 00:11:49,060
+00:11:52,880 --> 00:11:56,690
 penting untuk mengidentifikasi dan memprioritaskan pasien,
 
 190
-00:11:49,060 --> 00:11:52,880
+00:11:56,690 --> 00:12:00,490
 mengurangi lama tinggal, dan menghemat biaya,
 
 191
-00:11:52,880 --> 00:11:56,690
-menyiapkan rencana perawatan dan disposisi.
+00:12:00,490 --> 00:12:03,100
+mempersiapkan rencana perawatan dan disposisi.
 
 192
-00:11:56,690 --> 00:12:00,490
+00:12:03,100 --> 00:12:06,050
 Ini juga memprediksi tujuan akhir
 
 193
-00:12:00,490 --> 00:12:03,100
+00:12:06,050 --> 00:12:09,350
 setelah keluar, risiko mortalitas,
 
 194
-00:12:03,100 --> 00:12:06,050
-serta risiko kebutuhan untuk masuk ke unit perawatan intensif.
+00:12:09,350 --> 00:12:10,730
+serta risiko memerlukan masuk ke unit perawatan intensif.
 
 195
-00:12:06,050 --> 00:12:09,350
-Prediksi ini membantu memperingatkan tentang kemunduran pasien,
+00:12:10,730 --> 00:12:16,340
+Prediksi ini membantu memperingatkan tentang deteriorasi pasien,
 
 196
-00:12:09,350 --> 00:12:10,730
+00:12:16,340 --> 00:12:19,830
 serta mengalokasikan sumber daya rumah sakit dengan lebih efektif.
 
 197
-00:12:10,730 --> 00:12:16,340
-Tabel tersebut menggambarkan AUC, Area Di Bawah Kurva,
+00:12:19,830 --> 00:12:23,450
+Tabel ini menggambarkan AUC, Area Di Bawah Kurva,
 
 198
-00:12:16,340 --> 00:12:19,830
-untuk mortalitas, tujuan, keluaran 24 dan 48 jam,
+00:12:23,450 --> 00:12:28,670
+untuk mortalitas, tujuan, keluar dalam 24 dan 48 jam,
 
 199
 00:12:28,670 --> 00:12:33,080
-memperkirakan masuk ICU atau keluar ICU untuk semua tujuh
+memprediksi masuk ICU atau keluar ICU untuk semua tujuh
 
 200
 00:12:33,080 --> 00:12:37,700
@@ -800,7 +800,7 @@ rumah sakit di HHC.
 
 201
 00:12:37,700 --> 00:12:41,810
-Hasilnya dapat diandalkan dan kuat di semua prediksi
+Hasilnya sangat kuat secara andal di semua prediksi
 
 202
 00:12:41,810 --> 00:12:44,330
@@ -808,7 +808,7 @@ dan semua rumah sakit.
 
 203
 00:12:44,330 --> 00:12:47,720
-Selanjutnya, kami menunjukkan bahwa plot kalibrasi juga
+Selanjutnya, kami menunjukkan bahwa grafik kalibrasi juga
 
 204
 00:12:47,720 --> 00:12:49,160
@@ -816,7 +816,7 @@ sangat akurat.
 
 205
 00:12:49,160 --> 00:12:52,980
-Secara khusus, pada plot kiri di sumbu horizontal,
+Secara spesifik, pada grafik kiri di sumbu horizontal,
 
 206
 00:12:52,980 --> 00:12:56,420
@@ -824,7 +824,7 @@ kami memplot proporsi pasien yang memiliki probabilitas
 
 207
 00:12:56,420 --> 00:13:01,020
-keluar dalam 48 jam antara, katakanlah, 0.5 dan 0.6,
+discharge dalam 48 jam antara, katakanlah, 0,5 dan 0,6,
 
 208
 00:13:01,020 --> 00:13:06,180
@@ -832,23 +832,23 @@ dalam kenaikan 10%, dan kemudian memplot proporsi pasien
 
 209
 00:13:06,180 --> 00:13:09,990
-di antara mereka yang keluar dalam waktu 48 jam di sumbu vertikal.
+di antara mereka yang keluar dalam 48 jam di sumbu vertikal.
 
 210
 00:13:09,990 --> 00:13:11,250
-Garisnya sangat mendekati sudut 45 derajat,
+Garis tersebut sangat dekat dengan sudut 45 derajat,
 
 211
 00:13:11,250 --> 00:13:15,250
-menggambarkan bahwa probabilitas yang diprediksi sangat cocok dengan
+menggambarkan bahwa probabilitas yang diprediksi sangat mendekati
 
 212
 00:13:15,250 --> 00:13:19,380
-bukti empirik.
+bukti empiris.
 
 213
 00:13:19,380 --> 00:13:21,360
-Pada plot kanan, kami melihat plot kalibrasi untuk mortalitas.
+Pada grafik kanan, kami melihat grafik kalibrasi untuk mortalitas.
 
 214
 00:13:21,360 --> 00:13:25,570
@@ -856,15 +856,15 @@ Sekali lagi, kalibrasi sangat akurat.
 
 215
 00:13:25,570 --> 00:13:29,490
-Gambar tersebut menunjukkan perangkat lunak yang
+Gambar menunjukkan perangkat lunak yang
 
 216
 00:13:29,490 --> 00:13:32,220
-telah diterapkan di HHC.
+telah diimplementasikan di HHC.
 
 217
 00:13:32,220 --> 00:13:34,960
-Warna-warna tersebut menunjukkan informasi berikut.
+Warna-warna menunjukkan informasi berikut.
 
 218
 00:13:34,960 --> 00:13:38,740
@@ -876,11 +876,11 @@ diprioritaskan untuk keluar.
 
 220
 00:13:41,460 --> 00:13:43,720
-Kuning juga menunjukkan bahwa staf rumah sakit
+Kuning juga menunjukkan bahwa personel rumah sakit
 
 221
 00:13:43,720 --> 00:13:47,550
-perlu bersiap, tetapi tidak dengan tingkat intensitas yang sama.
+perlu mempersiapkan, tetapi tidak dengan tingkat intensitas yang sama.
 
 222
 00:13:47,550 --> 00:13:51,190
@@ -888,23 +888,23 @@ Merah menunjukkan bahwa pasien sedang memburuk.
 
 223
 00:13:51,190 --> 00:13:55,470
-Perhatikan bahwa kami memberikan peringatan hijau
+Perhatikan bahwa kami menetapkan alert hijau
 
 224
 00:13:55,470 --> 00:13:58,530
-jika probabilitas keluar dalam 24 jam atau 48 jam berikutnya
+jika probabilitas discharge dalam 24 jam atau 48 jam berikutnya
 
 225
 00:13:58,530 --> 00:14:02,530
-melebihi 50%.
+di atas 50%.
 
 226
 00:14:02,530 --> 00:14:04,740
-Peringatan kuning terjadi jika probabilitas keluar dalam 48 jam
+Alert kuning terjadi jika probabilitas discharge dalam 48 jam adalah
 
 227
 00:14:04,740 --> 00:14:10,360
-berada di antara 35% dan 50%, dan probabilitas meningkat lebih dari
+antara 35% dan 50%, dan probabilitas meningkat lebih dari
 
 228
 00:14:10,360 --> 00:14:16,660
@@ -912,15 +912,15 @@ berada di antara 35% dan 50%, dan probabilitas meningkat lebih dari
 
 229
 00:14:16,660 --> 00:14:19,870
-Perangkat lunak ini juga memplot subplot
+Perangkat lunak juga memplot subplot
 
 230
 00:14:19,870 --> 00:14:23,230
-yang menunjukkan bagaimana faktor-faktor berbeda memengaruhi lamanya tinggal.
+yang menunjukkan bagaimana faktor-faktor berbeda mempengaruhi lama tinggal.
 
 231
 00:14:23,230 --> 00:14:26,530
-Dengan cara ini, prediksi menjadi jauh lebih dapat diinterpretasikan.
+Dengan cara ini, prediksi jauh lebih dapat diinterpretasikan.
 
 232
 00:14:26,530 --> 00:14:32,020
@@ -932,7 +932,7 @@ memiliki AUC yang jauh lebih tinggi, mengidentifikasi
 
 234
 00:14:36,160 --> 00:14:40,690
-lebih banyak pasien yang dapat keluar,
+lebih banyak pasien yang dapat dikeluarkan,
 
 235
 00:14:40,690 --> 00:14:42,910
@@ -956,7 +956,7 @@ yang tidak menggunakannya.
 
 240
 00:14:57,940 --> 00:14:59,390
-Kami telah menemukan bahwa rata-rata lama tinggal pasien
+Kami menemukan bahwa rata-rata lama tinggal pasien
 
 241
 00:14:59,390 --> 00:15:02,050
@@ -968,11 +968,11 @@ berkurang sebesar 0,67 hari, dari 565 menjadi 498 hari.
 
 243
 00:15:05,440 --> 00:15:14,350
-Ini menunjukkan bahwa kami mengurangi lama tinggal
+Ini menunjukkan bahwa kami mengurangi lama
 
 244
 00:15:14,350 --> 00:15:16,480
-sekitar 15%, dan dengan demikian kami
+tinggal sekitar 15%, dan dengan demikian kami
 
 245
 00:15:16,480 --> 00:15:20,500
@@ -984,15 +984,15 @@ sehingga meningkatkan pendapatan keseluruhan rumah sakit
 
 247
 00:15:24,070 --> 00:15:27,430
-sebanyak puluhan juta setiap tahun.
+hingga puluhan juta setiap tahun.
 
 248
 00:15:27,430 --> 00:15:31,180
-HAIM dapat diterapkan secara luas dalam berbagai aplikasi.
+HAIM berlaku luas dalam berbagai aplikasi.
 
 249
 00:15:31,180 --> 00:15:35,650
-Contoh pekerjaan saat ini termasuk mendeteksi penganiayaan domestik
+Contoh pekerjaan saat ini termasuk mendeteksi kekerasan domestik
 
 250
 00:15:35,650 --> 00:15:40,180
@@ -1012,7 +1012,7 @@ Hospital, deteksi hematoma subdural,
 
 254
 00:15:54,460 --> 00:15:57,980
-serta yang disebut pendamping AI.
+serta apa yang disebut pendamping AI.
 
 255
 00:15:57,980 --> 00:16:00,830

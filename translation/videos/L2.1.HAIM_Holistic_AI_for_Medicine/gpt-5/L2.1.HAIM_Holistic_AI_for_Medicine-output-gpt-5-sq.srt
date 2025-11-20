@@ -1,0 +1,1036 @@
+1
+00:00:00,000 --> 00:00:02,120
+INSTRUKTORI: Në këtë leksion, ne paraqesim
+
+2
+00:00:02,120 --> 00:00:08,400
+Inteligjencën Artificiale Holistike për Mjekësinë, ose shkurt HAIM.
+
+3
+00:00:08,400 --> 00:00:11,900
+Haim është fjala hebraike për jetën.
+
+4
+00:00:11,900 --> 00:00:17,660
+Ajo përfaqëson një aplikim të IA multimodale në mjekësi.
+
+5
+00:00:17,660 --> 00:00:19,800
+Përmbledhja e leksionit është si vijon.
+
+6
+00:00:19,800 --> 00:00:23,670
+Së pari japim motivimin për përdorimin e IA-së multimodale.
+
+7
+00:00:23,670 --> 00:00:27,110
+Më pas paraqesim HAIM dhe e zbatojmë atë
+
+8
+00:00:27,110 --> 00:00:31,880
+në një mjedis real në sistemin Hartford HealthCare.
+
+9
+00:00:31,880 --> 00:00:35,030
+Dhe në fund, përmbyllim me aplikime të HAIM
+
+10
+00:00:35,030 --> 00:00:38,960
+në disa fusha të tjera të mjekësisë.
+
+11
+00:00:38,960 --> 00:00:42,260
+Për të motivuar multimodalitetin,
+
+12
+00:00:42,260 --> 00:00:45,920
+le të mendojmë se si mjekët marrin vendime.
+
+13
+00:00:45,920 --> 00:00:52,520
+Ata përdorin skanime, MRI, CT, rreze X, etj.; gjuhë,
+
+14
+00:00:52,520 --> 00:00:56,670
+raporte radiologjie, shënime të mjekëve ose infermierëve;
+
+15
+00:00:56,670 --> 00:01:00,200
+të dhëna tabelare, regjistra elektronikë mjekësorë, për shembull;
+
+16
+00:01:00,200 --> 00:01:04,290
+seri kohore; dhe informacion gjenomik.
+
+17
+00:01:04,290 --> 00:01:07,870
+Duke qenë se mjekët njerëzorë përdorin të dhëna multimodale,
+
+18
+00:01:07,870 --> 00:01:10,770
+është e natyrshme të pyesim nëse makineritë
+
+19
+00:01:10,770 --> 00:01:16,680
+mund të përdorin të dhëna multimodale për të bërë diagnoza dhe vendime mjekësore.
+
+20
+00:01:16,680 --> 00:01:22,770
+Të marrim në konsideratë sensorët që përdorin njerëzit për të kuptuar botën.
+
+21
+00:01:22,770 --> 00:01:26,220
+Njerëzit përdorin pesë shqisat bazë njerëzore--
+
+22
+00:01:26,220 --> 00:01:32,850
+prekjen, shikimin, dëgjimin, nuhatjen dhe shijen.
+
+23
+00:01:32,850 --> 00:01:36,390
+Me fjalë të tjera, multimodaliteti është një karakteristikë themelore
+
+24
+00:01:36,390 --> 00:01:38,070
+e jetës njerëzore.
+
+25
+00:01:38,070 --> 00:01:41,910
+Prandaj është e natyrshme të konsiderohet pyetja
+
+26
+00:01:41,910 --> 00:01:48,390
+nëse makineritë duhet gjithashtu të përdoren për të dhëna multimodale.
+
+27
+00:01:48,390 --> 00:01:52,830
+Në këtë leksion, ne paraqesim HAIM nga gjetjet kryesore
+
+28
+00:01:52,830 --> 00:01:57,960
+të një artikulli të vitit 2022 të titulluar, "Kornizë e Integruar Multimodale
+
+29
+00:01:57,960 --> 00:02:00,900
+e Inteligjencës Artificiale për Kujdesin Shëndetësor
+
+30
+00:02:00,900 --> 00:02:05,810
+Aplikime që u Shfaqën në Nature Digital Medicine,"
+
+31
+00:02:05,810 --> 00:02:10,850
+shtator 2022 nga unë dhe anëtarë të grupit tim kërkimor.
+
+32
+00:02:10,850 --> 00:02:13,520
+Do të doja t'ju tregoja pak nga historia
+
+33
+00:02:13,520 --> 00:02:15,650
+e konceptimit të HAIM.
+
+34
+00:02:15,650 --> 00:02:22,160
+Në vitin 2013, IBM krijoi Watson, një program kompjuterik që
+
+35
+00:02:22,160 --> 00:02:24,770
+mund të konkurronte në Jeopardy, një lojë
+
+36
+00:02:24,770 --> 00:02:29,180
+në të cilën një konkurrent i jepet një pohim
+
+37
+00:02:29,180 --> 00:02:31,250
+dhe ajo duhet ta shprehë përgjigjen
+
+38
+00:02:31,250 --> 00:02:33,350
+në formën e një pyetjeje.
+
+39
+00:02:33,350 --> 00:02:38,660
+Për shembull, nëse përgjigjja është "ai zhvilloi teorinë
+
+40
+00:02:38,660 --> 00:02:42,710
+e relativitetit," konkurrentja duhet të thotë për një përgjigje të saktë
+
+41
+00:02:42,710 --> 00:02:44,990
+"kush është Albert Ajnshtajni?"
+
+42
+00:02:44,990 --> 00:02:49,490
+IBM Watson konkurroi me lojtarët më të mirë njerëzorë në histori
+
+43
+00:02:49,490 --> 00:02:54,680
+për dy ditë, dhe fitoi shumë bindshëm.
+
+44
+00:02:54,680 --> 00:02:58,710
+E mbaj mend një entuziazëm për këtë ngjarje,
+
+45
+00:02:58,710 --> 00:03:01,220
+pasi dija në atë kohë që kjo ishte
+
+46
+00:03:01,220 --> 00:03:03,910
+fillimi i një epoke të shtytjes së inteligjencës së makinës
+
+47
+00:03:03,910 --> 00:03:06,190
+në nivelin tjetër.
+
+48
+00:03:06,190 --> 00:03:09,740
+IBM vazhdoi ta aplikojë Watson në mjekësi,
+
+49
+00:03:09,740 --> 00:03:12,550
+fatkeqësisht pa sukses.
+
+50
+00:03:12,550 --> 00:03:15,640
+Në 12 vitet ndërmjet, inteligjenca artificiale
+
+51
+00:03:15,640 --> 00:03:19,090
+ka avancuar ndjeshëm, veçanërisht IA gjenerative
+
+52
+00:03:19,090 --> 00:03:21,460
+dhe modelet e mëdha të gjuhës.
+
+53
+00:03:21,460 --> 00:03:24,970
+HAIM tregon si të kombinohen modalitete të ndryshme
+
+54
+00:03:24,970 --> 00:03:29,170
+për të arritur performancë ndjeshëm të përmirësuar.
+
+55
+00:03:29,170 --> 00:03:32,780
+HAIM paraqet një perspektivë holistike të IA--
+
+56
+00:03:32,780 --> 00:03:35,000
+vizion kompjuterik, përpunim i gjuhës natyrore,
+
+57
+00:03:35,000 --> 00:03:38,170
+mësim makinerik-- për të përmirësuar aftësinë e modeleve
+
+58
+00:03:38,170 --> 00:03:40,820
+për të bërë parashikime dhe përshkrime,
+
+59
+00:03:40,820 --> 00:03:44,230
+veçanërisht në mjekësi.
+
+60
+00:03:44,230 --> 00:03:47,560
+Paradigma tradicionale e mësimit makinerik
+
+61
+00:03:47,560 --> 00:03:51,400
+është të përdorësh të dhëna tabelare për të bërë parashikime.
+
+62
+00:03:51,400 --> 00:03:53,780
+Kur janë të pranishme shumë modalitete,
+
+63
+00:03:53,780 --> 00:03:56,480
+si vizioni kompjuterik ose gjuha,
+
+64
+00:03:56,480 --> 00:03:58,690
+kjo paradigmë nuk zbatohet dhe ne
+
+65
+00:03:58,690 --> 00:04:02,170
+duhet të zbulojmë mënyra të ndryshme të kombinimit të të dhënave.
+
+66
+00:04:02,170 --> 00:04:04,610
+Në slidat e ardhshme, ne përvijojmë si
+
+67
+00:04:04,610 --> 00:04:08,450
+të kombinohen modalitete të ndryshme të të dhënave.
+
+68
+00:04:08,450 --> 00:04:11,850
+Kur janë të pranishme të dhëna elektronike shëndetësore,
+
+69
+00:04:11,850 --> 00:04:16,560
+si ajo e treguar në slajd, ne i mbajmë regjistrat ashtu siç janë,
+
+70
+00:04:16,560 --> 00:04:19,138
+ashtu siç janë në formatin tradicional të mësimit makinerik,
+
+71
+00:04:19,138 --> 00:04:23,120
+ku metodat tradicionale zbatohen.
+
+72
+00:04:23,120 --> 00:04:26,070
+Kur ka të disponueshme seri kohore,
+
+73
+00:04:26,070 --> 00:04:29,790
+ne përdorim software si tsfresh--
+
+74
+00:04:29,790 --> 00:04:31,880
+do ta shihni tani në recitim--
+
+75
+00:04:31,880 --> 00:04:34,640
+për të nxjerrë veçori të serive kohore,
+
+76
+00:04:34,640 --> 00:04:38,340
+si vlera maksimale, vlera minimale, mediana,
+
+77
+00:04:38,340 --> 00:04:41,840
+mesatarja, numri i kulmeve, ndër shumë të tjera.
+
+78
+00:04:41,840 --> 00:04:45,860
+Në këtë mënyrë, seria kohore përmblidhet në numra
+
+79
+00:04:45,860 --> 00:04:50,390
+që janë inpute në një format tradicional të mësimit makinerik.
+
+80
+00:04:50,390 --> 00:04:53,210
+Kur inputi janë shënime të mjekut ose infermierit
+
+81
+00:04:53,210 --> 00:04:57,000
+ose një raport radiologjie, pra gjuhë,
+
+82
+00:04:57,000 --> 00:05:00,680
+ne përdorim një model themelor si ClinicalBERT.
+
+83
+00:05:00,680 --> 00:05:04,410
+Ky përmbledh informacionin e gjuhës në formatin
+
+84
+00:05:04,410 --> 00:05:09,420
+e një embedding-u, një vektor me 768 elemente.
+
+85
+00:05:09,420 --> 00:05:12,090
+Ky vektor përmbledh informacionin
+
+86
+00:05:12,090 --> 00:05:15,750
+në format numerik që mund të kombinohet
+
+87
+00:05:15,750 --> 00:05:18,510
+me veçori të tjera numerike.
+
+88
+00:05:18,510 --> 00:05:20,940
+Vini re se mund të përdorim modele IA gjenerative
+
+89
+00:05:20,940 --> 00:05:28,530
+si OpenAI 4.0 ose Llama në vend të ClinicalBERT.
+
+90
+00:05:28,530 --> 00:05:31,870
+Kur inputi është një kardiogram elektronike,
+
+91
+00:05:31,870 --> 00:05:36,510
+ne përdorim informacionin e gjuhës të përfshirë në EKG,
+
+92
+00:05:36,510 --> 00:05:41,370
+si gjuhë, dhe pastaj përdorim një model themelor si
+
+93
+00:05:41,370 --> 00:05:43,260
+ClinicalBERT, e kemi parë më herët,
+
+94
+00:05:43,260 --> 00:05:46,770
+që përmbledh informacionin e gjuhës në formatin
+
+95
+00:05:46,770 --> 00:05:51,610
+e një embedding-u të një vektori me 768 elemente në format numerik,
+
+96
+00:05:51,610 --> 00:05:54,300
+si më parë.
+
+97
+00:05:54,300 --> 00:05:57,790
+Kur inputi është një imazh si një rreze X,
+
+98
+00:05:57,790 --> 00:06:02,820
+ne përdorim rrjete neuronale konvolucionale për të nxjerrë një embedding
+
+99
+00:06:02,820 --> 00:06:07,050
+të një vektori me 768 elemente në format numerik.
+
+100
+00:06:07,050 --> 00:06:12,300
+Vini re se mund të përdorim embedding-e nga një model IA gjenerativ,
+
+101
+00:06:12,300 --> 00:06:19,590
+në vend që të përdorim imazhe nga një model CNN si një alternativë.
+
+102
+00:06:19,590 --> 00:06:22,470
+Kjo është ideja kritike e ligjëratës.
+
+103
+00:06:22,470 --> 00:06:26,520
+Ne përdorim veçoritë numerike që zhvilluam, ose drejtpërdrejt
+
+104
+00:06:26,520 --> 00:06:29,020
+nga regjistrat elektronikë të kujdesit shëndetësor
+
+105
+00:06:29,020 --> 00:06:32,730
+ose veçori të nxjerra nga seri kohore ose embedding-e
+
+106
+00:06:32,730 --> 00:06:34,830
+duke përdorur të dhëna të pastrukturuara.
+
+107
+00:06:34,830 --> 00:06:37,470
+Kjo ide quhet bashkim (fusion).
+
+108
+00:06:37,470 --> 00:06:41,080
+Tani kemi një detyrë tradicionale të të mësuarit makinerik.
+
+109
+00:06:41,080 --> 00:06:45,330
+Ne duam të parashikojmë, të themi, për shembull, vdekshmërinë duke
+
+110
+00:06:45,330 --> 00:06:48,510
+përdorur si input veçoritë numerike që nxorëm,
+
+111
+00:06:48,510 --> 00:06:50,230
+siç u tregua më herët.
+
+112
+00:06:50,230 --> 00:06:54,510
+Përdorim një model tradicional ML si XGBoost ose random forest
+
+113
+00:06:54,510 --> 00:06:58,620
+për të kryer këtë detyrë parashikimi.
+
+114
+00:06:58,620 --> 00:07:01,140
+Vini re që metoda është shumë e përgjithshme,
+
+115
+00:07:01,140 --> 00:07:04,180
+meqë trajtojmë çdo modalitet në mënyrë të pavarur,
+
+116
+00:07:04,180 --> 00:07:07,660
+në mënyrë që nëse shtojmë modalitete të reja,
+
+117
+00:07:07,660 --> 00:07:11,050
+thjesht shtojmë embedding-et shtesë.
+
+118
+00:07:11,050 --> 00:07:15,730
+Vini re që ne nuk i trajnojmë modalitetet në kombinim.
+
+119
+00:07:15,730 --> 00:07:19,000
+Vini re gjithashtu që embedding-et nuk varen
+
+120
+00:07:19,000 --> 00:07:21,880
+nga detyra që duam të kryejmë.
+
+121
+00:07:21,880 --> 00:07:24,460
+Embedding-et thjesht përmbledhin të dhënat
+
+122
+00:07:24,460 --> 00:07:29,860
+e çdo modaliteti pavarësisht nga detyra që duam të kryejmë.
+
+123
+00:07:29,860 --> 00:07:34,780
+Tani le ta aplikojmë HAIM për detyra të ndryshme parashikimi duke
+
+124
+00:07:34,780 --> 00:07:38,860
+përdorur grupin e të dhënave MIMIC-IV nga Beth Israel Deaconess Medical
+
+125
+00:07:38,860 --> 00:07:43,540
+Center, një sistem spitalor në Boston, Massachusetts.
+
+126
+00:07:43,540 --> 00:07:51,490
+Grupi i të dhënave me 34,537 regjistra pacientësh vjen nga
+
+127
+00:07:51,490 --> 00:07:54,850
+dhomat e urgjencës së kujdesit intensiv (ICU).
+
+128
+00:07:54,850 --> 00:07:57,940
+Regjistrat përfshijnë një rreze X të kraharorit,
+
+129
+00:07:57,940 --> 00:08:03,310
+regjistra mjekësorë elektronikë, shënime radiologjike dhe EKG.
+
+130
+00:08:03,310 --> 00:08:09,500
+Domethënë, përfshin të dhëna vizuale, gjuhësore dhe tabelore.
+
+131
+00:08:09,500 --> 00:08:12,600
+Diagnostikat tona shënjestër përfshijnë 12 shënjestra--
+
+132
+00:08:12,600 --> 00:08:14,990
+parashikimin e vdekshmërisë, domethënë, ne
+
+133
+00:08:14,990 --> 00:08:19,310
+synojmë të parashikojmë nëse një pacient ka ndërruar jetë ose dërgohet në hospice
+
+134
+00:08:19,310 --> 00:08:25,130
+ose pacienti është gjallë në momentin e daljes nga spitali; një
+
+135
+00:08:25,130 --> 00:08:29,810
+nga 10 diagnozat, domethënë, duam të parashikojmë nëse një pacient ka
+
+136
+00:08:29,810 --> 00:08:37,429
+një sëmundje të caktuar, si frakturë, lezion pulmonar, CM e zmadhuar,
+
+137
+00:08:37,429 --> 00:08:43,580
+konsolidim, pneumoni, klasa [INAUDIBLE], kapacitet
+
+138
+00:08:43,580 --> 00:08:49,940
+pulmonar, pneumotoraks, edemë, kardiomegali; dhe së fundi,
+
+139
+00:08:49,940 --> 00:08:52,670
+gjatësinë e qëndrimit, domethënë, duam
+
+140
+00:08:52,670 --> 00:08:58,340
+të parashikojmë nëse një pacient del nga spitali brenda 48 orëve.
+
+141
+00:08:58,340 --> 00:09:01,310
+Ne kemi krahasuar performancën e HAIM
+
+142
+00:09:01,310 --> 00:09:04,740
+dhe performancën e një modeli klasik të mësimit makinerik
+
+143
+00:09:04,740 --> 00:09:08,200
+që bazohet vetëm në regjistra mjekësorë elektronikë,
+
+144
+00:09:08,200 --> 00:09:10,020
+qasje klasike.
+
+145
+00:09:10,020 --> 00:09:16,650
+Në vdekshmëri, HAIM përmirëson saktësinë me 11% deri në 33%
+
+146
+00:09:16,650 --> 00:09:19,120
+krahasuar me regjistrat mjekësorë elektronikë.
+
+147
+00:09:19,120 --> 00:09:22,350
+Që bazohet vetëm në modele klasike të mësimit makinerik.
+
+148
+00:09:22,350 --> 00:09:25,860
+Në klasifikimin e sëmundjeve, HAIM përmirëson saktësinë
+
+149
+00:09:25,860 --> 00:09:30,630
+me 6% deri në 22% krahasuar me regjistrat elektronikë.
+
+150
+00:09:30,630 --> 00:09:34,890
+Në gjatësinë e qëndrimit, HAIM përmirëson saktësinë me 8% deri në 20%
+
+151
+00:09:34,890 --> 00:09:37,050
+krahasuar me regjistrat mjekësorë elektronikë
+
+152
+00:09:37,050 --> 00:09:39,840
+dhe modelin më klasik të mësimit makinerik.
+
+153
+00:09:39,840 --> 00:09:42,780
+Në të gjitha rastet, përdorimi i multimodalitetit
+
+154
+00:09:42,780 --> 00:09:47,460
+rezulton në një përmirësim domethënës të performancës.
+
+155
+00:09:47,460 --> 00:09:51,300
+Në këtë slide, paraqesim nën-analiza në mënyrë
+
+156
+00:09:51,300 --> 00:09:54,900
+që të kuptojmë kontributin relativ të secilit modalitet
+
+157
+00:09:54,900 --> 00:09:58,270
+në parashikimin për klasifikimin e sëmundjeve.
+
+158
+00:09:58,270 --> 00:10:00,810
+Inputi vizual, në këtë rast, rrezja X,
+
+159
+00:10:00,810 --> 00:10:02,820
+ishte modaliteti dominues.
+
+160
+00:10:02,820 --> 00:10:05,300
+Për gjatësinë e qëndrimit dhe vdekshmërinë,
+
+161
+00:10:05,300 --> 00:10:10,990
+seritë kohore dhe regjistrat mjekësorë elektronikë
+
+162
+00:10:10,990 --> 00:10:13,900
+ishin modaliteti dominues.
+
+163
+00:10:13,900 --> 00:10:18,040
+Më pas paraqesim një aplikim të metodologjisë HAIM
+
+164
+00:10:18,040 --> 00:10:22,570
+për të parashikuar gjatësinë e qëndrimit në sistemin Hartford Health Care,
+
+165
+00:10:22,570 --> 00:10:28,510
+shkurt HHC, sistemi më i madh spitalor në Connecticut,
+
+166
+00:10:28,510 --> 00:10:32,080
+me të ardhura operative mbi $5 miliardë në vit,
+
+167
+00:10:32,080 --> 00:10:37,300
+shtatë spitale të larmishme, që variojnë nga një spital akademik urban
+
+168
+00:10:37,300 --> 00:10:41,180
+deri te një spital komunitar, dhe nga spitale të mëdha te të vegjël.
+
+169
+00:10:41,180 --> 00:10:45,590
+Në total, HHC ka 2,500 shtretër.
+
+170
+00:10:45,590 --> 00:10:49,900
+Është përfaqësues i një rrjeti spitalor tipik dhe me cilësi të lartë në SHBA.
+
+171
+00:10:49,900 --> 00:10:52,660
+rrjet spitalor.
+
+172
+00:10:52,660 --> 00:10:56,170
+Ne kemi implementuar disa nga algoritmet që paraqitëm
+
+173
+00:10:56,170 --> 00:11:00,020
+në një kompani të quajtur Holistic Hospital Optimization,
+
+174
+00:11:00,020 --> 00:11:02,350
+me shkurtim H2O.
+
+175
+00:11:02,350 --> 00:11:04,420
+Kjo është një tregues i lidhjeve
+
+176
+00:11:04,420 --> 00:11:07,840
+me aspektin themelor të jetës, ujin.
+
+177
+00:11:07,840 --> 00:11:11,140
+Diskutojmë në detaje aplikimin e gjatësisë së qëndrimit.
+
+178
+00:11:11,140 --> 00:11:13,330
+Kemi implementuar aplikacione të tjera,
+
+179
+00:11:13,330 --> 00:11:17,230
+si një indeks përkeqësimi, që përfshin rrezikun e vdekshmërisë, rrezikun për ICU,
+
+180
+00:11:17,230 --> 00:11:21,670
+planifikimin e infermierëve dhe planifikimin e sallave të operacionit.
+
+181
+00:11:21,670 --> 00:11:24,580
+Softueri përdoret nga qindra përdorues--
+
+182
+00:11:24,580 --> 00:11:27,800
+mjekë, infermierë, administratorë.
+
+183
+00:11:27,800 --> 00:11:31,780
+Funksionon në të shtatë spitalet e HHC,
+
+184
+00:11:31,780 --> 00:11:35,710
+dhe ka sjellë një rritje vjetore të të ardhurave në dhjetëra miliona
+
+185
+00:11:35,710 --> 00:11:37,390
+dollarë.
+
+186
+00:11:37,390 --> 00:11:39,070
+Kemi implementuar këto zgjidhje
+
+187
+00:11:39,070 --> 00:11:43,210
+në disa sisteme të tjera spitalore anembanë botës.
+
+188
+00:11:43,210 --> 00:11:45,310
+Aplikacionet përfshijnë parashikimin e
+
+189
+00:11:45,310 --> 00:11:49,060
+daljes nga spitali në 24 ose 48 orët e ardhshme, gjë e cila
+
+190
+00:11:49,060 --> 00:11:52,880
+është e rëndësishme për identifikimin dhe prioritizimin e pacientëve,
+
+191
+00:11:52,880 --> 00:11:56,690
+uljen e gjatësisë së qëndrimit dhe kursimin e kostove,
+
+192
+00:11:56,690 --> 00:12:00,490
+përgatitjen për planin e trajtimit dhe dispozicionit.
+
+193
+00:12:00,490 --> 00:12:03,100
+Gjithashtu parashikon destinacionin final
+
+194
+00:12:03,100 --> 00:12:06,050
+pas daljes nga spitali, rrezikun e vdekshmërisë,
+
+195
+00:12:06,050 --> 00:12:09,350
+si dhe rrezikun për nevojën e shtrimit në njësinë e kujdesit intensiv
+
+196
+00:12:09,350 --> 00:12:10,730
+(ICU).
+
+197
+00:12:10,730 --> 00:12:16,340
+Këto parashikime ndihmojnë të sinjalizojnë përkeqësimin e pacientëve,
+
+198
+00:12:16,340 --> 00:12:19,830
+si dhe shpërndarjen më efektive të burimeve spitalore.
+
+199
+00:12:19,830 --> 00:12:23,450
+Tabela paraqet AUC, Zonën Nën Kurbë,
+
+200
+00:12:23,450 --> 00:12:28,670
+për vdekshmëri, destinacion, dalje në 24 dhe 48 orë,
+
+201
+00:12:28,670 --> 00:12:33,080
+parashikimin e hyrjes në TI ose daljes nga TI për të gjitha shtatë
+
+202
+00:12:33,080 --> 00:12:37,700
+spitalet në HHC.
+
+203
+00:12:37,700 --> 00:12:41,810
+Rezultatet janë në mënyrë të besueshme të forta në të gjitha parashikimet
+
+204
+00:12:41,810 --> 00:12:44,330
+dhe në të gjitha spitalet.
+
+205
+00:12:44,330 --> 00:12:47,720
+Më pas demonstrojmë që grafiqet e kalibrimit janë gjithashtu
+
+206
+00:12:47,720 --> 00:12:49,160
+shumë të sakta.
+
+207
+00:12:49,160 --> 00:12:52,980
+Në mënyrë specifike, në grafikun në të majtë në boshtin horizontal,
+
+208
+00:12:52,980 --> 00:12:56,420
+ne paraqesim përqindjen e pacientëve që kanë probabilitet
+
+209
+00:12:56,420 --> 00:13:01,020
+të daljes brenda 48 orëve ndërmjet, fjala vjen, 0.5 dhe 0.6,
+
+210
+00:13:01,020 --> 00:13:06,180
+me rritje prej 10%, dhe pastaj paraqesim përqindjen e pacientëve
+
+211
+00:13:06,180 --> 00:13:09,990
+nga ata që dalin brenda 48 orëve në boshtin vertikal.
+
+212
+00:13:09,990 --> 00:13:11,250
+.
+
+213
+00:13:11,250 --> 00:13:15,250
+Vija është shumë pranë këndit 45 gradë,
+
+214
+00:13:15,250 --> 00:13:19,380
+duke ilustruar se probabilitetet e parashikuara përputhen ngushtësisht
+
+215
+00:13:19,380 --> 00:13:21,360
+me evidencën empirike.
+
+216
+00:13:21,360 --> 00:13:25,570
+Në grafikun në të djathtë, pamë grafikun e kalibrimit për mortalitetin.
+
+217
+00:13:25,570 --> 00:13:29,490
+Sërish, kalibrimi është shumë i saktë.
+
+218
+00:13:29,490 --> 00:13:32,220
+Figura tregon softuerin që
+
+219
+00:13:32,220 --> 00:13:34,960
+është zbatuar në HHC.
+
+220
+00:13:34,960 --> 00:13:38,740
+Ngjyrat demonstrojnë informacionin vijues.
+
+221
+00:13:38,740 --> 00:13:41,460
+E gjelbra sugjeron që pacienti ka nevojë
+
+222
+00:13:41,460 --> 00:13:43,720
+të prioritizohet për dalje.
+
+223
+00:13:43,720 --> 00:13:47,550
+E verdha gjithashtu tregon që personeli i spitalit
+
+224
+00:13:47,550 --> 00:13:51,190
+duhet të përgatitet, por jo me të njëjtin nivel intensiteti.
+
+225
+00:13:51,190 --> 00:13:55,470
+E kuqja tregon që pacienti po përkeqësohet.
+
+226
+00:13:55,470 --> 00:13:58,530
+Vini re që ne caktojmë një alarm të gjelbër
+
+227
+00:13:58,530 --> 00:14:02,530
+nëse probabiliteti i daljes në 24 ose 48 orët e ardhshme
+
+228
+00:14:02,530 --> 00:14:04,740
+është mbi 50%.
+
+229
+00:14:04,740 --> 00:14:10,360
+Alarmi i verdhë ndodh nëse probabiliteti i daljes brenda 48 orëve është
+
+230
+00:14:10,360 --> 00:14:16,660
+ndërmjet 35% dhe 50%, dhe probabiliteti rritet me mbi
+
+231
+00:14:16,660 --> 00:14:19,870
+10% nga dita e mëparshme.
+
+232
+00:14:19,870 --> 00:14:23,230
+Softueri gjithashtu paraqet një nën-grafik
+
+233
+00:14:23,230 --> 00:14:26,530
+që tregon se si faktorë të ndryshëm ndikojnë në kohëzgjatjen e qëndrimit.
+
+234
+00:14:26,530 --> 00:14:32,020
+Në këtë mënyrë, parashikimet janë shumë më të interpretueshme.
+
+235
+00:14:32,020 --> 00:14:36,160
+Krahasuar me mjekët njerëzorë, qasja e inteligjencës artificiale
+
+236
+00:14:36,160 --> 00:14:40,690
+ka AUC dukshëm më të lartë, identifikon
+
+237
+00:14:40,690 --> 00:14:42,910
+më shumë pacientë që mund të dalin,
+
+238
+00:14:42,910 --> 00:14:45,490
+dhe bën parashikime më të sakta.
+
+239
+00:14:45,490 --> 00:14:49,750
+Qartësisht, avantazhi i IA është i rëndësishëm.
+
+240
+00:14:49,750 --> 00:14:54,670
+Ne kemi kryer një test në të cilin disa pavione në HHC
+
+241
+00:14:54,670 --> 00:14:57,940
+kanë përdorur softuerin dhe e kanë krahasuar me të tjerë
+
+242
+00:14:57,940 --> 00:14:59,390
+që nuk e përdorën.
+
+243
+00:14:59,390 --> 00:15:02,050
+Kemi gjetur që mesatarja e pacientit
+
+244
+00:15:02,050 --> 00:15:05,440
+kohëzgjatja e qëndrimit për njësitë që përdorin softuerin
+
+245
+00:15:05,440 --> 00:15:14,350
+u ul me 0.67 ditë, nga 565 në 498 ditë.
+
+246
+00:15:14,350 --> 00:15:16,480
+Kjo sugjeron që ne e ulim kohëzgjatjen
+
+247
+00:15:16,480 --> 00:15:20,500
+e qëndrimit afërsisht 15%, dhe kështu ne
+
+248
+00:15:20,500 --> 00:15:24,070
+mund të rrisim throughput-in me një sasi përkatëse,
+
+249
+00:15:24,070 --> 00:15:27,430
+duke rritur kështu të ardhurat e përgjithshme të spitalit
+
+250
+00:15:27,430 --> 00:15:31,180
+me dhjetëra milionë çdo vit.
+
+251
+00:15:31,180 --> 00:15:35,650
+HAIM është gjerësisht i zbatueshëm në një larmi aplikimesh.
+
+252
+00:15:35,650 --> 00:15:40,180
+Shembuj të punës aktuale përfshijnë zbulimin e dhunës në familje
+
+253
+00:15:40,180 --> 00:15:43,780
+në Brigham and Women's Hospital, zbulimin automatik
+
+254
+00:15:43,780 --> 00:15:47,110
+të të dhënave nga nyjet, skanimet, dhe laboratorët
+
+255
+00:15:47,110 --> 00:15:54,460
+në Mass General Brigham, diagnostikë e unifikuar për EKG në Hartford
+
+256
+00:15:54,460 --> 00:15:57,980
+Hospital, zbulimin e hematomës subdurale,
+
+257
+00:15:57,980 --> 00:16:00,830
+si dhe atë që quhet shoqërues IA.
+
+258
+00:16:00,830 --> 00:16:06,460
+Ne përdorim HAIM për t'u dhënë këshilla mjekëve dhe infermierëve në lidhje me
+
+259
+00:16:06,460 --> 00:16:08,310
+diagnostikimin.
+

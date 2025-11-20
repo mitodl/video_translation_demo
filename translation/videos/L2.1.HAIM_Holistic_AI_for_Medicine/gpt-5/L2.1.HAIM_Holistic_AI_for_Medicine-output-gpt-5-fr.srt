@@ -1,30 +1,30 @@
 1
 00:00:00,000 --> 00:00:02,120
-INSTRUCTEUR : Dans cette conférence, nous présentons
+INSTRUCTEUR : Dans ce cours, nous présentons
 
 2
 00:00:02,120 --> 00:00:08,400
-L'intelligence artificielle holistique pour la médecine, ou HAIM en abrégé.
+l’Intelligence Artificielle Holistique pour la Médecine, ou HAIM en abrégé.
 
 3
 00:00:08,400 --> 00:00:11,900
-Haim est le mot juif pour la vie.
+Haim est le mot juif pour « vie ».
 
 4
 00:00:11,900 --> 00:00:17,660
-Cela représente une application de l'IA multimodale en médecine.
+Elle représente une application de l’IA multimodale en médecine.
 
 5
 00:00:17,660 --> 00:00:19,800
-Le plan de la conférence est le suivant.
+Le plan du cours est le suivant.
 
 6
 00:00:19,800 --> 00:00:23,670
-Nous commençons par donner une motivation pour l'utilisation de l'IA multimodale.
+Nous donnons d’abord la motivation pour l’utilisation de l’IA multimodale.
 
 7
 00:00:23,670 --> 00:00:27,110
-Nous présentons ensuite HAIM et l'appliquons
+Nous présentons ensuite HAIM et l’appliquons
 
 8
 00:00:27,110 --> 00:00:31,880
@@ -32,7 +32,7 @@ dans un environnement réel au sein du système Hartford HealthCare.
 
 9
 00:00:31,880 --> 00:00:35,030
-Et enfin, nous concluons avec des applications de HAIM
+Et enfin, nous concluons par des applications de HAIM
 
 10
 00:00:35,030 --> 00:00:38,960
@@ -40,7 +40,7 @@ dans plusieurs autres domaines de la médecine.
 
 11
 00:00:38,960 --> 00:00:42,260
-Pour motiver la multimodalité,
+Afin de motiver la multimodalité,
 
 12
 00:00:42,260 --> 00:00:45,920
@@ -48,19 +48,19 @@ réfléchissons à la manière dont les médecins prennent des décisions.
 
 13
 00:00:45,920 --> 00:00:52,520
-Ils utilisent des scans, des IRM, des CT, des radios, etc. ; le langage,
+Ils utilisent des scans, des IRM, des scanners, des radiographies, etc. ; le langage,
 
 14
 00:00:52,520 --> 00:00:56,670
-les rapports de radiologie, les notes des médecins ou des infirmiers ;
+des comptes rendus de radiologie, des notes de médecins ou d’infirmiers ;
 
 15
 00:00:56,670 --> 00:01:00,200
-les données tabulaires, les dossiers médicaux électroniques, par exemple ;
+des données tabulaires, par exemple les dossiers médicaux électroniques ;
 
 16
 00:01:00,200 --> 00:01:04,290
-les séries temporelles ; et les informations génomiques.
+des séries temporelles ; et des informations génomiques.
 
 17
 00:01:04,290 --> 00:01:07,870
@@ -72,7 +72,7 @@ il est naturel de se demander si les machines
 
 19
 00:01:10,770 --> 00:01:16,680
-peuvent utiliser des données multimodales pour établir des diagnostics et des décisions médicales.
+peuvent utiliser des données multimodales pour établir des diagnostics et prendre des décisions médicales.
 
 20
 00:01:16,680 --> 00:01:22,770
@@ -80,15 +80,15 @@ Considérons les capteurs que les humains utilisent pour comprendre le monde.
 
 21
 00:01:22,770 --> 00:01:26,220
-Les gens utilisent les cinq sens humains de base --
+Les gens utilisent les cinq sens humains de base—
 
 22
 00:01:26,220 --> 00:01:32,850
-le toucher, la vue, l'ouïe, l'odorat et le goût.
+le toucher, la vue, l’ouïe, l’odorat et le goût.
 
 23
 00:01:32,850 --> 00:01:36,390
-En d'autres termes, la multimodalité est une caractéristique fondamentale
+Autrement dit, la multimodalité est une caractéristique fondamentale
 
 24
 00:01:36,390 --> 00:01:38,070
@@ -96,7 +96,7 @@ de la vie humaine.
 
 25
 00:01:38,070 --> 00:01:41,910
-Il est donc naturel de se poser la question
+Il est donc naturel d’envisager la question
 
 26
 00:01:41,910 --> 00:01:48,390
@@ -104,917 +104,933 @@ de savoir si les machines devraient également être utilisées pour des donnée
 
 27
 00:01:48,390 --> 00:01:52,830
-Dans cette conférence, nous présentons HAIM à partir des principales conclusions
+Dans ce cours, nous présentons HAIM à partir des principaux résultats
 
 28
 00:01:52,830 --> 00:01:57,960
-d'un article de 2022 intitulé, "Cadre intégré d'intelligence artificielle multimodale pour les soins de santé
+d’un article de 2022 intitulé « Integrated Multimodal
 
 29
 00:01:57,960 --> 00:02:00,900
-Applications qui sont parues dans Nature Digital Medicine,"
+Artificial Intelligence Framework for Healthcare
 
 30
 00:02:00,900 --> 00:02:05,810
-septembre 2022 par moi-même et des membres de mon groupe de recherche.
+Applications » paru dans Nature Digital Medicine,
 
 31
 00:02:05,810 --> 00:02:10,850
-Je voudrais vous parler un peu de l'histoire
+en septembre 2022, par moi-même et des membres de mon groupe de recherche.
 
 32
 00:02:10,850 --> 00:02:13,520
-de la conception de HAIM.
+Je voudrais vous raconter un peu l’histoire
 
 33
 00:02:13,520 --> 00:02:15,650
-En 2013, IBM a créé Watson, un programme informatique qui
+de la conception de HAIM.
 
 34
 00:02:15,650 --> 00:02:22,160
-pouvait rivaliser dans Jeopardy, un jeu
+En 2013, IBM a créé Watson, un programme informatique qui
 
 35
 00:02:22,160 --> 00:02:24,770
-où à un participant on donne une affirmation
+pouvait concourir à Jeopardy, un jeu
 
 36
 00:02:24,770 --> 00:02:29,180
-et elle doit exprimer la réponse
+où un candidat reçoit une affirmation
 
 37
 00:02:29,180 --> 00:02:31,250
-sous forme de question.
+et doit exprimer la réponse
 
 38
 00:02:31,250 --> 00:02:33,350
-Par exemple, si la réponse est "il a développé la théorie
+sous la forme d’une question.
 
 39
 00:02:33,350 --> 00:02:38,660
-de la relativité," le participant doit dire pour une bonne
+Par exemple, si la réponse est « il a développé la théorie
 
 40
 00:02:38,660 --> 00:02:42,710
-réponse : "qui est Albert Einstein ?"
+de la relativité », le candidat doit dire, pour une réponse correcte,
 
 41
 00:02:42,710 --> 00:02:44,990
-IBM Watson a rivalisé avec les meilleurs joueurs humains de l'histoire
+« qui est Albert Einstein ? »
 
 42
 00:02:44,990 --> 00:02:49,490
-pendant deux jours, et il a gagné de manière très décisive.
+IBM Watson a affronté les meilleurs joueurs humains de l’histoire
 
 43
 00:02:49,490 --> 00:02:54,680
-Je me rappelle de l'excitation lors de cet événement,
+pendant deux jours, et il a gagné de manière très nette.
 
 44
 00:02:54,680 --> 00:02:58,710
-car je savais à l'époque que c'était
+Je me souviens de l’enthousiasme suscité par cet événement,
 
 45
 00:02:58,710 --> 00:03:01,220
-le début d'une ère de propulsion de l'intelligence
+car je savais à l’époque que c’était
 
 46
 00:03:01,220 --> 00:03:03,910
-des machines au niveau supérieur.
+le début d’une ère propulsant l’intelligence
 
 47
 00:03:03,910 --> 00:03:06,190
-IBM a procédé à l'application de Watson en médecine,
+des machines au niveau supérieur.
 
 48
 00:03:06,190 --> 00:03:09,740
-malheureusement sans succès.
+IBM a ensuite appliqué Watson à la médecine,
 
 49
 00:03:09,740 --> 00:03:12,550
-Au cours des 12 années intervenues, l'intelligence artificielle
+malheureusement sans succès.
 
 50
 00:03:12,550 --> 00:03:15,640
-a énormément progressé, notamment l'IA générative
+Au cours des 12 années intermédiaires, l’intelligence artificielle
 
 51
 00:03:15,640 --> 00:03:19,090
-et les grands modèles linguistiques.
+a beaucoup progressé, en particulier l’IA générative
 
 52
 00:03:19,090 --> 00:03:21,460
-HAIM montre comment combiner différentes modalités
+et les grands modèles de langage.
 
 53
 00:03:21,460 --> 00:03:24,970
-pour obtenir une performance significativement améliorée.
+HAIM montre comment combiner diverses modalités
 
 54
 00:03:24,970 --> 00:03:29,170
-HAIM présente une perspective holistique de l'IA--
+pour obtenir des performances significativement améliorées.
 
 55
 00:03:29,170 --> 00:03:32,780
-vision par ordinateur, traitement du langage naturel,
+HAIM présente une perspective holistique de l’IA—
 
 56
 00:03:32,780 --> 00:03:35,000
-apprentissage machine-- pour améliorer la capacité des modèles
+vision par ordinateur, traitement du langage naturel,
 
 57
 00:03:35,000 --> 00:03:38,170
-à faire des prédictions et des prescriptions,
+apprentissage automatique—pour améliorer la capacité des modèles
 
 58
 00:03:38,170 --> 00:03:40,820
-surtout en médecine.
+à faire des prédictions et des prescriptions,
 
 59
 00:03:40,820 --> 00:03:44,230
-Le paradigme traditionnel de l'apprentissage machine
+en particulier en médecine.
 
 60
 00:03:44,230 --> 00:03:47,560
-est d'utiliser des données tabulaires pour faire des prédictions.
+Le paradigme traditionnel de l’apprentissage automatique
 
 61
 00:03:47,560 --> 00:03:51,400
-Lorsque plusieurs modalités sont présentes,
+consiste à utiliser des données tabulaires pour faire des prédictions.
 
 62
 00:03:51,400 --> 00:03:53,780
-comme la vision par ordinateur ou le langage,
+Lorsque plusieurs modalités sont présentes,
 
 63
 00:03:53,780 --> 00:03:56,480
-ce paradigme ne s'applique pas et nous
+comme la vision par ordinateur ou le langage,
 
 64
 00:03:56,480 --> 00:03:58,690
-devenons donc nécessaires de découvrir différentes façons de combiner les données.
+ce paradigme ne s’applique pas et nous
 
 65
 00:03:58,690 --> 00:04:02,170
-Dans les diapositives suivantes, nous décrivons comment
+devons découvrir d’autres façons de combiner les données.
 
 66
 00:04:02,170 --> 00:04:04,610
-combiner différentes modalités de données.
+Dans les diapositives suivantes, nous décrivons comment
 
 67
 00:04:04,610 --> 00:04:08,450
-Lorsque des données de santé électroniques sont présentes,
+combiner différentes modalités de données.
 
 68
 00:04:08,450 --> 00:04:11,850
-comme celles montrées dans la diapositive, nous conservons les dossiers tels quels,
+Lorsque des données de santé électroniques sont présentes,
 
 69
 00:04:11,850 --> 00:04:16,560
-comme ils le sont dans le format traditionnel d'apprentissage machine,
+comme celles montrées sur la diapositive, nous conservons les enregistrements tels quels,
 
 70
 00:04:16,560 --> 00:04:19,138
-où les méthodes traditionnelles s'appliquent.
+tels qu’ils sont dans le format traditionnel d’apprentissage automatique,
 
 71
 00:04:19,138 --> 00:04:23,120
-Lorsqu'il y a des séries temporelles disponibles,
+où les méthodes traditionnelles s’appliquent.
 
 72
 00:04:23,120 --> 00:04:26,070
-nous utilisons des logiciels comme tsfresh--
+Lorsqu’il existe des séries temporelles,
 
 73
 00:04:26,070 --> 00:04:29,790
-vous allez le voir maintenant dans la récitation--
+nous utilisons des logiciels comme tsfresh—
 
 74
 00:04:29,790 --> 00:04:31,880
-pour extraire des caractéristiques des séries temporelles,
+vous le verrez maintenant dans la séance de travaux dirigés—
 
 75
 00:04:31,880 --> 00:04:34,640
-comme la valeur maximale, la valeur minimale, la médiane,
+pour extraire des caractéristiques des séries temporelles,
 
 76
 00:04:34,640 --> 00:04:38,340
-la moyenne, le nombre de pics, entre autres.
+comme la valeur maximale, la valeur minimale, la médiane,
 
 77
 00:04:38,340 --> 00:04:41,840
-De cette manière, la série temporelle est résumée en chiffres
+la moyenne, le nombre de pics, entre beaucoup d’autres.
 
 78
 00:04:41,840 --> 00:04:45,860
-qui sont des entrées dans un format traditionnel d'apprentissage machine.
+De cette manière, la série temporelle est résumée en nombres
 
 79
 00:04:45,860 --> 00:04:50,390
-Lorsque les entrées sont des notes de médecin ou d'infirmier
+qui sont des entrées dans un format traditionnel d’apprentissage automatique.
 
 80
 00:04:50,390 --> 00:04:53,210
-ou un rapport de radiologie, c'est du langage,
+Lorsque les entrées sont des notes de médecin ou d’infirmier
 
 81
 00:04:53,210 --> 00:04:57,000
-nous utilisons un modèle fondamental comme ClinicalBERT.
+ou un compte rendu de radiologie, c’est-à-dire du langage,
 
 82
 00:04:57,000 --> 00:05:00,680
-Cela résume l'information linguistique au format
+nous utilisons un modèle fondamental comme ClinicalBERT.
 
 83
 00:05:00,680 --> 00:05:04,410
-d'un embedding, un vecteur de 768 éléments.
+Cela résume l’information linguistique sous la forme
 
 84
 00:05:04,410 --> 00:05:09,420
-Ce vecteur résume l'information
+d’un embedding, un vecteur de 768 éléments.
 
 85
 00:05:09,420 --> 00:05:12,090
-au format numérique qui peut être combiné
+Ce vecteur résume l’information
 
 86
 00:05:12,090 --> 00:05:15,750
-avec d'autres caractéristiques numériques.
+dans un format numérique qui peut être combiné
 
 87
 00:05:15,750 --> 00:05:18,510
-Notez que nous pouvons utiliser des modèles d'IA générative
+avec d’autres caractéristiques numériques.
 
 88
 00:05:18,510 --> 00:05:20,940
-comme OpenAI 4.0 ou Llama au lieu de ClinicalBERT.
+Notez que nous pouvons utiliser des modèles d’IA générative
 
 89
 00:05:20,940 --> 00:05:28,530
-Lorsque l'entrée est dans un électrocardiogramme électronique,
+comme OpenAI 4.0 ou Llama au lieu de ClinicalBERT.
 
 90
 00:05:28,530 --> 00:05:31,870
-nous utilisons l'information linguistique incluse dans l'ECG,
+Lorsque l’entrée est un électrocardiogramme,
 
 91
 00:05:31,870 --> 00:05:36,510
-comme langage, puis utilisons un modèle fondamental comme
+nous utilisons l’information linguistique incluse dans l’ECG,
 
 92
 00:05:36,510 --> 00:05:41,370
-ClinicalBERT, que nous avons vu plus tôt,
+comme du langage, puis utilisons un modèle fondamental comme
 
 93
 00:05:41,370 --> 00:05:43,260
-qui résume l'information linguistique au format
+ClinicalBERT, que nous avons vu plus tôt,
 
 94
 00:05:43,260 --> 00:05:46,770
-d'un embedding d'un vecteur de 768 éléments en format numérique,
+qui résume l’information linguistique sous la forme
 
 95
 00:05:46,770 --> 00:05:51,610
-comme auparavant.
+d’un embedding d’un vecteur de 768 éléments dans un format numérique,
 
 96
 00:05:51,610 --> 00:05:54,300
-Lorsque l'entrée est une image comme une radiographie,
+comme précédemment.
 
 97
 00:05:54,300 --> 00:05:57,790
-nous utilisons des réseaux de neurones convolutifs pour extraire un embedding
+Lorsque l’entrée est une image comme une radiographie,
 
 98
 00:05:57,790 --> 00:06:02,820
-d'un vecteur de 768 éléments en format numérique.
+nous utilisons des réseaux de neurones convolutifs pour extraire un embedding
 
 99
 00:06:02,820 --> 00:06:07,050
-Notez que nous pouvons utiliser des embeddings d'un modèle d'IA générative,
+d’un vecteur de 768 éléments dans un format numérique.
 
 100
-00:06:12,300 --> 00:06:19,590
-au lieu d'utiliser des images d'un modèle CNN comme alternative.
+00:06:07,050 --> 00:06:12,300
+Notez que nous pouvons utiliser des embeddings provenant d’un modèle d’IA générative,
 
 101
-00:06:19,590 --> 00:06:22,470
-C'est l'idée clé de la conférence.
+00:06:12,300 --> 00:06:19,590
+au lieu d’utiliser des images provenant d’un modèle CNN comme alternative.
 
 102
+00:06:19,590 --> 00:06:22,470
+C’est l’idée essentielle de ce cours.
+
+103
 00:06:22,470 --> 00:06:26,520
 Nous utilisons les caractéristiques numériques que nous avons développées, soit directement
 
-103
-00:06:26,520 --> 00:06:29,020
-à partir des dossiers de santé électroniques
-
 104
-00:06:29,020 --> 00:06:32,730
-ou des caractéristiques extraites des séries temporelles ou des embeddings
+00:06:26,520 --> 00:06:29,020
+à partir des dossiers médicaux électroniques
 
 105
+00:06:29,020 --> 00:06:32,730
+soit des caractéristiques extraites de séries temporelles ou d’embeddings
+
+106
 00:06:32,730 --> 00:06:34,830
 en utilisant des données non structurées.
 
-106
-00:06:34,830 --> 00:06:37,470
-Cette idée s'appelle la fusion.
-
 107
-00:06:37,470 --> 00:06:41,080
-Nous avons maintenant une tâche d'apprentissage automatique traditionnelle.
+00:06:34,830 --> 00:06:37,470
+Cette idée s’appelle la fusion.
 
 108
+00:06:37,470 --> 00:06:41,080
+Nous avons maintenant une tâche d’apprentissage automatique traditionnelle.
+
+109
 00:06:41,080 --> 00:06:45,330
 Nous voulons prédire, disons, par exemple, la mortalité en utilisant
 
-109
+110
 00:06:45,330 --> 00:06:48,510
 comme entrées les caractéristiques numériques que nous avons extraites,
 
-110
+111
 00:06:48,510 --> 00:06:50,230
 comme indiqué précédemment.
 
-111
-00:06:50,230 --> 00:06:54,510
-Nous utilisons un modèle d'apprentissage automatique traditionnel comme XGBoost ou la forêt aléatoire
-
 112
-00:06:54,510 --> 00:06:58,620
-pour réaliser cette tâche de prédiction.
+00:06:50,230 --> 00:06:54,510
+Nous utilisons un modèle d’AM traditionnel comme XGBoost ou forêt aléatoire
 
 113
+00:06:54,510 --> 00:06:58,620
+pour effectuer cette tâche de prédiction.
+
+114
 00:06:58,620 --> 00:07:01,140
 Notez que la méthode est très générale,
 
-114
+115
 00:07:01,140 --> 00:07:04,180
 car nous traitons chaque modalité indépendamment,
 
-115
+116
 00:07:04,180 --> 00:07:07,660
 de sorte que si nous ajoutons de nouvelles modalités,
 
-116
+117
 00:07:07,660 --> 00:07:11,050
 nous ajoutons simplement les embeddings supplémentaires.
 
-117
-00:07:11,050 --> 00:07:15,730
-Notez que nous ne formons pas les modalités en combinaison.
-
 118
+00:07:11,050 --> 00:07:15,730
+Notez que nous n’entraînons pas les modalités en combinaison.
+
+119
 00:07:15,730 --> 00:07:19,000
 Notez également que les embeddings ne dépendent pas
 
-119
-00:07:19,000 --> 00:07:21,880
-de la tâche que nous voulons accomplir.
-
 120
+00:07:19,000 --> 00:07:21,880
+de la tâche que nous voulons effectuer.
+
+121
 00:07:21,880 --> 00:07:24,460
 Les embeddings résument simplement les données
 
-121
-00:07:24,460 --> 00:07:29,860
-de chaque modalité indépendamment de la tâche que nous voulons accomplir.
-
 122
+00:07:24,460 --> 00:07:29,860
+de chaque modalité indépendamment de la tâche que nous voulons effectuer.
+
+123
 00:07:29,860 --> 00:07:34,780
 Appliquons maintenant HAIM à diverses tâches de prédiction en utilisant
 
-123
+124
 00:07:34,780 --> 00:07:38,860
 le jeu de données MIMIC-IV du Beth Israel Deaconess Medical
 
-124
-00:07:38,860 --> 00:07:43,540
-Center, un système hospitalier à Boston, Massachusetts.
-
 125
-00:07:43,540 --> 00:07:51,490
-Le jeu de données de 34 537 dossiers de patients provient
+00:07:38,860 --> 00:07:43,540
+Center, un réseau hospitalier à Boston, Massachusetts.
 
 126
-00:07:51,490 --> 00:07:54,850
-des services d'urgence des soins intensifs.
+00:07:43,540 --> 00:07:51,490
+Le jeu de données de 34 537 dossiers patients provient
 
 127
-00:07:54,850 --> 00:07:57,940
-Les dossiers comprennent une radiographie thoracique,
+00:07:51,490 --> 00:07:54,850
+des services de soins intensifs d’urgence.
 
 128
-00:07:57,940 --> 00:08:03,310
-des dossiers médicaux électroniques, des notes de radiologie et un EKG.
+00:07:54,850 --> 00:07:57,940
+Les dossiers incluent une radiographie thoracique,
 
 129
-00:08:03,310 --> 00:08:09,500
-C'est-à-dire qu'il comprend des données visuelles, linguistiques et tabulaires.
+00:07:57,940 --> 00:08:03,310
+des dossiers médicaux électroniques, des comptes rendus de radiologie et des ECG.
 
 130
-00:08:09,500 --> 00:08:12,600
-Nos diagnostics cibles comprennent 12 cibles--
+00:08:03,310 --> 00:08:09,500
+C’est‑à‑dire qu’il inclut des données de vision, de langage et tabulaires.
 
 131
-00:08:12,600 --> 00:08:14,990
-la prédiction de la mortalité, c'est-à-dire que nous
+00:08:09,500 --> 00:08:12,600
+Notre diagnostic cible inclut 12 cibles—
 
 132
-00:08:14,990 --> 00:08:19,310
-cherchons à prédire si un patient est décédé ou envoyé en soins palliatifs
+00:08:12,600 --> 00:08:14,990
+la prédiction de la mortalité, c’est‑à‑dire que nous
 
 133
-00:08:19,310 --> 00:08:25,130
-ou si le patient est vivant à la sortie de l'hôpital ; un
+00:08:14,990 --> 00:08:19,310
+visons à prédire si un patient est décédé ou orienté vers des soins palliatifs
 
 134
-00:08:25,130 --> 00:08:29,810
-des 10 diagnostics, c'est-à-dire que nous souhaitons prédire si un patient a
+00:08:19,310 --> 00:08:25,130
+ou si le patient est vivant à la sortie de l’hôpital ; l’une
 
 135
-00:08:29,810 --> 00:08:37,429
-une certaine maladie, comme une fracture, une lésion pulmonaire, une hypertrophie
+00:08:25,130 --> 00:08:29,810
+de 10 pathologies, c’est‑à‑dire que nous voulons prédire si un patient a
 
 136
-00:08:37,429 --> 00:08:43,580
-du cœur, une consolidation, une pneumonie, des classes [INAUDIBLE], une capacité pulmonaire,
+00:08:29,810 --> 00:08:37,429
+une certaine maladie, comme fracture, lésion pulmonaire, CM élargie,
 
 137
-00:08:43,580 --> 00:08:49,940
-un pneumothorax, un œdème, une cardiomégalie ; et enfin,
+00:08:37,429 --> 00:08:43,580
+condensation, pneumonie, classes [INAUDIBLE], capacité
 
 138
-00:08:49,940 --> 00:08:52,670
-la durée de séjour, c'est-à-dire que nous voulons
+00:08:43,580 --> 00:08:49,940
+pulmonaire, pneumothorax, œdème, cardiomégalie ; et enfin,
 
 139
-00:08:52,670 --> 00:08:58,340
-prédire si un patient sort de l'hôpital dans les 48 heures.
+00:08:49,940 --> 00:08:52,670
+la durée de séjour, c’est‑à‑dire que nous voulons
 
 140
-00:08:58,340 --> 00:09:01,310
-Nous avons comparé la performance de HAIM
+00:08:52,670 --> 00:08:58,340
+prédire si un patient sort de l’hôpital en 48 heures.
 
 141
-00:09:01,310 --> 00:09:04,740
-et la performance d'un modèle d'apprentissage automatique classique
+00:08:58,340 --> 00:09:01,310
+Nous avons comparé les performances de HAIM
 
 142
-00:09:04,740 --> 00:09:08,200
-qui est uniquement basé sur les dossiers médicaux électroniques,
+00:09:01,310 --> 00:09:04,740
+et les performances d’un modèle classique d’apprentissage automatique
 
 143
-00:09:08,200 --> 00:09:10,020
-l'approche classique.
+00:09:04,740 --> 00:09:08,200
+qui est uniquement basé sur des dossiers médicaux électroniques,
 
 144
+00:09:08,200 --> 00:09:10,020
+l’approche classique.
+
+145
 00:09:10,020 --> 00:09:16,650
 Sur la mortalité, HAIM améliore la précision de 11 % à 33 %
 
-145
+146
 00:09:16,650 --> 00:09:19,120
 par rapport aux dossiers médicaux électroniques.
 
-146
-00:09:19,120 --> 00:09:22,350
-Cela est uniquement basé sur des modèles d'apprentissage automatique classiques.
-
 147
+00:09:19,120 --> 00:09:22,350
+C’est uniquement basé sur des modèles classiques d’apprentissage automatique.
+
+148
 00:09:22,350 --> 00:09:25,860
 Sur la classification des maladies, HAIM améliore la précision
 
-148
+149
 00:09:25,860 --> 00:09:30,630
 de 6 % à 22 % par rapport aux dossiers électroniques.
 
-149
+150
 00:09:30,630 --> 00:09:34,890
 Sur la durée de séjour, HAIM améliore la précision de 8 % à 20 %
 
-150
+151
 00:09:34,890 --> 00:09:37,050
 par rapport aux dossiers médicaux électroniques
 
-151
-00:09:37,050 --> 00:09:39,840
-et à des modèles d'apprentissage automatique plus classiques.
-
 152
-00:09:39,840 --> 00:09:42,780
-Dans tous les cas, l'utilisation de la multimodalité
+00:09:37,050 --> 00:09:39,840
+et à un modèle d’apprentissage automatique plus classique.
 
 153
-00:09:42,780 --> 00:09:47,460
-entraîne une amélioration significative des performances.
+00:09:39,840 --> 00:09:42,780
+Dans tous les cas, l’utilisation de la multimodalité
 
 154
-00:09:47,460 --> 00:09:51,300
-Dans cette diapositive, nous présentons des sous-analyses afin
+00:09:42,780 --> 00:09:47,460
+se traduit par une amélioration significative des performances.
 
 155
+00:09:47,460 --> 00:09:51,300
+Dans cette diapositive, nous présentons des sous‑analyses afin
+
+156
 00:09:51,300 --> 00:09:54,900
 de comprendre la contribution relative de chaque modalité
 
-156
-00:09:54,900 --> 00:09:58,270
-à la prédiction de la classification des maladies.
-
 157
-00:09:58,270 --> 00:10:00,810
-L'entrée visuelle, dans ce cas, la radiographie,
+00:09:54,900 --> 00:09:58,270
+à la prédiction pour la classification des maladies.
 
 158
+00:09:58,270 --> 00:10:00,810
+L’entrée vision, dans ce cas la radiographie,
+
+159
 00:10:00,810 --> 00:10:02,820
 était la modalité dominante.
 
-159
+160
 00:10:02,820 --> 00:10:05,300
 Pour la durée de séjour et la mortalité,
 
-160
+161
 00:10:05,300 --> 00:10:10,990
 les séries temporelles et les dossiers médicaux électroniques
 
-161
+162
 00:10:10,990 --> 00:10:13,900
 étaient la modalité dominante.
 
-162
+163
 00:10:13,900 --> 00:10:18,040
 Nous présentons ensuite une application de la méthodologie HAIM
 
-163
-00:10:18,040 --> 00:10:22,570
-pour prédire la durée de séjour dans le système Hartford HealthCare,
-
 164
+00:10:18,040 --> 00:10:22,570
+pour prédire la durée de séjour au sein du réseau Hartford HealthCare,
+
+165
 00:10:22,570 --> 00:10:28,510
 HHC en abrégé, le plus grand système hospitalier du Connecticut,
 
-165
-00:10:28,510 --> 00:10:32,080
-avec des revenus d'exploitation supérieurs à 5 milliards de dollars par an,
-
 166
-00:10:32,080 --> 00:10:37,300
-sept hôpitaux divers, allant d'un hôpital universitaire urbain
+00:10:28,510 --> 00:10:32,080
+avec des revenus d’exploitation supérieurs à 5 milliards de dollars par an,
 
 167
-00:10:37,300 --> 00:10:41,180
-à un hôpital communautaire, et des hôpitaux de grande taille à de plus petits.
+00:10:32,080 --> 00:10:37,300
+sept hôpitaux diversifiés, allant d’un hôpital universitaire urbain
 
 168
+00:10:37,300 --> 00:10:41,180
+à un hôpital communautaire, et de grands à petits hôpitaux.
+
+169
 00:10:41,180 --> 00:10:45,590
 Au total, HHC dispose de 2 500 lits.
 
-169
-00:10:45,590 --> 00:10:49,900
-Il est représentatif d'un réseau hospitalier typique et de haute qualité aux États-Unis.
-
 170
-00:10:49,900 --> 00:10:52,660
-Nous avons mis en œuvre certains des algorithmes que nous avons présentés
+00:10:45,590 --> 00:10:49,900
+Il est représentatif d’un réseau hospitalier américain
 
 171
-00:10:52,660 --> 00:10:56,170
-dans une entreprise appelée Holistic Hospital Optimization,
+00:10:49,900 --> 00:10:52,660
+typique de haute qualité.
 
 172
-00:10:56,170 --> 00:11:00,020
-H2O en abrégé.
+00:10:52,660 --> 00:10:56,170
+Nous avons mis en œuvre certains des algorithmes que nous avons présentés
 
 173
-00:11:00,020 --> 00:11:02,350
-C'est une indication des liens
+00:10:56,170 --> 00:11:00,020
+dans une entreprise appelée Holistic Hospital Optimization,
 
 174
-00:11:02,350 --> 00:11:04,420
-avec l'aspect fondamental de la vie, l'eau.
+00:11:00,020 --> 00:11:02,350
+H2O en abrégé.
 
 175
-00:11:04,420 --> 00:11:07,840
-Nous discutons en détail de l'application de la durée de séjour.
+00:11:02,350 --> 00:11:04,420
+Ceci indique les liens
 
 176
-00:11:07,840 --> 00:11:11,140
-Nous avons mis en œuvre d'autres applications,
+00:11:04,420 --> 00:11:07,840
+avec l’aspect fondamental de la vie, l’eau.
 
 177
-00:11:11,140 --> 00:11:13,330
-comme un indice de détérioration, qui inclut le risque de mortalité, le risque des soins intensifs,
+00:11:07,840 --> 00:11:11,140
+Nous détaillons l’application sur la durée de séjour.
 
 178
-00:11:13,330 --> 00:11:17,230
-la planification des infirmières et la planification des salles d'opération.
+00:11:11,140 --> 00:11:13,330
+Nous avons mis en œuvre d’autres applications,
 
 179
-00:11:17,230 --> 00:11:21,670
-Le logiciel est utilisé par des centaines d'utilisateurs--
+00:11:13,330 --> 00:11:17,230
+comme un indice de détérioration, qui inclut le risque de mortalité, le risque de SI
 
 180
-00:11:21,670 --> 00:11:24,580
-médecins, infirmières, administrateurs.
+00:11:17,230 --> 00:11:21,670
+et, la planification des infirmières et la planification des blocs opératoires.
 
 181
-00:11:24,580 --> 00:11:27,800
-Il fonctionne dans les sept hôpitaux de HHC,
+00:11:21,670 --> 00:11:24,580
+Le logiciel est utilisé par des centaines d’utilisateurs—
 
 182
-00:11:27,800 --> 00:11:31,780
-et a entraîné une augmentation annuelle des recettes de plusieurs millions
+00:11:24,580 --> 00:11:27,800
+médecins, infirmières, administrateurs.
 
 183
-00:11:31,780 --> 00:11:35,710
-de dollars.
+00:11:27,800 --> 00:11:31,780
+Il fonctionne dans les sept hôpitaux de HHC,
 
 184
-00:11:35,710 --> 00:11:37,390
-Nous avons mis en œuvre ces solutions
+00:11:31,780 --> 00:11:35,710
+et a conduit à une augmentation de revenus annuelle de plusieurs dizaines de millions
 
 185
-00:11:37,390 --> 00:11:39,070
-dans plusieurs autres systèmes hospitaliers à travers le monde.
+00:11:35,710 --> 00:11:37,390
+de dollars.
 
 186
-00:11:39,070 --> 00:11:43,210
-Les applications comprennent la prédiction
+00:11:37,390 --> 00:11:39,070
+Nous avons déployé ces solutions
 
 187
-00:11:43,210 --> 00:11:45,310
-des sorties dans les 24 ou 48 heures suivantes, ce qui
+00:11:39,070 --> 00:11:43,210
+dans plusieurs autres systèmes hospitaliers à travers le monde.
 
 188
-00:11:45,310 --> 00:11:49,060
-est important pour identifier et prioriser les patients,
+00:11:43,210 --> 00:11:45,310
+Les applications incluent la prédiction de la
 
 189
-00:11:49,060 --> 00:11:52,880
-réduire la durée de séjour et économiser des coûts,
+00:11:45,310 --> 00:11:49,060
+sortie dans les 24 ou 48 heures, ce qui
 
 190
-00:11:52,880 --> 00:11:56,690
-préparer les projets de traitement et de disposition.
+00:11:49,060 --> 00:11:52,880
+est important pour identifier et prioriser les patients,
 
 191
-00:11:56,690 --> 00:12:00,490
-Il prédit également la destination finale
+00:11:52,880 --> 00:11:56,690
+réduire la durée de séjour et économiser des coûts,
 
 192
-00:12:00,490 --> 00:12:03,100
-après la sortie, le risque de mortalité,
+00:11:56,690 --> 00:12:00,490
+préparer les plans de traitement et d’orientation.
 
 193
-00:12:03,100 --> 00:12:06,050
-ainsi que le risque de nécessiter une admission en unité de soins intensifs.
+00:12:00,490 --> 00:12:03,100
+Elles prédisent également la destination finale
 
 194
-00:12:06,050 --> 00:12:09,350
-Ces prédictions aident à prévenir la détérioration des patients,
+00:12:03,100 --> 00:12:06,050
+après la sortie, le risque de mortalité,
 
 195
-00:12:09,350 --> 00:12:10,730
-ainsi qu'à allouer plus efficacement les ressources hospitalières.
+00:12:06,050 --> 00:12:09,350
+ainsi que le risque de nécessiter une admission en unité de soins intensifs,
 
 196
-00:12:10,730 --> 00:12:16,340
-Le tableau représente l'AUC, l'aire sous la courbe,
+00:12:09,350 --> 00:12:10,730
+l’unité.
 
 197
-00:12:16,340 --> 00:12:19,830
-pour la mortalité, la destination, la sortie à 24 et 48 heures,
+00:12:10,730 --> 00:12:16,340
+Ces prédictions aident à alerter sur la détérioration des patients,
 
 198
-00:12:28,670 --> 00:12:33,080
-la prédiction de l'entrée en soins intensifs ou de la sortie des soins intensifs pour les sept
+00:12:16,340 --> 00:12:19,830
+ainsi qu’à allouer plus efficacement les ressources hospitalières.
 
 199
-00:12:33,080 --> 00:12:37,700
-hôpitaux de HHC.
+00:12:19,830 --> 00:12:23,450
+Le tableau représente l’AUC, l’aire sous la courbe,
 
 200
-00:12:37,700 --> 00:12:41,810
-Les résultats sont de manière fiable solides dans toutes les prédictions
+00:12:23,450 --> 00:12:28,670
+pour la mortalité, la destination, la sortie à 24 et 48 heures,
 
 201
-00:12:41,810 --> 00:12:44,330
-and all hospitals.
+00:12:28,670 --> 00:12:33,080
+prédire l’entrée en USI ou la sortie d’USI pour les sept
 
 202
-00:12:44,330 --> 00:12:47,720
-We then demonstrate that the calibration plots are also
+00:12:33,080 --> 00:12:37,700
+hôpitaux du HHC.
 
 203
-00:12:47,720 --> 00:12:49,160
-highly accurate.
+00:12:37,700 --> 00:12:41,810
+Les résultats sont solidement fiables pour toutes les prédictions
 
 204
-00:12:49,160 --> 00:12:52,980
-Specifically, in the left plot, on the horizontal axis,
+00:12:41,810 --> 00:12:44,330
+et tous les hôpitaux.
 
 205
-00:12:52,980 --> 00:12:56,420
-we plot the proportion of patients with a probability
+00:12:44,330 --> 00:12:47,720
+Nous montrons ensuite que les courbes de calibration sont aussi
 
 206
-00:12:56,420 --> 00:13:01,020
-of discharge within 48 hours between, say, 0.5 and 0.6,
+00:12:47,720 --> 00:12:49,160
+très précises.
 
 207
-00:13:01,020 --> 00:13:06,180
-in 10% increments, and then plot the proportion of patients
+00:12:49,160 --> 00:12:52,980
+Plus précisément, sur le graphique de gauche, sur l’axe horizontal,
 
 208
-00:13:06,180 --> 00:13:09,990
-among those who were discharged within 48 hours on the vertical axis.
+00:12:52,980 --> 00:12:56,420
+nous traçons la proportion de patients qui ont une probabilité
 
 209
-00:13:09,990 --> 00:13:11,250
-The line is very close to the 45-degree angle,
+00:12:56,420 --> 00:13:01,020
+de sortie sous 48 heures comprise, disons, entre 0,5 et 0,6,
 
 210
-00:13:11,250 --> 00:13:15,250
-illustrating that the predicted probabilities closely match
+00:13:01,020 --> 00:13:06,180
+par incréments de 10 %, puis nous traçons la proportion de patients
 
 211
-00:13:15,250 --> 00:13:19,380
-the empirical evidence.
+00:13:06,180 --> 00:13:09,990
+parmi ceux qui sont sortis dans les 48 heures, sur l’axe vertical.
 
 212
-00:13:19,380 --> 00:13:21,360
-In the plot on the right, we saw the calibration plot for mortality.
+00:13:09,990 --> 00:13:11,250
+.
 
 213
-00:13:21,360 --> 00:13:25,570
-Again, the calibration is very accurate.
+00:13:11,250 --> 00:13:15,250
+La ligne est très proche de l’angle de 45 degrés,
 
 214
-00:13:25,570 --> 00:13:29,490
-The figure shows the software that
+00:13:15,250 --> 00:13:19,380
+illustrant que les probabilités prédites correspondent étroitement
 
 215
-00:13:29,490 --> 00:13:32,220
-was implemented at HHC.
+00:13:19,380 --> 00:13:21,360
+aux données empiriques.
 
 216
-00:13:32,220 --> 00:13:34,960
-The colors demonstrate the following information.
+00:13:21,360 --> 00:13:25,570
+Sur le graphique de droite, nous avons vu la courbe de calibration pour la mortalité.
 
 217
-00:13:34,960 --> 00:13:38,740
-Green suggests that the patient should
+00:13:25,570 --> 00:13:29,490
+Là encore, la calibration est très précise.
 
 218
-00:13:38,740 --> 00:13:41,460
-be prioritized for discharge.
+00:13:29,490 --> 00:13:32,220
+La figure montre le logiciel qui
 
 219
-00:13:41,460 --> 00:13:43,720
-Yellow also indicates that the hospital staff
+00:13:32,220 --> 00:13:34,960
+a été déployé au HHC.
 
 220
-00:13:43,720 --> 00:13:47,550
-should prepare, but not with the same level of intensity.
+00:13:34,960 --> 00:13:38,740
+Les couleurs illustrent les informations suivantes.
 
 221
-00:13:47,550 --> 00:13:51,190
-Red indicates that the patient is deteriorating.
+00:13:38,740 --> 00:13:41,460
+Le vert suggère que le patient doit
 
 222
-00:13:51,190 --> 00:13:55,470
-Note that we assign a green alert
+00:13:41,460 --> 00:13:43,720
+être priorisé pour la sortie.
 
 223
-00:13:55,470 --> 00:13:58,530
-if the probability of discharge in the next 24 or 48 hours
+00:13:43,720 --> 00:13:47,550
+Le jaune indique aussi que le personnel hospitalier
 
 224
-00:13:58,530 --> 00:14:02,530
-is greater than 50%.
+00:13:47,550 --> 00:13:51,190
+doit se préparer, mais pas avec le même niveau d’intensité.
 
 225
-00:14:02,530 --> 00:14:04,740
-The yellow alert occurs if the probability of discharge within 48 hours is
+00:13:51,190 --> 00:13:55,470
+Le rouge indique que l’état du patient se détériore.
 
 226
-00:14:04,740 --> 00:14:10,360
-between 35% and 50%, and the probability increases by more than
+00:13:55,470 --> 00:13:58,530
+Notez que nous attribuons une alerte verte
 
 227
-00:14:10,360 --> 00:14:16,660
-10% compared to the previous day.
+00:13:58,530 --> 00:14:02,530
+si la probabilité de sortie dans les prochaines 24 heures ou 48 heures
 
 228
-00:14:16,660 --> 00:14:19,870
-The software also plots a sub-graph
+00:14:02,530 --> 00:14:04,740
+dépasse 50 %.
 
 229
-00:14:19,870 --> 00:14:23,230
-that shows how different factors affect the length of stay.
+00:14:04,740 --> 00:14:10,360
+L’alerte jaune survient si la probabilité de sortie à 48 heures est
 
 230
-00:14:23,230 --> 00:14:26,530
-In this way, the predictions are much more interpretable.
+00:14:10,360 --> 00:14:16,660
+comprise entre 35 % et 50 %, et que la probabilité augmente de plus de
 
 231
-00:14:26,530 --> 00:14:32,020
-Compared to human physicians, the artificial intelligence approach
+00:14:16,660 --> 00:14:19,870
+10 % par rapport à la veille.
 
 232
-00:14:32,020 --> 00:14:36,160
-exhibits a significantly higher AUC, identifies
+00:14:19,870 --> 00:14:23,230
+Le logiciel trace également un sous-graphique
 
 233
-00:14:36,160 --> 00:14:40,690
-more patients who can be discharged,
+00:14:23,230 --> 00:14:26,530
+qui montre comment différents facteurs affectent la durée de séjour.
 
 234
-00:14:40,690 --> 00:14:42,910
-and makes more accurate predictions.
+00:14:26,530 --> 00:14:32,020
+De cette manière, les prédictions sont bien plus interprétables.
 
 235
-00:14:42,910 --> 00:14:45,490
-Clearly, the advantage of AI is significant.
+00:14:32,020 --> 00:14:36,160
+Comparée aux médecins humains, l’approche d’intelligence artificielle
 
 236
-00:14:45,490 --> 00:14:49,750
-We conducted a test in which some wards of HHC
+00:14:36,160 --> 00:14:40,690
+présente une AUC significativement plus élevée, identifie
 
 237
-00:14:49,750 --> 00:14:54,670
-used the software and compared it with others
+00:14:40,690 --> 00:14:42,910
+davantage de patients pouvant être sortis,
 
 238
-00:14:54,670 --> 00:14:57,940
-that did not use it.
+00:14:42,910 --> 00:14:45,490
+et produit des prédictions plus exactes.
 
 239
-00:14:57,940 --> 00:14:59,390
-We found that the average length of stay of patients
+00:14:45,490 --> 00:14:49,750
+Clairement, l’avantage de l’IA est significatif.
 
 240
-00:14:59,390 --> 00:15:02,050
-for the units that use the software
+00:14:49,750 --> 00:14:54,670
+Nous avons réalisé un test dans lequel certains services du HHC
 
 241
-00:15:02,050 --> 00:15:05,440
-was reduced by 0.67 days, going from 565 to 498 days.
+00:14:54,670 --> 00:14:57,940
+ont utilisé le logiciel et l’ont comparé avec d’autres
 
 242
-00:15:05,440 --> 00:15:14,350
-This suggests that we reduce the length
+00:14:57,940 --> 00:14:59,390
+qui ne l’ont pas utilisé.
 
 243
-00:15:14,350 --> 00:15:16,480
-of stay by about 15%, and thus we
+00:14:59,390 --> 00:15:02,050
+Nous avons constaté que la durée moyenne
 
 244
-00:15:16,480 --> 00:15:20,500
-can increase patient throughput by a corresponding amount,
+00:15:02,050 --> 00:15:05,440
+de séjour des patients pour les unités utilisant le logiciel
 
 245
-00:15:20,500 --> 00:15:24,070
-thereby increasing overall hospital revenue
+00:15:05,440 --> 00:15:14,350
+a diminué de 0,67 jour, passant de 565 à 498 jours.
 
 246
-00:15:24,070 --> 00:15:27,430
-by tens of millions per year.
+00:15:14,350 --> 00:15:16,480
+Cela suggère que nous réduisons la durée
 
 247
-00:15:27,430 --> 00:15:31,180
-HAIM is broadly applicable in a variety of applications.
+00:15:16,480 --> 00:15:20,500
+de séjour d’environ 15 %, et que nous
 
 248
-00:15:31,180 --> 00:15:35,650
-Examples of ongoing work include domestic abuse detection
+00:15:20,500 --> 00:15:24,070
+pouvons augmenter le débit dans une proportion correspondante,
 
 249
-00:15:35,650 --> 00:15:40,180
-at Brigham and Women's Hospital, automatic detection
+00:15:24,070 --> 00:15:27,430
+augmentant ainsi les revenus globaux de l’hôpital
 
 250
-00:15:40,180 --> 00:15:43,780
-of data from nodes, scans, and labs
+00:15:27,430 --> 00:15:31,180
+de plusieurs dizaines de millions par an.
 
 251
-00:15:43,780 --> 00:15:47,110
-at Mass General Brigham, unified diagnostics for EKG at Hartford
+00:15:31,180 --> 00:15:35,650
+HAIM est largement applicable dans une variété d’applications.
 
 252
-00:15:47,110 --> 00:15:54,460
-Hospital, detection of subdural hematoma,
+00:15:35,650 --> 00:15:40,180
+Des exemples de travaux en cours incluent la détection de violences domestiques
 
 253
-00:15:54,460 --> 00:15:57,980
-as well as what is called an AI companion.
+00:15:40,180 --> 00:15:43,780
+au Brigham and Women’s Hospital, la détection automatique
 
 254
-00:15:57,980 --> 00:16:00,830
-We use HAIM to give advice to doctors and nurses regarding
+00:15:43,780 --> 00:15:47,110
+de données issues de nœuds, d’imageries et de laboratoires
 
 255
+00:15:47,110 --> 00:15:54,460
+à Mass General Brigham, diagnostics unifiés pour l’ECG à Hartford
+
+256
+00:15:54,460 --> 00:15:57,980
+Hospital, détection d’hématome sous-dural,
+
+257
+00:15:57,980 --> 00:16:00,830
+ainsi que ce que l’on appelle l’AI companion.
+
+258
 00:16:00,830 --> 00:16:06,460
-diagnosis.
+Nous utilisons HAIM pour donner des conseils aux médecins et aux infirmières concernant
+
+259
+00:16:06,460 --> 00:16:08,310
+le diagnostic.
 

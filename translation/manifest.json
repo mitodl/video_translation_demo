@@ -6,35 +6,10 @@
       "youtubeId": "VAT44R63jOU",
       "methods": ["gpt-4o-mini", "gpt-5", "deep-l", "deep-l_gpt5"],
       "languages": {
-        "gpt-4o-mini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "gpt-5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "deep-l_gpt5": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "uk", "zh"]        
-      }
-    },
-    {
-      "id": "L3.1.StatististicsAndUnderstandingDistributions",
-      "title": "L3.1 Statistics and Understanding Distributions",
-      "youtubeId": "Vvt9y9FBuOk",
-      "methods": ["gpt-4o-mini", "gpt-5", "deep-l", "deep-l_gpt5"],
-      "languages": {
-        "gpt-4o-mini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "gpt-5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "deep-l_gpt5": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "uk", "zh"]
-      }
-    },
-    {
-      "id": "L3.2.SpreadsPercentilesVisualization",
-      "title": "L3.2 Spreads, Percentiles, Visualization",
-      "youtubeId": "QvvKn92MLy4",
-      "baseFilename": "L3.2.Spreads_Percentiles_Visualization",
-      "methods": ["gpt-4o-mini", "gpt-5", "deep-l", "deep-l_gpt5"],
-      "languages": {
-        "gpt-4o-mini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "gpt-5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "uk", "zh"],
-        "deep-l_gpt5": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "uk", "zh"]
+        "gpt-4o-mini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
+        "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
+        "gpt-5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
+        "deep-l_gpt5": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]        
       }
     }
   ],
@@ -51,7 +26,8 @@
     "kr": "Korean",
     "pt": "Portuguese",
     "ru": "Russian",
-    "uk": "Ukrainian",
+    "sq": "Albanian",
+    "tr": "Turkish",
     "zh": "Chinese"
   }
 }
