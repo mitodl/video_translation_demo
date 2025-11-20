@@ -111,7 +111,7 @@ function populateMethodSelect(videoIndex) {
     video.methods.forEach((method, index) => {
         const option = document.createElement('option');
         option.value = method;
-        option.textContent = `Method ${index + 1} - ${method}`;
+        option.textContent = `Method ${index + 1}`;
 
         // Disable if no languages available
         const hasLanguages = video.languages[method] && video.languages[method].length > 0;
