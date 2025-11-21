@@ -10,7 +10,7 @@
         "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
         "gpt-5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
         "deep-l_gpt5": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "advanced": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt-br", "ru", "sq", "tr", "zh"]            
+        "advanced": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
       }
     }
   ],
