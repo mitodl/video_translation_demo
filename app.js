@@ -74,13 +74,13 @@ function setDefaults() {
 
     // Populate and select gpt-4o-mini method
     populateMethodSelect(0);
-    if (video.languages['deep-l_gpt5'] && video.languages['deep-l_gpt5'].length > 0) {
-        currentSelection.method = 'deep-l_gpt5';
-        methodSelect.value = 'deep-l_gpt5';
+    if (video.languages['advanced'] && video.languages['advanced'].length > 0) {
+        currentSelection.method = 'advanced';
+        methodSelect.value = 'advanced';
 
         // Populate and select Spanish language
-        populateLanguageSelect(0, 'deep-l_gpt5');
-        if (video.languages['deep-l_gpt5'].includes('es')) {
+        populateLanguageSelect(0, 'advanced');
+        if (video.languages['advanced'].includes('es')) {
             currentSelection.language = 'es';
             languageSelect.value = 'es';
 
@@ -516,6 +516,9 @@ function getSubtitlePath(video, method, language) {
     } else if (method === 'deep-l_gpt5') {
         // deep-l_gpt5 uses: {baseFilename}-output-deepl-gpt-5-{lang}.srt
         return `translation/videos/${videoId}/${method}/${baseFilename}-output-deepl-gpt-5-${language}.srt`;
+    } else if (method === 'advanced') {
+        // advanced uses: {baseFilename}__output_{lang}_advanced.srt
+        return `translation/videos/${videoId}/${method}/${baseFilename}__output_${language}_advanced.srt`;
     } else {
         // gpt-4o-mini can use either pattern:
         // 1. {baseFilename}-output-gpt-4o-mini-{lang}.srt
