@@ -8,7 +8,7 @@
       "languages": {
         "multi_llm": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
         "gpt5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "gemini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "ru", "sq", "tr", "zh"]            
+        "gemini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
       }
     }
   ],
