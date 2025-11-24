@@ -1,0 +1,1036 @@
+0
+00:00:00,000 --> 00:00:02,120
+INSTRUCTOR: Bu derste,
+
+1
+00:00:02,120 --> 00:00:08,400
+kısaca HAIM olan Holistic Artificial Intelligence for Medicine’ı sunuyoruz.
+
+2
+00:00:08,400 --> 00:00:11,900
+Haim, yaşam anlamına gelen bir Yahudi kelimesidir.
+
+3
+00:00:11,900 --> 00:00:17,660
+Bu, tıpta çoklu modaliteli yapay zekanın bir uygulamasını temsil eder.
+
+4
+00:00:17,660 --> 00:00:19,800
+Dersin planı şu şekildedir.
+
+5
+00:00:19,800 --> 00:00:23,670
+Önce çoklu modaliteli yapay zekayı kullanma motivasyonunu veriyoruz.
+
+6
+00:00:23,670 --> 00:00:27,110
+Ardından HAIM’i sunuyor ve
+
+7
+00:00:27,110 --> 00:00:31,880
+Hartford HealthCare system’de gerçek dünyada uyguluyoruz.
+
+8
+00:00:31,880 --> 00:00:35,030
+Ve son olarak, tıbbın çeşitli diğer alanlarındaki HAIM uygulamalarıyla
+
+9
+00:00:35,030 --> 00:00:38,960
+bitiriyoruz.
+
+10
+00:00:38,960 --> 00:00:42,260
+Çoklu modaliteliği motive etmek için,
+
+11
+00:00:42,260 --> 00:00:45,920
+tıp doktorlarının nasıl karar verdiğini düşünelim.
+
+12
+00:00:45,920 --> 00:00:52,520
+Tarama görüntüleri, MR’lar, BT’ler, röntgenler vb.; dil,
+
+13
+00:00:52,520 --> 00:00:56,670
+radyoloji raporları, doktor veya hemşire notları;
+
+14
+00:00:56,670 --> 00:01:00,200
+tablolu veriler, örneğin elektronik tıbbi kayıtlar;
+
+15
+00:01:00,200 --> 00:01:04,290
+zaman serileri; ve genomik bilgi kullanırlar.
+
+16
+00:01:04,290 --> 00:01:07,870
+İnsan doktorlar çoklu modaliteli veri kullanıyorsa,
+
+17
+00:01:07,870 --> 00:01:10,770
+makinelerin de
+
+18
+00:01:10,770 --> 00:01:16,680
+tıbbi tanı ve kararlar vermek için çoklu modaliteli veri kullanıp kullanamayacağını sormak doğaldır.
+
+19
+00:01:16,680 --> 00:01:22,770
+İnsanların dünyayı anlamak için kullandığı algılayıcıları düşünün.
+
+20
+00:01:22,770 --> 00:01:26,220
+İnsanlar beş temel insan duyusunu kullanır—
+
+21
+00:01:26,220 --> 00:01:32,850
+dokunma, görme, işitme, koku ve tat.
+
+22
+00:01:32,850 --> 00:01:36,390
+Başka bir deyişle, çoklu modalite
+
+23
+00:01:36,390 --> 00:01:38,070
+insan yaşamının temel bir özelliğidir.
+
+24
+00:01:38,070 --> 00:01:41,910
+Bu nedenle
+
+25
+00:01:41,910 --> 00:01:48,390
+makinelerin de çoklu modaliteli veri için kullanılıp kullanılmaması sorusunu değerlendirmek doğaldır.
+
+26
+00:01:48,390 --> 00:01:52,830
+Bu derste, 2022 tarihli ve
+
+27
+00:01:52,830 --> 00:01:57,960
+“Integrated Multimodal
+
+28
+00:01:57,960 --> 00:02:00,900
+Artificial Intelligence Framework for Healthcare
+
+29
+00:02:00,900 --> 00:02:05,810
+Applications that Appeared in Nature Digital Medicine,”
+
+30
+00:02:05,810 --> 00:02:10,850
+Eylül 2022, benim ve araştırma grubumun üyeleri tarafından, başlıklı bir makalenin başlıca bulgularından HAIM’i sunuyoruz.
+
+31
+00:02:10,850 --> 00:02:13,520
+HAIM’in kavramsallaştırılmasının
+
+32
+00:02:13,520 --> 00:02:15,650
+biraz tarihçesinden bahsetmek istiyorum.
+
+33
+00:02:15,650 --> 00:02:22,160
+2013’te IBM, Jeopardy’de yarışabilen Watson’ı,
+
+34
+00:02:22,160 --> 00:02:24,770
+bir yarışmacıya bir ifade verildiği
+
+35
+00:02:24,770 --> 00:02:29,180
+ve cevabın bir soru biçiminde
+
+36
+00:02:29,180 --> 00:02:31,250
+ifade edilmesi gerektiği bir oyun,
+
+37
+00:02:31,250 --> 00:02:33,350
+geliştirdi.
+
+38
+00:02:33,350 --> 00:02:38,660
+Örneğin, cevap “o görelilik kuramını geliştirdi” ise,
+
+39
+00:02:38,660 --> 00:02:42,710
+yarışmacının doğru cevap olarak
+
+40
+00:02:42,710 --> 00:02:44,990
+“Albert Einstein kimdir?” demesi gerekir.
+
+41
+00:02:44,990 --> 00:02:49,490
+IBM Watson, iki gün boyunca tarihteki en iyi insan oyuncularla yarıştı
+
+42
+00:02:49,490 --> 00:02:54,680
+ve çok net bir şekilde kazandı.
+
+43
+00:02:54,680 --> 00:02:58,710
+Bu olaydaki heyecanı hatırladım,
+
+44
+00:02:58,710 --> 00:03:01,220
+çünkü bunun
+
+45
+00:03:01,220 --> 00:03:03,910
+makine zekasını bir sonraki seviyeye taşıyan bir dönemin başlangıcı
+
+46
+00:03:03,910 --> 00:03:06,190
+olduğunu o zaman biliyordum.
+
+47
+00:03:06,190 --> 00:03:09,740
+IBM, Watson’ı tıpta uygulamaya devam etti,
+
+48
+00:03:09,740 --> 00:03:12,550
+ne yazık ki başarısız oldu.
+
+49
+00:03:12,550 --> 00:03:15,640
+Aradan geçen 12 yılda, yapay zeka
+
+50
+00:03:15,640 --> 00:03:19,090
+önemli ölçüde ilerledi, özellikle üretken yapay zeka
+
+51
+00:03:19,090 --> 00:03:21,460
+ve büyük dil modelleri.
+
+52
+00:03:21,460 --> 00:03:24,970
+HAIM, çeşitli modaliteleri birleştirerek
+
+53
+00:03:24,970 --> 00:03:29,170
+performansı önemli ölçüde iyileştirmenin nasıl mümkün olduğunu gösteriyor.
+
+54
+00:03:29,170 --> 00:03:32,780
+HAIM,
+
+55
+00:03:32,780 --> 00:03:35,000
+bilgisayarlı görü, doğal dil işleme,
+
+56
+00:03:35,000 --> 00:03:38,170
+makine öğrenmesini kapsayan bütüncül bir yapay zeka perspektifi sunar
+
+57
+00:03:38,170 --> 00:03:40,820
+tahminler ve reçeteler yapmak için
+
+58
+00:03:40,820 --> 00:03:44,230
+—özellikle tıpta—modellerin yeteneğini geliştirmek üzere.
+
+59
+00:03:44,230 --> 00:03:47,560
+Geleneksel makine öğrenmesi paradigması,
+
+60
+00:03:47,560 --> 00:03:51,400
+tahminler yapmak için tablolu verileri kullanmaktır.
+
+61
+00:03:51,400 --> 00:03:53,780
+Birden fazla modalite mevcut olduğunda,
+
+62
+00:03:53,780 --> 00:03:56,480
+örneğin bilgisayarlı görü veya dil gibi,
+
+63
+00:03:56,480 --> 00:03:58,690
+bu paradigma geçerli değildir ve
+
+64
+00:03:58,690 --> 00:04:02,170
+verileri birleştirmenin farklı yollarını keşfetmemiz gerekir.
+
+65
+00:04:02,170 --> 00:04:04,610
+Sıradaki slaytlarda,
+
+66
+00:04:04,610 --> 00:04:08,450
+farklı veri modalitelerinin nasıl birleştirileceğini özetliyoruz.
+
+67
+00:04:08,450 --> 00:04:11,850
+Elektronik sağlık verileri mevcut olduğunda,
+
+68
+00:04:11,850 --> 00:04:16,560
+slaytta gösterilene benzer, kayıtları oldukları gibi,
+
+69
+00:04:16,560 --> 00:04:19,138
+geleneksel makine öğrenmesi formatında,
+
+70
+00:04:19,138 --> 00:04:23,120
+geleneksel yöntemlerin geçerli olduğu biçimde tutarız.
+
+71
+00:04:23,120 --> 00:04:26,070
+Zaman serileri mevcut olduğunda,
+
+72
+00:04:26,070 --> 00:04:29,790
+tsfresh—
+
+73
+00:04:29,790 --> 00:04:31,880
+şimdi uygulamalı derste göreceksiniz—
+
+74
+00:04:31,880 --> 00:04:34,640
+gibi bir yazılım kullanarak
+
+75
+00:04:34,640 --> 00:04:38,340
+maksimum değer, minimum değer, medyan,
+
+76
+00:04:38,340 --> 00:04:41,840
+ortalama, tepe sayısı vb. gibi zaman serisi özelliklerini çıkarırız.
+
+77
+00:04:41,840 --> 00:04:45,860
+Bu şekilde, zaman serisi,
+
+78
+00:04:45,860 --> 00:04:50,390
+geleneksel makine öğrenmesi formatında girdi olan sayılara özetlenir.
+
+79
+00:04:50,390 --> 00:04:53,210
+Girdi doktor veya hemşire
+
+80
+00:04:53,210 --> 00:04:57,000
+notları ya da bir radyoloji raporu olduğunda, yani dil olduğunda,
+
+81
+00:04:57,000 --> 00:05:00,680
+ClinicalBERT gibi bir temel model kullanırız.
+
+82
+00:05:00,680 --> 00:05:04,410
+Bu, dil bilgisini bir gömme biçiminde,
+
+83
+00:05:04,410 --> 00:05:09,420
+768 öğeli bir vektör olarak özetler.
+
+84
+00:05:09,420 --> 00:05:12,090
+Bu vektör, bilgiyi
+
+85
+00:05:12,090 --> 00:05:15,750
+diğer sayısal özelliklerle birleştirilebilecek sayısal formatta
+
+86
+00:05:15,750 --> 00:05:18,510
+özetler.
+
+87
+00:05:18,510 --> 00:05:20,940
+ClinicalBERT yerine
+
+88
+00:05:20,940 --> 00:05:28,530
+OpenAI 4.0 veya Llama gibi üretken yapay zeka modellerini de kullanabileceğimizi unutmayın.
+
+89
+00:05:28,530 --> 00:05:31,870
+Girdi bir elektronik kardiyogram olduğunda,
+
+90
+00:05:31,870 --> 00:05:36,510
+EKG’ye dahil edilen dil bilgisini,
+
+91
+00:05:36,510 --> 00:05:41,370
+tıpkı dilde olduğu gibi kullanırız ve ardından,
+
+92
+00:05:41,370 --> 00:05:43,260
+dil bilgisini daha önce gördüğümüz gibi
+
+93
+00:05:43,260 --> 00:05:46,770
+sayısal formatta 768 öğeli bir vektörlük bir gömme biçiminde özetleyen
+
+94
+00:05:46,770 --> 00:05:51,610
+ClinicalBERT gibi bir temel model
+
+95
+00:05:51,610 --> 00:05:54,300
+kullanırız.
+
+96
+00:05:54,300 --> 00:05:57,790
+Girdi bir röntgen gibi bir görüntü olduğunda,
+
+97
+00:05:57,790 --> 00:06:02,820
+evrişimli sinir ağlarını kullanarak
+
+98
+00:06:02,820 --> 00:06:07,050
+sayısal formatta 768 öğeli bir vektörlük bir gömme çıkarırız.
+
+99
+00:06:07,050 --> 00:06:12,300
+Alternatif olarak, bir CNN modelinden görüntüler kullanmak yerine,
+
+100
+00:06:12,300 --> 00:06:19,590
+üretken bir yapay zeka modelinden gömmeler kullanabileceğimizi unutmayın.
+
+101
+00:06:19,590 --> 00:06:22,470
+Bu dersin kritik fikri budur.
+
+102
+00:06:22,470 --> 00:06:26,520
+Geliştirdiğimiz sayısal özellikleri, ister doğrudan
+
+103
+00:06:26,520 --> 00:06:29,020
+elektronik sağlık kayıtlarından,
+
+104
+00:06:29,020 --> 00:06:32,730
+ister zaman serilerinden çıkarılmış özelliklerden ya da
+
+105
+00:06:32,730 --> 00:06:34,830
+yapılandırılmamış verilerden elde edilmiş gömmelerden olsun,
+
+106
+00:06:34,830 --> 00:06:37,470
+kullanırız. Bu fikre füzyon denir.
+
+107
+00:06:37,470 --> 00:06:41,080
+Artık geleneksel bir makine öğrenmesi görevimiz var.
+
+108
+00:06:41,080 --> 00:06:45,330
+Örneğin, daha önce belirtildiği gibi,
+
+109
+00:06:45,330 --> 00:06:48,510
+girdi olarak çıkardığımız sayısal özellikleri kullanarak
+
+110
+00:06:48,510 --> 00:06:50,230
+mortaliteyi tahmin etmek istiyoruz.
+
+111
+00:06:50,230 --> 00:06:54,510
+Bu tahmin görevini gerçekleştirmek için
+
+112
+00:06:54,510 --> 00:06:58,620
+XGBoost veya Rastgele Orman gibi geleneksel bir ML modeli kullanırız.
+
+113
+00:06:58,620 --> 00:07:01,140
+Yöntemin çok genel olduğunu,
+
+114
+00:07:01,140 --> 00:07:04,180
+her modaliteyi bağımsız ele aldığımız için
+
+115
+00:07:04,180 --> 00:07:07,660
+yeni modaliteler eklersek,
+
+116
+00:07:07,660 --> 00:07:11,050
+sadece ek gömmeler eklediğimizi unutmayın.
+
+117
+00:07:11,050 --> 00:07:15,730
+Modaliteleri kombinasyon halinde eğitmediğimizi de unutmayın.
+
+118
+00:07:15,730 --> 00:07:19,000
+Ayrıca, gömmelerin
+
+119
+00:07:19,000 --> 00:07:21,880
+gerçekleştirmek istediğimiz göreve bağlı olmadığını
+
+120
+00:07:21,880 --> 00:07:24,460
+da unutmayın.
+
+121
+00:07:24,460 --> 00:07:29,860
+Gömmeler, her modalitenin verilerini,
+
+122
+00:07:29,860 --> 00:07:34,780
+gerçekleştirmek istediğimiz görevden bağımsız olarak özetler.
+
+123
+00:07:34,780 --> 00:07:38,860
+Şimdi,
+
+124
+00:07:38,860 --> 00:07:43,540
+Boston, Massachusetts’teki bir hastane sistemi olan Beth Israel Deaconess Medical Center’ın MIMIC-IV veri setini
+
+125
+00:07:43,540 --> 00:07:51,490
+kullanarak çeşitli tahmin görevleri için HAIM’i uygulayalım.
+
+126
+00:07:51,490 --> 00:07:54,850
+34,537 hasta kaydından oluşan veri seti,
+
+127
+00:07:54,850 --> 00:07:57,940
+acil ICU odalarından gelmektedir.
+
+128
+00:07:57,940 --> 00:08:03,310
+Kayıtlar bir akciğer röntgeni,
+
+129
+00:08:03,310 --> 00:08:09,500
+elektronik tıbbi kayıtlar, radyoloji notları ve EKG içerir.
+
+130
+00:08:09,500 --> 00:08:12,600
+Yani, görme, dil ve tablolu verileri içerir.
+
+131
+00:08:12,600 --> 00:08:14,990
+Hedef tanılar 12 hedef içerir—
+
+132
+00:08:14,990 --> 00:08:19,310
+mortalite tahmini, yani
+
+133
+00:08:19,310 --> 00:08:25,130
+bir hastanın vefat edip etmediğini veya hospise gönderilip gönderilmediğini
+
+134
+00:08:25,130 --> 00:08:29,810
+ya da hastanın taburcu olduğunda hayatta olup olmadığını tahmin etmeyi hedefliyoruz;
+
+135
+00:08:29,810 --> 00:08:37,429
+10 tanıdan biri, yani bir hastada
+
+136
+00:08:37,429 --> 00:08:43,580
+kırık, akciğer lezyonu, enlarge CM,
+
+137
+00:08:43,580 --> 00:08:49,940
+konsolidasyon, pnömoni, [INAUDIBLE] classes, akciğer
+
+138
+00:08:49,940 --> 00:08:52,670
+kapasitesi, pnömotoraks, ödem, kardiyomegali; ve son olarak
+
+139
+00:08:52,670 --> 00:08:58,340
+yatış süresi, yani
+
+140
+00:08:58,340 --> 00:09:01,310
+bir hastanın 48 saat içinde hastaneden çıkıp çıkmayacağını tahmin etmek istiyoruz.
+
+141
+00:09:01,310 --> 00:09:04,740
+HAIM’in performansını,
+
+142
+00:09:04,740 --> 00:09:08,200
+yalnızca elektronik tıbbi kayıtlara dayanan,
+
+143
+00:09:08,200 --> 00:09:10,020
+klasik yaklaşım olan klasik bir makine öğrenmesi modelinin performansıyla
+
+144
+00:09:10,020 --> 00:09:16,650
+karşılaştırdık.
+
+145
+00:09:16,650 --> 00:09:19,120
+Mortalitede, HAIM, elektronik tıbbi kayıtlara kıyasla
+
+146
+00:09:19,120 --> 00:09:22,350
+doğruluğu %11’den %33’e kadar artırır.
+
+147
+00:09:22,350 --> 00:09:25,860
+Bu, yalnızca klasik makine öğrenmesi modellerine dayanmaktadır.
+
+148
+00:09:25,860 --> 00:09:30,630
+Hastalık sınıflandırmasında, HAIM,
+
+149
+00:09:30,630 --> 00:09:34,890
+elektronik kayıtlara kıyasla doğruluğu %6’dan %22’ye kadar artırır.
+
+150
+00:09:34,890 --> 00:09:37,050
+Yatış süresinde, HAIM,
+
+151
+00:09:37,050 --> 00:09:39,840
+elektronik tıbbi kayıtlara ve daha klasik makine öğrenmesi modeline kıyasla
+
+152
+00:09:39,840 --> 00:09:42,780
+doğruluğu %8’den %20’ye kadar artırır.
+
+153
+00:09:42,780 --> 00:09:47,460
+Tüm durumlarda, çoklu modalitenin kullanımı
+
+154
+00:09:47,460 --> 00:09:51,300
+performansta önemli bir iyileşme ile sonuçlanır.
+
+155
+00:09:51,300 --> 00:09:54,900
+Bu slaytta,
+
+156
+00:09:54,900 --> 00:09:58,270
+hastalık sınıflandırması için her modalitenin tahmine göreli katkısını anlamak üzere
+
+157
+00:09:58,270 --> 00:10:00,810
+alt analizler sunuyoruz.
+
+158
+00:10:00,810 --> 00:10:02,820
+Bu durumda, görme girdisi, yani röntgen,
+
+159
+00:10:02,820 --> 00:10:05,300
+baskın modaliteydi.
+
+160
+00:10:05,300 --> 00:10:10,990
+Yatış süresi ve mortalitede,
+
+161
+00:10:10,990 --> 00:10:13,900
+zaman serileri ve elektronik tıbbi kayıtlar
+
+162
+00:10:13,900 --> 00:10:18,040
+baskın modaliteydi.
+
+163
+00:10:18,040 --> 00:10:22,570
+Sonrasında,
+
+164
+00:10:22,570 --> 00:10:28,510
+Connecticut’taki en büyük hastane sistemi,
+
+165
+00:10:28,510 --> 00:10:32,080
+yıllık 5 milyar doların üzerinde işletme gelirine sahip,
+
+166
+00:10:32,080 --> 00:10:37,300
+akademik bir kentsel hastaneden bir toplum hastanesine
+
+167
+00:10:37,300 --> 00:10:41,180
+ve büyükten küçüğe uzanan yedi çeşitli hastaneden oluşan
+
+168
+00:10:41,180 --> 00:10:45,590
+Hartford Health Care system, kısaca HHC, için
+
+169
+00:10:45,590 --> 00:10:49,900
+yatış süresini tahmin etmek üzere HAIM metodolojisinin bir uygulamasını sunuyoruz.
+
+170
+00:10:49,900 --> 00:10:52,660
+HHC’nin toplam 2,500 yatağı vardır.
+
+171
+00:10:52,660 --> 00:10:56,170
+Bu, yüksek kaliteli, tipik bir ABD hastane ağını temsil eder.
+
+172
+00:10:56,170 --> 00:11:00,020
+H2O kısaltmasıyla Holistic Hospital Optimization adlı bir şirkette
+
+173
+00:11:00,020 --> 00:11:02,350
+sunduğumuz bazı algoritmaları
+
+174
+00:11:02,350 --> 00:11:04,420
+uyguladık.
+
+175
+00:11:04,420 --> 00:11:07,840
+Bu, hayatın temel unsuru olan su ile bağlantıların
+
+176
+00:11:07,840 --> 00:11:11,140
+bir göstergesidir.
+
+177
+00:11:11,140 --> 00:11:13,330
+Yatış süresi uygulamasını ayrıntılı olarak tartışıyoruz.
+
+178
+00:11:13,330 --> 00:11:17,230
+Mortalitenin riski, ICU riski,
+
+179
+00:11:17,230 --> 00:11:21,670
+hemşire çizelgeleme ve ameliyathane çizelgeleme gibi bir kötüleşme indeksini de içeren diğer uygulamaları hayata geçirdik.
+
+180
+00:11:21,670 --> 00:11:24,580
+Yazılım, yüzlerce kullanıcı—
+
+181
+00:11:24,580 --> 00:11:27,800
+hekimler, hemşireler, yöneticiler—tarafından kullanılmaktadır.
+
+182
+00:11:27,800 --> 00:11:31,780
+HHC’nin tüm yedi hastanesinde çalışır,
+
+183
+00:11:31,780 --> 00:11:35,710
+ve yıllık onlarca milyon dolar
+
+184
+00:11:35,710 --> 00:11:37,390
+gelir artışına yol açmıştır.
+
+185
+00:11:37,390 --> 00:11:39,070
+Bu çözümleri
+
+186
+00:11:39,070 --> 00:11:43,210
+dünya genelinde birkaç başka hastane sisteminde de uyguladık.
+
+187
+00:11:43,210 --> 00:11:45,310
+Uygulamalar,
+
+188
+00:11:45,310 --> 00:11:49,060
+özellikle hastaları belirlemek ve önceliklendirmek,
+
+189
+00:11:49,060 --> 00:11:52,880
+yatış süresini azaltmak ve maliyetleri düşürmek,
+
+190
+00:11:52,880 --> 00:11:56,690
+tedavi ve taburculuk planlarına hazırlık yapmak için önemli olan,
+
+191
+00:11:56,690 --> 00:12:00,490
+önümüzdeki 24 veya 48 saat içindeki taburculuğu tahmin etmeyi içerir.
+
+192
+00:12:00,490 --> 00:12:03,100
+Ayrıca taburculuk sonrası nihai varış noktasını,
+
+193
+00:12:03,100 --> 00:12:06,050
+mortalite riskini
+
+194
+00:12:06,050 --> 00:12:09,350
+ve yoğun bakım ünitesine yatış gereksinimi riskini de
+
+195
+00:12:09,350 --> 00:12:10,730
+tahmin eder.
+
+196
+00:12:10,730 --> 00:12:16,340
+Bu tahminler, hastaların kötüleşmesi konusunda uyarı vermenin
+
+197
+00:12:16,340 --> 00:12:19,830
+yanı sıra hastane kaynaklarını daha etkili bir şekilde tahsis etmeye yardımcı olur.
+
+198
+00:12:19,830 --> 00:12:23,450
+Tablo,
+
+199
+00:12:23,450 --> 00:12:28,670
+HHC’deki tüm yedi hastane için mortalite, varış noktası,
+
+200
+00:12:28,670 --> 00:12:33,080
+24 ve 48 saatlik taburculuk, ICU’ya giriş veya ICU’dan çıkışı tahmin etmek için
+
+201
+00:12:33,080 --> 00:12:37,700
+AUC, Eğri Altındaki Alan, gösterir.
+
+202
+00:12:37,700 --> 00:12:41,810
+Sonuçlar, tüm tahminler
+
+203
+00:12:41,810 --> 00:12:44,330
+ve tüm hastaneler genelinde güvenilir biçimde güçlüdür.
+
+204
+00:12:44,330 --> 00:12:47,720
+Sonraki adımda, kalibrasyon grafiklerinin de
+
+205
+00:12:47,720 --> 00:12:49,160
+çok doğru olduğunu gösteriyoruz.
+
+206
+00:12:49,160 --> 00:12:52,980
+Özellikle, soldaki grafikte yatay eksende,
+
+207
+00:12:52,980 --> 00:12:56,420
+diyelim ki 0.5 ile 0.6 arasında 48 saatlik taburculuk olasılığına sahip hastaların oranını
+
+208
+00:12:56,420 --> 00:13:01,020
+yüzde 10’luk artışlarla çiziyoruz
+
+209
+00:13:01,020 --> 00:13:06,180
+ve ardından dikey eksende
+
+210
+00:13:06,180 --> 00:13:09,990
+bu hastalar arasında 48 saat içinde taburcu olanların oranını
+
+211
+00:13:09,990 --> 00:13:11,250
+çiziyoruz.
+
+212
+00:13:11,250 --> 00:13:15,250
+Çizgi, kırk beş derecelik doğruya çok yakındır
+
+213
+00:13:15,250 --> 00:13:19,380
+ve bu da tahmin edilen olasılıkların
+
+214
+00:13:19,380 --> 00:13:21,360
+ampirik kanıtla yakından uyumlu olduğunu göstermektedir.
+
+215
+00:13:21,360 --> 00:13:25,570
+Sağdaki grafikte, mortalite için kalibrasyon grafiğini gördük.
+
+216
+00:13:25,570 --> 00:13:29,490
+Yine, kalibrasyon çok doğrudur.
+
+217
+00:13:29,490 --> 00:13:32,220
+Şekil,
+
+218
+00:13:32,220 --> 00:13:34,960
+HHC’de uygulanmış olan yazılımı göstermektedir.
+
+219
+00:13:34,960 --> 00:13:38,740
+Renkler aşağıdaki bilgileri ifade eder.
+
+220
+00:13:38,740 --> 00:13:41,460
+Yeşil, hastanın
+
+221
+00:13:41,460 --> 00:13:43,720
+taburcu için önceliklendirilmesi gerektiğini gösterir.
+
+222
+00:13:43,720 --> 00:13:47,550
+Sarı, hastane personelinin de
+
+223
+00:13:47,550 --> 00:13:51,190
+hazırlık yapması gerektiğini, ancak aynı yoğunlukta olmadığını gösterir.
+
+224
+00:13:51,190 --> 00:13:55,470
+Kırmızı, hastanın kötüleştiğini gösterir.
+
+225
+00:13:55,470 --> 00:13:58,530
+Yeşil uyarı atadığımızı unutmayın
+
+226
+00:13:58,530 --> 00:14:02,530
+önümüzdeki 24 saat veya 48 saat içindeki taburculuk olasılığı
+
+227
+00:14:02,530 --> 00:14:04,740
+%50’nin üzerindeyse.
+
+228
+00:14:04,740 --> 00:14:10,360
+48 saatlik taburculuk olasılığı
+
+229
+00:14:10,360 --> 00:14:16,660
+%35 ile %50 arasındaysa ve olasılık bir önceki güne göre %10’dan fazla artıyorsa
+
+230
+00:14:16,660 --> 00:14:19,870
+sarı uyarı gerçekleşir.
+
+231
+00:14:19,870 --> 00:14:23,230
+Yazılım ayrıca,
+
+232
+00:14:23,230 --> 00:14:26,530
+farklı faktörlerin yatış süresini nasıl etkilediğini gösteren bir alt grafik de çizer.
+
+233
+00:14:26,530 --> 00:14:32,020
+Bu yolla, tahminler çok daha anlaşılabilir hale gelir.
+
+234
+00:14:32,020 --> 00:14:36,160
+İnsan doktorlarla karşılaştırıldığında, yapay zeka yaklaşımı
+
+235
+00:14:36,160 --> 00:14:40,690
+anlamlı derecede daha yüksek AUC’ye sahiptir,
+
+236
+00:14:40,690 --> 00:14:42,910
+taburcu edilebilecek daha fazla hastayı belirler
+
+237
+00:14:42,910 --> 00:14:45,490
+ve daha doğru tahminler yapar.
+
+238
+00:14:45,490 --> 00:14:49,750
+Açıkça, YZ üstünlüğü belirgindir.
+
+239
+00:14:49,750 --> 00:14:54,670
+HHC’de belirli servislerin yazılımı kullandığı
+
+240
+00:14:54,670 --> 00:14:57,940
+ve bunu kullanmayanlarla karşılaştırıldığı
+
+241
+00:14:57,940 --> 00:14:59,390
+bir test gerçekleştirdik.
+
+242
+00:14:59,390 --> 00:15:02,050
+Yazılımı kullanan birimlerde ortalama hasta
+
+243
+00:15:02,050 --> 00:15:05,440
+yatış süresinin 0.67 gün azalarak
+
+244
+00:15:05,440 --> 00:15:14,350
+565 günden 498 güne düştüğünü bulduk.
+
+245
+00:15:14,350 --> 00:15:16,480
+Bu, yatış süresini yaklaşık %15 oranında azalttığımızı
+
+246
+00:15:16,480 --> 00:15:20,500
+ve böylece buna karşılık gelen miktarda
+
+247
+00:15:20,500 --> 00:15:24,070
+işleme kapasitesini artırabildiğimizi,
+
+248
+00:15:24,070 --> 00:15:27,430
+dolayısıyla hastanenin toplam gelirini
+
+249
+00:15:27,430 --> 00:15:31,180
+yıllık onlarca milyon artırdığımızı göstermektedir.
+
+250
+00:15:31,180 --> 00:15:35,650
+HAIM, çok çeşitli uygulamalarda geniş bir şekilde uygulanabilir.
+
+251
+00:15:35,650 --> 00:15:40,180
+Mevcut çalışmalardan örnekler arasında Brigham and Women’s Hospital’da aile içi şiddetin saptanması,
+
+252
+00:15:40,180 --> 00:15:43,780
+Mass General Brigham’da nodes, taramalar ve laboratuvarlardan verilerin otomatik saptanması,
+
+253
+00:15:43,780 --> 00:15:47,110
+
+
+254
+00:15:47,110 --> 00:15:54,460
+Hartford Hospital’da EKG için birleşik tanılama,
+
+255
+00:15:54,460 --> 00:15:57,980
+subdural hematomun saptanması
+
+256
+00:15:57,980 --> 00:16:00,830
+ve ayrıca yapay zeka refakatçisi denilen unsur yer almaktadır.
+
+257
+00:16:00,830 --> 00:16:06,460
+Tanıya ilişkin doktorlara ve hemşirelere tavsiye vermek için
+
+258
+00:16:06,460 --> 00:16:08,310
+HAIM’i kullanıyoruz.
+

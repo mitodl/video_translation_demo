@@ -14,7 +14,8 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "mistralai (>=1.9.11,<2.0.0)",
     "sarvamai (>=0.1.21,<0.2.0)",
-    "google-genai>=0.3.0"
+    "google-genai>=0.3.0",
+    "deepl>=1.16.0"
 ]
 
 [project.optional-dependencies]

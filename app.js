@@ -72,23 +72,35 @@ function setDefaults() {
     const video = manifest.videos[0];
     loadVideo(video.youtubeId);
 
-    // Populate and select gpt-4o-mini method
-    populateMethodSelect(0);
-    if (video.languages['advanced'] && video.languages['advanced'].length > 0) {
-        currentSelection.method = 'advanced';
-        methodSelect.value = 'advanced';
+    // Always load English subtitles for the selected video
+    loadEnglishSubtitles();
 
-        // Populate and select Spanish language
-        populateLanguageSelect(0, 'advanced');
-        if (video.languages['advanced'].includes('es')) {
-            currentSelection.language = 'es';
-            languageSelect.value = 'es';
-
-            // Load subtitles
-            loadEnglishSubtitles();
-            loadTranslatedSubtitles();
-        }
+    // Populate languages and prefer Spanish when available
+    populateLanguageSelect(0);
+    const availableLanguages = getAvailableLanguages(video);
+    if (availableLanguages.length === 0) {
+        return;
     }
+
+    const defaultLanguage = availableLanguages.includes('es')
+        ? 'es'
+        : availableLanguages[0];
+
+    currentSelection.language = defaultLanguage;
+    languageSelect.value = defaultLanguage;
+
+    // Populate methods for the default language and auto-select the first option
+    populateMethodSelect(0, defaultLanguage);
+    const languageMethods = getMethodsForLanguage(video, defaultLanguage);
+    if (languageMethods.length === 0) {
+        return;
+    }
+
+    currentSelection.method = languageMethods[0];
+    methodSelect.value = currentSelection.method;
+
+    // Load subtitles for the default selection
+    loadTranslatedSubtitles();
 }
 
 // Populate video dropdown
@@ -103,44 +115,97 @@ function populateVideoSelect() {
     });
 }
 
-// Populate method dropdown
-function populateMethodSelect(videoIndex) {
+function getAvailableLanguages(video) {
+    const languageOrder = [];
+
+    video.methods.forEach((method) => {
+        const methodLanguages = video.languages[method] || [];
+        methodLanguages.forEach((lang) => {
+            if (!languageOrder.includes(lang)) {
+                languageOrder.push(lang);
+            }
+        });
+    });
+
+    return languageOrder;
+}
+
+function getMethodsForLanguage(video, language) {
+    if (!language) {
+        return [];
+    }
+
+    return video.methods.filter((method) => isMethodAvailableForLanguage(video, method, language));
+}
+
+function isMethodAvailableForLanguage(video, method, language) {
+    if (!video || !method || !language) {
+        return false;
+    }
+
+    const methodLanguages = video.languages[method] || [];
+    return methodLanguages.includes(language);
+}
+
+function formatMethodLabel(methodName, index) {
+    const friendlyName = methodName
+        .replace(/[_-]/g, ' ')
+        .split(' ')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+
+    return `Method ${index + 1}`;
+}
+
+// Populate method dropdown based on selected language
+function populateMethodSelect(videoIndex, language) {
     methodSelect.innerHTML = '<option value="">Select a method...</option>';
+    methodSelect.dataset.language = language || '';
+
+    if (language === null || language === undefined || language === '') {
+        methodSelect.disabled = true;
+        return;
+    }
 
     const video = manifest.videos[videoIndex];
-    video.methods.forEach((method, index) => {
-        const option = document.createElement('option');
-        option.value = method;
-        option.textContent = `Method ${index + 1}`;
+    let hasMethods = false;
 
-        // Disable if no languages available
-        const hasLanguages = video.languages[method] && video.languages[method].length > 0;
-        if (!hasLanguages) {
-            option.disabled = true;
-            option.textContent += ' (no translations yet)';
+    video.methods.forEach((method, index) => {
+        if (!isMethodAvailableForLanguage(video, method, language)) {
+            return;
         }
 
+        const option = document.createElement('option');
+        option.value = method;
+        option.textContent = formatMethodLabel(method, index);
         methodSelect.appendChild(option);
+        hasMethods = true;
     });
+
+    if (!hasMethods) {
+        methodSelect.innerHTML = '<option value="">No methods available</option>';
+        methodSelect.disabled = true;
+        return;
+    }
 
     methodSelect.disabled = false;
 }
 
-// Populate language dropdown
-function populateLanguageSelect(videoIndex, method) {
+// Populate language dropdown based on video
+function populateLanguageSelect(videoIndex) {
     languageSelect.innerHTML = '<option value="">Select a language...</option>';
 
     const video = manifest.videos[videoIndex];
-    const languages = video.languages[method] || [];
+    const languages = getAvailableLanguages(video);
 
-    languages.forEach(langCode => {
+    languages.forEach((langCode) => {
         const option = document.createElement('option');
         option.value = langCode;
         option.textContent = manifest.languageNames[langCode] || langCode;
         languageSelect.appendChild(option);
     });
 
-    languageSelect.disabled = false;
+    languageSelect.disabled = languages.length === 0;
 }
 
 // Set up event listeners
@@ -160,70 +225,43 @@ function setupEventListeners() {
             clearSubtitles();
             clearVideo();
         } else {
-            const previousMethod = currentSelection.method;
             const previousLanguage = currentSelection.language;
+            const previousMethod = currentSelection.method;
 
-            currentSelection.video = parseInt(videoIndex);
-            const video = manifest.videos[videoIndex];
+            currentSelection.video = parseInt(videoIndex, 10);
+            const video = manifest.videos[currentSelection.video];
 
-            // Load English subtitles
+            loadVideo(video.youtubeId);
             loadEnglishSubtitles();
 
-            // Populate method dropdown
-            populateMethodSelect(videoIndex);
+            populateLanguageSelect(currentSelection.video);
+            const availableLanguages = getAvailableLanguages(video);
 
-            // Try to preserve method selection if it exists for this video
-            if (previousMethod && video.languages[previousMethod] && video.languages[previousMethod].length > 0) {
-                currentSelection.method = previousMethod;
-                methodSelect.value = previousMethod;
+            if (previousLanguage && availableLanguages.includes(previousLanguage)) {
+                currentSelection.language = previousLanguage;
+                languageSelect.value = previousLanguage;
+            } else {
+                currentSelection.language = null;
+                languageSelect.value = '';
+            }
 
-                // Populate language dropdown for the preserved method
-                populateLanguageSelect(videoIndex, previousMethod);
+            if (currentSelection.language) {
+                populateMethodSelect(currentSelection.video, currentSelection.language);
+                const supportedMethods = getMethodsForLanguage(video, currentSelection.language);
 
-                // Try to preserve language selection if it exists for this method
-                if (previousLanguage && video.languages[previousMethod].includes(previousLanguage)) {
-                    currentSelection.language = previousLanguage;
-                    languageSelect.value = previousLanguage;
+                if (previousMethod && supportedMethods.includes(previousMethod)) {
+                    currentSelection.method = previousMethod;
+                    methodSelect.value = previousMethod;
                     loadTranslatedSubtitles();
                 } else {
-                    currentSelection.language = null;
+                    currentSelection.method = null;
+                    methodSelect.value = '';
                     clearTranslatedSubtitles();
                 }
             } else {
+                methodSelect.innerHTML = '<option value="">Select a method...</option>';
+                methodSelect.disabled = true;
                 currentSelection.method = null;
-                currentSelection.language = null;
-                languageSelect.disabled = true;
-                languageSelect.innerHTML = '<option value="">Select a language...</option>';
-                clearTranslatedSubtitles();
-            }
-
-            loadVideo(video.youtubeId);
-        }
-    });
-
-    methodSelect.addEventListener('change', (e) => {
-        const method = e.target.value;
-
-        if (method === '') {
-            currentSelection.method = null;
-            currentSelection.language = null;
-            languageSelect.disabled = true;
-            languageSelect.innerHTML = '<option value="">Select a language...</option>';
-            clearTranslatedSubtitles();
-        } else {
-            const previousLanguage = currentSelection.language;
-            currentSelection.method = method;
-
-            const video = manifest.videos[currentSelection.video];
-            populateLanguageSelect(currentSelection.video, method);
-
-            // Try to preserve language selection if it exists for this method
-            if (previousLanguage && video.languages[method].includes(previousLanguage)) {
-                currentSelection.language = previousLanguage;
-                languageSelect.value = previousLanguage;
-                loadTranslatedSubtitles();
-            } else {
-                currentSelection.language = null;
                 clearTranslatedSubtitles();
             }
         }
@@ -232,13 +270,65 @@ function setupEventListeners() {
     languageSelect.addEventListener('change', (e) => {
         const language = e.target.value;
 
+        if (currentSelection.video === null) {
+            languageSelect.value = '';
+            return;
+        }
+
         if (language === '') {
             currentSelection.language = null;
+            currentSelection.method = null;
+            methodSelect.innerHTML = '<option value="">Select a method...</option>';
+            methodSelect.disabled = true;
             clearTranslatedSubtitles();
-        } else {
-            currentSelection.language = language;
-            loadTranslatedSubtitles();
+            return;
         }
+
+        const previousMethod = currentSelection.method;
+        currentSelection.language = language;
+
+        populateMethodSelect(currentSelection.video, language);
+
+        const video = manifest.videos[currentSelection.video];
+        const methods = getMethodsForLanguage(video, language);
+
+        if (previousMethod && methods.includes(previousMethod)) {
+            currentSelection.method = previousMethod;
+            methodSelect.value = previousMethod;
+            loadTranslatedSubtitles();
+        } else {
+            currentSelection.method = null;
+            methodSelect.value = '';
+            clearTranslatedSubtitles();
+        }
+    });
+
+    methodSelect.addEventListener('change', (e) => {
+        const method = e.target.value;
+
+        if (method === '') {
+            currentSelection.method = null;
+            clearTranslatedSubtitles();
+            return;
+        }
+
+        if (currentSelection.video === null || !currentSelection.language) {
+            methodSelect.value = '';
+            return;
+        }
+
+        const video = manifest.videos[currentSelection.video];
+        const isSupported = isMethodAvailableForLanguage(video, method, currentSelection.language);
+
+        if (!isSupported) {
+            currentSelection.method = null;
+            methodSelect.value = '';
+            clearTranslatedSubtitles();
+            return;
+        }
+
+        currentSelection.method = method;
+        loadTranslatedSubtitles();
     });
 }
 
@@ -500,31 +590,47 @@ function parseTimestamp(timestamp) {
 function getSubtitlePath(video, method, language) {
     const videoId = video.id;
     const baseFilename = video.baseFilename || videoId;
+    const basePath = `translation/videos/${videoId}`;
+
+    const buildPath = (folder, filename) => `${basePath}/${folder}/${filename}`;
 
     // For English, use the original file
     if (language === 'en') {
-        return `translation/videos/${videoId}/${baseFilename}-en.srt`;
+        return `${basePath}/${baseFilename}-en.srt`;
     }
 
     // Different naming conventions for different methods
     if (method === 'deep-l') {
         // deep-l uses: {baseFilename}-output-deepl-{lang}.srt
-        return `translation/videos/${videoId}/${method}/${baseFilename}-output-deepl-${language}.srt`;
+        return buildPath(method, `${baseFilename}-output-deepl-${language}.srt`);
     } else if (method === 'gpt-5') {
         // gpt-5 uses: {baseFilename}-output-gpt-5-{lang}.srt
-        return `translation/videos/${videoId}/${method}/${baseFilename}-output-gpt-5-${language}.srt`;
+        return buildPath(method, `${baseFilename}-output-gpt-5-${language}.srt`);
     } else if (method === 'deep-l_gpt5') {
         // deep-l_gpt5 uses: {baseFilename}-output-deepl-gpt-5-{lang}.srt
-        return `translation/videos/${videoId}/${method}/${baseFilename}-output-deepl-gpt-5-${language}.srt`;
+        return buildPath(method, `${baseFilename}-output-deepl-gpt-5-${language}.srt`);
     } else if (method === 'advanced') {
         // advanced uses: {baseFilename}__output_{lang}_advanced.srt
-        return `translation/videos/${videoId}/${method}/${baseFilename}__output_${language}_advanced.srt`;
+        return buildPath(method, `${baseFilename}__output_${language}_advanced.srt`);
+    } else if (method === 'multi_llm') {
+        // multi_llm reuses the advanced filename pattern but lives in its own folder
+        return buildPath('multi_llm', `${baseFilename}__output_${language}_advanced.srt`);
+    } else if (method === 'julia') {
+        // julia outputs follow: output_{lang}_{runId}.srt (default runId 19 if not supplied)
+        const juliaRunId = video.juliaRunId || video.juliaSuffix || '19';
+        return buildPath('julia', `output_${language}_${juliaRunId}.srt`);
+    } else if (method === 'gpt5') {
+        // gpt5 uses: {baseFilename}__output_{lang}_gpt5.srt
+        return buildPath('gpt5', `${baseFilename}__output_${language}_gpt5.srt`);
+    } else if (method === 'gemini') {
+        // gemini uses: {baseFilename}__output_{lang}_gemini.srt
+        return buildPath('gemini', `${baseFilename}__output_${language}_gemini.srt`);
     } else {
         // gpt-4o-mini can use either pattern:
         // 1. {baseFilename}-output-gpt-4o-mini-{lang}.srt
         // 2. {baseFilename}-en_output-{lang}.srt (legacy)
         // Try the new pattern first
-        return `translation/videos/${videoId}/${method}/${baseFilename}-output-gpt-4o-mini-${language}.srt`;
+        return buildPath(method, `${baseFilename}-output-gpt-4o-mini-${language}.srt`);
     }
 }
 
@@ -617,7 +723,7 @@ function updateSubtitleCount() {
 // Clear all subtitles
 function clearSubtitles() {
     showEmptyState('Select a video to view English subtitles', 'english');
-    showEmptyState('Select a translation method and language', 'translated');
+    showEmptyState('Select a language and translation method', 'translated');
     subtitleCount.textContent = '';
     subtitleData = [];
     englishSubtitleData = [];
@@ -628,7 +734,7 @@ function clearSubtitles() {
 
 // Clear only translated subtitles
 function clearTranslatedSubtitles() {
-    showEmptyState('Select a translation method and language', 'translated');
+    showEmptyState('Select a language and translation method', 'translated');
     translatedSubtitleData = [];
     subtitleData = englishSubtitleData; // Fall back to English for overlay
     translatedHeader.textContent = 'Translation';

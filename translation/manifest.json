@@ -4,13 +4,12 @@
       "id": "L2.1.HAIM_Holistic_AI_for_Medicine",
       "title": "L2.1 HAIM: Holistic AI for Medicine",
       "youtubeId": "VAT44R63jOU",
-      "methods": ["deep-l_gpt5", "gpt-5", "deep-l", "gpt-4o-mini", "advanced"],
+      "methods": ["gemini", "gpt5", "multi_llm", "julia"],
       "languages": {
-        "gpt-4o-mini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "deep-l": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "gpt-5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "deep-l_gpt5": ["en", "ar", "de", "el", "es", "fr", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "advanced": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
+        "multi_llm": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
+        "julia": ["en", "ar", "de", "es", "fr", "pt", "ru"],
+        "gpt5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
+        "gemini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
       }
     }
   ],

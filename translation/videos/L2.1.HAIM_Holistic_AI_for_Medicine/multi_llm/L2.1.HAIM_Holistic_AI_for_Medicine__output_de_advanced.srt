@@ -1,0 +1,1036 @@
+0
+00:00:00,000 --> 00:00:02,120
+DOZENT: In dieser Vorlesung stellen wir
+
+1
+00:00:02,120 --> 00:00:08,400
+Holistic Artificial Intelligence for Medicine vor, oder kurz HAIM.
+
+2
+00:00:08,400 --> 00:00:11,900
+Haim ist das hebräische Wort für Leben.
+
+3
+00:00:11,900 --> 00:00:17,660
+Es steht für eine Anwendung multimodaler KI in der Medizin.
+
+4
+00:00:17,660 --> 00:00:19,800
+Der Aufbau der Vorlesung ist wie folgt.
+
+5
+00:00:19,800 --> 00:00:23,670
+Zunächst geben wir eine Motivation für den Einsatz multimodaler KI.
+
+6
+00:00:23,670 --> 00:00:27,110
+Anschließend präsentieren wir HAIM und wenden es
+
+7
+00:00:27,110 --> 00:00:31,880
+in einer realen Umgebung im Hartford-HealthCare-System an.
+
+8
+00:00:31,880 --> 00:00:35,030
+Und schließlich schließen wir mit Anwendungen von HAIM
+
+9
+00:00:35,030 --> 00:00:38,960
+in mehreren anderen Bereichen der Medizin ab.
+
+10
+00:00:38,960 --> 00:00:42,260
+Um die Multimodalität zu motivieren,
+
+11
+00:00:42,260 --> 00:00:45,920
+überlegen wir, wie Ärzte Entscheidungen treffen.
+
+12
+00:00:45,920 --> 00:00:52,520
+Sie nutzen Scans, MRTs, CTs, Röntgenbilder und dergleichen; Sprache,
+
+13
+00:00:52,520 --> 00:00:56,670
+wie Radiologieberichte, Arzt- oder Krankenakten;
+
+14
+00:00:56,670 --> 00:01:00,200
+tabellarische Daten, etwa elektronische Patientenakten;
+
+15
+00:01:00,200 --> 00:01:04,290
+Zeitreihendaten; und genomische Informationen.
+
+16
+00:01:04,290 --> 00:01:07,870
+Da menschliche Ärzte multimodale Daten verwenden,
+
+17
+00:01:07,870 --> 00:01:10,770
+liegt es nahe zu fragen, ob Maschinen
+
+18
+00:01:10,770 --> 00:01:16,680
+ebenfalls multimodale Daten nutzen können, um medizinische Diagnosen und Entscheidungen zu treffen.
+
+19
+00:01:16,680 --> 00:01:22,770
+Betrachten wir die Sensoren, die Menschen nutzen, um die Welt zu verstehen.
+
+20
+00:01:22,770 --> 00:01:26,220
+Menschen verwenden die fünf grundlegenden menschlichen Sinne –
+
+21
+00:01:26,220 --> 00:01:32,850
+Tastsinn, Sehsinn, Gehörsinn, Geruchssinn und Geschmackssinn.
+
+22
+00:01:32,850 --> 00:01:36,390
+Mit anderen Worten: Multimodalität ist ein grundlegendes Merkmal
+
+23
+00:01:36,390 --> 00:01:38,070
+des menschlichen Lebens.
+
+24
+00:01:38,070 --> 00:01:41,910
+Es ist daher naheliegend, die Frage zu stellen
+
+25
+00:01:41,910 --> 00:01:48,390
+ob Maschinen ebenfalls für multimodale Daten eingesetzt werden sollten.
+
+26
+00:01:48,390 --> 00:01:52,830
+In dieser Vorlesung präsentieren wir HAIM basierend auf den zentralen Erkenntnissen
+
+27
+00:01:52,830 --> 00:01:57,960
+eines Artikels aus dem Jahr 2022 mit dem Titel „Integrated Multimodal
+
+28
+00:01:57,960 --> 00:02:00,900
+Artificial Intelligence Framework for Healthcare
+
+29
+00:02:00,900 --> 00:02:05,810
+Applications“, der im September 2022 in *Nature Digital Medicine*
+
+30
+00:02:05,810 --> 00:02:10,850
+von mir und Mitgliedern meiner Forschungsgruppe erschienen ist.
+
+31
+00:02:10,850 --> 00:02:13,520
+Ich möchte Ihnen etwas zur Entstehungsgeschichte
+
+32
+00:02:13,520 --> 00:02:15,650
+von HAIM erzählen.
+
+33
+00:02:15,650 --> 00:02:22,160
+2013 entwickelte IBM Watson, ein Computerprogramm, das
+
+34
+00:02:22,160 --> 00:02:24,770
+in der Quizshow *Jeopardy!* antreten konnte – ein Spiel
+
+35
+00:02:24,770 --> 00:02:29,180
+bei dem den Kandidaten eine Aussage vorgegeben wird
+
+36
+00:02:29,180 --> 00:02:31,250
+und sie die Antwort
+
+37
+00:02:31,250 --> 00:02:33,350
+in Form einer Frage formulieren müssen.
+
+38
+00:02:33,350 --> 00:02:38,660
+Wenn die Antwort beispielsweise „er entwickelte die Relativitätstheorie“ lautet,
+
+39
+00:02:38,660 --> 00:02:42,710
+muss der Kandidat für eine korrekte Antwort sagen:
+
+40
+00:02:42,710 --> 00:02:44,990
+„Wer ist Albert Einstein?“
+
+41
+00:02:44,990 --> 00:02:49,490
+IBM Watson trat gegen die besten menschlichen Spieler der Geschichte an
+
+42
+00:02:49,490 --> 00:02:54,680
+und gewann über zwei Tage hinweg sehr deutlich.
+
+43
+00:02:54,680 --> 00:02:58,710
+Ich erinnere mich an die Begeisterung für dieses Ereignis,
+
+44
+00:02:58,710 --> 00:03:01,220
+da mir damals klar war, dass dies der Beginn einer Ära war,
+
+45
+00:03:01,220 --> 00:03:03,910
+in der die maschinelle Intelligenz
+
+46
+00:03:03,910 --> 00:03:06,190
+auf die nächste Stufe gehoben werden würde.
+
+47
+00:03:06,190 --> 00:03:09,740
+IBM versuchte anschließend, Watson in der Medizin einzusetzen,
+
+48
+00:03:09,740 --> 00:03:12,550
+leider ohne Erfolg.
+
+49
+00:03:12,550 --> 00:03:15,640
+In den folgenden 12 Jahren hat sich die künstliche Intelligenz jedoch deutlich weiterentwickelt,
+
+50
+00:03:15,640 --> 00:03:19,090
+insbesondere die generative KI
+
+51
+00:03:19,090 --> 00:03:21,460
+und große Sprachmodelle.
+
+52
+00:03:21,460 --> 00:03:24,970
+HAIM zeigt, wie verschiedene Modalitäten kombiniert werden können,
+
+53
+00:03:24,970 --> 00:03:29,170
+um die Leistung deutlich zu verbessern.
+
+54
+00:03:29,170 --> 00:03:32,780
+HAIM bietet eine ganzheitliche Perspektive auf KI –
+
+55
+00:03:32,780 --> 00:03:35,000
+Computer Vision, natürliche Sprachverarbeitung,
+
+56
+00:03:35,000 --> 00:03:38,170
+maschinelles Lernen –, um die Fähigkeit von Modellen
+
+57
+00:03:38,170 --> 00:03:40,820
+zu verbessern, Vorhersagen und Empfehlungen zu treffen,
+
+58
+00:03:40,820 --> 00:03:44,230
+insbesondere in der Medizin.
+
+59
+00:03:44,230 --> 00:03:47,560
+Das traditionelle Paradigma des maschinellen Lernens
+
+60
+00:03:47,560 --> 00:03:51,400
+besteht darin, tabellarische Daten für Vorhersagen zu verwenden.
+
+61
+00:03:51,400 --> 00:03:53,780
+Wenn mehrere Modalitäten vorliegen,
+
+62
+00:03:53,780 --> 00:03:56,480
+wie Computer Vision oder Sprache,
+
+63
+00:03:56,480 --> 00:03:58,690
+ist dieses Paradigma nicht anwendbar, und wir
+
+64
+00:03:58,690 --> 00:04:02,170
+müssen andere Wege finden, Daten zu kombinieren.
+
+65
+00:04:02,170 --> 00:04:04,610
+In den folgenden Folien skizzieren wir, wie
+
+66
+00:04:04,610 --> 00:04:08,450
+verschiedene Datenmodalitäten kombiniert werden können.
+
+67
+00:04:08,450 --> 00:04:11,850
+Wenn elektronische Gesundheitsdaten vorliegen,
+
+68
+00:04:11,850 --> 00:04:16,560
+wie auf der Folie gezeigt, belassen wir die Datensätze in ihrem ursprünglichen Format,
+
+69
+00:04:16,560 --> 00:04:19,138
+da sie dem traditionellen maschinellen Lernformat entsprechen,
+
+70
+00:04:19,138 --> 00:04:23,120
+in dem klassische Methoden anwendbar sind.
+
+71
+00:04:23,120 --> 00:04:26,070
+Wenn Zeitreihendaten verfügbar sind,
+
+72
+00:04:26,070 --> 00:04:29,790
+verwenden wir Software wie tsfresh –
+
+73
+00:04:29,790 --> 00:04:31,880
+das sehen Sie gleich in der Übung –,
+
+74
+00:04:31,880 --> 00:04:34,640
+um Merkmale der Zeitreihe zu extrahieren,
+
+75
+00:04:34,640 --> 00:04:38,340
+wie den Maximalwert, den Minimalwert, den Median,
+
+76
+00:04:38,340 --> 00:04:41,840
+den Mittelwert, die Anzahl der Spitzenwerte und viele andere.
+
+77
+00:04:41,840 --> 00:04:45,860
+Auf diese Weise wird die Zeitreihe in numerischen Werten zusammengefasst,
+
+78
+00:04:45,860 --> 00:04:50,390
+die als Eingaben im traditionellen maschinellen Lernformat dienen.
+
+79
+00:04:50,390 --> 00:04:53,210
+Wenn die Eingabe aus Arzt- oder Krankenakten
+
+80
+00:04:53,210 --> 00:04:57,000
+oder einem Radiologiebericht besteht, also sprachbasiert ist,
+
+81
+00:04:57,000 --> 00:05:00,680
+verwenden wir ein Grundlagenmodell wie ClinicalBERT.
+
+82
+00:05:00,680 --> 00:05:04,410
+Dieses fasst die sprachlichen Informationen in Form
+
+83
+00:05:04,410 --> 00:05:09,420
+einer Einbettung, eines 768-dimensionalen Vektors, zusammen.
+
+84
+00:05:09,420 --> 00:05:12,090
+Dieser Vektor fasst die Informationen
+
+85
+00:05:12,090 --> 00:05:15,750
+in einem numerischen Format zusammen, das mit anderen numerischen Merkmalen
+
+86
+00:05:15,750 --> 00:05:18,510
+kombiniert werden kann.
+
+87
+00:05:18,510 --> 00:05:20,940
+Beachten Sie, dass wir stattdessen auch generative KI-Modelle
+
+88
+00:05:20,940 --> 00:05:28,530
+wie OpenAI 4.0 oder Llama anstelle von ClinicalBERT verwenden können.
+
+89
+00:05:28,530 --> 00:05:31,870
+Wenn die Eingabe ein elektronisches Kardiogramm ist,
+
+90
+00:05:31,870 --> 00:05:36,510
+nutzen wir die darin enthaltenen sprachlichen Informationen,
+
+91
+00:05:36,510 --> 00:05:41,370
+wie bei Sprache, und verwenden dann ein Grundlagenmodell wie
+
+92
+00:05:41,370 --> 00:05:43,260
+ClinicalBERT, das wir bereits kennengelernt haben,
+
+93
+00:05:43,260 --> 00:05:46,770
+um die sprachlichen Informationen in Form einer Einbettung
+
+94
+00:05:46,770 --> 00:05:51,610
+als 768-dimensionalen Vektor in numerischem Format zusammenzufassen,
+
+95
+00:05:51,610 --> 00:05:54,300
+wie zuvor.
+
+96
+00:05:54,300 --> 00:05:57,790
+Wenn die Eingabe ein Bild wie ein Röntgenbild ist,
+
+97
+00:05:57,790 --> 00:06:02,820
+verwenden wir faltende neuronale Netze, um eine Einbettung
+
+98
+00:06:02,820 --> 00:06:07,050
+als 768-dimensionalen Vektor in numerischem Format zu extrahieren.
+
+99
+00:06:07,050 --> 00:06:12,300
+Beachten Sie, dass wir stattdessen auch Einbettungen aus einem generativen KI-Modell
+
+100
+00:06:12,300 --> 00:06:19,590
+verwenden können, anstatt Bilder aus einem CNN-Modell zu nutzen.
+
+101
+00:06:19,590 --> 00:06:22,470
+Das ist die zentrale Idee dieser Vorlesung.
+
+102
+00:06:22,470 --> 00:06:26,520
+Wir verwenden die numerischen Merkmale, die wir entweder direkt
+
+103
+00:06:26,520 --> 00:06:29,020
+aus elektronischen Gesundheitsakten gewonnen
+
+104
+00:06:29,020 --> 00:06:32,730
+oder aus Zeitreihendaten extrahiert oder durch Einbettungen
+
+105
+00:06:32,730 --> 00:06:34,830
+unstrukturierter Daten erzeugt haben.
+
+106
+00:06:34,830 --> 00:06:37,470
+Diese Idee wird als Fusion bezeichnet.
+
+107
+00:06:37,470 --> 00:06:41,080
+Nun haben wir eine klassische Aufgabe des maschinellen Lernens.
+
+108
+00:06:41,080 --> 00:06:45,330
+Wir möchten beispielsweise die Sterblichkeit vorhersagen,
+
+109
+00:06:45,330 --> 00:06:48,510
+wobei wir die zuvor extrahierten numerischen Merkmale als Eingaben
+
+110
+00:06:48,510 --> 00:06:50,230
+verwenden.
+
+111
+00:06:50,230 --> 00:06:54,510
+Dafür nutzen wir ein klassisches ML-Modell wie XGBoost oder Random Forest
+
+112
+00:06:54,510 --> 00:06:58,620
+um diese Vorhersageaufgabe durchzuführen.
+
+113
+00:06:58,620 --> 00:07:01,140
+Beachten Sie, dass die Methode sehr allgemein ist,
+
+114
+00:07:01,140 --> 00:07:04,180
+da wir jede Modalität unabhängig behandeln,
+
+115
+00:07:04,180 --> 00:07:07,660
+Wenn wir neue Modalitäten hinzufügen,
+
+116
+00:07:07,660 --> 00:07:11,050
+fügen wir einfach die zusätzlichen Einbettungen hinzu.
+
+117
+00:07:11,050 --> 00:07:15,730
+Beachten Sie auch, dass wir die Modalitäten nicht gemeinsam trainieren.
+
+118
+00:07:15,730 --> 00:07:19,000
+Die Einbettungen hängen zudem nicht
+
+119
+00:07:19,000 --> 00:07:21,880
+von der Aufgabe ab, die wir durchführen möchten.
+
+120
+00:07:21,880 --> 00:07:24,460
+Die Einbettungen fassen lediglich die Daten
+
+121
+00:07:24,460 --> 00:07:29,860
+jeder Modalität unabhängig von der Aufgabe zusammen, die wir lösen wollen.
+
+122
+00:07:29,860 --> 00:07:34,780
+Wenden wir nun HAIM auf verschiedene Vorhersageaufgaben an, wobei wir den
+
+123
+00:07:34,780 --> 00:07:38,860
+MIMIC-IV-Datensatz des Beth Israel Deaconess Medical
+
+124
+00:07:38,860 --> 00:07:43,540
+Center verwenden, einem Krankenhaussystem in Boston, Massachusetts.
+
+125
+00:07:43,540 --> 00:07:51,490
+Der Datensatz umfasst 34.537 Patientenakten aus den
+
+126
+00:07:51,490 --> 00:07:54,850
+Notaufnahme-Intensivstationen.
+
+127
+00:07:54,850 --> 00:07:57,940
+Die Akten beinhalten Röntgenbilder des Brustkorbs,
+
+128
+00:07:57,940 --> 00:08:03,310
+elektronische Patientenakten, radiologische Befunde und EKGs.
+
+129
+00:08:03,310 --> 00:08:09,500
+Das heißt, er umfasst visuelle Daten, Sprache und tabellarische Daten.
+
+130
+00:08:09,500 --> 00:08:12,600
+Unsere Zieldiagnosen umfassen 12 Ziele:
+
+131
+00:08:12,600 --> 00:08:14,990
+die Vorhersage der Sterblichkeit – dabei geht es darum,
+
+132
+00:08:14,990 --> 00:08:19,310
+vorherzusagen, ob ein Patient verstorben ist, in ein Hospiz
+
+133
+00:08:19,310 --> 00:08:25,130
+überwiesen wurde oder bei der Krankenhausentlassung noch am Leben ist; eine
+
+134
+00:08:25,130 --> 00:08:29,810
+von 10 Diagnosen – hier möchten wir vorhersagen, ob ein Patient eine
+
+135
+00:08:29,810 --> 00:08:37,429
+bestimmte Erkrankung hat, wie Frakturen, Lungenläsionen, vergrößertes CM, Konsolidierung,
+
+136
+00:08:37,429 --> 00:08:43,580
+Lungenentzündung, [unverständliche] Klassen, Lungenkapazität, Pneumothorax, Ödem, Kardiomegalie;
+
+137
+00:08:43,580 --> 00:08:49,940
+und schließlich die Verweildauer – dabei geht es darum
+
+138
+00:08:49,940 --> 00:08:52,670
+vorherzusagen, ob ein Patient das Krankenhaus innerhalb von 48 Stunden
+
+139
+00:08:52,670 --> 00:08:58,340
+verlässt.
+
+140
+00:08:58,340 --> 00:09:01,310
+Wir haben die Leistung von HAIM
+
+141
+00:09:01,310 --> 00:09:04,740
+mit der Leistung eines klassischen maschinellen Lernmodells verglichen
+
+142
+00:09:04,740 --> 00:09:08,200
+das ausschließlich auf elektronischen Patientenakten basiert –
+
+143
+00:09:08,200 --> 00:09:10,020
+der klassische Ansatz.
+
+144
+00:09:10,020 --> 00:09:16,650
+Bei der Sterblichkeitsvorhersage verbessert HAIM die Genauigkeit um 11 % bis 33 %
+
+145
+00:09:16,650 --> 00:09:19,120
+im Vergleich zu elektronischen Patientenakten,
+
+146
+00:09:19,120 --> 00:09:22,350
+also basierend auf klassischen maschinellen Lernmodellen.
+
+147
+00:09:22,350 --> 00:09:25,860
+Bei der Krankheitsklassifikation steigert HAIM die Genauigkeit
+
+148
+00:09:25,860 --> 00:09:30,630
+um 6 % bis 22 % im Vergleich zu elektronischen Akten.
+
+149
+00:09:30,630 --> 00:09:34,890
+Bei der Verweildauer verbessert HAIM die Genauigkeit um 8 % bis 20 %
+
+150
+00:09:34,890 --> 00:09:37,050
+im Vergleich zu elektronischen Patientenakten
+
+151
+00:09:37,050 --> 00:09:39,840
+und klassischen maschinellen Lernmodellen.
+
+152
+00:09:39,840 --> 00:09:42,780
+In allen Fällen führt der Einsatz von Multimodalität
+
+153
+00:09:42,780 --> 00:09:47,460
+zu einer deutlichen Leistungssteigerung.
+
+154
+00:09:47,460 --> 00:09:51,300
+Auf dieser Folie präsentieren wir Subanalysen, um
+
+155
+00:09:51,300 --> 00:09:54,900
+den relativen Beitrag jeder Modalität
+
+156
+00:09:54,900 --> 00:09:58,270
+zur Vorhersage der Krankheitsklassifikation zu verstehen.
+
+157
+00:09:58,270 --> 00:10:00,810
+Die visuelle Eingabe – in diesem Fall das Röntgenbild –
+
+158
+00:10:00,810 --> 00:10:02,820
+war die dominierende Modalität.
+
+159
+00:10:02,820 --> 00:10:05,300
+Bei der Verweildauer und der Sterblichkeit,
+
+160
+00:10:05,300 --> 00:10:10,990
+waren die Zeitreihendaten und die elektronischen Patientenakten
+
+161
+00:10:10,990 --> 00:10:13,900
+die dominierenden Modalitäten.
+
+162
+00:10:13,900 --> 00:10:18,040
+Als Nächstes stellen wir eine Anwendung der HAIM-Methodik
+
+163
+00:10:18,040 --> 00:10:22,570
+zur Vorhersage der Verweildauer im Hartford-HealthCare-System vor,
+
+164
+00:10:22,570 --> 00:10:28,510
+kurz HHC, dem größten Krankenhaussystem in Connecticut,
+
+165
+00:10:28,510 --> 00:10:32,080
+mit einem Jahresumsatz von über 5 Milliarden US-Dollar,
+
+166
+00:10:32,080 --> 00:10:37,300
+sieben verschiedenen Krankenhäusern – von einem akademischen städtischen Krankenhaus
+
+167
+00:10:37,300 --> 00:10:41,180
+bis hin zu einem Gemeinschaftskrankenhaus und von großen bis zu kleinen Krankenhäusern.
+
+168
+00:10:41,180 --> 00:10:45,590
+Insgesamt verfügt HHC über 2.500 Betten.
+
+169
+00:10:45,590 --> 00:10:49,900
+Es ist repräsentativ für ein hochwertiges, typisches US-
+
+170
+00:10:49,900 --> 00:10:52,660
+Krankenhausnetz.
+
+171
+00:10:52,660 --> 00:10:56,170
+Wir haben einige der von uns vorgestellten Algorithmen
+
+172
+00:10:56,170 --> 00:11:00,020
+in einem Unternehmen namens Holistic Hospital Optimization,
+
+173
+00:11:00,020 --> 00:11:02,350
+kurz H2O, umgesetzt.
+
+174
+00:11:02,350 --> 00:11:04,420
+Dies ist ein Verweis auf die grundlegende Lebenskomponente Wasser.
+
+175
+00:11:04,420 --> 00:11:07,840
+Wir besprechen im Detail die Anwendung zur Verweildauer.
+
+176
+00:11:07,840 --> 00:11:11,140
+Wir haben auch andere Anwendungen implementiert,
+
+177
+00:11:11,140 --> 00:11:13,330
+wie einen Verschlechterungsindex, der das Sterblichkeitsrisiko, das Intensivstationsrisiko,
+
+178
+00:11:13,330 --> 00:11:17,230
+die Pflegeplanung und die Planung von Operationssälen umfasst.
+
+179
+00:11:17,230 --> 00:11:21,670
+Die Software wird von Hunderten von Nutzern –
+
+180
+00:11:21,670 --> 00:11:24,580
+Ärzten, Pflegekräften, Verwaltungsmitarbeitern – genutzt.
+
+181
+00:11:24,580 --> 00:11:27,800
+Sie funktioniert in allen sieben Krankenhäusern von HHC,
+
+182
+00:11:27,800 --> 00:11:31,780
+und hat zu einer jährlichen Umsatzsteigerung im zweistelligen Millionenbereich geführt.
+
+183
+00:11:31,780 --> 00:11:35,710
+Wir haben diese Lösungen
+
+184
+00:11:35,710 --> 00:11:37,390
+auch in mehreren anderen Krankenhaussystemen weltweit implementiert.
+
+185
+00:11:37,390 --> 00:11:39,070
+Die Anwendungen umfassen die Vorhersage
+
+186
+00:11:39,070 --> 00:11:43,210
+der Entlassung innerhalb der nächsten 24 oder 48 Stunden, was
+
+187
+00:11:43,210 --> 00:11:45,310
+wichtig ist, um Patienten zu identifizieren und zu priorisieren,
+
+188
+00:11:45,310 --> 00:11:49,060
+die Verweildauer zu verkürzen und Kosten zu sparen sowie
+
+189
+00:11:49,060 --> 00:11:52,880
+Behandlungs- und Entlassungspläne vorzubereiten.
+
+190
+00:11:52,880 --> 00:11:56,690
+Außerdem wird das endgültige Ziel
+
+191
+00:11:56,690 --> 00:12:00,490
+nach der Entlassung, das Sterblichkeitsrisiko,
+
+192
+00:12:00,490 --> 00:12:03,100
+sowie das Risiko einer Aufnahme auf die Intensivstation
+
+193
+00:12:03,100 --> 00:12:06,050
+vorhergesagt.
+
+194
+00:12:06,050 --> 00:12:09,350
+Diese Vorhersagen helfen dabei, Verschlechterungen bei Patienten
+
+195
+00:12:09,350 --> 00:12:10,730
+frühzeitig zu erkennen und die Krankenhausressourcen
+
+196
+00:12:10,730 --> 00:12:16,340
+effizienter einzusetzen.
+
+197
+00:12:16,340 --> 00:12:19,830
+Die Tabelle zeigt die AUC, die Fläche unter der Kurve,
+
+198
+00:12:19,830 --> 00:12:23,450
+für Sterblichkeit, Entlassungsziel, Entlassung innerhalb von 24 und 48 Stunden,
+
+199
+00:12:23,450 --> 00:12:28,670
+Vorhersage des Intensivstationsaufenthalts (Eintritt und Austritt) für alle sieben
+
+200
+00:12:28,670 --> 00:12:33,080
+Krankenhäuser von HHC.
+
+201
+00:12:33,080 --> 00:12:37,700
+Die Ergebnisse sind durchgehend zuverlässig und stark
+
+202
+00:12:37,700 --> 00:12:41,810
+bei allen Vorhersagen und in allen Krankenhäusern.
+
+203
+00:12:41,810 --> 00:12:44,330
+Als Nächstes zeigen wir, dass auch die Kalibrierungsplots
+
+204
+00:12:44,330 --> 00:12:47,720
+sehr genau sind.
+
+205
+00:12:47,720 --> 00:12:49,160
+Auf dem linken Plot tragen wir auf der horizontalen Achse den Anteil der Patienten ab,
+
+206
+00:12:49,160 --> 00:12:52,980
+deren Entlassungswahrscheinlichkeit innerhalb von 48 Stunden beispielsweise zwischen 0,5 und 0,6 liegt,
+
+207
+00:12:52,980 --> 00:12:56,420
+in 10 %-Schritten, und dann den Anteil der Patienten,
+
+208
+00:12:56,420 --> 00:13:01,020
+die innerhalb von 48 Stunden entlassen wurden, auf der vertikalen
+
+209
+00:13:01,020 --> 00:13:06,180
+Achse.
+
+210
+00:13:06,180 --> 00:13:09,990
+Die Linie liegt sehr nah an der 45-Grad-Linie,
+
+211
+00:13:09,990 --> 00:13:11,250
+was zeigt, dass die vorhergesagten Wahrscheinlichkeiten eng mit den empirischen Belegen
+
+212
+00:13:11,250 --> 00:13:15,250
+übereinstimmen.
+
+213
+00:13:15,250 --> 00:13:19,380
+Auf dem rechten Plot sehen wir den Kalibrierungsplot für die Sterblichkeit.
+
+214
+00:13:19,380 --> 00:13:21,360
+Auch hier ist die Kalibrierung sehr genau.
+
+215
+00:13:21,360 --> 00:13:25,570
+Die Abbildung zeigt die bei HHC implementierte Software.
+
+216
+00:13:25,570 --> 00:13:29,490
+Die Farben zeigen folgende Informationen an.
+
+217
+00:13:29,490 --> 00:13:32,220
+Grün bedeutet, dass der Patient
+
+218
+00:13:32,220 --> 00:13:34,960
+priorisiert entlassen werden sollte.
+
+219
+00:13:34,960 --> 00:13:38,740
+Gelb zeigt an, dass das Krankenhauspersonal
+
+220
+00:13:38,740 --> 00:13:41,460
+Vorbereitungen treffen sollte, allerdings nicht mit derselben Dringlichkeit.
+
+221
+00:13:41,460 --> 00:13:43,720
+Rot zeigt an, dass sich der Zustand des Patienten verschlechtert.
+
+222
+00:13:43,720 --> 00:13:47,550
+Beachten Sie, dass wir eine grüne Warnung ausgeben,
+
+223
+00:13:47,550 --> 00:13:51,190
+wenn die Entlassungswahrscheinlichkeit innerhalb der nächsten 24 oder 48 Stunden
+
+224
+00:13:51,190 --> 00:13:55,470
+über 50 % liegt.
+
+225
+00:13:55,470 --> 00:13:58,530
+Die gelbe Warnung erfolgt, wenn die Entlassungswahrscheinlichkeit innerhalb von 48 Stunden
+
+226
+00:13:58,530 --> 00:14:02,530
+zwischen 35 % und 50 % liegt und sich die Wahrscheinlichkeit
+
+227
+00:14:02,530 --> 00:14:04,740
+im Vergleich zum Vortag um mehr als 10 % erhöht hat.
+
+228
+00:14:04,740 --> 00:14:10,360
+Die Software zeigt außerdem ein Unterdiagramm an,
+
+229
+00:14:10,360 --> 00:14:16,660
+das darstellt, wie verschiedene Faktoren die Verweildauer beeinflussen.
+
+230
+00:14:16,660 --> 00:14:19,870
+Auf diese Weise sind die Vorhersagen deutlich besser interpretierbar.
+
+231
+00:14:19,870 --> 00:14:23,230
+Im Vergleich zu menschlichen Ärzten weist der KI-Ansatz
+
+232
+00:14:23,230 --> 00:14:26,530
+eine deutlich höhere AUC auf, identifiziert
+
+233
+00:14:26,530 --> 00:14:32,020
+mehr Patienten, die entlassen werden können,
+
+234
+00:14:32,020 --> 00:14:36,160
+und trifft genauere Vorhersagen.
+
+235
+00:14:36,160 --> 00:14:40,690
+Der KI-Vorteil ist offensichtlich.
+
+236
+00:14:40,690 --> 00:14:42,910
+Wir haben einen Test durchgeführt, bei dem bestimmte Stationen in HHC
+
+237
+00:14:42,910 --> 00:14:45,490
+die Software nutzten und mit anderen verglichen wurden
+
+238
+00:14:45,490 --> 00:14:49,750
+die sie nicht verwendeten.
+
+239
+00:14:49,750 --> 00:14:54,670
+Dabei stellten wir fest, dass sich die durchschnittliche Verweildauer der Patienten
+
+240
+00:14:54,670 --> 00:14:57,940
+in den Einheiten, die die Software nutzten, um 0,67 Tage verringerte –
+
+241
+00:14:57,940 --> 00:14:59,390
+von 565 auf 498 Tage.
+
+242
+00:14:59,390 --> 00:15:02,050
+Dies deutet darauf hin, dass wir die Verweildauer um etwa 15 % reduzieren
+
+243
+00:15:02,050 --> 00:15:05,440
+und dadurch den Durchsatz um einen entsprechenden Betrag steigern können,
+
+244
+00:15:05,440 --> 00:15:14,350
+was den jährlichen Gesamtumsatz
+
+245
+00:15:14,350 --> 00:15:16,480
+des Krankenhauses
+
+246
+00:15:16,480 --> 00:15:20,500
+um zehn Millionen US-Dollar
+
+247
+00:15:20,500 --> 00:15:24,070
+erhöht.
+
+248
+00:15:24,070 --> 00:15:27,430
+HAIM ist in einer Vielzahl von Anwendungen breit einsetzbar.
+
+249
+00:15:27,430 --> 00:15:31,180
+Beispiele für aktuelle Arbeiten umfassen die Erkennung von häuslicher Gewalt
+
+250
+00:15:31,180 --> 00:15:35,650
+im Brigham and Women’s Hospital, automatische Datenerfassung
+
+251
+00:15:35,650 --> 00:15:40,180
+aus Knoten, Scans und Laboren im Mass General Brigham,
+
+252
+00:15:40,180 --> 00:15:43,780
+einheitliche EKG-Diagnostik im Hartford
+
+253
+00:15:43,780 --> 00:15:47,110
+Hospital, die Erkennung von subduralen Hämatomen,
+
+254
+00:15:47,110 --> 00:15:54,460
+sowie das sogenannte KI-Companion-System.
+
+255
+00:15:54,460 --> 00:15:57,980
+Wir nutzen HAIM, um Ärzten und Pflegekräften Ratschläge
+
+256
+00:15:57,980 --> 00:16:00,830
+zur Diagnose zu geben.
+
+257
+00:16:00,830 --> 00:16:06,460
+
+
+258
+00:16:06,460 --> 00:16:08,310
+
+
