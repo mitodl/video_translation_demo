@@ -6,7 +6,7 @@
       "youtubeId": "VAT44R63jOU",
       "methods": ["gemini", "gpt5", "multi_llm"],
       "languages": {
-        "multi_llm": ["en", "ar", "de", "el", "es", "fr", "hi", "ja", "kr", "pt", "ru"],
+        "multi_llm": ["en", "ar", "de", "el", "es", "fr", "hi", "ja", "pt", "ru"],
         "gpt5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
         "gemini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
       }
