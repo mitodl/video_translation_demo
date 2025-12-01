@@ -6,9 +6,9 @@
       "youtubeId": "VAT44R63jOU",
       "methods": ["gemini", "gpt5", "multi_llm"],
       "languages": {
-        "multi_llm": ["en", "ar", "de", "el", "es", "fr", "hi", "ja", "pt", "ru"],
-        "gpt5": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
-        "gemini": ["en", "ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
+        "multi_llm": ["ar", "de", "el", "es", "fr", "hi", "ja", "pt", "ru"],
+        "gpt5": ["ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"],
+        "gemini": ["ar", "de", "el", "es", "fr", "hi", "id", "ja", "kr", "pt", "ru", "sq", "tr", "zh"]            
       }
     }
   ],
