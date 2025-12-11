@@ -5,7 +5,7 @@ description = "MIT Video Translation Viewer - A tool for viewing course videos w
 readme = "README.md"
 requires-python = ">=3.13,<4.0"
 authors = [
-    { name = "MIT Video Translation Team" }
+    { name = "MIT Office of Digital Learning" }
 ]
 
 dependencies = [
@@ -15,7 +15,9 @@ dependencies = [
     "mistralai (>=1.9.11,<2.0.0)",
     "sarvamai (>=0.1.21,<0.2.0)",
     "google-genai>=0.3.0",
-    "deepl>=1.16.0"
+    "deepl>=1.16.0",
+    "srt>=3.5.3",
+    "litellm (>=1.80.9,<2.0.0)"
 ]
 
 [project.optional-dependencies]
