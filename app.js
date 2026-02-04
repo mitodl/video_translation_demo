@@ -625,6 +625,9 @@ function getSubtitlePath(video, method, language) {
     } else if (method === 'gemini') {
         // gemini uses: {baseFilename}__output_{lang}_gemini.srt
         return buildPath('gemini', `${baseFilename}__output_${language}_gemini.srt`);
+    } else if (method === 'human') {
+        // human uses: {baseFilename}__output_{lang}_human.srt
+        return buildPath('human', `${baseFilename}__output_${language}_human.srt`);        
     } else {
         // gpt-4o-mini can use either pattern:
         // 1. {baseFilename}-output-gpt-4o-mini-{lang}.srt

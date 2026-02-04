@@ -1,6 +1,17 @@
 {
   "videos": [
     {
+      "id": "how_to_speak_ocw",
+      "title": "How to Speak",
+      "youtubeId": "Unzc731iCUY",
+      "methods": ["gemini", "gpt5", "human"],
+      "languages": {
+        "gemini" : ["es", "pt"],
+        "gpt5": ["es", "pt"],
+        "human": ["es", "pt"]
+      }
+    },
+    {
       "id": "L2.1.HAIM_Holistic_AI_for_Medicine",
       "title": "L2.1 HAIM: Holistic AI for Medicine",
       "youtubeId": "VAT44R63jOU",
