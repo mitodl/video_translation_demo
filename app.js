@@ -342,11 +342,23 @@ function loadVideo(youtubeId) {
     // Stop subtitle updates
     stopSubtitleUpdates();
 
-    // Create player container
+    // Create player container with controls
     videoContainer.innerHTML = `
         <div id="youtube-player"></div>
         <div id="subtitle-overlay" class="subtitle-overlay">
             <div id="subtitle-overlay-text" class="subtitle-overlay-text" style="display: none;"></div>
+        </div>
+        <div id="video-controls" class="video-controls">
+            <div class="controls-row">
+                <button id="btn-play-pause" class="control-btn" title="Play/Pause">
+                    <span class="icon-play">&#9658;</span>
+                    <span class="icon-pause" style="display:none;">&#10074;&#10074;</span>
+                </button>
+                <button id="btn-rewind" class="control-btn" title="Rewind 10 seconds">&#8630; 10</button>
+                <button id="btn-forward" class="control-btn" title="Forward 10 seconds">10 &#8631;</button>
+                <span id="time-display" class="time-display">0:00 / 0:00</span>
+                <input type="range" id="seek-bar" class="seek-bar" min="0" max="100" value="0" step="0.1">
+            </div>
         </div>
     `;
 
@@ -356,6 +368,7 @@ function loadVideo(youtubeId) {
         width: '100%',
         videoId: youtubeId,
         playerVars: {
+            'controls': 0,
             'playsinline': 1,
             'modestbranding': 1,
             'rel': 0,
@@ -372,6 +385,10 @@ function loadVideo(youtubeId) {
 // Player ready callback
 function onPlayerReady(event) {
     console.log('Player ready for video');
+
+    // Initialize video controls
+    initVideoControls();
+    updateControlsUI();
 
     // If we already have subtitles loaded and video is playing, start updates
     if (subtitleData.length > 0) {
@@ -390,6 +407,7 @@ function onPlayerStateChange(event) {
     } else {
         stopSubtitleUpdates();
     }
+    updatePlayPauseIcon();
 }
 
 // Start subtitle updates
@@ -407,6 +425,7 @@ function startSubtitleUpdates() {
         if (ytPlayer && ytPlayer.getCurrentTime) {
             const currentTime = ytPlayer.getCurrentTime();
             updateSubtitleOverlay(currentTime);
+            updateControlsUI();
         }
     }, 100); // Update every 100ms for smooth subtitle display
 }
@@ -782,6 +801,185 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// ============================================
+// VIDEO CONTROLS
+// ============================================
+
+let controlsHideTimeout = null;
+let isSeeking = false;
+
+// Initialize video controls (called from onPlayerReady)
+function initVideoControls() {
+    const videoContainer = document.getElementById('video-container');
+    const controls = document.getElementById('video-controls');
+
+    if (!controls) return;
+
+    const playPauseBtn = document.getElementById('btn-play-pause');
+    const rewindBtn = document.getElementById('btn-rewind');
+    const forwardBtn = document.getElementById('btn-forward');
+    const seekBar = document.getElementById('seek-bar');
+
+    // Play/Pause button
+    playPauseBtn.addEventListener('click', togglePlayPause);
+
+    // Rewind button (-10 seconds)
+    rewindBtn.addEventListener('click', () => seekRelative(-10));
+
+    // Forward button (+10 seconds)
+    forwardBtn.addEventListener('click', () => seekRelative(10));
+
+    // Seek bar events
+    seekBar.addEventListener('input', onSeekBarInput);
+    seekBar.addEventListener('change', onSeekBarChange);
+    seekBar.addEventListener('mousedown', () => { isSeeking = true; });
+    seekBar.addEventListener('mouseup', () => { isSeeking = false; });
+
+    // Auto-hide controls on mouse inactivity
+    videoContainer.addEventListener('mousemove', showControls);
+    videoContainer.addEventListener('mouseleave', () => hideControlsAfterDelay(1000));
+
+    // Prevent controls from hiding when interacting with them
+    controls.addEventListener('mouseenter', () => clearTimeout(controlsHideTimeout));
+    controls.addEventListener('mouseleave', () => hideControlsAfterDelay(2000));
+
+    // Show controls initially
+    showControls();
+}
+
+// Toggle play/pause
+function togglePlayPause() {
+    if (!ytPlayer) return;
+
+    const state = ytPlayer.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+        ytPlayer.pauseVideo();
+    } else {
+        ytPlayer.playVideo();
+    }
+}
+
+// Seek relative to current position
+function seekRelative(seconds) {
+    if (!ytPlayer) return;
+
+    const currentTime = ytPlayer.getCurrentTime();
+    const duration = ytPlayer.getDuration();
+    const newTime = Math.max(0, Math.min(duration, currentTime + seconds));
+
+    ytPlayer.seekTo(newTime, true);
+    updateControlsUI();
+    showControls();
+}
+
+// Handle seek bar input (while dragging)
+function onSeekBarInput(event) {
+    if (!ytPlayer) return;
+
+    const seekBar = event.target;
+    const duration = ytPlayer.getDuration();
+    const seekTime = (seekBar.value / 100) * duration;
+
+    updateTimeDisplay(seekTime, duration);
+}
+
+// Handle seek bar change (after release)
+function onSeekBarChange(event) {
+    if (!ytPlayer) return;
+
+    const seekBar = event.target;
+    const duration = ytPlayer.getDuration();
+    const seekTime = (seekBar.value / 100) * duration;
+
+    ytPlayer.seekTo(seekTime, true);
+    isSeeking = false;
+}
+
+// Update all controls UI
+function updateControlsUI() {
+    if (!ytPlayer || !ytPlayer.getCurrentTime) return;
+
+    const currentTime = ytPlayer.getCurrentTime();
+    const duration = ytPlayer.getDuration() || 0;
+
+    updateTimeDisplay(currentTime, duration);
+
+    if (!isSeeking) {
+        updateSeekBar(currentTime, duration);
+    }
+
+    updatePlayPauseIcon();
+}
+
+// Update time display
+function updateTimeDisplay(currentTime, duration) {
+    const timeDisplay = document.getElementById('time-display');
+    if (!timeDisplay) return;
+
+    timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+}
+
+// Update seek bar position
+function updateSeekBar(currentTime, duration) {
+    const seekBar = document.getElementById('seek-bar');
+    if (!seekBar || duration === 0) return;
+
+    const progress = (currentTime / duration) * 100;
+    seekBar.value = progress;
+}
+
+// Update play/pause button icon based on player state
+function updatePlayPauseIcon() {
+    const playPauseBtn = document.getElementById('btn-play-pause');
+    if (!playPauseBtn || !ytPlayer) return;
+
+    const state = ytPlayer.getPlayerState();
+    const iconPlay = playPauseBtn.querySelector('.icon-play');
+    const iconPause = playPauseBtn.querySelector('.icon-pause');
+
+    if (state === YT.PlayerState.PLAYING) {
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'inline';
+    } else {
+        iconPlay.style.display = 'inline';
+        iconPause.style.display = 'none';
+    }
+}
+
+// Format seconds to MM:SS or HH:MM:SS
+function formatTime(seconds) {
+    if (isNaN(seconds) || seconds < 0) return '0:00';
+
+    const hours = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+
+    if (hours > 0) {
+        return `${hours}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Show controls and reset hide timer
+function showControls() {
+    const controls = document.getElementById('video-controls');
+    if (!controls) return;
+
+    controls.classList.remove('hidden');
+    hideControlsAfterDelay(3000);
+}
+
+// Hide controls after delay
+function hideControlsAfterDelay(delay) {
+    clearTimeout(controlsHideTimeout);
+    controlsHideTimeout = setTimeout(() => {
+        const controls = document.getElementById('video-controls');
+        if (controls && ytPlayer && ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) {
+            controls.classList.add('hidden');
+        }
+    }, delay);
 }
 
 // Initialize app when DOM is ready
