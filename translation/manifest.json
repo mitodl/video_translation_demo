@@ -12,6 +12,17 @@
       }
     },
     {
+      "id": "intro_programming",
+      "title": "Introduction to Programming",
+      "youtubeId": "xAcTmDO6NTI",
+      "methods": ["gemini", "gpt5", "human"],
+      "languages": {
+        "gemini" : ["es"],
+        "gpt5": ["es"],
+        "human": ["es"]
+      }
+    },    
+    {
       "id": "L2.1.HAIM_Holistic_AI_for_Medicine",
       "title": "L2.1 HAIM: Holistic AI for Medicine",
       "youtubeId": "VAT44R63jOU",

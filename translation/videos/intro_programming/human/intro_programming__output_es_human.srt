@@ -1,0 +1,6147 @@
+1
+00:00:00,000 --> 00:00:04,933
+[CHIRRIDOS] [SUSURROS] [CLICS]
+
+2
+00:00:16,433 --> 00:00:21,367
+ANA BELL: Bienvenidos
+a la primera clase de 6.100L.
+
+3
+00:00:21,433 --> 00:00:23,200
+Ese es nuestro nuevo número.
+
+4
+00:00:23,267 --> 00:00:24,500
+Me llamo Ana Bell.
+
+5
+00:00:24,567 --> 00:00:26,800
+Son dos palabras separadas,
+nombre Ana,
+
+6
+00:00:26,867 --> 00:00:28,833
+apellido Bell... superconfuso.
+
+7
+00:00:28,900 --> 00:00:31,233
+Soy profesora del Departamento de EECS
+
+8
+00:00:31,300 --> 00:00:33,733
+desde hace ya unos 10 años.
+
+9
+00:00:33,800 --> 00:00:36,100
+Llevo algún tiempo
+dando el curso de introducción.
+
+10
+00:00:36,167 --> 00:00:39,167
+Estoy muy feliz de dictar
+esta versión completa del semestre
+
+11
+00:00:39,233 --> 00:00:41,700
+de 6.100 A.
+
+12
+00:00:41,767 --> 00:00:45,467
+Hoy vamos a repasar
+
+13
+00:00:45,533 --> 00:00:48,500
+un poco de información administrativa
+del curso
+
+14
+00:00:48,567 --> 00:00:50,767
+y veremos algunas ideas
+
+15
+00:00:50,833 --> 00:00:53,367
+sobre computadoras,
+de alto nivel, cómo funcionan.
+
+16
+00:00:53,433 --> 00:00:56,633
+Luego veremos unos conceptos
+básicos de Python.
+
+17
+00:00:56,700 --> 00:00:58,967
+Así que empezaremos
+programar de inmediato.
+
+18
+00:00:59,100 --> 00:01:01,800
+Les recomiendo mucho,
+ya que están en esta clase,
+
+19
+00:01:01,867 --> 00:01:04,467
+que descarguen las diapositivas
+de la clase de antemano,
+
+20
+00:01:04,533 --> 00:01:08,633
+para tomar notas y ejecutar
+el código cuando yo lo haga.
+
+21
+00:01:08,700 --> 00:01:10,667
+Algunas de las clases
+son interactivas.
+
+22
+00:01:10,733 --> 00:01:12,200
+Y haremos pausas,
+
+23
+00:01:12,267 --> 00:01:14,400
+así que podrán tomarse un descanso
+
+24
+00:01:14,467 --> 00:01:16,367
+y practicar un poco de programación.
+
+25
+00:01:16,433 --> 00:01:18,067
+Y eso es importante...
+
+26
+00:01:18,133 --> 00:01:19,400
+Las llamo pausas de "intentarlo".
+
+27
+00:01:19,467 --> 00:01:21,500
+Eso es importante
+para asegurarse de estar realmente
+
+28
+00:01:21,567 --> 00:01:24,700
+practicando lo que estamos
+aprendiendo en este momento.
+
+29
+00:01:24,767 --> 00:01:28,233
+La idea principal de la clase
+es que voy a enseñar cosas
+
+30
+00:01:28,300 --> 00:01:29,733
+pero también habrá oportunidades
+
+31
+00:01:29,800 --> 00:01:33,767
+para preguntas
+y para que prueben programar
+
+32
+00:01:33,833 --> 00:01:34,933
+algo en el momento.
+
+33
+00:01:35,000 --> 00:01:36,700
+Incluso si no terminan
+de escribir un programa
+
+34
+00:01:36,767 --> 00:01:39,333
+sobre el que empecemos a hablar,
+yo lo terminaré,
+
+35
+00:01:39,400 --> 00:01:41,366
+y todos podemos hablar
+al respecto juntos.
+
+36
+00:01:41,433 --> 00:01:46,200
+Y les mostraré
+algunas dificultades y cosas así.
+
+37
+00:01:46,267 --> 00:01:47,700
+Habrá muchas oportunidades
+
+38
+00:01:47,767 --> 00:01:52,267
+para practicar en esta clase
+en varios grados de granularidad.
+
+39
+00:01:52,333 --> 00:01:54,433
+Y también hay muchas oportunidades
+
+40
+00:01:54,500 --> 00:01:58,000
+en las fichas que les daré
+para practicar un poco más
+
+41
+00:01:58,067 --> 00:02:02,267
+en casa y a través de muchos
+diferentes recursos también.
+
+42
+00:02:02,333 --> 00:02:05,533
+Hago hincapié
+en la participación y la práctica
+
+43
+00:02:05,600 --> 00:02:08,333
+porque uno de los motivos
+por los que están aquí
+
+44
+00:02:08,400 --> 00:02:10,100
+es para aprender a programar.
+
+45
+00:02:10,167 --> 00:02:11,800
+No saben programar todavía.
+
+46
+00:02:11,933 --> 00:02:14,833
+Y la programación
+es en realidad una habilidad.
+
+47
+00:02:14,900 --> 00:02:16,033
+Es como matemáticas o lectura.
+
+48
+00:02:16,100 --> 00:02:18,033
+Es algo que hay que practicar.
+
+49
+00:02:18,100 --> 00:02:21,233
+No pueden solo verme escribir
+en un montón de líneas de código
+
+50
+00:02:21,300 --> 00:02:23,733
+y luego al momento del examen,
+
+51
+00:02:23,800 --> 00:02:25,533
+saber automáticamente cómo hacerlo.
+
+52
+00:02:25,600 --> 00:02:29,466
+Tienen que hacerlo a menudo,
+practicar mucho
+
+53
+00:02:29,533 --> 00:02:31,867
+para que les salga
+cada vez más natural.
+
+54
+00:02:32,000 --> 00:02:35,600
+Así que las tres grandes cosas
+que se llevarán de esta clase
+
+55
+00:02:35,667 --> 00:02:37,233
+son los conceptos, obviamente...
+
+56
+00:02:37,300 --> 00:02:39,567
+Vamos a aprender algunas ideas
+de informática,
+
+57
+00:02:39,633 --> 00:02:43,767
+habilidad de programación
+y resolución de problemas...
+
+58
+00:02:43,833 --> 00:02:45,133
+habilidad para resolver problemas.
+
+59
+00:02:45,200 --> 00:02:48,100
+Las clases y exámenes
+básicamente les ayudan
+
+60
+00:02:48,167 --> 00:02:50,433
+a poner a prueba su conocimiento
+de los conceptos
+
+61
+00:02:50,500 --> 00:02:52,633
+y a conocer conceptos.
+
+62
+00:02:52,700 --> 00:02:56,600
+Los ejercicios prácticos
+les dan habilidades de programación.
+
+63
+00:02:56,667 --> 00:02:59,900
+Y las series de problemas les ayudan
+con la resolución de problemas.
+
+64
+00:02:59,966 --> 00:03:04,000
+Básicamente, si les dan
+una versión inglesa de un problema
+
+65
+00:03:04,067 --> 00:03:07,467
+en inglés, ¿cómo van de eso
+
+66
+00:03:07,533 --> 00:03:10,667
+a pensar en qué conceptos
+de informática puedo aplicarlos?
+
+67
+00:03:10,733 --> 00:03:14,233
+Y después de eso, ¿cómo
+tomo esos conceptos de informática
+
+68
+00:03:14,300 --> 00:03:17,267
+y hago realmente la programación?
+
+69
+00:03:17,333 --> 00:03:20,700
+¿Cuáles son algunos de los temas
+que veremos?
+
+70
+00:03:20,767 --> 00:03:23,400
+Veremos los aspectos principales,
+aprenderemos
+
+71
+00:03:23,466 --> 00:03:24,733
+pensamiento computacional.
+
+72
+00:03:24,800 --> 00:03:28,800
+Así que en el futuro,
+ante un problema,
+
+73
+00:03:28,867 --> 00:03:31,833
+no deberían pensar primero
+¿cómo resuelvo esto matemáticamente?
+
+74
+00:03:31,900 --> 00:03:34,033
+o ¿cómo resuelvo este problema
+
+75
+00:03:34,100 --> 00:03:35,633
+a la fuerza o manualmente?
+
+76
+00:03:35,700 --> 00:03:39,167
+¿Cómo puedo aplicar la computación
+para ayudarme a resolver el problema?
+
+77
+00:03:39,233 --> 00:03:40,733
+Y a lo largo de estas clases
+
+78
+00:03:40,800 --> 00:03:44,267
+veremos algunos ejemplos
+de cómo aplicar la computación
+
+79
+00:03:44,333 --> 00:03:46,433
+a un problema que quizás ya han visto
+
+80
+00:03:46,500 --> 00:03:51,000
+y resuelto matemáticamente,
+lo cual es genial.
+
+81
+00:03:51,067 --> 00:03:52,833
+Obviamente, para conseguir eso,
+
+82
+00:03:52,900 --> 00:03:54,633
+a aprender
+el lenguaje de programación Python.
+
+83
+00:03:54,700 --> 00:03:56,300
+Una vez que entendamos
+los aspectos básicos,
+
+84
+00:03:56,367 --> 00:03:59,533
+veremos cómo empezar
+a estructurar el código
+
+85
+00:03:59,600 --> 00:04:01,500
+para que se ve un poco mejor,
+así no tenemos
+
+86
+00:04:01,567 --> 00:04:04,600
+solo un montón de código
+tirado en un archivo.
+
+87
+00:04:04,667 --> 00:04:06,467
+Vamos a empezar
+a organizar nuestro código
+
+88
+00:04:06,533 --> 00:04:11,300
+y ver cómo podemos hacerlo
+limpio, legible y modular.
+
+89
+00:04:11,367 --> 00:04:14,700
+Y luego hacia...
+
+90
+00:04:14,767 --> 00:04:16,899
+no en esta clase,
+sino en un par de clases
+
+91
+00:04:16,966 --> 00:04:19,200
+y como tema a lo largo de esta clase,
+
+92
+00:04:19,267 --> 00:04:20,899
+vamos a ver algunos algoritmos.
+
+93
+00:04:20,966 --> 00:04:23,233
+No son supercomplicados,
+
+94
+00:04:23,300 --> 00:04:26,100
+pero son un tipo de algoritmos base
+para un montón de algoritmos
+
+95
+00:04:26,167 --> 00:04:28,133
+que quizás vean en el futuro
+
+96
+00:04:28,200 --> 00:04:30,633
+si deciden tomar más clases de CS.
+
+97
+00:04:30,700 --> 00:04:32,200
+Por último, ya terminando la clase,
+
+98
+00:04:32,267 --> 00:04:34,867
+veremos la complejidad algorítmica,
+que básicamente
+
+99
+00:04:34,933 --> 00:04:37,600
+significa que vamos a empezar
+a preguntar o tratar de responder
+
+100
+00:04:37,667 --> 00:04:40,100
+la pregunta:
+¿cómo sabemos que los programas
+
+101
+00:04:40,167 --> 00:04:42,000
+que programamos son eficientes?
+
+102
+00:04:42,067 --> 00:04:44,500
+Podemos prograrmarlos,
+pero ¿cómo sabemos que son rápidos?
+
+103
+00:04:44,567 --> 00:04:47,267
+¿Cómo sabemos que no consumen
+
+104
+00:04:47,332 --> 00:04:48,567
+toda la memoria del equipo?
+
+105
+00:04:48,633 --> 00:04:51,633
+Así que cosas así,
+comparando diferentes algoritmos
+
+106
+00:04:51,700 --> 00:04:55,600
+que hacen lo mismo unos con otros.
+
+107
+00:04:55,667 --> 00:04:58,267
+Así que si no hay preguntas...
+
+108
+00:04:58,332 --> 00:05:00,267
+Otra vez, como dije,
+un montón de esta información
+
+109
+00:05:00,333 --> 00:05:02,400
+ya está en las fichas que les di.
+
+110
+00:05:02,467 --> 00:05:05,767
+Podemos empezar.
+
+111
+00:05:05,833 --> 00:05:11,167
+Para empezar,
+hablaremos del conocimiento.
+
+112
+00:05:11,233 --> 00:05:14,133
+El conocimiento declarativo
+es una declaración de hecho,
+
+113
+00:05:14,200 --> 00:05:17,367
+y muchos de nosotros probablemente
+en matemáticas y en el pasado
+
+114
+00:05:17,433 --> 00:05:19,200
+hemos trabajado
+con conocimiento declarativo.
+
+115
+00:05:19,267 --> 00:05:21,233
+Pero la informática no funciona así.
+
+116
+00:05:21,300 --> 00:05:23,500
+Esta clase no funciona así.
+
+117
+00:05:23,567 --> 00:05:25,867
+En informática trabajamos
+
+118
+00:05:25,933 --> 00:05:28,733
+con conocimiento imperativo,
+que es básicamente una receta,
+
+119
+00:05:28,800 --> 00:05:30,467
+cómo hacer algo.
+
+120
+00:05:30,533 --> 00:05:33,000
+Y cuando estamos programando,
+todo lo que estamos haciendo
+
+121
+00:05:33,067 --> 00:05:35,800
+es escribir una receta
+para que el equipo haga algo.
+
+122
+00:05:35,867 --> 00:05:37,867
+Eso es todo.
+
+123
+00:05:37,933 --> 00:05:40,467
+Aquí hay un ejemplo numérico.
+
+124
+00:05:40,533 --> 00:05:44,133
+La primera afirmación
+es una afirmación declarativa.
+
+125
+00:05:44,200 --> 00:05:46,800
+La raíz cuadrada de un número X
+es Y de manera tal que Y*Y
+
+126
+00:05:46,867 --> 00:05:47,867
+es igual a X.
+
+127
+00:05:47,933 --> 00:05:50,100
+Hay muchos valores posibles para X e Y
+
+128
+00:05:50,167 --> 00:05:53,533
+con los que esta declaración
+puede ser verdad, ¿no?
+
+129
+00:05:53,600 --> 00:05:55,800
+Pero si le diéramos esa afirmación
+a la computadora,
+
+130
+00:05:55,867 --> 00:05:57,300
+no sabría qué hacer con eso.
+
+131
+00:05:57,367 --> 00:06:00,700
+Lo que tenemos que hacer
+es decirle a la computadora
+
+132
+00:06:00,767 --> 00:06:03,367
+cómo encontrar la raíz cuadrada
+de un número
+
+133
+00:06:03,433 --> 00:06:06,000
+y que luego nos diga cuál es
+la raíz cuadrada de ese número.
+
+134
+00:06:06,067 --> 00:06:09,300
+Y así la computadora
+entonces necesita una receta.
+
+135
+00:06:09,367 --> 00:06:11,233
+Así que la receta,
+una realmente simple
+
+136
+00:06:11,300 --> 00:06:12,933
+para encontrar la raíz cuadrada
+de un número,
+
+137
+00:06:13,000 --> 00:06:15,433
+son los pasos uno, dos, tres.
+
+138
+00:06:15,500 --> 00:06:17,467
+Así que lo que hacemos es...
+Digamos que queremos
+
+139
+00:06:17,533 --> 00:06:20,600
+encontrar la raíz cuadrada de 16.
+
+140
+00:06:20,667 --> 00:06:23,900
+Obviamente sabemos que es cuatro,
+pero la computadora no.
+
+141
+00:06:23,967 --> 00:06:25,467
+Así que le damos
+una conjetura inicial.
+
+142
+00:06:25,533 --> 00:06:27,600
+Digamos que la conjetura es tres.
+
+143
+00:06:27,667 --> 00:06:29,332
+¿Qué hacemos a partir de ahí?
+
+144
+00:06:29,400 --> 00:06:30,867
+Los pasos que seguimos...
+
+145
+00:06:30,933 --> 00:06:35,900
+Paso uno, si 3 por 3 es 9,
+está lo suficientemente cerca de 16,
+
+146
+00:06:35,967 --> 00:06:37,067
+podemos parar.
+
+147
+00:06:37,133 --> 00:06:39,267
+No es realmente
+lo suficientemente cerca para mí.
+
+148
+00:06:39,332 --> 00:06:41,832
+Así que continuemos.
+
+149
+00:06:41,900 --> 00:06:44,733
+Paso dos... de lo contrario, haremos
+
+150
+00:06:44,800 --> 00:06:46,867
+una nueva conjetura promediando G,
+
+151
+00:06:46,933 --> 00:06:50,100
+que es nuestra conjetura inicial,
+3 y X
+
+152
+00:06:50,167 --> 00:06:52,200
+sobre G, que es 16 sobre 3.
+
+153
+00:06:52,267 --> 00:06:54,367
+16 era la raíz cuadrada
+que queríamos encontrar.
+
+154
+00:06:54,433 --> 00:06:58,133
+Así que nuestra próxima conjetura
+es 4.17.
+
+155
+00:06:58,200 --> 00:07:00,933
+Bien, usando la nueva conjetura,
+repetimos el proceso
+
+156
+00:07:01,000 --> 00:07:02,133
+hasta acercarnos lo suficiente.
+
+157
+00:07:02,200 --> 00:07:03,833
+Así que volvemos al primer paso.
+
+158
+00:07:03,900 --> 00:07:05,733
+Esa es la primera parte del proceso.
+
+159
+00:07:05,800 --> 00:07:07,133
+Vemos la conjetura al cuadrado.
+
+160
+00:07:07,200 --> 00:07:10,333
+4.17 al cuadrado es 17.36.
+
+161
+00:07:10,400 --> 00:07:13,400
+Así que ahora decimos
+¿se acerca lo suficiente?
+
+162
+00:07:13,467 --> 00:07:14,767
+En realidad, no.
+No es así.
+
+163
+00:07:14,833 --> 00:07:15,733
+Es 17.
+
+164
+00:07:15,800 --> 00:07:17,533
+No se acerca para nada a 16.
+
+165
+00:07:17,600 --> 00:07:19,400
+Así que hagámoslo de nuevo.
+
+166
+00:07:19,467 --> 00:07:26,067
+Una nueva conjetura promediando
+4.17 y 16 dividido por 4.17.
+
+167
+00:07:26,133 --> 00:07:30,100
+Eso nos da nuestra
+nueva conjetura, 435.
+
+168
+00:07:30,167 --> 00:07:34,133
+Siguiente paso, usando la nueva
+conjetura, repetimos el proceso.
+
+169
+00:07:34,200 --> 00:07:38,367
+Así que 4,00035 al cuadrado
+es 16.277...
+
+170
+00:07:38,433 --> 00:07:40,000
+.0277.
+
+171
+00:07:40,067 --> 00:07:42,667
+¿Está lo suficientemente cerca de X?
+
+172
+00:07:42,733 --> 00:07:44,433
+Sí, podría ser feliz con esto.
+
+173
+00:07:44,500 --> 00:07:47,900
+Podría parar allí porque estamos
+dentro de una especie de más/menos 1.
+
+174
+00:07:47,967 --> 00:07:49,233
+Así que eso me parece bien.
+
+175
+00:07:49,300 --> 00:07:52,267
+Pero si queremos que esté
+dentro de más o menos 1 por 10
+
+176
+00:07:52,332 --> 00:07:55,100
+a los negativos 6 o 7 o algo así,
+
+177
+00:07:55,167 --> 00:07:58,700
+entonces continuaríamos
+con el proceso.
+
+178
+00:07:58,767 --> 00:08:01,767
+Así que realmente
+lo que teníamos es un algoritmo.
+
+179
+00:08:01,833 --> 00:08:03,533
+Es una secuencia de pasos...
+
+180
+00:08:03,600 --> 00:08:04,833
+Paso uno, paso dos, paso tres.
+
+181
+00:08:04,900 --> 00:08:07,400
+Hay algún tipo de flujo de control.
+
+182
+00:08:07,467 --> 00:08:12,000
+En una parte si la conjetura
+era lo suficientemente cerca,
+
+183
+00:08:12,067 --> 00:08:13,567
+podíamos parar.
+
+184
+00:08:13,633 --> 00:08:15,500
+De lo contrario, hacemos otra cosa.
+
+185
+00:08:15,567 --> 00:08:17,633
+Hubo otro flujo de control
+
+186
+00:08:17,700 --> 00:08:19,167
+donde dijimos repite esto.
+
+187
+00:08:19,233 --> 00:08:21,033
+Así que no estamos yendo linealmente
+
+188
+00:08:21,100 --> 00:08:23,100
+sino que estamos cambiando el flujo.
+
+189
+00:08:23,167 --> 00:08:25,667
+Y por último es una forma de parar.
+
+190
+00:08:25,733 --> 00:08:27,733
+No queremos que el algoritmo
+siga para siempre.
+
+191
+00:08:27,800 --> 00:08:29,300
+Nos gustaría parar en algún momento.
+
+192
+00:08:29,367 --> 00:08:32,366
+Y este punto de parada,
+fue un poco vaga al respecto.
+
+193
+00:08:32,433 --> 00:08:35,866
+Pero podría ser cuando estábamos
+dentro de más o menos 1
+
+194
+00:08:35,933 --> 00:08:39,600
+de la respuesta real.
+
+195
+00:08:39,667 --> 00:08:44,600
+Y así las recetas son
+básicamente algoritmos, ¿verdad?
+
+196
+00:08:44,667 --> 00:08:47,467
+Mi abuela básicamente
+nos estaba enseñando algoritmos
+
+197
+00:08:47,533 --> 00:08:51,967
+cuando nos enseñaba a hacer un pastel.
+
+198
+00:08:52,033 --> 00:08:55,300
+Ella no lo llamaba así,
+pero en realidad lo era.
+
+199
+00:08:55,367 --> 00:08:58,333
+Y así incluso las recetas tienen
+esa misma estructura.
+
+200
+00:08:58,400 --> 00:08:59,633
+Hay una secuencia de pasos.
+
+201
+00:08:59,700 --> 00:09:00,700
+Hay un flujo de control.
+
+202
+00:09:00,767 --> 00:09:02,933
+Como, si no tienes huevo,
+usa un sustituto de huevo.
+
+203
+00:09:03,000 --> 00:09:06,633
+O volver a pinchar con un palillo
+para ver
+
+204
+00:09:06,700 --> 00:09:09,467
+si sale limpio cada minuto o algo así.
+
+205
+00:09:09,533 --> 00:09:12,133
+Y luego hay una forma de parar.
+
+206
+00:09:12,200 --> 00:09:13,600
+Cuando el palillo sale limpio,
+
+207
+00:09:13,667 --> 00:09:16,733
+lo sacas del horno, y te lo comes.
+
+208
+00:09:16,800 --> 00:09:19,633
+Y las computadoras son máquinas.
+que ejecutan estos algoritmos.
+
+209
+00:09:19,700 --> 00:09:22,133
+En realidad son tontas.
+
+210
+00:09:22,200 --> 00:09:24,167
+Las computadoras
+no son muy inteligentes.
+
+211
+00:09:24,233 --> 00:09:26,167
+No toman decisiones por su cuenta.
+
+212
+00:09:26,233 --> 00:09:28,433
+Sólo siguen estas secuencias de pasos
+
+213
+00:09:28,500 --> 00:09:30,367
+que les dijimos que hicieran.
+
+214
+00:09:30,433 --> 00:09:34,933
+Las computadoras son buenas
+para almacenar muchos datos.
+
+215
+00:09:35,000 --> 00:09:36,600
+Nosotros no podemos,
+pero las computadoras
+
+216
+00:09:36,667 --> 00:09:40,467
+pueden almacenar gigabytes
+de almacenamiento, incluso terabytes.
+
+217
+00:09:40,533 --> 00:09:42,400
+Las computadoras
+pueden hacer operaciones
+
+218
+00:09:42,467 --> 00:09:44,667
+realmente rápido,
+algo que nosotros no podemos hacer.
+
+219
+00:09:44,733 --> 00:09:46,100
+Son buenas en esas dos cosas,
+
+220
+00:09:46,167 --> 00:09:47,767
+pero no son muy inteligentes.
+
+221
+00:09:47,833 --> 00:09:49,800
+No pueden tomar decisiones
+a menos que se les ordene
+
+222
+00:09:49,867 --> 00:09:54,100
+tomar las decisiones.
+
+223
+00:09:54,167 --> 00:09:59,167
+En realidad, la computadora
+sólo hace lo que le dices que haga.
+
+224
+00:09:59,233 --> 00:10:02,767
+Y esa es una de las grandes ideas
+que quiero que recuerden
+
+225
+00:10:02,833 --> 00:10:05,000
+de esta clase.
+
+226
+00:10:05,067 --> 00:10:07,367
+La computadora sólo hace
+lo que le dices que haga.
+
+227
+00:10:07,433 --> 00:10:09,700
+Las secuencias de pasos
+que le dices que haga,
+
+228
+00:10:09,767 --> 00:10:12,467
+esa es lo único que sigue.
+
+229
+00:10:12,533 --> 00:10:15,733
+Un poco de historia
+para que puedan apreciar
+
+230
+00:10:15,800 --> 00:10:19,267
+el lenguaje de programación
+Python antes de empezar
+
+231
+00:10:19,333 --> 00:10:22,067
+realmente a trabajar con él.
+
+232
+00:10:22,133 --> 00:10:24,767
+Así que antes de 1940,
+teníamos estas cosas
+
+233
+00:10:24,833 --> 00:10:27,167
+llamadas
+computadoras de programa fijo.
+
+234
+00:10:27,233 --> 00:10:29,200
+Una calculadora de bolsillo
+es un ejemplo de eso.
+
+235
+00:10:29,267 --> 00:10:33,833
+Cada botón era una operación.
+
+236
+00:10:33,900 --> 00:10:35,933
+En la pequeña pantalla,
+podías usar paréntesis
+
+237
+00:10:36,000 --> 00:10:38,033
+para poner un montón de diferentes
+operaciones juntas,
+
+238
+00:10:38,100 --> 00:10:41,433
+pero no había forma de almacenar
+todas estas operaciones juntas
+
+239
+00:10:41,500 --> 00:10:45,700
+para poner más tarde diferentes
+entradas para esa misma secuencia
+
+240
+00:10:45,767 --> 00:10:46,733
+de cálculos.
+
+241
+00:10:46,800 --> 00:10:49,200
+Había que poner cada una
+de esas secuencias de operaciones
+
+242
+00:10:49,267 --> 00:10:52,900
+cada vez.
+
+243
+00:10:52,967 --> 00:10:57,733
+Después, vinieron las computadoras
+de programas almacenados.
+
+244
+00:10:57,800 --> 00:11:03,533
+Podían almacenar
+instrucciones para hacer cosas
+
+245
+00:11:03,600 --> 00:11:06,333
+como datos.
+
+246
+00:11:06,400 --> 00:11:09,333
+Y había un programa especial
+llamado intérprete
+
+247
+00:11:09,400 --> 00:11:10,800
+que ejecutaba estas instrucciones.
+
+248
+00:11:10,867 --> 00:11:14,300
+Sabía cómo seguir
+secuencias simples de pasos.
+
+249
+00:11:14,367 --> 00:11:17,467
+Cuando el programa le decía
+que fuera a un lugar diferente,
+
+250
+00:11:17,533 --> 00:11:18,100
+lo hacía.
+
+251
+00:11:18,167 --> 00:11:23,700
+Así que básicamente
+ejecutaba estas instrucciones.
+
+252
+00:11:23,767 --> 00:11:28,667
+Y las instrucciones que hacía
+eran aritméticas y lógicas,
+
+253
+00:11:28,733 --> 00:11:30,700
+como sumar, restar, etc.
+
+254
+00:11:30,767 --> 00:11:34,200
+Simples pruebas como comprobar
+la igualdad entre dos valores;
+
+255
+00:11:34,267 --> 00:11:36,433
+y mover datos,
+así que tomar este valor
+
+256
+00:11:36,500 --> 00:11:39,500
+y ponerlo en una ubicación
+de memoria diferente.
+
+257
+00:11:39,567 --> 00:11:41,800
+Sólo quería darles
+un resumen muy breve,
+
+258
+00:11:41,867 --> 00:11:44,333
+y esto no es superexacto,
+pero les da una idea
+
+259
+00:11:44,400 --> 00:11:47,333
+de cómo pasan exactamente las cosas
+
+260
+00:11:47,400 --> 00:11:50,367
+a bajo nivel en la computadora.
+
+261
+00:11:50,433 --> 00:11:52,600
+La computadora
+básicamente tiene memoria,
+
+262
+00:11:52,667 --> 00:11:53,967
+donde se almacenan cosas.
+
+263
+00:11:54,033 --> 00:11:57,667
+Tiene una unidad de lógica aritmética
+que hace operaciones.
+
+264
+00:11:57,733 --> 00:12:00,067
+Sabe cómo sumar cosas,
+restar cosas, multiplicar cosas,
+
+265
+00:12:00,133 --> 00:12:01,733
+comparar cosas.
+
+266
+00:12:01,800 --> 00:12:03,900
+Y tiene también la unidad de control,
+
+267
+00:12:03,967 --> 00:12:06,533
+donde se encuentra
+este contador de programas.
+
+268
+00:12:06,600 --> 00:12:08,533
+Aquí es donde se pone un programa.
+
+269
+00:12:08,600 --> 00:12:10,500
+Así que veamos si esto funciona.
+
+270
+00:12:10,567 --> 00:12:12,200
+Esto es un programa.
+
+271
+00:12:12,267 --> 00:12:14,400
+Y aquí arriba está nuestra memoria.
+
+272
+00:12:14,467 --> 00:12:18,200
+Así que tenemos un montón
+de ubicaciones de memoria, 3456, 3457.
+
+273
+00:12:18,267 --> 00:12:20,433
+Y en cada una
+de estas ubicaciones de memoria,
+
+274
+00:12:20,500 --> 00:12:24,700
+tiene algunos valores
+almacenados, ya llenados.
+
+275
+00:12:24,767 --> 00:12:28,100
+Cuando ejecutamos este programa
+la primera vez, lo que termina pasando
+
+276
+00:12:28,167 --> 00:12:31,200
+es que el intérprete
+ve la primera instrucción,
+
+277
+00:12:31,267 --> 00:12:35,600
+Sumar, los valores
+de 3456 y 3457 juntos.
+
+278
+00:12:35,667 --> 00:12:38,133
+Así que va
+a estas ubicaciones de memoria aquí,
+
+279
+00:12:38,200 --> 00:12:40,633
+toma el 3 y el 4, y los envía
+
+280
+00:12:40,700 --> 00:12:42,400
+a la unidad lógica aritmética.
+
+281
+00:12:42,467 --> 00:12:44,633
+Esta unidad sabe cómo hacer la suma.
+
+282
+00:12:44,700 --> 00:12:49,500
+Así que suma 3 más 4, 7
+y envía el resultado aquí.
+
+283
+00:12:49,567 --> 00:12:52,633
+No le dijimos nunca que almacene
+ese resultado en ninguna parte.
+
+284
+00:12:52,700 --> 00:12:54,867
+Pero la siguiente instrucción
+dice Almacenar
+
+285
+00:12:54,933 --> 00:12:57,200
+el valor que nos acaba
+de dar la unidad de lógica aritmética
+
+286
+00:12:57,267 --> 00:12:59,700
+en esta ubicación de memoria, 3458.
+
+287
+00:12:59,767 --> 00:13:04,300
+Así que el siguiente paso
+básicamente toma ese 7
+
+288
+00:13:04,367 --> 00:13:08,267
+y lo almacena
+en la ubicación de la memoria 3458.
+
+289
+00:13:08,333 --> 00:13:12,600
+Supertedioso...
+Todo lo que hicimos fue sumar 3 más 4.
+
+290
+00:13:12,667 --> 00:13:14,000
+Lo hacemos de nuevo.
+
+291
+00:13:14,067 --> 00:13:17,967
+Añadimos los valores de 7889 y 7890.
+
+292
+00:13:18,033 --> 00:13:19,233
+Así que va en la memoria.
+
+293
+00:13:19,300 --> 00:13:23,333
+Toma el 5 y el 2, los envía
+a la unidad de lógica aritmética.
+
+294
+00:13:23,400 --> 00:13:26,633
+Esta unidad calcula que da 7,
+devuelve ese resultado
+
+295
+00:13:26,700 --> 00:13:32,200
+y luego lo almacenamos
+en la ubicación 7891.
+
+296
+00:13:32,267 --> 00:13:34,900
+Y después de eso,
+solo hicimos dos sumas.
+
+297
+00:13:34,967 --> 00:13:38,267
+La siguiente instrucción
+dice Comparar los valores
+
+298
+00:13:38,333 --> 00:13:41,700
+en los lugares de la memoria
+3458 y 7891.
+
+299
+00:13:41,767 --> 00:13:45,600
+Vamos a comparar el 7 con el 7.
+
+300
+00:13:45,667 --> 00:13:49,367
+La unidad de lógica aritmética
+hace esta comparación y dice
+
+301
+00:13:49,433 --> 00:13:51,300
+"Bueno, 7 y 7 son iguales".
+
+302
+00:13:51,367 --> 00:13:54,733
+Así que esto es verdad
+o lo que sea quiera decirle
+
+303
+00:13:54,800 --> 00:13:56,800
+al intérprete.
+
+304
+00:13:56,867 --> 00:13:59,067
+La última instrucción que tenemos aquí
+
+305
+00:13:59,133 --> 00:14:01,767
+es Imprimir el resultado
+de esa comparación.
+
+306
+00:14:01,833 --> 00:14:04,867
+Así que imprimimos Verdadero
+porque eran iguales.
+
+307
+00:14:04,933 --> 00:14:06,833
+De nuevo, superalto nivel,
+pero de alguna forma
+
+308
+00:14:06,900 --> 00:14:10,100
+les da una idea
+de los lenguajes de programación
+
+309
+00:14:10,167 --> 00:14:10,700
+de estos días.
+
+310
+00:14:10,767 --> 00:14:14,200
+Sería muy tedioso programar
+si tuviéramos que escribir programas
+
+311
+00:14:14,267 --> 00:14:16,400
+de esta manera.
+
+312
+00:14:16,467 --> 00:14:17,900
+Alan Turing hace mucho tiempo demostró
+
+313
+00:14:17,967 --> 00:14:20,333
+que puedes calcular cualquier cosa
+
+314
+00:14:20,400 --> 00:14:22,100
+con operaciones primitivas
+más básicas aún,
+
+315
+00:14:22,167 --> 00:14:23,633
+no sumar, restar.
+
+316
+00:14:23,700 --> 00:14:26,567
+Sino con una cinta,
+en donde tendrías realmente
+
+317
+00:14:26,633 --> 00:14:29,767
+6 operaciones primitivas: mover cinta
+a la derecha, mover a la izquierda,
+
+318
+00:14:29,833 --> 00:14:33,700
+leer el valor de la cinta,
+poner un valor en la cinta,
+
+319
+00:14:33,767 --> 00:14:38,067
+borrar el valor de la cinta,
+y ninguna operación.
+
+320
+00:14:38,133 --> 00:14:43,733
+Y desde que demostró esto,
+cuál era el resultado en realidad
+
+321
+00:14:43,800 --> 00:14:46,700
+está aquí abajo.
+
+322
+00:14:46,767 --> 00:14:48,633
+Cualquier cosa computable
+en un lenguaje
+
+323
+00:14:48,700 --> 00:14:50,767
+es computable
+en cualquier lenguaje de programación.
+
+324
+00:14:50,833 --> 00:14:53,600
+Así que si tuviéramos
+un programa escrito en Java,
+
+325
+00:14:53,667 --> 00:14:57,467
+que básicamente
+se resumen en algo superlargo
+
+326
+00:14:57,533 --> 00:15:02,467
+pero que se basa
+en estas seis operaciones primitivas.
+
+327
+00:15:02,533 --> 00:15:05,100
+Si reducimos este programa
+a estas seis operaciones primitivas,
+
+328
+00:15:05,167 --> 00:15:08,400
+podemos volver a construir
+el mismo programa
+
+329
+00:15:08,467 --> 00:15:10,300
+en un lenguaje
+completamente diferente.
+
+330
+00:15:10,367 --> 00:15:11,600
+Y eso es realmente poderoso.
+
+331
+00:15:11,667 --> 00:15:14,333
+Esa es una declaración genial.
+
+332
+00:15:14,400 --> 00:15:17,900
+Ahora, no trabajaremos
+con esas operaciones primitivas.
+
+333
+00:15:17,967 --> 00:15:21,567
+Usaremos operaciones primitivas
+de Python,
+
+334
+00:15:21,633 --> 00:15:23,700
+que son más prácticas y permiten
+
+335
+00:15:23,767 --> 00:15:26,433
+que hagamos muchas más cosas
+en mucho menos tiempo.
+
+336
+00:15:26,500 --> 00:15:28,200
+Voy a hacer una pequeña comparación
+
+337
+00:15:28,267 --> 00:15:32,467
+sobre las operaciones primitivas
+de Python con el idioma español.
+
+338
+00:15:32,533 --> 00:15:36,033
+En español, algunas de las operaciones
+primitivas podrían ser palabras
+
+339
+00:15:36,100 --> 00:15:38,367
+o incluso letras o caracteres.
+
+340
+00:15:38,433 --> 00:15:41,733
+Pero podemos decir que son palabras.
+
+341
+00:15:41,800 --> 00:15:43,333
+Con los caracteres, formamos palabras.
+
+342
+00:15:43,400 --> 00:15:44,933
+Con las palabras, formamos oraciones.
+
+343
+00:15:45,000 --> 00:15:46,633
+Con las oraciones,
+construimos cuentos.
+
+344
+00:15:46,700 --> 00:15:50,633
+Con los cuentos,
+podemos hacer libros y cosas así.
+
+345
+00:15:50,700 --> 00:15:52,667
+En los lenguajes de programación,
+las operaciones
+
+346
+00:15:52,733 --> 00:15:58,800
+primitivas son números,
+secuencias de caracteres, operadores
+
+347
+00:15:58,867 --> 00:16:04,433
+como suma, multiplicación, división,
+
+348
+00:16:04,500 --> 00:16:06,967
+comprobar la igualdad,
+comprobar que algo es más grande
+
+349
+00:16:07,033 --> 00:16:09,100
+que otra cosa, etc.
+
+350
+00:16:09,167 --> 00:16:12,133
+Una vez que tenemos estas operaciones
+básicas en un lenguaje,
+
+351
+00:16:12,200 --> 00:16:15,633
+podemos empezar a construir
+la sintaxis del lenguaje.
+
+352
+00:16:15,700 --> 00:16:20,067
+En español, si tenemos algo
+como sustantivo y sustantivo
+
+353
+00:16:20,133 --> 00:16:22,000
+no tiene sentido.
+
+354
+00:16:22,067 --> 00:16:23,900
+"Perro gato niño"
+no tiene mucho sentido.
+
+355
+00:16:23,967 --> 00:16:26,000
+No es sintácticamente válido.
+
+356
+00:16:26,067 --> 00:16:31,033
+Pero sustantivo verbo sustantivo
+es sintácticamente válido.
+
+357
+00:16:31,100 --> 00:16:33,567
+De manera similar,
+en los lenguajes de programación,
+
+358
+00:16:33,633 --> 00:16:37,833
+podemos tener dos objetos
+como paralelos.
+
+359
+00:16:37,900 --> 00:16:41,033
+Aquí hay una secuencia
+de caracteres H e I.
+
+360
+00:16:41,100 --> 00:16:43,600
+Y este es el número 5
+justo al lado de esa secuencia
+
+361
+00:16:43,667 --> 00:16:45,200
+de caracteres.
+
+362
+00:16:45,267 --> 00:16:47,300
+Pero eso no tiene
+ningún sentido, ¿verdad?
+
+363
+00:16:47,367 --> 00:16:49,500
+¿Qué significa tener
+esta secuencia de caracteres
+
+364
+00:16:49,567 --> 00:16:50,833
+y ese número justo al lado?
+
+365
+00:16:50,900 --> 00:16:52,600
+No tiene sentido en Python.
+
+366
+00:16:52,667 --> 00:16:54,900
+En lugar de eso,
+lo que tenemos que hacer
+
+367
+00:16:54,967 --> 00:16:57,400
+es añadir un operador
+entre estos dos objetos.
+
+368
+00:16:57,467 --> 00:16:59,300
+Así que añadimos
+un pequeño operador asterisco
+
+369
+00:16:59,367 --> 00:17:01,500
+entre la secuencia de caracteres "HI"
+
+370
+00:17:01,567 --> 00:17:02,933
+y el número 5.
+
+371
+00:17:03,000 --> 00:17:05,067
+Y en Python, el significado para esto
+
+372
+00:17:05,133 --> 00:17:08,233
+es que quiero repetir
+la secuencia de caracteres "HI",
+
+373
+00:17:08,300 --> 00:17:09,700
+H-I, cinco veces.
+
+374
+00:17:09,767 --> 00:17:13,333
+Así que esto básicamente
+Dame "Hi, hi, hi, hi, hi".
+
+375
+00:17:13,400 --> 00:17:17,200
+Así que una vez que tenemos
+oraciones en inglés
+
+376
+00:17:17,267 --> 00:17:21,000
+y expresiones
+que son sintácticamente válidas,
+
+377
+00:17:21,067 --> 00:17:24,200
+ahora podemos hablar
+de la semántica estática del lenguaje.
+
+378
+00:17:24,267 --> 00:17:27,099
+Así que en español,
+decir algo como "Yo soy hambre"
+
+379
+00:17:27,166 --> 00:17:31,933
+es sintácticamente correcto,
+pero no es...
+
+380
+00:17:32,000 --> 00:17:37,533
+No tiene una buena semántica estática.
+
+381
+00:17:37,600 --> 00:17:41,567
+No hay significado...
+No significa nada
+
+382
+00:17:41,633 --> 00:17:44,800
+porque "soy"
+no se usa con ese sustantivo.
+
+383
+00:17:44,867 --> 00:17:46,567
+También
+en los lenguajes de programación,
+
+384
+00:17:46,633 --> 00:17:49,333
+y esto va a diferir dependiendo
+de qué lenguaje de programación
+
+385
+00:17:49,400 --> 00:17:50,933
+se use...
+
+386
+00:17:51,000 --> 00:17:53,000
+En la diapositiva anterior vimos
+
+387
+00:17:53,067 --> 00:17:56,533
+que se puede usar
+el asterisco entre la secuencia
+
+388
+00:17:56,600 --> 00:17:57,967
+de caracteres y el número.
+
+389
+00:17:58,033 --> 00:18:01,633
+Y eso significaba repetir
+esa secuencia muchas veces.
+
+390
+00:18:01,700 --> 00:18:04,800
+Pero si usamos un operador
+de suma entre la secuencia
+
+391
+00:18:04,867 --> 00:18:07,300
+de caracteres y un número,
+
+392
+00:18:07,367 --> 00:18:10,333
+eso no significa nada en Python.
+
+393
+00:18:10,400 --> 00:18:12,267
+Sería un error de semántica estática,
+
+394
+00:18:12,333 --> 00:18:14,633
+aunque sea sintácticamente válido.
+
+395
+00:18:14,700 --> 00:18:21,367
+Tenemos objeto operador objeto.
+
+396
+00:18:21,433 --> 00:18:24,433
+Hasta ahora, encontramos
+buenos paralelismos
+
+397
+00:18:24,500 --> 00:18:28,000
+entre el español como lenguaje
+y los lenguajes de programación.
+
+398
+00:18:28,500 --> 00:18:30,667
+Pero aquí es donde las cosas cambian,
+
+399
+00:18:30,733 --> 00:18:33,767
+cuando hablamos
+de la semántica de un idioma.
+
+400
+00:18:33,833 --> 00:18:37,400
+En español, puede haber
+muchos significados diferentes.
+
+401
+00:18:37,467 --> 00:18:41,600
+El pollo está listo para comer.
+Significa comamos este pollo.
+
+402
+00:18:41,667 --> 00:18:44,267
+O el pollo está listo para comer
+significa que el pollo quiere
+
+403
+00:18:44,333 --> 00:18:46,000
+comer algo.
+
+404
+00:18:46,067 --> 00:18:49,633
+En los lenguajes de programación,
+no hay múltiples significados
+
+405
+00:18:49,700 --> 00:18:50,900
+en un programa que programamos.
+
+406
+00:18:50,967 --> 00:18:53,600
+Porque la computadora, la máquina,
+
+407
+00:18:53,667 --> 00:18:57,933
+el lenguaje sigue las instrucciones
+al pie de la letra,
+
+408
+00:18:58,000 --> 00:19:01,800
+no hay ambigüedad
+sobre lo que tiene que hacer.
+
+409
+00:19:01,867 --> 00:19:03,533
+Sólo sigue a la las instrucciones
+y hace
+
+410
+00:19:03,600 --> 00:19:08,300
+lo que tiene que hacer
+hasta el final, hasta que alcanza
+
+411
+00:19:08,367 --> 00:19:10,000
+el fin del programa.
+
+412
+00:19:10,067 --> 00:19:12,033
+Y los programas
+solo tienen un significado,
+
+413
+00:19:12,100 --> 00:19:14,000
+pero el problema es
+que podría no ser el significado
+
+414
+00:19:14,067 --> 00:19:17,233
+que uno quería que tuviera.
+
+415
+00:19:17,300 --> 00:19:19,700
+Y ahí es cuando las cosas
+empiezan a ir mal.
+
+416
+00:19:19,767 --> 00:19:23,933
+Podemos tener errores sintácticos
+en un programa, errores de ortografía
+
+417
+00:19:24,000 --> 00:19:25,767
+y errores de sangría, cosas así.
+
+418
+00:19:25,833 --> 00:19:27,200
+Y esos son fáciles de detectar.
+
+419
+00:19:27,267 --> 00:19:31,767
+Los errores de semántica estática
+son un 90% fáciles de detectar.
+
+420
+00:19:31,833 --> 00:19:35,733
+Pero el problema viene
+con la semántica.
+
+421
+00:19:35,800 --> 00:19:38,933
+El significado que uno planificaba
+que este programa tuviera
+
+422
+00:19:39,000 --> 00:19:41,700
+podría no ser lo que en realidad
+está haciendo.
+
+423
+00:19:41,767 --> 00:19:44,733
+Y ahí es donde ocurren
+la mayoría de mis errores.
+
+424
+00:19:44,800 --> 00:19:47,067
+Y ahí es donde me frustro
+muchísimo cuando programo.
+
+425
+00:19:47,133 --> 00:19:49,567
+Y probablemente ahí sea
+donde ustedes se frustrarán
+
+426
+00:19:49,633 --> 00:19:51,533
+también porque escriben
+un programa que creen
+
+427
+00:19:51,600 --> 00:19:55,967
+está haciendo una cosa,
+pero o se bloquea de inmediato,
+
+428
+00:19:56,033 --> 00:19:59,467
+o tarda mucho y no se detiene,
+o se cierra,
+
+429
+00:19:59,533 --> 00:20:01,033
+pero les da una respuesta incorrecta.
+
+430
+00:20:01,100 --> 00:20:02,933
+No es lo que estaban esperando.
+
+431
+00:20:03,000 --> 00:20:08,500
+Y hablaremos de esto
+en unas cuantas clases.
+
+432
+00:20:08,567 --> 00:20:10,333
+Así que cuando escribimos
+programas, básicamente
+
+433
+00:20:10,400 --> 00:20:14,067
+estamos escribiendo secuencias
+de definiciones y órdenes.
+
+434
+00:20:14,133 --> 00:20:17,300
+Y vamos a escribir
+estos en un editor de archivos
+
+435
+00:20:17,367 --> 00:20:18,700
+o en un shell.
+
+436
+00:20:18,767 --> 00:20:22,900
+Hoy, para empezar,
+escribiremos directamente en el shell.
+
+437
+00:20:22,967 --> 00:20:26,300
+Y la mitad de mañana,
+escribiremos en el shell
+
+438
+00:20:26,367 --> 00:20:30,767
+porque no vamos a escribir...
+
+439
+00:20:30,833 --> 00:20:33,733
+No vamos a escribir realmente
+muchas líneas de código.
+
+440
+00:20:33,800 --> 00:20:34,733
+Solo vamos a...
+
+441
+00:20:34,800 --> 00:20:39,900
+Voy a mostrarles
+algunas cosas realmente rápidas
+
+442
+00:20:39,967 --> 00:20:42,400
+que podemos hacer
+con el lenguaje Python.
+
+443
+00:20:42,467 --> 00:20:45,667
+Espero que todos hayan instalado
+el entorno
+
+444
+00:20:45,733 --> 00:20:47,400
+de programación.
+
+445
+00:20:47,467 --> 00:20:48,967
+Este es el editor de códigos.
+
+446
+00:20:49,033 --> 00:20:51,700
+Así que mañana,
+empezaremos a trabajar aquí.
+
+447
+00:20:51,767 --> 00:20:54,767
+Pero por hoy,
+solo trabajaremos en el shell.
+
+448
+00:20:54,833 --> 00:20:57,733
+E incluso en el futuro,
+pueden seguir ingresando
+
+449
+00:20:57,800 --> 00:20:58,867
+comandos en el shell.
+
+450
+00:20:58,933 --> 00:21:01,667
+El shell me parece muy útil
+si hay algo realmente
+
+451
+00:21:01,733 --> 00:21:04,167
+rápido que quiero comprobar
+
+452
+00:21:04,233 --> 00:21:06,767
+y no quiero escribir un programa
+y ejecutarlo.
+
+453
+00:21:06,833 --> 00:21:08,333
+Es como un comando simple
+
+454
+00:21:08,400 --> 00:21:09,867
+que quiero comprobar, ver que haga
+
+455
+00:21:09,933 --> 00:21:14,033
+lo quiero antes de insertarlo
+en mi editor de códigos.
+
+456
+00:21:14,100 --> 00:21:19,600
+Así que aquí tenemos esto.
+
+457
+00:21:19,667 --> 00:21:20,867
+Así que el mío es...
+
+458
+00:21:20,933 --> 00:21:23,100
+Usaré el tema blanco
+solo porque me parece
+
+459
+00:21:23,167 --> 00:21:25,233
+que es más fácil para que lo vean.
+
+460
+00:21:25,300 --> 00:21:26,867
+Este es el editor de archivos.
+
+461
+00:21:26,933 --> 00:21:30,167
+Y esto es sólo un montón
+de expresiones o...
+
+462
+00:21:30,233 --> 00:21:32,867
+Sí, un montón de códigos
+que vamos a escribir hoy.
+
+463
+00:21:32,933 --> 00:21:36,067
+Y vamos a escribirlo en el shell hoy,
+esta cosa
+
+464
+00:21:36,133 --> 00:21:37,133
+de aquí a la derecha.
+
+465
+00:21:40,267 --> 00:21:45,233
+¿Qué es exactamente lo que hacemos
+cuando escribimos un programa?
+
+466
+00:21:45,300 --> 00:21:48,167
+Básicamente, vamos a crear
+
+467
+00:21:48,233 --> 00:21:53,067
+objetos dentro de nuestros programas
+y vamos a manipularlos.
+
+468
+00:21:53,133 --> 00:21:54,033
+Eso es todo.
+
+469
+00:21:54,100 --> 00:22:00,267
+Eso es la programación esencialmente.
+
+470
+00:22:00,333 --> 00:22:03,300
+Ahora, cuando creamos objetos,
+
+471
+00:22:03,367 --> 00:22:05,000
+es importante... esto es algo
+
+472
+00:22:05,067 --> 00:22:06,400
+a lo que volveremos una y otra vez
+
+473
+00:22:06,467 --> 00:22:08,700
+en un entorno de más alto nivel.
+
+474
+00:22:08,767 --> 00:22:11,367
+Pero ahora mismo
+lo que quiero que entiendan
+
+475
+00:22:11,433 --> 00:22:16,800
+es que cuando creamos
+un objeto, un objeto tiene un tipo.
+
+476
+00:22:16,867 --> 00:22:20,533
+Y el tipo de objeto le dice a Python
+
+477
+00:22:20,600 --> 00:22:23,800
+las cosas que se te permiten
+hacer con ese objeto.
+
+478
+00:22:23,867 --> 00:22:25,333
+Aquí hay dos ejemplos.
+
+479
+00:22:25,400 --> 00:22:29,033
+El número 30, es un número.
+
+480
+00:22:29,100 --> 00:22:31,400
+El tipo del que hablaremos
+al respecto en un rato.
+
+481
+00:22:31,467 --> 00:22:32,500
+El tipo es un entero.
+
+482
+00:22:32,567 --> 00:22:33,700
+Es un número entero.
+
+483
+00:22:33,767 --> 00:22:35,100
+Pero básicamente, ¿qué cosas
+
+484
+00:22:35,167 --> 00:22:37,500
+podemos hacer con este número entero?
+
+485
+00:22:37,567 --> 00:22:39,033
+Podemos sumarlo a otro número.
+
+486
+00:22:39,100 --> 00:22:40,600
+Podemos restarlo a otro número.
+
+487
+00:22:40,667 --> 00:22:43,033
+Podemos elevarlo a otra potencia.
+
+488
+00:22:43,100 --> 00:22:47,433
+Podemos elevar otro número
+a esta potencia de 30.
+
+489
+00:22:47,500 --> 00:22:50,167
+Un montón de operaciones matemáticas,
+
+490
+00:22:50,233 --> 00:22:52,200
+como uno esperaría.
+
+491
+00:22:52,267 --> 00:22:53,867
+Eso es bastante directo.
+
+492
+00:22:53,933 --> 00:22:57,700
+¿Qué hay de esto de aquí,
+comillas, A mayúscula,
+
+493
+00:22:57,767 --> 00:22:59,133
+N minúscula,
+
+494
+00:22:59,200 --> 00:23:01,533
+A minúscula, comillas?
+
+495
+00:23:01,600 --> 00:23:04,033
+Esto es algo que veremos
+en la próxima clase.
+
+496
+00:23:04,100 --> 00:23:05,200
+Se llama cadena.
+
+497
+00:23:05,267 --> 00:23:07,567
+Y es una secuencia de caracteres.
+
+498
+00:23:07,633 --> 00:23:10,633
+Las comillas le dicen a Python
+que es una secuencia de caracteres.
+
+499
+00:23:10,700 --> 00:23:13,500
+Y los caracteres que la forman
+son A mayúscula, N minúscula,
+
+500
+00:23:13,567 --> 00:23:15,433
+y A minúscula.
+
+501
+00:23:15,500 --> 00:23:18,967
+El tipo de cosas
+que puede hacer con esta cadena
+
+502
+00:23:19,033 --> 00:23:20,933
+no es del mismo tipo
+de cosas que puedo hacer
+
+503
+00:23:21,000 --> 00:23:22,133
+con el número, ¿verdad?
+
+504
+00:23:22,200 --> 00:23:25,433
+Si intentara tomar Ana y dividirlo
+
+505
+00:23:25,500 --> 00:23:28,733
+por la secuencia de caracteres Bob,
+
+506
+00:23:28,800 --> 00:23:31,267
+Python se quejaría mucho
+
+507
+00:23:31,333 --> 00:23:33,000
+porque no puede dividir
+cadena sobre cadena,
+
+508
+00:23:33,067 --> 00:23:34,033
+una secuencia de caracteres.
+
+509
+00:23:34,100 --> 00:23:35,567
+No tiene sentido dividirlo
+
+510
+00:23:35,633 --> 00:23:37,633
+por otra secuencia de caracteres.
+
+511
+00:23:37,700 --> 00:23:40,733
+Del mismo modo, no puedo
+elevar Ana a una potencia.
+
+512
+00:23:40,800 --> 00:23:42,900
+No puedo multiplicar...
+
+513
+00:23:42,967 --> 00:23:45,367
+No puedo multiplicarlo
+por sí mismo, ni cosas así.
+
+514
+00:23:45,433 --> 00:23:47,200
+Pero el tipo de cosas
+que se me permite
+
+515
+00:23:47,267 --> 00:23:48,800
+hacer a una secuencia de caracteres
+
+516
+00:23:48,867 --> 00:23:50,333
+es diferente del tipo de cosas
+
+517
+00:23:50,400 --> 00:23:51,667
+que puedo hacer a un número.
+
+518
+00:23:51,733 --> 00:23:53,833
+Las cosas que puedo hacer
+con una secuencia de caracteres
+
+519
+00:23:53,900 --> 00:23:56,167
+es que puedo decir, bueno,
+¿cuál es el carácter
+
+520
+00:23:56,233 --> 00:23:57,933
+en la primera posición?
+
+521
+00:23:58,000 --> 00:23:59,700
+¿Cuál es el carácter del medio?
+
+522
+00:23:59,767 --> 00:24:02,033
+¿Cuán larga es
+la secuencia de caracteres?
+
+523
+00:24:02,100 --> 00:24:04,400
+¿Cuántos caracteres tengo?
+
+524
+00:24:04,467 --> 00:24:07,300
+Y ahora pueden ver
+que el tipo de objeto
+
+525
+00:24:07,367 --> 00:24:08,500
+es realmente muy importante.
+
+526
+00:24:08,567 --> 00:24:11,900
+Python lo usa para saber
+el tipo de operaciones
+
+527
+00:24:11,967 --> 00:24:13,333
+que puede hacer con él.
+
+528
+00:24:13,400 --> 00:24:16,433
+Y en realidad hay objetos escalares,
+
+529
+00:24:16,500 --> 00:24:19,867
+y estas son las operaciones primitivas
+de Python, números
+
+530
+00:24:19,933 --> 00:24:21,600
+y valores de la verdad.
+
+531
+00:24:21,667 --> 00:24:23,267
+Y hay objetos no escalares.
+
+532
+00:24:23,333 --> 00:24:24,867
+No hablaremos de esos todavía.
+
+533
+00:24:24,933 --> 00:24:26,567
+Hablaremos de esos en algunas clases.
+
+534
+00:24:26,633 --> 00:24:28,500
+Pero estos tienen
+algún tipo de estructura.
+
+535
+00:24:28,567 --> 00:24:30,733
+Así que, por ejemplo,
+una lista de números
+
+536
+00:24:30,800 --> 00:24:33,800
+tiene una estructura porque hay
+un número al principio
+
+537
+00:24:33,867 --> 00:24:36,000
+de la lista, hay un número
+al final de la lista,
+
+538
+00:24:36,067 --> 00:24:36,700
+cosas así.
+
+539
+00:24:36,767 --> 00:24:39,400
+Pero un número en sí mismo
+no tiene una estructura.
+
+540
+00:24:39,467 --> 00:24:42,333
+Es sólo el número.
+
+541
+00:24:42,400 --> 00:24:44,833
+Entonces, ¿cuáles son los tipos
+de los objetos escalares?
+
+542
+00:24:44,900 --> 00:24:46,800
+¿Qué tipos de operaciones primitivas
+hay en Python?
+
+543
+00:24:46,867 --> 00:24:52,600
+Enteros, así que número 5, 0,
+menos 100, 1 millón.
+
+544
+00:24:52,667 --> 00:24:54,933
+Punto flotante es otro tipo.
+
+545
+00:24:55,000 --> 00:24:58,800
+Representa a todos
+los números reales, así que 3.27.
+
+546
+00:24:58,867 --> 00:25:02,533
+2.0 es un punto flotante
+porque tiene un número decimal
+
+547
+00:25:02,600 --> 00:25:04,733
+aunque para nosotros
+solo signifique 2.
+
+548
+00:25:04,800 --> 00:25:07,233
+Pero a Python, si ponemos 2.0,
+
+549
+00:25:07,300 --> 00:25:08,967
+dice que es un tipo de punto flotante.
+
+550
+00:25:09,033 --> 00:25:12,300
+Menos 3,14159, cosas así.
+
+551
+00:25:12,367 --> 00:25:13,800
+Bool es un valor booleano.
+
+552
+00:25:13,867 --> 00:25:15,567
+Representa los valores de la verdad.
+
+553
+00:25:15,633 --> 00:25:20,367
+Y sólo hay dos posibles
+valores para un tipo booleano,
+
+554
+00:25:20,433 --> 00:25:21,400
+Verdadero y Falso.
+
+555
+00:25:21,467 --> 00:25:26,633
+Y tiene que ser con mayúsculas,
+Verdadero y Falso.
+
+556
+00:25:26,700 --> 00:25:31,600
+Y el último es este tipo NingúnTipo.
+
+557
+00:25:31,667 --> 00:25:33,500
+Se llama literalmente NingúnTipo.
+
+558
+00:25:33,567 --> 00:25:36,100
+Y sólo tiene un valor especial,
+Ninguno.
+
+559
+00:25:36,167 --> 00:25:37,900
+No vamos a hablar de eso por ahora,
+
+560
+00:25:37,967 --> 00:25:41,167
+pero lo haremos más adelante.
+
+561
+00:25:41,233 --> 00:25:43,333
+Así que para averiguar
+el tipo de objeto
+
+562
+00:25:43,400 --> 00:25:47,300
+cuando creas ese objeto,
+usas el comando de tipo.
+
+563
+00:25:47,367 --> 00:25:50,367
+Para que podamos decir algo
+como escribir paréntesis.
+
+564
+00:25:50,433 --> 00:25:51,600
+Y esto es un comando.
+
+565
+00:25:51,667 --> 00:25:53,967
+Y dentro de los paréntesis,
+¿de qué quieres encontrar
+
+566
+00:25:54,033 --> 00:25:55,033
+el tipo?
+
+567
+00:25:55,100 --> 00:25:59,067
+Así que si hacemos el tipo de 7,
+me dice que es un entero.
+
+568
+00:25:59,133 --> 00:26:01,033
+Y si quieren hacer
+el mismo comando de nuevo,
+
+569
+00:26:01,100 --> 00:26:02,800
+pulso la flecha arriba,
+y automáticamente
+
+570
+00:26:02,867 --> 00:26:04,500
+pone lo que escribí antes.
+
+571
+00:26:04,567 --> 00:26:07,400
+Y luego si quiero hacer tipo de 0.0,
+
+572
+00:26:07,467 --> 00:26:09,500
+es un punto flotante
+porque hay un punto decimal.
+
+573
+00:26:13,100 --> 00:26:14,467
+Esto es básicamente lo que dije.
+
+574
+00:26:14,533 --> 00:26:16,400
+Así que escribimos esto en el shell.
+
+575
+00:26:16,467 --> 00:26:23,233
+Y el shell nos dice
+cuál es el resultado.
+
+576
+00:26:23,300 --> 00:26:28,100
+Así que sólo para reiterar,
+entero, punto flotante, bool
+
+577
+00:26:28,167 --> 00:26:31,800
+y NingúnTipo son tipos de objetos.
+
+578
+00:26:31,867 --> 00:26:34,633
+Y puede haber
+muchos objetos diferentes
+
+579
+00:26:34,700 --> 00:26:36,800
+que se pueden crear de ese tipo.
+
+580
+00:26:36,867 --> 00:26:38,900
+Si pensamos en eso,
+enteros y puntos flotantes,
+
+581
+00:26:38,967 --> 00:26:41,067
+básicamente tenemos
+un número infinito
+
+582
+00:26:41,133 --> 00:26:43,967
+de objetos que podemos
+crear de esos tipos
+
+583
+00:26:44,033 --> 00:26:48,633
+porque podemos tener 0, 1, 2,
+3, 100, 200, 300, 1 millón,
+
+584
+00:26:48,700 --> 00:26:49,767
+y todos los negativos.
+
+585
+00:26:49,833 --> 00:26:54,433
+Hay casi un número infinito
+de valores u objetos
+
+586
+00:26:54,500 --> 00:26:56,767
+que podemos crear
+del tipo entero y punto flotante.
+
+587
+00:26:56,833 --> 00:27:01,400
+Pero bool, sólo hay dos,
+los valores Verdadero o Falso.
+
+588
+00:27:01,467 --> 00:27:04,867
+Y de NingúnTipo solo hay uno, Ninguno.
+
+589
+00:27:04,933 --> 00:27:07,600
+Así que ese es el tipo,
+y estos son los posibles valores,
+
+590
+00:27:07,667 --> 00:27:11,133
+posibles objetos que podemos crear.
+
+591
+00:27:11,200 --> 00:27:12,300
+Prueben ustedes.
+
+592
+00:27:12,367 --> 00:27:14,633
+Pueden gritar las respuestas.
+
+593
+00:27:14,700 --> 00:27:17,700
+No hay nada que escribir a menos que
+quieran comprobarlo ustedes mismos.
+
+594
+00:27:17,767 --> 00:27:20,133
+¿Cuál es el tipo de 1234?
+
+595
+00:27:20,200 --> 00:27:21,467
+AUDIENCIA: Enteros.
+
+596
+00:27:21,533 --> 00:27:22,533
+ANA BELL: Enteros.
+
+597
+00:27:22,600 --> 00:27:24,667
+¿El tipo de 8.99?
+
+598
+00:27:24,733 --> 00:27:25,433
+Punto flotante.
+
+599
+00:27:25,500 --> 00:27:27,167
+¿El tipo de 9.0?
+
+600
+00:27:27,233 --> 00:27:27,800
+Punto flotante.
+
+601
+00:27:27,867 --> 00:27:29,700
+¿Ese tipo de Verdadero?
+
+602
+00:27:29,767 --> 00:27:30,200
+Bool.
+
+603
+00:27:30,267 --> 00:27:31,667
+¿Y el tipo de Falso?
+
+604
+00:27:31,733 --> 00:27:32,367
+Bool.
+
+605
+00:27:32,433 --> 00:27:33,333
+Perfecto.
+
+606
+00:27:33,400 --> 00:27:35,733
+Si alguna vez se preguntan
+cuál es el tipo de algo,
+
+607
+00:27:35,800 --> 00:27:37,367
+lo escriben aquí.
+
+608
+00:27:37,433 --> 00:27:38,600
+Lo están haciendo bien.
+
+609
+00:27:38,667 --> 00:27:39,633
+El tipo es bool.
+
+610
+00:27:39,700 --> 00:27:43,800
+El tipo verdadero en minúscula
+es un error,
+
+611
+00:27:43,867 --> 00:27:46,333
+solo quería señalar eso
+solo para reiterar el hecho
+
+612
+00:27:46,400 --> 00:27:48,933
+de que las mayúsculas
+son importantes en Python.
+
+613
+00:27:49,000 --> 00:27:51,200
+Por cierto,
+este es nuestro primero error.
+
+614
+00:27:51,267 --> 00:27:52,533
+Muy emocionante.
+
+615
+00:27:52,600 --> 00:27:55,133
+El error NameError
+es un error de nombre
+
+616
+00:27:55,200 --> 00:28:00,100
+y este es el mensaje asociado a él.
+
+617
+00:28:00,167 --> 00:28:04,433
+También es algo especial en Python
+
+618
+00:28:04,500 --> 00:28:06,433
+cuando hay cosas
+codificadas por colores.
+
+619
+00:28:06,500 --> 00:28:10,367
+Verdadero en mayúsculas
+y falso en mayúsculas
+
+620
+00:28:10,433 --> 00:28:13,233
+están en azul oscuro aquí,
+mientras que cualquier cosa
+
+621
+00:28:13,300 --> 00:28:17,833
+que no sea algo especial
+en Python es de color negro.
+
+622
+00:28:17,900 --> 00:28:19,833
+Así que el tipo
+es un comando especial.
+
+623
+00:28:19,900 --> 00:28:23,633
+Esto es un punto flotante,
+así que están codificados por color.
+
+624
+00:28:23,700 --> 00:28:25,033
+Bien.
+
+625
+00:28:25,100 --> 00:28:27,600
+Así que una vez que creamos
+objetos, una cosa
+
+626
+00:28:27,667 --> 00:28:30,233
+que podemos hacer con estos
+objetos es convertirlo, cast,
+
+627
+00:28:30,300 --> 00:28:31,600
+a un tipo diferente.
+
+628
+00:28:31,667 --> 00:28:36,233
+Ahora, esto es tal vez
+un poco confuso
+
+629
+00:28:36,300 --> 00:28:39,600
+porque no vamos a cambiar
+realmente el objeto
+
+630
+00:28:39,667 --> 00:28:40,667
+una vez que lo creamos.
+
+631
+00:28:40,733 --> 00:28:46,133
+Una vez que creamos el entero 3,
+está en la memoria.
+
+632
+00:28:46,200 --> 00:28:49,833
+Si hacemos cast a ese entero
+a una versión flotante de él,
+
+633
+00:28:49,900 --> 00:28:52,167
+estamos creando un nuevo
+objeto en la memoria.
+
+634
+00:28:52,233 --> 00:28:53,233
+No vamos a cambiar el 3.
+
+635
+00:28:53,300 --> 00:28:55,233
+El 3 ya existe.
+
+636
+00:28:55,300 --> 00:28:57,567
+Solo vamos a crear
+la versión flotante de él
+
+637
+00:28:57,633 --> 00:29:00,367
+y almacenarla como un nuevo objeto
+en la memoria.
+
+638
+00:29:00,433 --> 00:29:03,733
+Así que cuando hacemos
+el 3 punto flotante, eso es un comando
+
+639
+00:29:03,800 --> 00:29:08,067
+que me da la versión de punto flotante
+del entero 3.
+
+640
+00:29:08,133 --> 00:29:10,667
+Así que eso me dará 3.0.
+
+641
+00:29:10,733 --> 00:29:16,700
+Por ejemplo, esto es lo que tenía,
+punto flotante 3.
+
+642
+00:29:16,767 --> 00:29:18,900
+El resultado es 3.0.
+
+643
+00:29:18,967 --> 00:29:26,067
+Si hago entero de 5.2, lo trunca
+
+644
+00:29:26,133 --> 00:29:29,033
+y me da la parte entera
+de este punto flotante.
+
+645
+00:29:29,100 --> 00:29:33,500
+Si hago el número entero de 5.9,
+lo sigue truncando
+
+646
+00:29:33,567 --> 00:29:35,467
+y me da la versión entera
+de este punto flotante.
+
+647
+00:29:35,533 --> 00:29:37,600
+No redondea.
+
+648
+00:29:37,667 --> 00:29:42,133
+Sólo pido la versión entera
+de este punto flotante.
+
+649
+00:29:42,200 --> 00:29:45,700
+Algunas operaciones como redondear
+
+650
+00:29:45,767 --> 00:29:48,800
+tienen una acción de cast
+implícita en ellas.
+
+651
+00:29:48,867 --> 00:29:53,500
+Si redondeo 5.9, en realidad,
+va a redondearlo a 6.0
+
+652
+00:29:53,567 --> 00:29:55,633
+y luego le hará un cast a un entero.
+
+653
+00:29:55,700 --> 00:29:58,500
+Así que observen
+que no me da como resultado 6.0.
+
+654
+00:29:58,567 --> 00:30:00,633
+Luego lo redondea a sólo 6.
+
+655
+00:30:03,567 --> 00:30:08,033
+Eso es básicamente
+lo que dije en el ejemplo.
+
+656
+00:30:08,100 --> 00:30:10,867
+Así que prueben ustedes.
+
+657
+00:30:10,933 --> 00:30:12,733
+¿Cuáles son los tipos
+de los siguientes?
+
+658
+00:30:12,800 --> 00:30:14,767
+No necesito los valores
+sino los tipos.
+
+659
+00:30:14,833 --> 00:30:23,567
+Para el tipo punto flotante de 123,
+¿cuál es el tipo de eso?
+
+660
+00:30:23,633 --> 00:30:24,933
+Punto flotante, sí, correcto.
+
+661
+00:30:25,000 --> 00:30:26,800
+Sí.
+
+662
+00:30:26,867 --> 00:30:28,767
+¿Qué pasa si redondeo 7.9?
+
+663
+00:30:28,833 --> 00:30:30,100
+¿Cuál es el tipo del resultado?
+
+664
+00:30:30,167 --> 00:30:31,000
+Entero, sí.
+
+665
+00:30:31,067 --> 00:30:35,633
+¿Y si creo un punto flotante
+del redondeo de 7.2?
+
+666
+00:30:35,700 --> 00:30:36,333
+AUDIENCIA: Punto flotante.
+
+667
+00:30:36,400 --> 00:30:37,867
+ANA BELL: Sí, bien.
+
+668
+00:30:37,933 --> 00:30:39,233
+El punto flotante sería 7.0.
+
+669
+00:30:39,300 --> 00:30:41,500
+¿Y el entero de 7.2?
+
+670
+00:30:41,567 --> 00:30:42,867
+AUDIENCIA: 7.
+
+671
+00:30:42,933 --> 00:30:43,767
+Entero.
+
+672
+00:30:43,833 --> 00:30:44,967
+ANA BELL: Entero, sí, correcto.
+
+673
+00:30:45,033 --> 00:30:46,433
+Quiero el tipo no el valor.
+
+674
+00:30:46,500 --> 00:30:51,433
+Y el entero de 7.9 es un entero,
+correcto.
+
+675
+00:30:51,500 --> 00:30:54,000
+Impresionante, bien.
+
+676
+00:30:54,067 --> 00:30:57,000
+Bien, hemos creado
+un montón de objetos.
+
+677
+00:30:57,067 --> 00:30:58,900
+Sabemos que podemos
+crear un montón de objetos
+
+678
+00:30:58,967 --> 00:30:59,600
+en los programas.
+
+679
+00:30:59,667 --> 00:31:01,100
+¿Qué hacemos con ellos?
+
+680
+00:31:01,167 --> 00:31:05,300
+Podemos combinarlos
+para formar expresiones.
+
+681
+00:31:05,367 --> 00:31:08,733
+Digamos que tenemos 3 más 2.
+
+682
+00:31:08,800 --> 00:31:11,433
+Tengo un objeto, operador, objeto.
+
+683
+00:31:11,500 --> 00:31:13,467
+Genial, sintácticamente válida
+en Python
+
+684
+00:31:13,533 --> 00:31:15,833
+y no tiene errores
+de semántica estática.
+
+685
+00:31:15,900 --> 00:31:21,067
+Así que si hago eso en Python,
+va a estar bien.
+
+686
+00:31:21,133 --> 00:31:25,033
+3 más 2 = 5.
+
+687
+00:31:25,100 --> 00:31:31,367
+Y el tipo de 3 más 2 es un entero.
+
+688
+00:31:31,433 --> 00:31:32,900
+Básicamente, lo que he hecho aquí,
+
+689
+00:31:32,967 --> 00:31:38,267
+es poner una expresión
+dentro de este tipo de comando.
+
+690
+00:31:38,333 --> 00:31:39,700
+Y eso está bien.
+
+691
+00:31:39,767 --> 00:31:41,467
+Eso, de hecho, se recomienda
+en Python.
+
+692
+00:31:41,533 --> 00:31:44,600
+No hay que solo calcular
+y luego insertar.
+
+693
+00:31:44,667 --> 00:31:45,967
+Eso sería muy, muy tedioso.
+
+694
+00:31:46,033 --> 00:31:50,300
+Pueden insertar expresiones
+en muchos lugares diferentes.
+
+695
+00:31:50,367 --> 00:31:53,433
+Así que aquí tenemos 3 más 2,
+5 dividido 3.
+
+696
+00:31:53,500 --> 00:31:56,567
+De nuevo, si hacemos 5 dividido 3
+tiene este valor decimal.
+
+697
+00:31:56,633 --> 00:31:59,400
+Y el resultado
+tiene un punto flotante.
+
+698
+00:31:59,467 --> 00:32:01,767
+Es de tipo punto flotante.
+
+699
+00:32:01,833 --> 00:32:03,300
+Así que lo que es importante recordar
+
+700
+00:32:03,367 --> 00:32:08,333
+cuando hacemos expresiones
+es que Python lee la expresión,
+
+701
+00:32:08,400 --> 00:32:12,600
+pero no almacena
+la expresión en la memoria.
+
+702
+00:32:12,667 --> 00:32:15,000
+Lo que hace es leer la expresión,
+
+703
+00:32:15,067 --> 00:32:18,267
+lo evalúa a un solo valor,
+
+704
+00:32:18,333 --> 00:32:22,000
+y luego almacena
+el valor del resultado en la memoria.
+
+705
+00:32:22,067 --> 00:32:23,633
+Así que nunca se almacena
+la expresión.
+
+706
+00:32:23,700 --> 00:32:27,600
+Evalúa la expresión
+y luego almacena el valor.
+
+707
+00:32:27,667 --> 00:32:30,600
+Esta es la sintaxis de una expresión:
+objeto, operador,
+
+708
+00:32:30,667 --> 00:32:33,100
+objeto, como acabamos de ver.
+
+709
+00:32:33,167 --> 00:32:36,600
+Y eso es realmente...
+y la idea que dije antes,
+
+710
+00:32:36,667 --> 00:32:40,267
+donde Python almacena
+valores de expresiones,
+
+711
+00:32:40,333 --> 00:32:45,400
+no las expresiones en sí,
+es muy, muy importante.
+
+712
+00:32:45,467 --> 00:32:48,367
+Así que esta es mi primera
+diapositiva de una gran idea.
+
+713
+00:32:48,433 --> 00:32:50,533
+Decidí insertar estas diapositivas
+
+714
+00:32:50,600 --> 00:32:53,533
+para enfatizar
+la importancia de varios conceptos.
+
+715
+00:32:53,600 --> 00:32:55,167
+Así que espero que este sea uno.
+
+716
+00:32:55,233 --> 00:32:57,633
+Así que estamos tomando expresiones.
+
+717
+00:32:57,700 --> 00:32:59,267
+Pueden ser tan complejas como quieran.
+
+718
+00:32:59,333 --> 00:33:01,800
+Podemos usar paréntesis, un montón.
+
+719
+00:33:01,867 --> 00:33:05,000
+No tiene que ser
+objeto, operador, objeto.
+
+720
+00:33:05,067 --> 00:33:07,367
+Puede ser más complejo que eso.
+
+721
+00:33:07,433 --> 00:33:10,533
+Pero más allá de cuán completa
+sea esa expresión,
+
+722
+00:33:10,600 --> 00:33:14,667
+la evaluamos,
+y la remplazamos por un valor.
+
+723
+00:33:14,733 --> 00:33:18,300
+Y la expresión puede ser algo así.
+
+724
+00:33:18,367 --> 00:33:20,867
+No tiene que ser solo
+algo que sea matemático.
+
+725
+00:33:20,933 --> 00:33:22,600
+Esto era una expresión matemática,
+
+726
+00:33:22,667 --> 00:33:24,333
+pero esto también es una expresión.
+
+727
+00:33:24,400 --> 00:33:25,600
+Y lo evalúa.
+
+728
+00:33:25,667 --> 00:33:31,167
+Así que todo esto evalúa
+a esta palabra, esta palabra
+
+729
+00:33:31,233 --> 00:33:34,200
+que representa el tipo entero.
+
+730
+00:33:34,267 --> 00:33:36,600
+Aquí hay más ejemplos.
+
+731
+00:33:36,667 --> 00:33:39,400
+3 más 2, otra vez.
+
+732
+00:33:39,467 --> 00:33:42,200
+Tenemos estos ejemplos
+con los paréntesis,
+
+733
+00:33:42,267 --> 00:33:44,167
+4 más 2 por 6 menos 1, obviamente,
+
+734
+00:33:44,233 --> 00:33:46,067
+nos da el número 35.
+
+735
+00:33:46,133 --> 00:33:49,067
+Y luego podemos insertar
+expresiones donde queramos.
+
+736
+00:33:49,133 --> 00:33:51,867
+Así que aquí estoy insertando
+esa expresión específica
+
+737
+00:33:51,933 --> 00:33:54,167
+en el comando de tipo.
+
+738
+00:33:54,233 --> 00:33:56,867
+Y esto también es una expresión,
+como acabo de decir.
+
+739
+00:33:56,933 --> 00:34:00,500
+Y su resultado es entero.
+
+740
+00:34:00,567 --> 00:34:04,000
+Y de manera similar, también podemos
+insertar esa expresión aquí.
+
+741
+00:34:04,067 --> 00:34:06,833
+Y luego podemos meter eso en un cast.
+
+742
+00:34:06,900 --> 00:34:08,433
+Y nos da un punto flotante.
+
+743
+00:34:08,500 --> 00:34:09,733
+¿Sí?
+
+744
+00:34:09,800 --> 00:34:11,867
+AUDIENCIA: Así que cuando estás
+insertando expresiones
+
+745
+00:34:11,933 --> 00:34:14,967
+[INAUDIBLE]
+
+746
+00:34:15,033 --> 00:34:16,199
+[INAUDIBLE]
+
+747
+00:34:16,266 --> 00:34:17,867
+ANA BELL:
+Cuando insertas... lo siento,
+
+748
+00:34:17,933 --> 00:34:19,233
+¿cuándo estás insertando qué?
+
+749
+00:34:19,300 --> 00:34:21,367
+AUDIENCIA: Bueno, como dijiste
+que son expresiones,
+
+750
+00:34:21,433 --> 00:34:24,500
+y dijiste que necesitabas
+objeto, operador, objeto,
+
+751
+00:34:24,567 --> 00:34:25,900
+expresión, tipo.
+
+752
+00:34:25,967 --> 00:34:28,033
+¿Cuáles serían los operadores
+en este caso?
+
+753
+00:34:28,100 --> 00:34:30,100
+ANA BELL: Sí, entiendo.
+
+754
+00:34:30,167 --> 00:34:31,367
+AUDIENCIA: ¿Cómo se definen?
+
+755
+00:34:31,433 --> 00:34:34,367
+ANA BELL: Sí, es una buena pregunta.
+
+756
+00:34:34,433 --> 00:34:41,833
+En este caso en particular,
+el tipo y el punto flotante no son...
+
+757
+00:34:41,900 --> 00:34:44,867
+No hay operador,
+en este caso en particular.
+
+758
+00:34:44,933 --> 00:34:48,132
+Es más como un comando
+que nos da un resultado.
+
+759
+00:34:48,199 --> 00:34:51,132
+Pero hay de todas formas...
+
+760
+00:34:51,199 --> 00:34:54,433
+hay un resultado que nos da.
+
+761
+00:34:54,500 --> 00:34:56,867
+Así que podemos tomar
+el resultado de esto
+
+762
+00:34:56,933 --> 00:35:00,167
+y guardarlo en otro lugar.
+
+763
+00:35:00,233 --> 00:35:04,067
+Lo siento, sí, el ejemplo
+que en la diapositiva anterior
+
+764
+00:35:04,133 --> 00:35:06,300
+era sólo un ejemplo de una expresión
+
+765
+00:35:06,367 --> 00:35:08,633
+donde podríamos hacer
+objeto, operador, objeto.
+
+766
+00:35:08,700 --> 00:35:09,700
+Sí.
+
+767
+00:35:14,833 --> 00:35:16,433
+Sí, así que cuando tengamos estos...
+
+768
+00:35:16,500 --> 00:35:19,400
+supongo que funciona
+para expresiones matemáticas.
+
+769
+00:35:19,467 --> 00:35:21,700
+Las expresiones matemáticas
+se leen de izquierda a derecha,
+
+770
+00:35:21,767 --> 00:35:22,533
+como en matemáticas.
+
+771
+00:35:22,600 --> 00:35:29,100
+Los paréntesis pueden anular
+ciertos precedentes.
+
+772
+00:35:29,167 --> 00:35:33,200
+Si tenemos comandos
+que tienen cálculos,
+
+773
+00:35:33,267 --> 00:35:36,233
+entonces tenemos este comando
+con los paréntesis.
+
+774
+00:35:36,300 --> 00:35:39,067
+Y evaluamos lo que hay
+dentro de los paréntesis primero.
+
+775
+00:35:39,133 --> 00:35:42,300
+Trabajamos de adentro hacia afuera
+en ese caso en particular.
+
+776
+00:35:45,133 --> 00:35:46,500
+Aquí hay algunos ejemplos.
+
+777
+00:35:46,567 --> 00:35:47,633
+Prueben ustedes esto.
+
+778
+00:35:47,700 --> 00:35:50,467
+Podemos escribir estos
+en nuestra consola.
+
+779
+00:35:50,533 --> 00:35:53,500
+¿Cuáles son los valores
+de las siguientes expresiones?
+
+780
+00:35:53,567 --> 00:35:57,567
+Entonces,
+13 menos 4 dividido 12 por 12.
+
+781
+00:35:57,633 --> 00:35:58,633
+Podemos probar eso.
+
+782
+00:36:03,300 --> 00:36:04,733
+Es lo primero que se me ocurre,
+
+783
+00:36:04,800 --> 00:36:05,900
+tendremos que escribirlo.
+
+784
+00:36:05,967 --> 00:36:07,667
+0.0625, bien.
+
+785
+00:36:07,733 --> 00:36:10,900
+Así que el valor de esa expresión
+es un punto flotante.
+
+786
+00:36:10,967 --> 00:36:12,100
+0.0625.
+
+787
+00:36:12,167 --> 00:36:17,433
+¿Cuál es el valor
+del tipo de expresión 4 por 3?
+
+788
+00:36:17,500 --> 00:36:18,433
+AUDIENCIA: Entero.
+
+789
+00:36:18,500 --> 00:36:19,267
+ANA BELL: Entero, sí.
+
+790
+00:36:19,333 --> 00:36:23,633
+¿Y el tipo de la expresión 4.0 por 3?
+
+791
+00:36:23,700 --> 00:36:24,367
+AUDIENCIA: Punto flotante.
+
+792
+00:36:24,433 --> 00:36:26,300
+ANA BELL: Sí, correcto.
+
+793
+00:36:26,367 --> 00:36:27,133
+Muy bien.
+
+794
+00:36:27,200 --> 00:36:29,933
+Así que el tipo de 4 por 3 es entero.
+
+795
+00:36:30,000 --> 00:36:32,500
+Pero 4.0 por 3 es un punto flotante.
+
+796
+00:36:32,567 --> 00:36:33,433
+Bien.
+
+797
+00:36:33,500 --> 00:36:37,267
+Y luego, ¿qué hay del entero
+de la mitad o de 1 sobre 2?
+
+798
+00:36:40,500 --> 00:36:42,300
+AUDIENCIA: Es 0.
+
+799
+00:36:42,367 --> 00:36:44,967
+ANA BELL: Sí, exactamente, es 0.
+
+800
+00:36:45,033 --> 00:36:50,167
+Sí, porque es 0,5 y lo truncamos a 0.
+
+801
+00:36:50,233 --> 00:36:52,700
+La razón por la que puse esto aquí
+es porque lleva muy bien
+
+802
+00:36:52,767 --> 00:36:54,000
+a esta diapositiva.
+
+803
+00:36:54,067 --> 00:36:56,233
+No tienen que memorizar estas reglas.
+
+804
+00:36:56,300 --> 00:36:59,267
+Siempre se pueden ver en la consola.
+
+805
+00:36:59,333 --> 00:37:01,433
+Pero hay algunos
+reglas para los tipos de resultado
+
+806
+00:37:01,500 --> 00:37:03,167
+cuando hacemos operaciones.
+
+807
+00:37:03,233 --> 00:37:06,933
+Así que cuando hagamos
+operaciones con números,
+
+808
+00:37:07,000 --> 00:37:11,667
+suma, resta, y multiplicación siempre
+
+809
+00:37:11,733 --> 00:37:15,467
+van a dar un entero
+y ambos operadores son enteros.
+
+810
+00:37:15,533 --> 00:37:17,333
+Si uno es un punto flotante
+o ambos lo son,
+
+811
+00:37:17,400 --> 00:37:19,333
+entonces me da un punto flotante.
+
+812
+00:37:19,400 --> 00:37:20,767
+La división es diferente.
+
+813
+00:37:20,833 --> 00:37:24,500
+No importa los tipos que dividas,
+siempre tendrás un punto flotante.
+
+814
+00:37:27,200 --> 00:37:30,033
+Ahora, ¿qué hay
+de estas // y este porcentaje?
+
+815
+00:37:30,100 --> 00:37:32,200
+Estas son en realidad
+operaciones útiles.
+
+816
+00:37:32,267 --> 00:37:35,033
+Van un poco de la mano
+con la división.
+
+817
+00:37:35,100 --> 00:37:41,667
+Así que cuando hago 5 dividido 3,
+es este 1.667.
+
+818
+00:37:41,733 --> 00:37:48,033
+// es básicamente un piso
+o un obtener la parte entera
+
+819
+00:37:48,100 --> 00:37:49,200
+de la división.
+
+820
+00:37:49,267 --> 00:37:52,400
+Así que 5//3 me da uno.
+
+821
+00:37:52,467 --> 00:37:57,567
+Trunca la fracción.
+
+822
+00:37:57,633 --> 00:38:01,067
+El porcentaje me da el resto.
+
+823
+00:38:01,133 --> 00:38:05,567
+Así que 5%3 me da el resto
+cuando divido 5 por 3.
+
+824
+00:38:05,633 --> 00:38:09,467
+Así que me va a dar un número entero.
+
+825
+00:38:09,533 --> 00:38:12,367
+Así que eso va a ser 2 porque quedan 2
+
+826
+00:38:12,433 --> 00:38:15,367
+cuando hago 5 dividido 3.
+
+827
+00:38:15,433 --> 00:38:17,733
+Así que estas operaciones
+son muy útiles,
+
+828
+00:38:17,800 --> 00:38:23,133
+el // y el porcentaje,
+para programas matemáticos.
+
+829
+00:38:23,200 --> 00:38:25,833
+Lo último es el **,
+
+830
+00:38:25,900 --> 00:38:30,267
+como denotamos potencia,
+potenciación, un poco diferente
+
+831
+00:38:30,333 --> 00:38:32,900
+de lo que se suele hacer
+en matemáticas.
+
+832
+00:38:32,967 --> 00:38:36,900
+Así que 2 elevado al cubo, 8.
+
+833
+00:38:36,967 --> 00:38:39,567
+2 elevado a la 3.0, 8.0.
+
+834
+00:38:39,633 --> 00:38:45,000
+Y las reglas para entero
+división, por ciento,
+
+835
+00:38:45,067 --> 00:38:48,900
+y la potenciación son solo
+como la suma, la resta,
+
+836
+00:38:48,967 --> 00:38:49,533
+multiplicación.
+
+837
+00:38:49,600 --> 00:38:52,567
+Si uno es un punto flotante,
+el resultado también lo será.
+
+838
+00:38:57,033 --> 00:38:58,033
+Sí.
+
+839
+00:39:00,267 --> 00:39:04,200
+Bien, hablamos del tipo de resultado.
+
+840
+00:39:04,267 --> 00:39:06,033
+Así que creo que brevemente
+mencionamos esto.
+
+841
+00:39:06,100 --> 00:39:09,233
+La precedencia del operador
+es exponenciación y luego
+
+842
+00:39:09,300 --> 00:39:12,867
+multiplicación, división,
+por ciento o resto
+
+843
+00:39:12,933 --> 00:39:14,467
+en el siguiente nivel, y luego suma,
+
+844
+00:39:14,533 --> 00:39:15,667
+resta en la parte inferior.
+
+845
+00:39:15,733 --> 00:39:20,433
+Pero siempre se pueden anular
+estos usando paréntesis.
+
+846
+00:39:20,500 --> 00:39:24,733
+¿Hay alguna pregunta
+antes de continuar?
+
+847
+00:39:24,800 --> 00:39:25,467
+Sí.
+
+848
+00:39:25,533 --> 00:39:27,700
+AUDIENCIA:
+¿Por qué la división siempre
+
+849
+00:39:27,767 --> 00:39:30,033
+resulta en un punto de flotación
+si tienes 9 por 3
+
+850
+00:39:30,100 --> 00:39:32,267
+y eso es [INAUDIBLE]?
+¿Por qué [INAUDIBLE]?
+
+851
+00:39:32,333 --> 00:39:34,567
+ANA BELL:
+Sí, la pregunta es ¿por qué siempre
+
+852
+00:39:34,633 --> 00:39:36,333
+resulta en un punto de flotación?
+
+853
+00:39:36,400 --> 00:39:40,467
+Si no lo hago, creo que la operación
+en sí misma tendría
+
+854
+00:39:40,533 --> 00:39:43,700
+que hacer trabajo extra para averiguar
+si es un número entero
+
+855
+00:39:43,767 --> 00:39:44,433
+o no.
+
+856
+00:39:44,500 --> 00:39:49,333
+Así que creo que es más fácil
+que siempre dé un punto de flotación,
+
+857
+00:39:49,400 --> 00:39:50,333
+supongo.
+
+858
+00:39:50,400 --> 00:39:54,167
+En versiones anteriores de Python,
+la / era en realidad,
+
+859
+00:39:54,233 --> 00:39:58,033
+creo que la división entera,
+lo cual es superilógico,
+
+860
+00:39:58,100 --> 00:39:59,967
+porque uno usaría eso en su programa.
+
+861
+00:40:00,033 --> 00:40:01,800
+Y uno haría una división
+de enteros básicamente
+
+862
+00:40:01,867 --> 00:40:03,267
+y las cosas saldrían mal.
+
+863
+00:40:03,333 --> 00:40:08,233
+Pero es solo una opción de diseño
+en nombre de los programadores.
+
+864
+00:40:08,300 --> 00:40:11,567
+¿Alguna otra pregunta hasta ahora?
+
+865
+00:40:11,633 --> 00:40:15,033
+Bien, tenemos muchos objetos.
+
+866
+00:40:15,100 --> 00:40:18,833
+Los objetos tienen diferentes tipos,
+puntos de flotación, enteros,
+
+867
+00:40:18,900 --> 00:40:20,067
+booleanos.
+
+868
+00:40:20,133 --> 00:40:22,233
+¿Qué podemos hacer con ellos?
+
+869
+00:40:22,300 --> 00:40:24,667
+Hasta ahora,
+están solo como esperando ahí,
+
+870
+00:40:24,733 --> 00:40:26,533
+y podemos conseguir
+propiedades sobre ellos.
+
+871
+00:40:26,600 --> 00:40:28,667
+Pero lo que nos gustaría
+es escribir programas,
+
+872
+00:40:28,733 --> 00:40:30,533
+Básicamente
+tratar de automatizar algunas cosas
+
+873
+00:40:30,600 --> 00:40:32,867
+sobre estos objetos, manipularlos
+
+874
+00:40:32,933 --> 00:40:36,667
+para ayudarnos a lograr
+un programa más complicado
+
+875
+00:40:36,733 --> 00:40:38,300
+e interesante.
+
+876
+00:40:38,367 --> 00:40:42,700
+Así que lo que podemos hacer
+para conseguir ese objetivo
+
+877
+00:40:42,767 --> 00:40:48,200
+es empezar a asignar nombres
+a algunos de estos objetos.
+
+878
+00:40:48,267 --> 00:40:54,800
+Si creo un objeto para pi
+en mi programa a 20 lugares decimales
+
+879
+00:40:54,867 --> 00:40:57,733
+de alguna manera,
+y tengo ese número en mi programa,
+
+880
+00:40:57,800 --> 00:40:59,333
+ese punto flotante en mi programa...
+
+881
+00:40:59,400 --> 00:41:02,400
+si quiero usar ese número
+en muchos lugares diferentes
+
+882
+00:41:02,467 --> 00:41:04,600
+en mi programa,
+tendría que copiarlo y pegarlo
+
+883
+00:41:04,667 --> 00:41:10,267
+un montón de veces,
+lo cual es muy tedioso,
+
+884
+00:41:10,333 --> 00:41:12,567
+ocurrirán muchos errores.
+
+885
+00:41:12,633 --> 00:41:13,667
+No quiero hacer eso.
+
+886
+00:41:13,733 --> 00:41:16,300
+Así que en vez de eso,
+lo que sí puedo es dar un nombre
+
+887
+00:41:16,367 --> 00:41:21,033
+a este ridículamente largo
+valor de pi llamado pi.
+
+888
+00:41:21,100 --> 00:41:23,400
+Puedo simplemente
+usar este nombre en cualquier lugar.
+
+889
+00:41:23,467 --> 00:41:26,233
+Quiero tomar ese ridículamente
+largo valor para pi
+
+890
+00:41:26,300 --> 00:41:27,433
+en mi programa.
+
+891
+00:41:27,500 --> 00:41:29,800
+Es mucho más fácil de leer.
+
+892
+00:41:29,867 --> 00:41:32,267
+Es mucho más fácil para mí
+escribir este programa.
+
+893
+00:41:32,333 --> 00:41:38,700
+Y así tendré un programa
+realmente limpio y bueno.
+
+894
+00:41:38,767 --> 00:41:40,867
+Así que lo que podemos hacer
+es que podemos empezar
+
+895
+00:41:40,933 --> 00:41:45,533
+diciendo que se hará referencia
+al punto flotante 0.001 por el nombre
+
+896
+00:41:45,600 --> 00:41:52,733
+"pequeño" o se hará referencia
+al 100.4 por el nombre “temp”.
+
+897
+00:41:52,800 --> 00:41:56,033
+Así que lo que queremos hacer es crear
+estas cosas llamadas variables.
+
+898
+00:41:56,100 --> 00:42:00,167
+Y una variable es diferente
+en informática
+
+899
+00:42:00,233 --> 00:42:02,733
+de una variable matemática
+o las variables
+
+900
+00:42:02,800 --> 00:42:04,300
+que conocen hasta ahora en matemática.
+
+901
+00:42:04,367 --> 00:42:06,500
+Las variables matemáticas
+vuelven a la idea
+
+902
+00:42:06,567 --> 00:42:09,467
+de conocimiento declarativo,
+una afirmación declarativa.
+
+903
+00:42:09,533 --> 00:42:12,400
+Pueden tener algo
+como A más B es igual a B menos 1
+
+904
+00:42:12,467 --> 00:42:16,800
+en matemática, o X es igual a...
+o X veces X es igual a Y,
+
+905
+00:42:16,867 --> 00:42:18,967
+y eso está perfectamente bien.
+
+906
+00:42:19,033 --> 00:42:22,600
+En matemática, básicamente decimos
+que la variable X representa
+
+907
+00:42:22,667 --> 00:42:24,900
+todas las raíces cuadradas de Y.
+
+908
+00:42:24,967 --> 00:42:27,733
+Eso no va a servir en informática.
+
+909
+00:42:27,800 --> 00:42:30,633
+En informática no tenemos...
+
+910
+00:42:30,700 --> 00:42:32,200
+no tenemos conocimiento declarativo.
+
+911
+00:42:32,267 --> 00:42:33,333
+Hay conocimiento imperativo.
+
+912
+00:42:33,400 --> 00:42:35,700
+En informática trabajamos
+
+913
+00:42:35,767 --> 00:42:39,733
+con un montón
+de declaraciones de asignación.
+
+914
+00:42:39,800 --> 00:42:42,300
+Así que lo que podemos hacer
+en informática
+
+915
+00:42:42,367 --> 00:42:47,667
+es que vamos a básicamente
+a unir un valor a una variable.
+
+916
+00:42:47,733 --> 00:42:49,700
+Así que vamos a decir
+que el nombre de esta variable
+
+917
+00:42:49,767 --> 00:42:50,800
+está unido a este valor.
+
+918
+00:42:50,867 --> 00:42:52,567
+Cada vez que quiero tomar este valor,
+
+919
+00:42:52,633 --> 00:42:55,033
+Voy a invocar el nombre
+de esta variable.
+
+920
+00:42:55,100 --> 00:42:56,500
+Aquí hay algunos ejemplos.
+
+921
+00:42:56,567 --> 00:42:59,833
+Tengo un A es igual a B más 1.
+
+922
+00:42:59,900 --> 00:43:03,200
+La cosa a la derecha
+evaluará hasta algún valor
+
+923
+00:43:03,267 --> 00:43:09,000
+mientras tenga algo
+para lo que B tenga un valor.
+
+924
+00:43:09,067 --> 00:43:11,467
+Tengo aquí que M es igual a 10.
+
+925
+00:43:11,533 --> 00:43:12,867
+Así que M es una variable.
+
+926
+00:43:12,933 --> 00:43:14,800
+Su valor es de 10.
+
+927
+00:43:14,867 --> 00:43:18,933
+Tengo que F es igual a M por 9.98.
+
+928
+00:43:19,000 --> 00:43:21,567
+Así que de nuevo, tengo una expresión
+a la derecha,
+
+929
+00:43:21,633 --> 00:43:22,667
+y eso está bien.
+
+930
+00:43:22,733 --> 00:43:27,267
+Voy a usar el valor de 10,
+así que el valor de F será de 99.8.
+
+931
+00:43:27,333 --> 00:43:28,133
+Sí.
+
+932
+00:43:28,200 --> 00:43:32,500
+AUDIENCIA:
+¿Puedes poner así que para...
+
+933
+00:43:32,567 --> 00:43:34,233
+¿Es como este único valor de M?
+
+934
+00:43:34,300 --> 00:43:35,833
+¿O puede ser que sea
+
+935
+00:43:35,900 --> 00:43:38,300
+cualquier valor de M asignado
+recientemente?
+
+936
+00:43:38,367 --> 00:43:38,933
+ANA BELL: Sí.
+
+937
+00:43:39,000 --> 00:43:42,567
+La pregunta es ¿puede M tener
+el valor que sea recientemente?
+
+938
+00:43:42,633 --> 00:43:45,267
+Así que en este caso en particular,
+sólo tengo estas dos líneas.
+
+939
+00:43:45,333 --> 00:43:47,167
+Y M será lo que sea que sea 10.
+
+940
+00:43:47,233 --> 00:43:50,967
+Pero veremos en un par de clases
+que podemos escribir
+
+941
+00:43:51,033 --> 00:43:53,667
+un bucle donde cambiamos M.
+
+942
+00:43:53,733 --> 00:43:58,000
+Y luego cada vez que cambiamos M,
+inmediatamente calculamos F.
+
+943
+00:43:58,067 --> 00:44:01,267
+Y luego calcularía F
+basándose en el nuevo valor de M.
+
+944
+00:44:01,333 --> 00:44:05,367
+Pero si tenemos estas dos líneas,
+eso es todo lo que hay.
+
+945
+00:44:05,433 --> 00:44:07,133
+Solo usa 10.
+
+946
+00:44:07,200 --> 00:44:08,300
+¿Había otra pregunta?
+
+947
+00:44:11,833 --> 00:44:15,233
+Así que en informática,
+sólo hay una variable
+
+948
+00:44:15,300 --> 00:44:18,467
+a la izquierda de este signo igual,
+llamada operador de asignación.
+
+949
+00:44:18,533 --> 00:44:21,367
+Y hay un valor a la derecha
+
+950
+00:44:21,433 --> 00:44:24,167
+del mismo signo,
+el operador de asignación.
+
+951
+00:44:24,233 --> 00:44:29,600
+Así que una variable básicamente
+se corresponde o se une a un valor.
+
+952
+00:44:29,667 --> 00:44:34,167
+Así que el signo igual
+es una afirmación de asignación.
+
+953
+00:44:34,233 --> 00:44:35,400
+No es igualdad.
+
+954
+00:44:35,467 --> 00:44:37,700
+No es una solución
+para X tipo de situación.
+
+955
+00:44:37,767 --> 00:44:39,200
+Es sólo una asignación.
+
+956
+00:44:39,267 --> 00:44:42,800
+Une este nombre a este valor.
+
+957
+00:44:42,867 --> 00:44:46,867
+Así que la forma en que pensamos
+el nombre con el valor
+
+958
+00:44:46,933 --> 00:44:49,700
+es, si tenemos esta
+afirmación de asignación aquí,
+
+959
+00:44:49,767 --> 00:44:51,733
+primero nos fijamos
+en el lado derecho.
+
+960
+00:44:51,800 --> 00:44:53,567
+Así que siempre empezamos
+con el lado derecho.
+
+961
+00:44:53,633 --> 00:44:55,467
+Y lo evaluamos.
+
+962
+00:44:55,533 --> 00:44:58,067
+Recuerden,
+tenemos una expresión a la derecha.
+
+963
+00:44:58,133 --> 00:45:00,900
+Tenemos que evaluarla a un valor.
+
+964
+00:45:00,967 --> 00:45:04,867
+Así que esto será 3.14,
+lo que sea, 1.159.
+
+965
+00:45:04,933 --> 00:45:09,733
+Y luego tomamos ese valor
+y lo unimos al nombre pi.
+
+966
+00:45:09,800 --> 00:45:14,100
+Cada vez que escribo p-i, "pi",
+en mi programa de ahora en adelante,
+
+967
+00:45:14,167 --> 00:45:18,400
+Python automáticamente
+toma 3.14159 de la memoria.
+
+968
+00:45:18,467 --> 00:45:21,367
+Así que ahora está unido a ese valor.
+
+969
+00:45:21,433 --> 00:45:23,333
+Bien, hay algunas reglas.
+
+970
+00:45:23,400 --> 00:45:24,833
+¿Estaban en la anterior?
+
+971
+00:45:24,900 --> 00:45:32,200
+Sí, hay algunas reglas
+para los nombres de variables,
+
+972
+00:45:32,267 --> 00:45:33,867
+pero hablaremos sobre eso en un rato.
+
+973
+00:45:33,933 --> 00:45:36,767
+Por ahora, quiero que me digan
+si alguna de las siguientes cosas
+
+974
+00:45:36,833 --> 00:45:37,667
+están permitidas.
+
+975
+00:45:37,733 --> 00:45:40,133
+Si hago X es igual a 6,
+¿está permitido en Python?
+
+976
+00:45:40,200 --> 00:45:41,567
+AUDIENCIA: Sí.
+
+977
+00:45:41,633 --> 00:45:42,467
+ANA BELL: Sí, así es.
+
+978
+00:45:42,533 --> 00:45:42,767
+Bien.
+
+979
+00:45:42,833 --> 00:45:45,200
+Porque tengo un nombre de variable
+unido a un valor, 6.
+
+980
+00:45:45,267 --> 00:45:46,400
+¿Qué pasa con 6 es igual a X?
+
+981
+00:45:46,467 --> 00:45:47,467
+Es al revés.
+
+982
+00:45:47,533 --> 00:45:48,067
+AUDIENCIA: No.
+
+983
+00:45:48,133 --> 00:45:49,233
+ANA BELL: Muy bien.
+
+984
+00:45:49,300 --> 00:45:53,433
+6 es igual a X está mal,
+error de sintaxis.
+
+985
+00:45:53,500 --> 00:45:56,500
+¿Y X veces Y es igual a 3 más 4?
+
+986
+00:45:56,567 --> 00:45:57,267
+AUDIENCIA: No.
+
+987
+00:45:57,333 --> 00:45:59,500
+ANA BELL: No, exactamente,
+porque la cosa de la izquierda
+
+988
+00:45:59,567 --> 00:46:00,900
+tiene un operador.
+
+989
+00:46:00,967 --> 00:46:02,767
+Y los operadores son especiales.
+
+990
+00:46:02,833 --> 00:46:05,967
+Así que no puede tener...
+no puede haber una variable con ese *
+
+991
+00:46:06,033 --> 00:46:06,833
+como un nombre.
+
+992
+00:46:06,900 --> 00:46:09,733
+¿Qué tal XY es igual a 3 más 4?
+
+993
+00:46:09,800 --> 00:46:10,400
+AUDIENCIA: Sí.
+
+994
+00:46:10,467 --> 00:46:11,733
+ANA BELL: Se permite, así es.
+
+995
+00:46:11,800 --> 00:46:14,100
+Esperaba que cayeran en la trampa,
+pero no lo hicieron.
+
+996
+00:46:14,167 --> 00:46:17,667
+XY es igual a 3 más 4 está bien.
+
+997
+00:46:17,733 --> 00:46:18,667
+No había ningún error.
+
+998
+00:46:18,733 --> 00:46:21,733
+Y luego puedo invocar
+el nombre de la variable
+
+999
+00:46:21,800 --> 00:46:23,900
+que acabo de crear
+simplemente escribiendo.
+
+1000
+00:46:23,967 --> 00:46:27,633
+Así que si escribo XY, me da 7.
+
+1001
+00:46:27,700 --> 00:46:32,200
+Y luego puedo hacer operaciones
+con eso, XY más 1 es 8.
+
+1002
+00:46:32,267 --> 00:46:32,767
+Sí.
+
+1003
+00:46:32,833 --> 00:46:34,633
+AUDIENCIA:
+Antes estabas poniendo las cadenas
+
+1004
+00:46:34,700 --> 00:46:35,700
+con apóstrofos.
+
+1005
+00:46:35,767 --> 00:46:37,367
+¿No lo necesitarías?
+
+1006
+00:46:37,433 --> 00:46:40,300
+ANA BELL: Esas son cadenas,
+secuencias de caracteres.
+
+1007
+00:46:40,367 --> 00:46:42,067
+Aquí, estas son variables.
+
+1008
+00:46:42,133 --> 00:46:47,200
+Estos son nombres
+que yo le doy como variable.
+
+1009
+00:46:47,267 --> 00:46:48,467
+Muy buena pregunta.
+
+1010
+00:46:48,533 --> 00:46:50,933
+Así que esto va a ser una cadena.
+
+1011
+00:46:51,000 --> 00:46:52,767
+Y, como pueden ver, cambió de color.
+
+1012
+00:46:52,833 --> 00:46:55,333
+Tiene algún significado en Python.
+
+1013
+00:46:55,400 --> 00:46:58,700
+Pero XY es una variable que yo creo.
+
+1014
+00:47:03,767 --> 00:47:08,000
+¿Por qué hay que darles
+nombres a las variables?
+
+1015
+00:47:08,067 --> 00:47:10,933
+Porque como les mostré
+con el ejemplo pi,
+
+1016
+00:47:11,000 --> 00:47:14,467
+es mucho más fácil
+escribir código legible
+
+1017
+00:47:14,533 --> 00:47:18,400
+si tienen nombres de variables
+dentro de los programas.
+
+1018
+00:47:18,467 --> 00:47:20,500
+Así que cuando toman...
+
+1019
+00:47:20,567 --> 00:47:23,033
+cuando escriban programas,
+es importante elegir
+
+1020
+00:47:23,100 --> 00:47:25,000
+los nombres de las variables
+inteligentemente.
+
+1021
+00:47:25,067 --> 00:47:27,400
+No es buena idea usar solo una letra.
+
+1022
+00:47:27,467 --> 00:47:28,867
+No es buena idea nombrar algo
+
+1023
+00:47:28,933 --> 00:47:31,233
+con algo que no tenga
+nada que ver con el programa
+
+1024
+00:47:31,300 --> 00:47:33,567
+que están escribiendo,
+porque van a querer
+
+1025
+00:47:33,633 --> 00:47:36,867
+releer estos programas
+en algún momento en el futuro.
+
+1026
+00:47:36,933 --> 00:47:39,433
+U otros querrán leer
+sus programas alguna vez
+
+1027
+00:47:39,500 --> 00:47:40,667
+en el futuro.
+
+1028
+00:47:40,733 --> 00:47:43,167
+Así que aquí hay un ejemplo
+de un buen programa.
+
+1029
+00:47:43,233 --> 00:47:46,067
+Básicamente son cuatro
+declaraciones de asignación
+
+1030
+00:47:46,133 --> 00:47:48,267
+que hacen algunos cálculos.
+
+1031
+00:47:48,333 --> 00:47:51,000
+La primera línea del programa
+no es realmente una línea.
+
+1032
+00:47:51,067 --> 00:47:52,867
+Se llama comentario.
+
+1033
+00:47:52,933 --> 00:47:54,633
+Pueden tener tantos de estos
+como quieran.
+
+1034
+00:47:54,700 --> 00:47:55,967
+Empiezan con un símbolo #.
+
+1035
+00:47:56,033 --> 00:47:57,467
+Es una línea que empieza con #.
+
+1036
+00:47:57,533 --> 00:48:00,800
+Y básicamente es un texto
+
+1037
+00:48:00,867 --> 00:48:05,633
+que escribimos para ayudarnos
+o para que otros sepan
+
+1038
+00:48:05,700 --> 00:48:06,967
+qué debería hacer el código.
+
+1039
+00:48:07,033 --> 00:48:10,367
+Solemos hacemos comentarios
+de grandes trozos de código a la vez,
+
+1040
+00:48:10,433 --> 00:48:13,633
+no línea por línea.
+
+1041
+00:48:13,700 --> 00:48:17,733
+Tenemos estas cuatro
+declaraciones de asignación.
+
+1042
+00:48:17,800 --> 00:48:22,100
+Aquí estoy definiendo una variable
+llamada pi unida al valor este,
+
+1043
+00:48:22,167 --> 00:48:25,367
+así que no es la división
+sino 3.14159.
+
+1044
+00:48:25,433 --> 00:48:28,767
+La variable llamada radio
+unida a este punto flotante 2.2.
+
+1045
+00:48:28,833 --> 00:48:30,667
+Y luego tengo una variable
+llamada área
+
+1046
+00:48:30,733 --> 00:48:34,500
+que está unida
+al resultado de esta expresión.
+
+1047
+00:48:34,567 --> 00:48:38,267
+Así que cuando Python ve
+mi pi y mi radio,
+
+1048
+00:48:38,333 --> 00:48:42,200
+los toma de la memoria,
+los reemplaza con los valores,
+
+1049
+00:48:42,267 --> 00:48:45,600
+evalúa la expresión, toma ese valor
+
+1050
+00:48:45,667 --> 00:48:49,200
+que evaluamos a 15 punto algo,
+lo que sea que sea esto,
+
+1051
+00:48:49,267 --> 00:48:52,700
+y une el 15 punto algo al nombre
+
+1052
+00:48:52,767 --> 00:48:54,133
+área.
+
+1053
+00:48:54,200 --> 00:48:55,767
+Lo mismo con la circunferencia.
+
+1054
+00:48:59,567 --> 00:49:01,300
+El estilo de código es algo
+que en realidad
+
+1055
+00:49:01,367 --> 00:49:03,200
+vamos a ver
+en sus conjuntos de problemas.
+
+1056
+00:49:03,267 --> 00:49:05,467
+Así que sólo quería
+hablar rápidamente de eso.
+
+1057
+00:49:05,533 --> 00:49:09,500
+Aquí hay un programa
+que tiene un estilo muy malo.
+
+1058
+00:49:09,567 --> 00:49:10,867
+En realidad, eso se queda corto.
+
+1059
+00:49:10,933 --> 00:49:13,300
+Debería decir
+que es terrible o algo así.
+
+1060
+00:49:13,367 --> 00:49:15,767
+Pero por si no lo han notado,
+
+1061
+00:49:15,833 --> 00:49:17,833
+es el mismo programa
+de la diapositiva anterior.
+
+1062
+00:49:17,900 --> 00:49:20,533
+Pero si les diera este programa
+desde el principio,
+
+1063
+00:49:20,600 --> 00:49:22,967
+probablemente no sabrían
+lo que está haciendo.
+
+1064
+00:49:23,033 --> 00:49:26,967
+Está reutilizando 355 sobre 113
+dos veces aquí.
+
+1065
+00:49:27,033 --> 00:49:30,067
+Está usando solo A y C
+como nombres de variables.
+
+1066
+00:49:30,133 --> 00:49:33,667
+Su descripción es “hacer cálculos”.
+
+1067
+00:49:33,733 --> 00:49:35,000
+Malísimo.
+
+1068
+00:49:35,067 --> 00:49:36,600
+Esto es un poco mejor.
+
+1069
+00:49:36,667 --> 00:49:40,900
+He reconocido que 355 sobre 113
+se está usando dos veces.
+
+1070
+00:49:40,967 --> 00:49:43,000
+Así que lo guardaré como una variable.
+
+1071
+00:49:43,067 --> 00:49:47,867
+Pero mis variables
+siguen siendo caracteres únicos.
+
+1072
+00:49:47,933 --> 00:49:51,467
+Y mis comentarios son bastante malos.
+
+1073
+00:49:51,533 --> 00:49:54,567
+Básicamente estoy diciendo
+lo que el código está haciendo.
+
+1074
+00:49:54,633 --> 00:49:56,600
+Por favor, no hagan eso.
+
+1075
+00:49:56,667 --> 00:50:01,333
+Vemos
+que A es igual a P veces R veces R.
+
+1076
+00:50:01,400 --> 00:50:03,800
+Veo que estoy multiplicando
+P por R al cuadrado.
+
+1077
+00:50:03,867 --> 00:50:06,967
+No necesito leer eso en inglés.
+
+1078
+00:50:07,033 --> 00:50:10,533
+Lo que me gustaría ver
+es un comentario como este.
+
+1079
+00:50:10,600 --> 00:50:13,867
+Aquí estoy comentando
+un trozo de código.
+
+1080
+00:50:13,933 --> 00:50:17,267
+Y alguien que no quiera
+leer este trozo de código
+
+1081
+00:50:17,333 --> 00:50:18,967
+sólo lee el comentario, y yo ya sé
+
+1082
+00:50:19,033 --> 00:50:21,900
+que estoy calculando
+el área y la circunferencia usando
+
+1083
+00:50:21,967 --> 00:50:23,600
+una aproximación para pi.
+
+1084
+00:50:23,667 --> 00:50:27,900
+Ese comentario está muy bien,
+con nombres que describen bien
+
+1085
+00:50:27,967 --> 00:50:31,133
+y todo eso.
+
+1086
+00:50:31,200 --> 00:50:34,567
+Así que una vez que creamos un objeto,
+
+1087
+00:50:34,633 --> 00:50:37,300
+una vez que creamos un objeto
+y lo unimos
+
+1088
+00:50:37,367 --> 00:50:41,200
+a una variable,
+podemos cambiar las uniones.
+
+1089
+00:50:41,267 --> 00:50:43,300
+Así que podemos tomar
+ese nombre de variable
+
+1090
+00:50:43,367 --> 00:50:46,567
+y unirlo a un valor
+completamente diferente.
+
+1091
+00:50:46,633 --> 00:50:49,800
+Esto podría no ser útil ahora mismo,
+
+1092
+00:50:49,867 --> 00:50:52,933
+pero será útil cuando presentemos
+
+1093
+00:50:53,000 --> 00:50:55,567
+el flujo de control
+en nuestros programas.
+
+1094
+00:50:55,633 --> 00:50:59,333
+Para volver a unir una variable
+lo que eso significa
+
+1095
+00:50:59,400 --> 00:51:01,567
+es que vamos a tomar el nombre,
+
+1096
+00:51:01,633 --> 00:51:03,800
+vamos a soltar la unión
+al valor anterior,
+
+1097
+00:51:03,867 --> 00:51:05,900
+y vamos a volver a unirlo
+a un nuevo valor.
+
+1098
+00:51:05,967 --> 00:51:08,800
+Así que voy a mostrarles
+cómo se ve esto en la memoria.
+
+1099
+00:51:08,867 --> 00:51:11,600
+Voy a usar
+esta especie de imagen de nubes
+
+1100
+00:51:11,667 --> 00:51:14,667
+para representar
+lo que sucede detrás de escena
+
+1101
+00:51:14,733 --> 00:51:15,967
+cada vez que programamos.
+
+1102
+00:51:16,033 --> 00:51:18,900
+Es como una pequeña animación
+para ayudarles a entender
+
+1103
+00:51:18,967 --> 00:51:20,700
+línea por línea lo que está pasando.
+
+1104
+00:51:20,767 --> 00:51:24,000
+Así que aquí tenemos pi igual a 3.14.
+
+1105
+00:51:24,067 --> 00:51:27,867
+Así que el verde 3.14
+es mi valor en la memoria.
+
+1106
+00:51:27,933 --> 00:51:28,633
+La nube es la memoria.
+
+1107
+00:51:28,700 --> 00:51:29,900
+Ese es mi valor en la memoria.
+
+1108
+00:51:29,967 --> 00:51:32,400
+Y está unido a este nombre pi.
+
+1109
+00:51:32,467 --> 00:51:35,367
+Así que este es mi nombre de variable.
+
+1110
+00:51:35,433 --> 00:51:38,533
+La siguiente línea,
+radio es igual a 2.2, lo mismo.
+
+1111
+00:51:38,600 --> 00:51:41,667
+Tengo 2.2 como mi valor en la memoria,
+mi objeto.
+
+1112
+00:51:41,733 --> 00:51:44,867
+Y el radio es el nombre
+para ese objeto.
+
+1113
+00:51:44,933 --> 00:51:47,133
+El área es igual
+a pi por radio al cuadrado.
+
+1114
+00:51:47,200 --> 00:51:49,033
+Lo que pasa detrás de escena
+
+1115
+00:51:49,100 --> 00:51:51,467
+es que calcula este valor.
+
+1116
+00:51:51,533 --> 00:51:52,800
+No almacena la expresión.
+
+1117
+00:51:52,867 --> 00:51:55,467
+Almacena el valor que resulta
+del cálculo,
+
+1118
+00:51:55,533 --> 00:51:58,367
+y luego lo guarda...
+
+1119
+00:51:58,433 --> 00:52:01,467
+o lo une al nombre área.
+
+1120
+00:52:01,533 --> 00:52:03,033
+¿Todo bien hasta ahora?
+
+1121
+00:52:03,100 --> 00:52:04,300
+Hemos visto este código antes.
+
+1122
+00:52:04,367 --> 00:52:04,800
+Genial.
+
+1123
+00:52:04,867 --> 00:52:06,867
+Así que ahora lo que pasa
+cuando hacemos esto,
+
+1124
+00:52:06,933 --> 00:52:09,667
+¿radio es igual al radio más 1?
+
+1125
+00:52:09,733 --> 00:52:15,533
+En matemáticas,
+eso diría que 0 es igual a 1.
+
+1126
+00:52:15,600 --> 00:52:16,767
+Pero no es matemática aquí.
+
+1127
+00:52:16,833 --> 00:52:20,567
+Es informática
+y esto es perfectamente válido.
+
+1128
+00:52:20,633 --> 00:52:25,100
+Estamos siguiendo la regla
+cuando tenemos una asignación
+
+1129
+00:52:25,167 --> 00:52:29,867
+que dice que mires primero
+el lado derecho y lo evalúes
+
+1130
+00:52:29,933 --> 00:52:32,500
+y luego lo unas al lado izquierdo.
+
+1131
+00:52:32,567 --> 00:52:37,367
+Así que si me fijo en el lado
+derecho primero, veo radio.
+
+1132
+00:52:37,433 --> 00:52:38,300
+¿Cuál es el valor?
+
+1133
+00:52:38,367 --> 00:52:40,000
+2.2.
+
+1134
+00:52:40,067 --> 00:52:43,800
+Vemos sumar 1 a eso, 3.2.
+
+1135
+00:52:43,867 --> 00:52:45,533
+Guardar eso en la memoria.
+
+1136
+00:52:45,600 --> 00:52:47,767
+Y luego vemos la asignación.
+
+1137
+00:52:47,833 --> 00:52:51,933
+Ahora lo guardamos
+con el nombre radio.
+
+1138
+00:52:52,000 --> 00:52:56,200
+Bien, así que sólo podemos tener
+una variable asignada
+
+1139
+00:52:56,267 --> 00:52:57,967
+a un valor a la vez.
+
+1140
+00:52:58,033 --> 00:52:59,533
+Esto no es matemática.
+
+1141
+00:52:59,600 --> 00:53:00,800
+Esto es informática.
+
+1142
+00:53:00,867 --> 00:53:05,300
+Así que radio solo puede apuntar
+a una sola cosa a la vez.
+
+1143
+00:53:05,367 --> 00:53:08,533
+Con esta línea de código,
+el radio es igual al radio más 1.
+
+1144
+00:53:08,600 --> 00:53:12,633
+Hemos perdido la unión a 2.2,
+este objeto en la memoria,
+
+1145
+00:53:12,700 --> 00:53:17,467
+y hemos vuelto a unirlo al valor 3.2.
+
+1146
+00:53:17,533 --> 00:53:19,267
+Y eso está perfectamente bien.
+
+1147
+00:53:19,333 --> 00:53:21,267
+2.2 ahora está simplemente
+guardado en la memoria.
+
+1148
+00:53:21,333 --> 00:53:25,300
+No podemos volver a eso a menos
+que diga quizás radio es igual a 2.2.
+
+1149
+00:53:25,367 --> 00:53:27,400
+Sólo se queda ahí
+en la memoria y luego
+
+1150
+00:53:27,467 --> 00:53:29,833
+podría ser recopilado
+o recogido más tarde
+
+1151
+00:53:29,900 --> 00:53:31,767
+por una limpieza de memoria
+o algo así.
+
+1152
+00:53:31,833 --> 00:53:34,400
+Pero por ahora, no puedo volver a eso.
+
+1153
+00:53:34,467 --> 00:53:39,733
+Ahora, ¿cuál es el valor para el área
+al final de estas líneas?
+
+1154
+00:53:39,800 --> 00:53:43,567
+Bueno, según Esto es 15.1976.
+
+1155
+00:53:43,633 --> 00:53:47,633
+Así que está usando
+el viejo valor 2.2 para el radio.
+
+1156
+00:53:47,700 --> 00:53:52,833
+Y eso está bien porque
+el programa nunca dijo...
+
+1157
+00:53:52,900 --> 00:53:55,867
+Nunca tuvo una línea
+que dijera recalcular el área
+
+1158
+00:53:55,933 --> 00:53:59,300
+después de cambiar el radio.
+
+1159
+00:53:59,367 --> 00:54:02,767
+Solo está siguiendo, tontamente,
+línea por línea.
+
+1160
+00:54:02,833 --> 00:54:05,333
+No sabe que si cambio el radio,
+
+1161
+00:54:05,400 --> 00:54:08,000
+el usuario podría querer
+cambiar el área.
+
+1162
+00:54:08,067 --> 00:54:09,900
+No hace esas conexiones.
+
+1163
+00:54:09,967 --> 00:54:12,133
+Solo está siguiendo instrucciones.
+
+1164
+00:54:12,200 --> 00:54:13,267
+Y eso está bien.
+
+1165
+00:54:13,333 --> 00:54:15,267
+Si queremos cambiar el área,
+
+1166
+00:54:15,333 --> 00:54:18,333
+tendríamos que copiar
+esta línea y pegarla
+
+1167
+00:54:18,400 --> 00:54:19,967
+después de que hayamos cambiado
+el radio.
+
+1168
+00:54:20,033 --> 00:54:24,133
+Y luego el área cambiaría también.
+
+1169
+00:54:24,200 --> 00:54:25,033
+¿Tiene sentido?
+
+1170
+00:54:25,100 --> 00:54:28,267
+Eso es una parte importante
+de esta clase.
+
+1171
+00:54:28,333 --> 00:54:30,333
+Bien, genial.
+
+1172
+00:54:30,400 --> 00:54:33,433
+Así que la gran idea aquí
+es que nuestras líneas se evalúan
+
+1173
+00:54:33,500 --> 00:54:34,100
+una tras otra.
+
+1174
+00:54:34,167 --> 00:54:35,000
+No omitimos ninguna.
+
+1175
+00:54:35,067 --> 00:54:36,433
+No estamos repitiendo cosas.
+
+1176
+00:54:36,500 --> 00:54:38,533
+Eso es algo que aprenderemos
+más tarde.
+
+1177
+00:54:38,600 --> 00:54:41,767
+Pero por ahora, línea por línea.
+
+1178
+00:54:41,833 --> 00:54:44,333
+Aquí hay algo
+para que practiquen ustedes.
+
+1179
+00:54:44,400 --> 00:54:46,267
+Estas tres líneas
+se ejecutan en orden.
+
+1180
+00:54:46,333 --> 00:54:49,433
+¿Cuáles son los valores
+para las variables de metros y pies
+
+1181
+00:54:49,500 --> 00:54:51,167
+en cada línea?
+
+1182
+00:54:51,233 --> 00:54:54,700
+¿Qué hay de la primera línea,
+cuál es el valor de los metros
+
+1183
+00:54:54,767 --> 00:54:57,400
+después de ejecutar la primera línea?
+
+1184
+00:54:57,467 --> 00:54:57,867
+100.
+
+1185
+00:54:57,933 --> 00:54:58,933
+¿Y los pies?
+
+1186
+00:55:01,633 --> 00:55:05,867
+Así que al final de la primera línea,
+aún no hay valor para los pies.
+
+1187
+00:55:05,933 --> 00:55:07,667
+¿Qué tal después de la segunda línea?
+
+1188
+00:55:07,733 --> 00:55:09,267
+328.08.
+
+1189
+00:55:09,333 --> 00:55:09,900
+¿Cierto?
+
+1190
+00:55:09,967 --> 00:55:11,900
+¿Qué hay del valor de los metros?
+
+1191
+00:55:11,967 --> 00:55:12,600
+AUDIENCIA: 100.
+
+1192
+00:55:12,667 --> 00:55:13,900
+ANA BELL: Sigue siendo 100.
+
+1193
+00:55:13,967 --> 00:55:15,867
+¿Y después de la tercera línea?
+
+1194
+00:55:15,933 --> 00:55:20,300
+Estoy cambiando los metros a 200.
+
+1195
+00:55:20,367 --> 00:55:21,300
+Exactamente, sí.
+
+1196
+00:55:21,367 --> 00:55:26,167
+Los metros son 200,
+pero pies sigue siendo 328.08.
+
+1197
+00:55:26,233 --> 00:55:29,900
+Y esto es algo
+que quiero mostrarles hoy.
+
+1198
+00:55:29,967 --> 00:55:31,433
+Y vamos a usar este Python Tutor
+
+1199
+00:55:31,500 --> 00:55:34,800
+mucho más en el futuro.
+
+1200
+00:55:34,867 --> 00:55:37,400
+Python Tutor es un sitio web
+muy bueno que permite
+
+1201
+00:55:37,467 --> 00:55:39,400
+intervenir en tu código...
+
+1202
+00:55:39,467 --> 00:55:41,533
+revisar tu código paso a paso.
+
+1203
+00:55:41,600 --> 00:55:44,767
+Así que en cada línea que ejecutas,
+
+1204
+00:55:44,833 --> 00:55:47,867
+puedes ver los valores
+de todas las variables del código.
+
+1205
+00:55:47,933 --> 00:55:49,733
+Es una herramienta de depuración
+muy útil.
+
+1206
+00:55:49,800 --> 00:55:52,933
+Espero que lo prueben hoy
+y el lunes, tal vez,
+
+1207
+00:55:53,000 --> 00:55:55,733
+para los ejercicios con los dedos
+si tienen problemas.
+
+1208
+00:55:55,800 --> 00:55:59,267
+Y pueden usarlo para exámenes
+para ayudarles a depurar.
+
+1209
+00:55:59,333 --> 00:56:00,633
+Pero puedo mostrarles cómo es.
+
+1210
+00:56:00,700 --> 00:56:03,667
+Es bastante simple aquí
+porque es sólo un paso a paso.
+
+1211
+00:56:03,733 --> 00:56:05,400
+Así que lo revisamos.
+
+1212
+00:56:05,467 --> 00:56:08,267
+El rojo indica la línea
+que voy a ejecutar.
+
+1213
+00:56:08,333 --> 00:56:10,233
+Verde es la línea
+que acabo de ejecutar.
+
+1214
+00:56:10,300 --> 00:56:12,167
+Acabo de ejecutar los 100 metros.
+
+1215
+00:56:12,233 --> 00:56:16,067
+Así que aquí tengo la variable
+de metro con el valor 100.
+
+1216
+00:56:16,133 --> 00:56:17,567
+Sigo revisando.
+
+1217
+00:56:17,633 --> 00:56:19,400
+Así que acabo de ejecutar
+pies es igual a esto.
+
+1218
+00:56:19,467 --> 00:56:24,700
+Ahora tengo una variable llamada
+pies con un valor de 328.08.
+
+1219
+00:56:24,767 --> 00:56:26,533
+Metros sigue siendo 100.
+
+1220
+00:56:26,600 --> 00:56:33,700
+Y con los 200 metros,
+los pies siguieron en 328.08.
+
+1221
+00:56:33,767 --> 00:56:35,633
+Así que obviamente,
+es un programa bastante simple
+
+1222
+00:56:35,700 --> 00:56:37,167
+para ejecutar Python Tutor,
+pero ustedes
+
+1223
+00:56:37,233 --> 00:56:44,433
+pueden imaginarse cómo usarlo
+en entornos más complejos.
+
+1224
+00:56:44,500 --> 00:56:45,633
+¿Qué tal una vez más?
+
+1225
+00:56:45,700 --> 00:56:47,700
+Y este es mi último ejemplo.
+
+1226
+00:56:47,767 --> 00:56:49,933
+Quiero que intenten
+escribir un programa
+
+1227
+00:56:50,000 --> 00:56:51,833
+que cambie los valores de X e Y.
+
+1228
+00:56:51,900 --> 00:56:53,733
+Así que originalmente...
+y dibujaré esto,
+
+1229
+00:56:53,800 --> 00:56:55,533
+el diagrama de memoria muy rápido.
+
+1230
+00:56:55,600 --> 00:56:58,267
+Esta es nuestra memoria.
+
+1231
+00:56:58,333 --> 00:57:00,900
+Tenemos X unida a 1.
+
+1232
+00:57:00,967 --> 00:57:03,467
+Y unida 2.
+
+1233
+00:57:03,533 --> 00:57:08,033
+Y lo que quiero hacer
+sin decir X es igual a 2,
+
+1234
+00:57:08,100 --> 00:57:10,667
+Y es igual a 1, lo que quiero hacer
+es intercambiar los valores.
+
+1235
+00:57:10,733 --> 00:57:14,900
+Quiero que X esté asociada con 2
+y que Y esté asociada con 1
+
+1236
+00:57:14,967 --> 00:57:18,933
+pero sólo usando comandos como este.
+
+1237
+00:57:19,000 --> 00:57:22,700
+Entonces, este código tiene errores.
+
+1238
+00:57:22,767 --> 00:57:23,900
+Eso significa que está mal.
+
+1239
+00:57:23,967 --> 00:57:26,600
+Tiene un error.
+
+1240
+00:57:26,667 --> 00:57:28,200
+Bueno, revisemos paso a paso
+
+1241
+00:57:28,267 --> 00:57:29,633
+de a poquito.
+
+1242
+00:57:29,700 --> 00:57:32,033
+Y es igual a X.
+
+1243
+00:57:32,100 --> 00:57:34,633
+¿Qué hago cuando Y es igual a X aquí?
+
+1244
+00:57:37,600 --> 00:57:43,033
+Sí, correcto.
+Y va para pasar de 2 a 1.
+
+1245
+00:57:43,100 --> 00:57:45,300
+¿Qué pasa cuando hago X es igual a Y?
+
+1246
+00:57:47,833 --> 00:57:49,767
+Sí, X no cambia.
+
+1247
+00:57:49,833 --> 00:57:54,200
+Mi primera línea, Y es igual X,
+perdió la unión a 2.
+
+1248
+00:57:54,267 --> 00:57:58,400
+Y ahora todo está mal.
+porque no puedo recuperarla.
+
+1249
+00:57:58,467 --> 00:58:00,800
+Así que si no entendieron esto,
+
+1250
+00:58:00,867 --> 00:58:03,633
+pueden hacer clic en Python Tutor
+y revisarlo paso a paso
+
+1251
+00:58:03,700 --> 00:58:05,433
+por su cuenta.
+
+1252
+00:58:05,500 --> 00:58:07,867
+¿Pero cómo podemos arreglar esto?
+
+1253
+00:58:07,933 --> 00:58:09,700
+AUDIENCIA: Crea una tercera variable.
+
+1254
+00:58:09,767 --> 00:58:11,533
+ANA BELL: ¿Crear una tercera variable?
+
+1255
+00:58:11,600 --> 00:58:12,767
+Sí, es una gran idea.
+
+1256
+00:58:12,833 --> 00:58:14,467
+Sí, podemos crear
+una tercera variable.
+
+1257
+00:58:14,533 --> 00:58:16,900
+Así que X es 1, Y es 1...
+
+1258
+00:58:16,967 --> 00:58:17,800
+Y es 2.
+
+1259
+00:58:17,867 --> 00:58:19,200
+Podemos crear una tercera variable.
+
+1260
+00:58:19,267 --> 00:58:23,167
+¿A qué debe ser igual esa variable?
+
+1261
+00:58:23,233 --> 00:58:25,033
+¿X o Y?
+
+1262
+00:58:25,100 --> 00:58:27,200
+Sí, cualquiera.
+
+1263
+00:58:27,267 --> 00:58:30,133
+Lo hice con Y, así que elijamos Y.
+
+1264
+00:58:30,200 --> 00:58:33,433
+Así que aquí tengo
+una variable temporal llamada "temp",
+
+1265
+00:58:33,500 --> 00:58:36,900
+y lo hice igual a 2.
+
+1266
+00:58:36,967 --> 00:58:38,400
+¿Y ahora qué puedo hacer?
+
+1267
+00:58:41,900 --> 00:58:43,333
+¿A cuál puedo reasignar ahora?
+
+1268
+00:58:43,400 --> 00:58:47,333
+¿X es igual a Y o Y es igual a X?
+
+1269
+00:58:47,400 --> 00:58:49,800
+Correcto, Y es igual a...
+Si hago X es igual a Y,
+
+1270
+00:58:49,867 --> 00:58:53,367
+Perdí mi unión a 1,
+y está todo mal otra vez.
+
+1271
+00:58:53,433 --> 00:58:55,533
+Así que Y es igual a X está bien.
+
+1272
+00:58:55,600 --> 00:58:59,233
+Así que voy a eliminar
+la unión de Y con 2
+
+1273
+00:58:59,300 --> 00:59:01,067
+y la voy a unir a 1.
+
+1274
+00:59:01,133 --> 00:59:04,533
+¿Y ahora qué hago?
+
+1275
+00:59:04,600 --> 00:59:10,900
+Sí, ahora reasignar tranquilamente
+X a la temp.
+
+1276
+00:59:10,967 --> 00:59:14,767
+Puedo decir que X es igual a temp
+porque temp apunta a 2.
+
+1277
+00:59:14,833 --> 00:59:19,400
+Y quiero que X también apunte a 2.
+
+1278
+00:59:19,467 --> 00:59:23,233
+Así que en términos de código,
+eso es una especie de diagrama.
+
+1279
+00:59:23,300 --> 00:59:24,300
+Podemos escribir el código.
+
+1280
+00:59:24,367 --> 00:59:27,600
+Veamos.
+
+1281
+00:59:27,667 --> 00:59:30,967
+No lo escribimos aquí,
+sino ustedes por su cuenta.
+
+1282
+00:59:31,033 --> 00:59:32,767
+Pueden escribirlo aquí si quieren.
+
+1283
+00:59:32,833 --> 00:59:33,800
+O podemos hacerlo juntos.
+
+1284
+00:59:33,867 --> 00:59:34,900
+Así que X es igual...
+
+1285
+00:59:34,967 --> 00:59:35,400
+Uy.
+
+1286
+00:59:35,467 --> 00:59:39,000
+X es igual a 1, Y es igual a 2.
+
+1287
+00:59:39,067 --> 00:59:41,700
+Y luego teníamos temp.
+
+1288
+00:59:41,767 --> 00:59:44,967
+Queríamos asignarlo
+a lo que fuera que fuera Y.
+
+1289
+00:59:45,033 --> 00:59:48,067
+Así que decimos que temp es igual a Y.
+
+1290
+00:59:48,133 --> 00:59:50,567
+Y si quieren comprobar
+los valores de las variables,
+
+1291
+00:59:50,633 --> 00:59:52,267
+pueden invocar los nombres.
+
+1292
+00:59:52,333 --> 00:59:59,300
+Así que X es 1, Y es 2 y temp debe ser
+lo que sea que sea Y, 2.
+
+1293
+00:59:59,367 --> 01:00:00,900
+Hasta ahora, bien.
+
+1294
+01:00:00,967 --> 01:00:07,133
+Así que ahora estoy en el paso
+aquí, ¿verdad?
+
+1295
+01:00:07,200 --> 01:00:08,400
+Acabo de crear esto.
+
+1296
+01:00:08,467 --> 01:00:10,067
+Lo último que tengo que hacer
+
+1297
+01:00:10,133 --> 01:00:15,667
+es borrar la unión de X
+a lo que sea que sea temp.
+
+1298
+01:00:15,733 --> 01:00:18,267
+Quiero hacer esta operación aquí,
+
+1299
+01:00:18,333 --> 01:00:23,467
+lo que significa que quiero asignar
+X para que sea igual a temp.
+
+1300
+01:00:23,533 --> 01:00:26,967
+Así que ahora X es 2, Y es 1.
+
+1301
+01:00:29,733 --> 01:00:32,800
+¿Qué hice?
+
+1302
+01:00:32,867 --> 01:00:36,067
+Sí, así que esto sucede a veces.
+
+1303
+01:00:36,133 --> 01:00:39,133
+Podemos empezar de nuevo.
+
+1304
+01:00:39,200 --> 01:00:41,600
+Así que Y es igual a temp.
+
+1305
+01:00:41,667 --> 01:00:42,467
+Lo siento.
+
+1306
+01:00:42,533 --> 01:00:44,900
+Temp es igual a Y.
+
+1307
+01:00:49,600 --> 01:00:52,300
+Y es igual a X.
+
+1308
+01:00:52,367 --> 01:00:53,567
+Y es 1.
+
+1309
+01:00:53,633 --> 01:00:54,600
+X es 1.
+
+1310
+01:00:54,667 --> 01:00:58,000
+Y después, X es igual a temp.
+
+1311
+01:00:58,067 --> 01:01:00,867
+Y es 1, X es 2.
+
+1312
+01:01:00,933 --> 01:01:04,400
+Así que está bien si sale mal.
+
+1313
+01:01:04,467 --> 01:01:05,800
+Va a salir mal.
+
+1314
+01:01:05,867 --> 01:01:08,000
+Podemos empezar de nuevo
+en este caso en particular
+
+1315
+01:01:08,067 --> 01:01:10,233
+redefiniendo nuestras variables
+
+1316
+01:01:10,300 --> 01:01:11,900
+y simplemente probándolo
+todo otra vez.
+
+1317
+01:01:11,967 --> 01:01:13,667
+Para eso sirve el shell.
+
+1318
+01:01:13,733 --> 01:01:14,600
+Para eso lo uso.
+
+1319
+01:01:14,667 --> 01:01:16,767
+Para eso vamos a usarlo en el futuro,
+
+1320
+01:01:16,833 --> 01:01:20,867
+sólo para hacer cosas rápidas
+así y también cosas
+
+1321
+01:01:20,933 --> 01:01:24,000
+como comprobar los tipos
+y otros comandos
+
+1322
+01:01:24,067 --> 01:01:27,633
+que hicimos antes.
+
+1323
+01:01:27,700 --> 01:01:30,833
+Bien, ¿alguna pregunta
+antes de hacer el resumen?
+
+1324
+01:01:30,900 --> 01:01:33,567
+¿Estuvo bien a este ritmo
+o fue demasiado rápido?
+
+1325
+01:01:33,633 --> 01:01:35,433
+¿O estuvo bien?
+
+1326
+01:01:35,500 --> 01:01:36,633
+Muy bien.
+
+1327
+01:01:36,700 --> 01:01:37,633
+Pulgares hacia arriba.
+
+1328
+01:01:37,700 --> 01:01:40,200
+Hagamos un resumen rápido.
+
+1329
+01:01:40,267 --> 01:01:43,367
+Vimos que podemos crear programas
+
+1330
+01:01:43,433 --> 01:01:45,100
+manipulando objetos.
+
+1331
+01:01:45,167 --> 01:01:47,433
+Creamos objetos en Python.
+
+1332
+01:01:47,500 --> 01:01:50,000
+Y vimos que los objetos
+tienen un tipo en particular.
+
+1333
+01:01:50,067 --> 01:01:53,400
+El tipo de objeto
+le dice a Python las cosas
+
+1334
+01:01:53,467 --> 01:01:57,200
+que puedes hacer con ese objeto.
+
+1335
+01:01:57,267 --> 01:02:00,700
+Podemos combinar objetos
+para formar expresiones.
+
+1336
+01:02:00,767 --> 01:02:03,933
+Y estas expresiones
+evalúan o se reducen
+
+1337
+01:02:04,000 --> 01:02:06,233
+a un valor particular.
+
+1338
+01:02:06,300 --> 01:02:09,800
+Los objetos o valores
+pueden almacenarse en variables.
+
+1339
+01:02:09,867 --> 01:02:13,433
+Y estas variables nos permiten
+acceder a estos valores
+
+1340
+01:02:13,500 --> 01:02:15,767
+con nombres más bonitos
+más tarde en nuestro programa.
+
+1341
+01:02:15,833 --> 01:02:20,400
+Y luego podemos escribir
+programas más ordenados, más legibles
+
+1342
+01:02:20,467 --> 01:02:21,733
+también.
+
+1343
+01:02:21,800 --> 01:02:22,533
+El signo igual...
+
+1344
+01:02:22,600 --> 01:02:25,300
+Les mostré un par de diferencias
+entre las matemáticas
+
+1345
+01:02:25,367 --> 01:02:26,233
+e informática.
+
+1346
+01:02:26,300 --> 01:02:29,767
+El signo igual
+era una diferencia importante.
+
+1347
+01:02:29,833 --> 01:02:31,833
+El signo igual en matemática
+es declarativo,
+
+1348
+01:02:31,900 --> 01:02:34,833
+y el signo igual en informática
+es una asignación.
+
+1349
+01:02:34,900 --> 01:02:38,533
+Básicamente estás diciendo
+esto está asociado con esto.
+
+1350
+01:02:38,600 --> 01:02:44,167
+No hay ningún tipo de igualdad
+en la informática.
+
+1351
+01:02:44,233 --> 01:02:48,567
+Y sí, las computadoras hacen
+lo que les dices que hagan.
+
+1352
+01:02:48,633 --> 01:02:51,267
+Eso es algo muy importante aquí.
+
+1353
+01:02:51,333 --> 01:02:53,933
+Línea por línea, se ejecuta
+comenzando desde arriba,
+
+1354
+01:02:54,000 --> 01:02:55,800
+va línea por línea.
+
+1355
+01:02:55,867 --> 01:02:58,900
+Hasta ahora,
+no hemos ningún lugar
+
+1356
+01:02:58,967 --> 01:03:00,533
+donde la computadora
+tome una decisión.
+
+1357
+01:03:00,600 --> 01:03:02,500
+Pero en la próxima clase, veremos
+
+1358
+01:03:02,567 --> 01:03:06,067
+cómo insertar puntos de decisión
+en nuestros programas
+
+1359
+01:03:06,133 --> 01:03:10,367
+para que la computadora
+ejecute un conjunto de código
+
+1360
+01:03:10,433 --> 01:03:12,300
+u otro conjunto de código.
+
+1361
+01:03:12,367 --> 01:03:14,800
+Muy bien,
+aquí termina la clase de hoy.
+
+1362
+01:03:14,867 --> 01:03:16,000
+Gracias a todos por venir.
+
+1363
+01:03:16,067 --> 01:03:18,333
+Hasta el lunes.
